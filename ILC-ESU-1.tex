@@ -281,9 +281,150 @@ ILC promises a long future beyond its initial 250~GeV stage.
 
 \section{\label{sec:collider}Collider}
 
-2 pages - Benno, Shin
+%2 pages - Benno, Shin
 
-    Summary of the ILC250 design (important to note the elements that are retained in first stage to accommodate future energy extensions)
+%    Summary of the ILC250 design (important to note the elements that are retained in first stage to accommodate future energy extensions)
+
+{\it Note (BL): The following 3 paragraphs in italics will probably be absorbed in the general introduction.}
+
+{\it 
+The International Linear Accelerator (ILC) is a $250\,{\mathrm{GeV}}$ (extendable up to $1\,{\mathrm{TeV}}$) linear $e^+e^-$ collider, based on $1.3\,{\mathrm{GHz}}$ superconducting radio-frequency (SCRF) cavities.
+It is designed to  achieve a luminosity of $1.5\cdot 10^{34}~{\mathrm{cm}}^{-1}{\mathrm{s}}^{-1}$ and provide an integrated luminosity of $350\,{\mathrm{fb}}^{-1}$ in the first four years of running.
+The electron beam will be polarised to $80\,\%$, and positrons with $30\,\%$ polarization will be provided if the undulator based positron source concept is employed. 
+}
+
+{\it 
+Its parameters have been set by physics requirements first outlined in 2003,
+updated in 2006, and thoroughly discussed over many years with the physics user community. 
+After the discovery of the Higgs boson it was decided that an initial energy of $250\,{\mathrm{GeV}}$ provides the opportunity for a precision physics programme at a reasonable initial cost~\cite{Evans:2017rvt}.
+Some relevant parameters are given in Tab.~\ref{tab:ilc-params}.
+}
+
+\begin{table}
+\begin{tabular}{lccccc}
+Quantity & Symbol & Unit & Initial &  \multicolumn{2}{c}{Upgrades} \\
+\hline
+Centre of mass energy & $\sqrt{s}$ & ${\mathrm{GeV}}$ & $250$ & $500$ & $1000$ \\
+Luminosity & \multicolumn{2}{c}{${\mathcal{L}}$ $10^{34}{\mathrm{cm^{-2}s^{-1}}}$} & $1.35$ & $1.8$ & $4.9$ \\
+Repetition frequency &$f_{\mathrm{rep}}$ & ${\mathrm{Hz}}$  & $5$ & $5$ & $4$ \\
+Bunches per pulse  &$n_{\mathrm{bunch}}$ & 1  & $1312$ & $1312$ & $2450$ \\
+Bunch population  &$N_{\mathrm{e}}$ & $10^{10}$ &$2$ & $2$ & $1.74$ \\
+Linac bunch interval & $\Delta t_{\mathrm{b}}$ & ${\mathrm{ns}}$ & $554$ & $554$ & $366$ \\
+Beam current in pulse & $I_{\mathrm{pulse}}$ & ${\mathrm{mA}}$& $5.8$ & $5.8$ & $7.6$  \\
+Beam pulse duration  & $t_{\mathrm{pulse}}$ & ${\mathrm{\mu s}}$ &$727$ & $727$ & $897$ \\
+Average beam power  & $P_{\mathrm{ave}}$   & ${\mathrm{MW}}$ & $5.3$   &$10.5$  & $27.2$ \\  
+Norm. hor. emitt. at IP & $\gamma\epsilon_{\mathrm{x}}$ & ${\mathrm{\mu m}}$& $5$ & $10$ & $10$  \\ 
+Norm. vert. emitt. at IP & $\gamma\epsilon_{\mathrm{y}}$ & ${\mathrm{nm}}$ & $35$ & $35$ & $35$ \\ 
+RMS hor. beam size at IP  & $\sigma^*_{\mathrm{x}}$ & ${\mathrm{nm}}$  & $516$ & $474$ & $335$ \\
+RMS vert. beam size at IP &$\sigma^*_{\mathrm{y}}$ & ${\mathrm{nm}}$ & $7.7$  & $5.9$ & $2.7$ \\
+Site AC power  & $P_{\mathrm{site}}$ &  ${\mathrm{MW}}$ & $129$ & $163$ & $300$ \\
+Site length & $L_{\mathrm{site}}$ &  ${\mathrm{km}}$ & $20.5$ & $31$ & $40$ \\
+\end{tabular}
+\caption{Summary table of the ILC accelerator parameters in the initial $250\,{\mathrm{GeV}}$ staged configuration
+and possible upgrades.
+\label{tab:ilc-params}}
+\end{table}
+
+{\it
+The collider design is the result of nearly twenty years of R\&D. 
+The heart of the ILC, the superconducting cavities, is based on over a decade of pioneering work by the TESLA collaboration in the 1990s. 
+Some other aspects were based on the R\&D carried out for the JLC/GLC and NLC projects, which were based on room-temperature accelerating structures. 
+From 2005 to the publication of the Technical Design Report (TDR)~\cite{Adolphsen:2013kya} in 2013, the design of the ILC accelerator was conducted as a worldwide international collaboration coordinated by the Global Design Effort (GDE) under a mandate from the International Committee for Future Accelerators (ICFA).
+Since then, the Linear Collider Collaboration (LCC) has been coordinating the international activities for both, the ILC and CLIC projects, again mandated by ICFA.
+}
+
+The fundamental goal of the design of the ILC is a high energy efficiency, which limits the overall power consumption of the accelerator complex during operation to $129\,{\mathrm{MW}}$ at  $250\,{\mathrm{GeV}}$ and $300\,{\mathrm{MV}}$ at  $1\,{\mathrm{TeV}}$, which is comparable to the power consumption of CERN.
+% Stapnes at ALCW2018: 1.35TWh in 2012 -> 154MW on average in 2012
+This is achieved by the use of SCRF technology for the main accelerator, which offers a high RF-to-beam efficiency through the use of superconducting cavities, operating at $1.3\,{\mathrm{GHz}}$, where high-efficiency klystrons are commercially available.
+At accelerating gradients of $31.5$ to $35\,{\mathrm{MV/m}}$ this technology offers high overall efficiency and reasonable investment costs, even considering the cryogenic infrastructure needed for the operation at $2\,{\mathrm{K}}$.
+
+The underlying TESLA technology is mature, with a broad industrial base throughout the world, and is in use at a number of free electron laser facilities that are in operation (European XFEL at DESY, Hamburg), under construction (LCLS-II at SLAC, Stanford) or in preparation (SCLF in Shanghai) in the three regions Asia, Americas, and Europe that have contributed to the ILC design.
+In preparation for the ILC, Japan and the U.S.\ have founded a collaboration for further cost optimisation of the TESLA technology.
+In recent years, new surface treatments during the cavity preparation process, such as the so-called nitrogen infusion, have been developed at Fermilab and elsewhere, with the prospect to achieve higher gradients and lower loss rates with a less expensive surface preparation scheme than assumed in the TDR.
+
+When the Higgs discovery was imminent in 2012, the Japan Association of High Energy Physicists (JAHEP) made a proposal to host the ILC in Japan. 
+Subsequently, the Japanese ILC Strategy Council conducted a survey of possible sites for the ILC in Japan, looking for  suitable geological conditions for a tunnel up to $50\,{\mathrm{km}}$ in length (as required for a $1\,{\mathrm{TeV}}$  machine), and the possibility to establish a laboratory where several thousand international scientists can work and live. 
+As a result, the candidate site in the Kitakami region in northern Japan, close to the larger cities of Sendai and Morioka, was found to be the best option. 
+The site offers a large, uniform granite formation with no currently active faults that is well suited for tunneling.
+Even at the great Tohoku earthquake in 2011 underground installations in this rock formation were essentially unaffected, which underlines the suitability of this candidate site. 
+
+Fig.~\ref{fig_ilc-schematic} shows a schematic overview over the accelerator with its main subsystems.
+The accelerator extends over $20.5\,{\mathrm{km}}$, with two main arms that are dominated by the electron and positron main linacs, respectively, at an $14\,{\mathrm{mrad}}$ crossing angle.
+
+ \begin{figure}[tb]
+ %\epsfysize=9.0cm
+ \begin{center}
+ \includegraphics[width=\hsize]{figures/TDR-machine-layout-cartoon-staged.pdf}
+\caption{Schematic layout of the ILC in the $250\,{\mathrm{GeV}}$ staged configuration.
+\label{fig_ilc-schematic}}
+ \end{center}
+ \end{figure}
+
+Electrons are produced by a polarised electron gun located in the tunnel of the positron beam delivery system. A Ti:sapphire laser impinges on a photocathode with a strained GaAs/GaAsP superlattice structure, which will provide  $90\,\%$, electron polarisation at the source, resulting in $80\,\%$ polarisation at the interaction point. The design is based on the electron source of the SLAC accelerator. 
+
+Two concepts for positron production are considered:
+
+The baseline solution employs superconducting helical undulators at the end of the electron main linac producing circularly polarised photons, which are converted in rotating titanium target to  positrons with a $30\,\%$ longitudinal polarisation.
+This positron production scheme requires a fully commissioned electron linac delivering a beam close to $125\,{\mathrm{GeV}}$, which is a concern for commissioning and operation. 
+%The main technical challenges of this concept are the target and the photon dump. 
+%In addition, the undulator photon flux rapidly falls for electron energies below $125\,{\mathrm{GeV}}$, which is a concern for commissioning and operation.  
+An alternative design, the electron driven source, utilises a dedicated S-band electron accelerator to provide a $3\,{\mathrm{GeV}}$ beam that is used to produce electrons.
+% on a rotating titanium target. 
+%Electrons are produced over a timespan of $66\,{\mathrm{ms}}$, reducing the target heat load and the necessary rotation speed.
+%Technical challenges for this concept are radiation in the capture device and beam loading in the first accelerating cavities. 
+This source would not provide positron polarisation,
+but offer advantages for operation at lower electron beam energies and commissioning.
+% as its operation is independent  from the main linac electron beam, operation at lower electron beam energies is possible and commissioning can begin in parallel to electron source commissioning.
+
+Electrons and positrons are injected at $5\,{\mathrm{GeV}}$ into the centrally placed $3.2\,{\mathrm{km}}$ long damping ring complex, where their emittance is reduced to $2\,{\mathrm{pm}}$ ($5\,{\mathrm{\mu m}}$) in the horizontal (vertical) plane within $200\,{\mathrm{ms}}$. 
+These emittance numbers are well in line with the performance of today's storage rings for advanced light sources.
+To achieve the necessary damping time constant, the damping ring is equipped with $54$ superconducting wigglers. 
+
+The damped beams are transported to the beginning of the main accelerator by two low emittance beam transport lines. Two bunch compressor stages at $5$ and $15\,{\mathrm{GeV}}$ reduce the longitudinal bunch length to $300\,{\mathrm{\mu m}}$ before the beams are accelerated to $125\,{\mathrm{GeV}}$ in the two main linacs.
+
+The main linacs accelerate the beams in superconducting cavities made of niobium, operating at $1.3\,{\mathrm{GHz}}$ frequency and a temperature of $2.0\,{\mathrm{K}}$. 
+Each cavity has $9$ cells and is $1.25\,{\mathrm{m}}$ long. The mean accelerating gradient will be $31.5$ to $35\,{\mathrm{MV/m}}$.
+Cavities are mounted in $12\,{\mathrm{m}}$ long cryomodules that house $9$ cavities or $8$ cavities plus a quadrupole unit for beam focusing. 
+The cryomodules provide cooling and thermal shielding to the cavities and cryomodules, and contain all necessary pipes for fluid and gaseous helium at various temperatures, so that no separate helium transport line is necessary.
+Cryomodules of this type have been in continuous operation since 2000 in the TESLA Test Facility (TTF, now FLASH) at DESY,  proving their long-term stability. 
+Since September 2017, the European X-FEL at DESY has been in operation, utilizing 97 of these cryo modules. 
+Cost and performance estimates for the ILC cryomodules are based on the experience from these facilities, and thus can be regarded with high confidence. 
+
+The radiofrequency (RF) power for the cavities is generated by commercially available $10\,{\mathrm{MW}}$ klystrons with an efficiency of $65\,\%$. 
+The pulse modulators will be use a new, modular and cost-effective semiconductor design develped at SLAC, the MARX modulator.
+
+The cryogenic system design foresees six cryo plants for the main linacs with a size similar to the plants for one LHC octant; 
+two smaller plants would supply the central region including the preaccelerators of the sources and the damping rings. 
+
+Finally, the beam delivery system focuses the beams to the required size of $516\,{\mathrm{\mu m}} \times 7.7\,{\mathrm{nm}} $. 
+A feedback system, which profits from the relatively long inter bunch separation of $554\,{\mathrm{ns}}$, ensures the necessary beam stability. 
+The necessary nano-beam technology has been tested at the Accelerator Test Facility 2 (ATF-2) at KEK.
+
+
+The TDR baseline design was for a centre-of-mass energy of $\sqrt{s}=500\,{\mathrm{GeV}}$, upgradeable to a final energy of $1\,{\mathrm{TeV}}$.
+After the discovery of the Higgs boson in 2013 interest grew for an accelerator operating as a ``Higgs factory'' at $\sqrt{s}=250\,{\mathrm{GeV}}$, slightly above the maximum for $Zh$ production. 
+The design for a $250\,{\mathrm{GeV}}$ version of the ILC has recently been presented in a  staging report by the LCC directorate~\cite{Evans:2017rvt} and was endorsed by ICFA.
+
+The staged ILC version of the ILC  
+% (in the preferred ``option A'') 
+would have two main linac tunnels about half the length ($6$ instead of $11\, {\mathrm{km}}$) of the $500\,{\mathrm{GeV}}$ TDR design. 
+Other systems, in particular the beam delivery system and the main dumps, would retain the dimensions of the TDR design.
+Thus, the ILC-250 could be upgraded to energies of $500\,{\mathrm{GeV}}$ or even $1\,{\mathrm{TeV}}$ with a reasonable effort, without extensive modifications to the central region. 
+Recent studies of rock vibrations from tunnel excavation in granite rock indicate that the necessary additional main linac tunnels could be largely constructed with the ILC running, so that an energy upgrade could be realised with an interruption in data taking of a couple of years only, compatible with a smooth continuation of the physics programme.
+
+Another upgrade option, which could come before or after an energy upgrade, is a luminosity upgrade. 
+Doubling the luminosity by doubling number of bunches per pulse to $2625$ at a reduced bunch separation of $366\,{\mathrm{ns}}$ would require $50\,\%$ more klystrons and modulators and an increased cryogenic capacity. 
+The damping rings would also permit an increase of the pulse repetition rate from $5$ to $10\,{\mathrm{Hz}}$. 
+This would require a significant increase in cryogenic capacity, or running at a reduced gradient after an energy upgrade.
+% Both paths to a luminosity increase would pose large  stress for the positron source target and probably require its redesign, which would be a significant engineering challenge, but not a cost driver.
+The projections for the physics potential of the ILC at $250\,{\mathrm{GeV}}$ are based on a total integrated luminosity of $2\,{\mathrm{ab}}^{-1}$, which assumes at least one luminosity upgrade.
+
+The total project cost for the construction of the $250\,{\mathrm{GeV}}$ accelerator is estimated to be $5,260\,{\mathrm{MILCU}}$, where an ILCU (ILC Currency Unit) is defined as $1\,{\mathrm{US\$}}$ in 2012 terms, plus $17\,{\mathrm{Mh}}$ of work. 
+These numbers include the cost for civil engineering and the laboratory, while costs for land acquisition are exempt, as are R\&D costs before the construction start, and costs for the detectors.
+The estimate is an estimate of the median project cost, without contingency or management reserve.
+The cost premium to cover the project cost with $85\,\%$ instead of $50\,\%$ confidence level (loosely speaking, the $1\,\sigma$ uncertainty of the cost estimate) has been estimated to be $23\,\%$ of the estimated cost.
+
+The construction of the accelerator will require nine years after ground breaking, preceded by a four year preparation phase.
 
 \section{\label{sec:detect}Detectors and R\&D}
 
@@ -345,6 +486,20 @@ An important aspect of the detector concept work has been in addition to the dev
 1 page - Frank G. and Akiya
 
   Description of ILC software and computing requirements
+  
+  {\it Text on software : not written yet. }
+  
+  An initial computing concept for the ILC, including a first estimate of the required resources, has been developed by the LCC Software and Computing Group.
+This concepts follows in general terms that of other ongoing experiments at the LHC and Belle-2 with a strong on-site computing center, complemented with large
+Grid-based computing resources distributed around the world. However, due to he much lower event rates at the ILC, compared to the LHC, we will be
+able to run in an un-triggered mode where collision data from every bunch crossing will be recorded. At the experiment site we require only limited computing
+resources for online monitoring, QA and data buffering capabilities for a few days. Prompt reconstruction, event building and filtering of the interesting collisions
+will be performed at the main ILC campus, resulting in a data reduction of around 97\%. The reminder of the data will be distributed to major participating Grid sites
+in the world for further skimming and final redistributed for physics analysis.
+Based on detailed physics and background simulations we estimate the total raw data rate of the ILC to be $\sim$1.5GB/s, resulting in about 10-15 PB/y storage needs.
+The estimated computing power that will be needed for simulation, reconstruction and analysis will be around 200-300 kHepSpec06.
+Given that these numbers are already smaller than what is needed by the LHC experiments today and an expected annual increase of 15\% and 25\% for storage and CPU
+respectively at flat budget, we expect the overall computing costs for the ILC to be more than an order of magnitude small than those for the LHC.
 
 \section{\label{sec:discuss}Discussion}
 
@@ -412,8 +567,22 @@ paper on $\ee\to b\bar b$
   %%CITATION = ARXIV:1306.6327;%%
   %224 citations counted in INSPIRE as of 24 Sep 2017
 
+%\cite{Adolphsen:2013kya}
+\bibitem{Adolphsen:2013kya}
+  C.~Adolphsen {\it et al.},
+  %``The International Linear Collider Technical Design Report - Volume 3.II: Accelerator Baseline Design,''
+  arXiv:1306.6328 [physics.acc-ph].
+  %%CITATION = ARXIV:1306.6328;%%
+
+%\cite{Evans:2017rvt}
+\bibitem{Evans:2017rvt}
+  L.~Evans {\it et al.} [Linear Collider Collaboration],
+  %``The International Linear Collider Machine Staging Report 2017,'' 
+  arXiv:1711.00568 [physics.acc-ph].
+  %%CITATION = ARXIV:1711.00568;%%
 
 \end{thebibliography}
+
 
 
 \end{document}
