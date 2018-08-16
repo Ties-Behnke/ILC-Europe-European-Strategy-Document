@@ -140,7 +140,7 @@ the nature of dark matter and even the relationship of gravity.
 The effort to design and establish the technology for the linear collider 
 culminated in the publication of the Technical Design Report (TDR)
 for the International Linear Collider (ILC) in 2013~\cite{Behnke:2013xla}.
-The ILC presented in the TDR is a 200–500 GeV (extendable to 1 TeV) centre-of-mass 
+The ILC presented in the TDR is a 200-500 GeV (extendable to 1 TeV) centre-of-mass 
 high luminosity
 linear electron-positron collider, based on 1.3 GHz superconducting radio-frequency (SCRF)
 accelerating technology. 
@@ -255,7 +255,7 @@ effective field theory (EFT), new physics effects on the  Higgs boson
 couplings to $W$ and $Z$ are related to new physics effects on
 precision electroweak observables and in $\ee\to W^+W^-$.   This
 latter reaction can also be studied to high precision at an $\ee$
-collider.  Beam polarization at the ILC is at especially powerful tool
+collider.  Beam polarization at the ILC is an especially powerful tool
 to separate the contributions of different EFT
 coefficients.    In \cite{Barklow:2017suo}, it is shown that {\it all}
 relevant EFT
@@ -540,15 +540,41 @@ European groups have played a central role in these efforts. The ILD concept gro
 An important aspect of the detector concept work has been in addition to the development and demonstration of the technology the integration of the detector into the collider and into the proposed site. The location of the experiment in an earth-quake prone area poses challenges which have been addressed through R\& D on detector stability, support and service. The scheme to operate two detectors in one interaction region, the so called push-pull scheme, has no example and needed significant engineering work to demonstrate its feasibility. With strong support from particle physics laboratories in Europe, in  particular DESY and CERN, many of the most relevant questions could be answered and the feasibility of the approach could be demonstrated at least in principle. 
 
 
-\section{\label{sec:soft}Software}
 
-1 page - Frank G. and Akiya
+\section{\label{sec:soft}Software and Computing}
 
-  Description of ILC software and computing requirements
+[1 page - Frank G. and Akiya
+
+  Description of ILC software and computing requirements]
+
+The excellent and unprecedented detector resolution of the two proposed ILC detector concepts described
+in the previous section is of course crucial for meeting the ambitious physics goals
+defined for the ILC programme. However achieving the ultimate physics performance is only possible if it
+is complemented with powerful software tools at all levels of the data processing. This starts with the
+detailed detector description for simulation, followed by sophisticated event reconstruction algorithms
+and is completed with high-performance and easy to use tools for physics analyses.
+For over a decade the ILC community has developed and improved its software ecosystem, called \emph{iLCSoft}.
+At the heart of \emph{iLCSoft} are the common event data model LCIO, the Marlin application framework and the
+DD4hep detector description toolkit. These tools provide the basis for almost all linear collider related
+studies carried over the years, including those for CLIC and also recently for CEPC.
+From the start a strong focus has been put on developing flexible and generic tools that can easily be applied
+to other experiments or new detector concepts. This approach of developing common tools wherever possible
+has helped a lot in leveraging the limited manpower and putting the focus on the algorithm development that
+is crucial for the physics performance. Recent developments evolving around the Hep Software Foundation are
+now following a similar strategy, also for the LHC experiments.
+For both detectors there are simulation models with realistic descriptions of the detector technologies,
+the dead material, gaps, imperfections, as well as detector services. These models have been used for large
+scale Monte Carlo productions and physics analyses for the TDR and more recent detector optimization
+campaigns. Based on these studies, we already now have a rather good understanding of the expected
+detector performance and physics reach of the ILC.
+The development of \emph{iLCSoft} is a truly international activity, where European groups, in particular DESY and
+CERN have played a leading role and should continue to do so, if the ILC will be approved. In this case
+a strong focus will be on adapting the software tools for modern hardware architectures and continue to
+further improve the computing and physics performance of the algorithms.
+
+
   
-  {\it Text on software : not written yet. }
-  
-  An initial computing concept for the ILC, including a first estimate of the required resources, has been developed by the LCC Software and Computing Group.
+An initial computing concept for the ILC, including a first estimate of the required resources, has been developed by the LCC Software and Computing Group.
 This concepts follows in general terms that of other ongoing experiments at the LHC and Belle-2 with a strong on-site computing center, complemented with large
 Grid-based computing resources distributed around the world. However, due to he much lower event rates at the ILC, compared to the LHC, we will be
 able to run in an un-triggered mode where collision data from every bunch crossing will be recorded. At the experiment site we require only limited computing
