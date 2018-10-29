@@ -56,7 +56,18 @@
 %]{geometry}
 \usepackage{acronym}
 \usepackage{eurosym}
-\usepackage{booktabs}
+\usepackage{bbding}  %checkmark symbols
+\usepackage{rotating} %Rotate headers
+\usepackage{array}
+\usepackage{adjustbox}
+ \newcolumntype{R}[2]{%              
+     >{\adjustbox{angle=#1,lap=\width-(#2)}\bgroup}%
+     l%
+     <{\egroup}%
+ }
+\newcommand*\rot{\multicolumn{1}{R{45}{1em}}}% no optional argument here, please!
+
+
 \begin{document}
 
 \preprint{LCCPEB---}
@@ -291,26 +302,34 @@ After a call for ``letters of intent'' in 2009~\cite{Aihara:2009ad,Abe:2010aa}, 
 which were validated and then presented in Volume 4 of the ILC TDR ~\cite{Behnke:2013lya}.
 
 \subsection{ILC detector competence in Europe~\label{sec:det:competence}}
-Europe has participated strongly in the work on the ILC detector concepts and related technological developments. Initiated by the TESLA project at the start of the century, an international effort was put into place to develop the needed detector technologies. This is augmented by strong national support, but also by European programs like the EUDET initiative (2006-2010), the AIDA program (2011-2015) or the AIDA 2020 program (2016-2019). In Europe, both CERN and DESY act as a hub of activity and provide common infrastructures and facilities including test beams. Programs in Asia, in particular in Japan, and in the Americas also played an important role in the ILC concepts. 
+Europe has participated strongly in the work on the ILC detector concepts and 
+related technological developments. Initiated by the TESLA project at the start 
+of the century, an international effort was put into place to develop the needed 
+detector technologies. This is augmented by strong national support, but also by 
+European programs like the EUDET initiative (2006-2010), the AIDA program 
+(2011-2015) or the AIDA-2020 program (2016-2019). In Europe, both CERN and DESY 
+act as a hub of activity and provide common infrastructures and facilities 
+including test beams. Programs in Asia, in particular in Japan, and in the 
+Americas also played an important role in the ILC concepts. 
 
-\begin{table*}[t]
-\includegraphics[width=\hsize]{figures/ILCEAP-Matrices-detectors.pdf}
-\caption{\label{tab:PrePrep:detectors} An overview of recent activities in the area of ILC-related detector R\&D and integration in Europe. \bfseries{Juan's Survey 2015, may need Updates}}
-\end{table*}
+% \begin{table*}[t]
+% \includegraphics[width=\hsize]{figures/ILCEAP-Matrices-detectors.pdf}
+% \caption{\label{tab:PrePrep:detectors} An overview of recent activities in the area of ILC-related detector R\&D and integration in Europe. \bfseries{Juan's Survey 2015, may need Updates}}
+% \end{table*}
 
-% \begin{table}[htbp]
-%     \centering
-%     \begin{tabular}{l|c|c|c|c|c|c|c|c|c|c|c|}
-%                   &  CERN & DESY & Czech Republic & France & Germany & Israel & Netherlands & Norway & Poland & Spain & UK \\
-%          Vertexing &  & & & & & & & & & & \\ \midrule
-%          Tracking  &  & & & & & & & & & & \\ \midrule
-%          Calorimetry  &  & & & & & & & & & & \\ \midrule
-%          MDI  &  & & & & & & & & & & \\ \midrule
-%          Integration  &  & & & & & & & & & & \\ \bottomrule
-%     \end{tabular}
-%     \caption{An overview of recent activities in the area of ILC-related detector R\&D and integration in Europe. \bfseries{Juan's Survey 2015, may need Updates}}
-%     \label{tab:my_label}
-% \end{table}
+ \begin{table}[htbp]
+
+\begin{tabular}{l c c c c c c c c c c c c}
+           &  \rot{CERN} & \rot{DESY} & \rot{Czech Republic} & \rot{France} & \rot{Germany} & \rot{Israel} & \rot{Netherlands} & \rot{Norway} & \rot{Poland} & \rot{Serbia} & \rot{Spain} & \rot{UK} \\ \toprule
+\bfseries Vertexing  & \Checkmark	 &\Checkmark	&\Checkmark		 &\Checkmark	  &\Checkmark	    & 	     & 		   & 	    &\Checkmark	     & 	     &\Checkmark	     &  \Checkmark \\
+\bfseries Tracking   & \Checkmark	 &\Checkmark	& 		 &\Checkmark	  &\Checkmark	    & 	     &\Checkmark	 	   & 	    & 	     & 	     &\Checkmark      &  \Checkmark \\ 
+\bfseries Calorimetry& \Checkmark	 &\Checkmark	&\Checkmark		 &\Checkmark	  &\Checkmark	    &\Checkmark	     & 		   &\Checkmark	    &\Checkmark	     &\Checkmark	     &\Checkmark      &  \Checkmark \\ 
+\bfseries MDI        & \Checkmark	 &\Checkmark	& 		 & 	  & 	    & 	     & 		   &\Checkmark	    & 	     & 	     & 	     &  \Checkmark \\ 
+\bfseries Integration& \Checkmark	 &\Checkmark	& 		 &\Checkmark	  & 	    & 	     & 		   & 	    & 	     & 	     &\Checkmark	     &    \\ \botrule
+\end{tabular}
+\caption{An overview of recent activities in the area of ILC-related detector R\&D and integration in Europe based on a 2015 survey. \bfseries{Juan's Survey 2015, may need Updates}}
+\label{tab:PrePrep:detectors}
+\end{table}
 
 
 A summary of the recent activities in ILC-related detector R\&D is given in Table~\ref{tab:PrePrep:detectors}. 
