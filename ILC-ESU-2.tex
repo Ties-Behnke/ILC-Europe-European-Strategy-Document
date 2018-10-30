@@ -66,6 +66,16 @@
      <{\egroup}%
  }
 \newcommand*\rot{\multicolumn{1}{R{60}{1em}}}% no optional argument here, please!
+\usepackage{xspace}
+\usepackage[table]{xcolor}
+
+\newif\ifEdNotes \EdNotestrue
+\def\noednotes{\EdNotesfalse}
+\def\ednotes{\EdNotestrue}
+\newcommand{\doednote}[1]{{\color{red}(\textbf{Ed:} \textit{#1)}}}
+\newcommand{\ednote}[1]{\ifEdNotes 
+  \doednote{#1} 
+\fi}
 
 
 \begin{document}
@@ -119,14 +129,19 @@ Steinar, Jim, Juan, 1.5 pages
 
 \section{\label{sec:acc}Accelerator}
 
-Europe has a very strong scientific, technological and industrial basis to make significant contributions to the construction of virtually any part of the ILC accelerator. In following three subsections the past/current activities, the ILC preparation phase and the subsequent construction phase 
-will be described, from the perspective of European capabilities for and participation in constructing the ILC accelerator. A final subsection considers the organisation of the future ILC accelerator activities on the European side. 
+Europe has a very strong scientific, technological and industrial basis to make significant contributions to the construction of virtually 
+any part of the ILC accelerator. In following three subsections the past/current activities, the ILC preparation phase and the subsequent construction phase 
+will be described, from the perspective of European capabilities for and participation in constructing the ILC accelerator. 
+A final subsection considers the organisation of the future ILC accelerator activities on the European side. 
 
-\subsection{ILC accelerator competence in Europe~\label{sec:competence:accelerator}}
+\subsection{ILC accelerator competence in Europe~\label{sec:acc:competence}}
 
 The key recent and ongoing activities in Europe with high relevance for ILC are the direct
 European participation in the ILC Global Design Effort (GDE) and the Linear Collider Collaboration (LCC),
-the European XFEL project at DESY , the European Spallation Source (ESS) superconducting linac, the European participation in the ATF-2~\cite{Grishanov:2005ek,Grishanov:2006kx} at KEK for linear collider studies, the E-JADE Marie Curie project~\cite{ejade}, and the CLIC study~\cite{Aicheler:2012bya,Linssen:2012hp}. The following paragraphs will summarize these briefly, while a more comprehensive description can be found in ~\cite{ejade-report}. [ALL THESE NEED DEFINITION AND REFS - UNDERWAY]
+the European XFEL (E-XFEL) project at DESY , the European Spallation Source (ESS) superconducting linac, the European 
+participation in the ATF-2~\cite{Grishanov:2005ek,Grishanov:2006kx} at KEK for linear collider studies, the E-JADE Marie 
+Curie project~\cite{ejade}, and the CLIC study~\cite{Aicheler:2012bya,Linssen:2012hp}. The following paragraphs 
+will summarize these briefly, while a more comprehensive description can be found in ~\cite{ejade-report}. \ednote{ALL THESE NEED DEFINITION AND REFS - UNDERWAY}
 
 During 2007-2012 the ILC GDE was responsible for the coordination of the worldwide ILC accelerator design. 
 R\&D and cost-estimate development during this period culminated in the publication of the ILC Technical Design Report in 2013~\cite{Behnke:2013xla}. 
@@ -146,9 +161,9 @@ several related projects have allowed European researchers to continue activitie
 the last five years. These were to a large degree focused on studies for implementing a 250~GeV ILC machine in Japan. 
 These European activities are as follows:
 \begin{itemize}
-\item Participation in the LCC Accelerator Design and Integration (SCRF, Cryogenics, HLRF, Civil Engineering, Beam dump, Positron source, Radiation safety)
+\item Participation in the LCC Accelerator Design and Integration (SCRF, Cryogenics, High-Level RF (HLRF), Civil Engineering, Beam dump, Positron source, Radiation safety)
 \item Participation in the ATF-2 programme at KEK (nano beams and final focus)
-\item Combined studies with CLIC in several areas (beam-dynamics, modelling/simulation, damping rings, RTML, BDS, MDI, cost and power)
+\item Combined studies with CLIC in several areas (beam-dynamics, modelling/simulation, damping rings, RTML, Beam Delivery System(BDS), Machine-Detector Interface (MDI), cost and power)
 \item E-JADE supported secondments of European researchers to Japan for ILC and ATF-2 related activities.
 \end{itemize}
 These activities involves groups in Spain, France, DESY, UK, Italy and CERN. 
@@ -160,9 +175,8 @@ These activities involves groups in Spain, France, DESY, UK, Italy and CERN.
 %\%caption{\label{fig:PrePrep:gdelccadi} Current and recent common studies between European institutions and Japan relevant for the ILC in the framework of LCC (revise with Akira). In parallel several European groups have played leading role in the ATF-2 programme at KEK for linear collider nanobeam and final focus students, involving students and researchers from France, Spain, UK, CERN and DESY.}
 %\end{table}
 
-\vspace{0.15cm}
-Beyond the activities described above, the XFEL project at DESY is nevertheless the most prominent example of European capabilities for contributing to construction of the ILC accelerator.
-The 17.5~GeV superconducting linac at the European XFEL at DESY, comprises 100 superconducting ILC-like cryomodules (800 1.3~GHz TESLA cavities) driven by 25 10~MW multibeam klystrons. The XFEL linac configuration is very similar to that foreseen for the ILC and can be seen as a 7\% (in energy) ILC prototype. The cryomodules were produced by a consortium of six European countries together with predominantly European industries. The consortium members and the various responsibilities across the linac-relevant XFEL work packages (including testing) are given in Table~\ref{tab:PrePrep:XFELResponsibilities}.
+Beyond the activities described above, the European XFEL project at DESY is nevertheless the most prominent example of European capabilities for contributing to construction of the ILC accelerator.
+The 17.5~GeV superconducting linac at the E-XFEL at DESY, comprises 100 superconducting ILC-like cryomodules (800 1.3~GHz TESLA cavities) driven by 25 10~MW multibeam klystrons. The E-XFEL linac configuration is very similar to that foreseen for the ILC and can be seen as a 7\% (in energy) ILC prototype. The cryomodules were produced by a consortium of six European countries together with predominantly European industries. The consortium members and the various responsibilities across the linac-relevant E-XFEL work packages (including testing) are given in Table~\ref{tab:acc:XFELResponsibilities}.
 
 % \begin{table*}[t]
 % \includegraphics[width=\textwidth]{figures/ILCEAP-Matrices-XFEL.pdf}
@@ -187,23 +201,32 @@ Cryogenics		&\Checkmark&&&&&\\\hline
 AMTF hall		&\Checkmark&&&&&\\
 \end{tabular}
 
-\caption{\label{tab:PrePrep:XFELResponsibilities} Responsibility matrix for cryomodule production and testing for the European XFEL. More details and a similar matrix can be found in ~\cite{ejade-report} concerning construction of SCRF modules for ESS. The latter also includes Sweden and UK as well as new groups in several of the countries already involved in the E-XFEL construction. The ESS effort is also strategically important for ILC as infrastructures and industries are being updated and procedures are improving also today.} 
+\caption{\label{tab:acc:XFELResponsibilities} Responsibility matrix for cryomodule production and testing for the European XFEL. 
+More details and a similar matrix can be found in ~\cite{ejade-report} concerning construction of SCRF modules for the ESS. 
+The latter also includes Sweden and UK as well as new groups in several of the countries already involved in the E-XFEL construction. 
+The ESS effort is also strategically important for ILC as infrastructures and industries are being updated and procedures are improving also today.} 
 \end{table}
 
-Construction of the European XFEL is now complete, and the SCRF linac has been brought into operation. The XFEL can directly benefit the ILC in several ways: 
+Construction of the European XFEL is now complete, and the SCRF linac has been brought into operation. The E-XFEL can directly benefit the ILC in several ways: 
 \begin{itemize}
 \item The experience and knowledge gained during the unprecedented industrial
 production of 100 cryomodules over a three-year period can provide 
-invaluable input to any future large-scale production for the ILC. The detailed cost breakdown of the XFEL cryomodules provides a solid basis for any future projection of a possible European in-kind contribution to the ILC. 
+invaluable input to any future large-scale production for the ILC. The detailed cost breakdown of the E-XFEL cryomodules 
+provides a solid basis for any future projection of a possible European in-kind contribution to the ILC. 
 \item 
-The currently ongoing commissioning of the XFEL and its future operation will provide invaluable ``system testing'' for the ILC, including understanding the ultimate performance of the modules with beam loading, beam control (LLRF development), software tools, and more general operational experience. 
-\item The infrastructure that was constructed for XFEL cavity and module 
+The currently ongoing commissioning of the E-XFEL and its future operation will provide invaluable ``system testing'' for the ILC, 
+including understanding the ultimate performance of the modules with beam loading, beam control (LLRF development), software tools, 
+and more general operational experience. 
+\item The infrastructure that was constructed for E-XFEL cavity and module 
 testing, high-power coupler conditioning and module assembly will continue to be maintained, and (in the case of the testing infrastructure) will provide a significant support for SCRF R\&D.
 \end{itemize}
 
-The expertise and infrastructures established for the E-XFEL are now deployed in the construction of SCRF modules for ESS construction of SCRF modules for ESS. The consortium is slightly different with Sweden and UK joining, DESY for obvious reasons less involved, and several new groups from countries already involved in the E-XEL. The ESS effort is also strategically important for ILC as it ensures that infrastructures and industries are being updated and procedures are improving also today.
+The expertise and infrastructures established for the E-XFEL are now deployed in the construction of SCRF modules for the construction of SCRF modules for the ESS. 
+The consortium is slightly different with Sweden and UK joining, DESY for obvious reasons less involved, and several new groups from countries already 
+involved in the E-XEL. The ESS effort is also strategically important for ILC as it ensures that infrastructures and industries 
+are being updated and procedures are improving also today.
 
-\subsection{ILC accelerator preparation phase activities in Europe ~\label{sec:prepphase:accelerator}}
+\subsection{ILC accelerator preparation phase activities in Europe ~\label{sec:acc:prephase}}
 
 The overall resources needed during the four-year preparation phase are estimated to be 5\% of the material and 10\% of the personnel 
 foreseen for the initial 250~GeV accelerator project construction. Irrespective of the final level of European investment into the ILC, 
@@ -221,11 +244,17 @@ The preparation phase will be used for three main purposes:
 
 \begin{itemize}
 \item 
-Technical preparation of the major European deliverables foreseen for the construction phase. This covers final technical specifications, final prototypes, the preparation of pre-series orders and the preparation of local facilities. A particularly important point for Europe is the transfer of European XFEL know-how and the preparation of the relevant facilities for ILC construction.
+Technical preparation of the major European deliverables foreseen for the construction phase. 
+This covers final technical specifications, final prototypes, the preparation of pre-series orders and the preparation of local 
+facilities. A particularly important point for Europe is the transfer of European XFEL know-how and the preparation of the 
+relevant facilities for ILC construction.
 \item
-The other key technical activity will be the organisation of a strong European design office for ILC that will liaise with other such offices: there will certainly be a host-lab office in Japan, but additional international design offices will be required. In Europe, the installation of a central European Design Office at CERN with satellite offices in other European laboratories is considered the most viable model.
+The other key technical activity will be the organisation of a strong European design office for ILC that will liaise with 
+other such offices: there will certainly be a host-lab office in Japan, but additional international design offices will be 
+required. In Europe, the installation of a central European Design Office at CERN with satellite offices in other European laboratories is considered the most viable model.
 \item 
-The third key activity in the preparation phase will be negotiations about the final European ILC contributions, about the organisation of the project in the construction and operation phase, and about a future governance model for the ILC. These issues are discussed in further chapters of this document.
+The third key activity in the preparation phase will be negotiations about the final European ILC contributions, about the 
+organisation of the project in the construction and operation phase, and about a future governance model for the ILC. These issues are discussed in further chapters of this document.
 \end{itemize}
 
 The key activities are summarised in table~\ref{fig:prep-phase-summary} - unify format.
