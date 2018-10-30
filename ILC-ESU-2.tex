@@ -60,15 +60,19 @@
 \usepackage{rotating} %Rotate headers
 \usepackage{array}
 \usepackage{adjustbox}
+\usepackage{xspace} 
+\usepackage[table]{xcolor} %color 
+
+%fancy table formatings
  \newcolumntype{R}[2]{%              
      >{\adjustbox{angle=#1,lap=\width-(#2)}\bgroup}%
      l%
      <{\egroup}%
  }
 \newcommand*\rot{\multicolumn{1}{R{60}{1em}}}% no optional argument here, please!
-\usepackage{xspace}
-\usepackage[table]{xcolor}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
+%ednotes
 \newif\ifEdNotes \EdNotestrue
 \def\noednotes{\EdNotesfalse}
 \def\ednotes{\EdNotestrue}
@@ -76,6 +80,8 @@
 \newcommand{\ednote}[1]{\ifEdNotes 
   \doednote{#1} 
 \fi}
+
+\newcommand{\epem}{\mbox{${\rm e}^+{\rm e}^-$}}
 
 
 \begin{document}
@@ -184,21 +190,21 @@ The 17.5~GeV superconducting linac at the E-XFEL at DESY, comprises 100 supercon
 % \end{table*}
 
 \begin{table}[htbp]
-\begin{tabular}{l|c|c|c|c|c|c|}
+\begin{tabular}{l|C{0.6cm}|C{0.6cm}|C{0.6cm}|C{0.6cm}|C{0.6cm}|C{0.6cm}|}
 
 	& \rot{\bfseries Germany}& \rot{\bfseries France}&\rot{\bfseries Italy}&\rot{\bfseries Poland}&\rot{\bfseries Russia}&\rot{\bfseries Spain} \\\hline
-\bfseries Linac&&&&&&\\\hline
-Cryomodules		&\Checkmark&\Checkmark&\Checkmark&&&\\
-SCRF Cavities		&\Checkmark&&\Checkmark&&&\\
-Couplers and Tuners	&\Checkmark&\Checkmark&&\Checkmark&&\\
-Cold Vacuum		&\Checkmark&&&&\Checkmark&\\
-Cavity String Assembly	&\Checkmark&\Checkmark&&&&\\
-SC Magnets		&\Checkmark&&&\Checkmark&&\Checkmark\\\hline
-\bfseries Infrastructure&&&&&&\\\hline
-AMTF			&\Checkmark&&&\Checkmark&\Checkmark&\\
-Cryogenics		&\Checkmark&&&&&\\\hline
-\bfseries Sites \& Buildings&&&&&&\\\hline
-AMTF hall		&\Checkmark&&&&&\\
+\bfseries Linac&&&&&&\\[5pt]\hline
+\hspace{0.3cm}Cryomodules		&\Checkmark&\Checkmark&\Checkmark&&&\\[5pt]
+\hspace{0.3cm}SCRF Cavities		&\Checkmark&&\Checkmark&&&\\[5pt]
+\hspace{0.3cm}Couplers and Tuners	&\Checkmark&\Checkmark&&\Checkmark&&\\[5pt]
+\hspace{0.3cm}Cold Vacuum		&\Checkmark&&&&\Checkmark&\\[5pt]
+\hspace{0.3cm}Cavity String Assembly	&\Checkmark&\Checkmark&&&&\\[5pt]
+\hspace{0.3cm}SC Magnets		&\Checkmark&&&\Checkmark&&\Checkmark\\[5pt]\hline
+\bfseries Infrastructure&&&&&&\\[5pt]\hline
+\hspace{0.3cm}AMTF			&\Checkmark&&&\Checkmark&\Checkmark&\\[5pt]
+\hspace{0.3cm}Cryogenics		&\Checkmark&&&&&\\[5pt]\hline
+\bfseries Sites \& Buildings&&&&&&\\[5pt]\hline
+\hspace{0.3cm}AMTF hall		&\Checkmark&&&&&\\[5pt] \hline
 \end{tabular}
 
 \caption{\label{tab:acc:XFELResponsibilities} Responsibility matrix for cryomodule production and testing for the European XFEL. 
@@ -306,10 +312,10 @@ European contribution of around {\bfseries ??\%} to the ILC accelerator project.
 
 Figure~\ref{fig:constructionmodel:ILCPrimaryCostDrivers} shows the primary cost drivers of the ILC as identified in the TDR~\cite{Adolphsen:2013kya}. The dominant cost driver is the production of approximately 930 SCRF cryomodules. Given European expertise, 
 existing infrastructure, and proven industrial capability arising from the construction 
-of the European XFEL and ESS, it is widely assumed that a large fraction of the European in-kind contribution 
+of the E-XFEL and ESS, it is widely assumed that a large fraction of the European in-kind contribution 
 will be in the form of cryomodules. The ILC TDR assumed that three, possibly four, production sites 
 would be required worldwide. 
-The European XFEL has been constructed by a consortium of several European countries, with DESY providing overall coordination. Based on this experience and the known published cost of the XFEL cryomodules, we have produced a model for producing and testing one-third of the cryomodule production (310 cryomodules). This model has then been used to scale to other possible contribution scenarios discussed below.The resulting cost per cryomodule is about 1.56 M\euro{} (material and labour), including module production and 100\% testing of cavities and cryomodules, which represents an approximate reduction of 30\% over the actual XFEL cost. This reduction has been estimated through the higher production numbers and the re-use of existing XFEL production and testing infrastructure.  Where applicable, a mild learning curve slope of 95\% has been applied, assuming two vendors for procurement of all major sub components. (REVISE NOW WITH LOWER NUMBER).
+The European XFEL has been constructed by a consortium of several European countries, with DESY providing overall coordination. Based on this experience and the known published cost of the E-XFEL cryomodules, we have produced a model for producing and testing one-third of the cryomodule production (310 cryomodules). This model has then been used to scale to other possible contribution scenarios discussed below.The resulting cost per cryomodule is about 1.56 M\euro{} (material and labour), including module production and 100\% testing of cavities and cryomodules, which represents an approximate reduction of 30\% over the actual E-XFEL cost. This reduction has been estimated through the higher production numbers and the re-use of existing E-XFEL production and testing infrastructure.  Where applicable, a mild learning curve slope of 95\% has been applied, assuming two vendors for procurement of all major sub components. \ednote{REVISE NOW WITH LOWER NUMBER}.
 
 Europe not only has expertise in cryomodule production, but also in many other 
 of the subsystems required for the ILC. A European contribution to ILC could 
@@ -337,7 +343,6 @@ Spain	&x,e	&	&	&		&a		&		&c,g			&\\
 Sweden	&e	&	&	&		&		&		&g			&\\
 Switzerland& 	&	&	&		&x,c		&		&			&\\
 UK	&e	&	&g	&g		&c,g,a		&c,g,a		&c,g,a			&\\
-    
 \end{tabular}
 \caption{The Eu}
 \end{table*}
@@ -363,21 +368,9 @@ Top: capital costs. Bottom: explicit personnel in FTE.
 
 
 \subsection{\label{sec:acc-org}Organisation of the accelerator activities}
-[FROM EJADE REPORT - WRITE HERE ABOUT ACC.,  MOVE DET. PART TO III.D]
+\ednote{[FROM EJADE REPORT - WRITE HERE ABOUT ACC.,  MOVE DET. PART TO III.D]}
 In this short chapter we discuss possible organisation forms of a European 
-participation in the ILC. Traditionally, European groups have participated in 
-projects outside of CERN using bilateral agreements between the individual 
-European countries and the host nation. One examples for these is the European 
-participation in the B-factories at SLAC and KEK or in the Tevatron programme at 
-Fermilab.
-
-More recently, the European participation in the long-baseline neutrino 
-programme at Fermilab (LBNF/DUNE), while still being negotiated in the 
-traditional bilateral way, has been augmented by the European Neutrino Platform 
-hosted by CERN, which offers technical infrastructure and support for European 
-groups working on detector and other contributions to long-baseline neutrino 
-projects. CERN is also now formally a member of the DUNE collaboration.
-
+participation in the ILC. 
 On the accelerator side, the typical model is based on a leading host laboratory supported by 
 bi-lateral agreements for in-kind deliverables from other funding agencies and 
 laboratories. This was the model used during the LHC construction. 
@@ -385,7 +378,16 @@ The exact organisation of Europe's contribution to the ILC is not clear as of to
 and beyond the scope of this document. In any case, our current assumption is that 
 CERN will play a leading role in the European participation in the ILC.
 
-
+\ednote{Also from Action Plan}
+Given the physics interests in a future \epem accelerator, the ILC project is likely to imply a substantial investment from
+the European perspective. This fact highlights the necessity for a high-level
+agreement about the level of European participation in ILC to be formalised between 2020
+and 2023 if the currently assumed time-line of the ILC project is to be respected. Various
+financing models for European contribution can be envisaged, including bilateral agreements
+between Japan and European partners and models combining CERN resources with direct bilateral
+agreements. The organisation of the European efforts towards a coherent contribution to ILC
+from Europe, scientifically and technically with CERN in a leading coordinating role, seems to be
+the most realistic and effective scenario.
 
 
 \section{\label{sec:det}Detector}
@@ -416,13 +418,13 @@ Americas also played an important role in the ILC concepts.
 
  \begin{table}[htbp]
 
-\begin{tabular}{l c c c c c c c c c c c c}
-           &  \rot{ \bfseries CERN} & \rot{ \bfseries DESY} & \rot{ \bfseries Czech Republic} & \rot{ \bfseries France} & \rot{ \bfseries Germany} & \rot{ \bfseries Israel} & \rot{ \bfseries Netherlands} & \rot{ \bfseries Norway} & \rot{ \bfseries Poland} & \rot{ \bfseries Serbia} & \rot{ \bfseries Spain} & \rot{ \bfseries UK} \\ \toprule
-\bfseries Vertexing  & \Checkmark 	 &\Checkmark	&\Checkmark		 &\Checkmark	  &\Checkmark	    & 	     & 		   & 	    &\Checkmark	     & 	     &\Checkmark	     &  \Checkmark \\
-\bfseries Tracking   & \Checkmark	 &\Checkmark	& 		 &\Checkmark	  &\Checkmark	    & 	     &\Checkmark	 	   & 	    & 	     & 	     &\Checkmark      &  \Checkmark \\ 
-\bfseries Calorimetry& \Checkmark	 &\Checkmark	&\Checkmark		 &\Checkmark	  &\Checkmark	    &\Checkmark	     & 		   &\Checkmark	    &\Checkmark	     &\Checkmark	     &\Checkmark      &  \Checkmark \\ 
-\bfseries MDI        & \Checkmark	 &\Checkmark	& 		 & 	  & 	    & 	     & 		   &\Checkmark	    & 	     & 	     & 	     &  \Checkmark \\ 
-\bfseries Integration& \Checkmark	 &\Checkmark	& 		 &\Checkmark	  & 	    & 	     & 		   & 	    & 	     & 	     &\Checkmark	     &    \\ \botrule
+\begin{tabular}{l |c |c |c |c |c |c |c |c |c |c |c |c|}
+           &  \rot{ \bfseries CERN} & \rot{ \bfseries DESY} & \rot{ \bfseries Czech Republic} & \rot{ \bfseries France} & \rot{ \bfseries Germany} & \rot{ \bfseries Israel} & \rot{ \bfseries Netherlands} & \rot{ \bfseries Norway} & \rot{ \bfseries Poland} & \rot{ \bfseries Serbia} & \rot{ \bfseries Spain} & \rot{ \bfseries UK} \\[5pt]\hline 
+\bfseries Vertexing  & \Checkmark 	 &\Checkmark	&\Checkmark		 &\Checkmark	  &\Checkmark	    & 	     & 		   & 	    &\Checkmark	     & 	     &\Checkmark	     &  \Checkmark \\[5pt]
+\bfseries Tracking   & \Checkmark	 &\Checkmark	& 		 &\Checkmark	  &\Checkmark	    & 	     &\Checkmark	 	   & 	    & 	     & 	     &\Checkmark      &  \Checkmark \\[5pt] 
+\bfseries Calorimetry& \Checkmark	 &\Checkmark	&\Checkmark		 &\Checkmark	  &\Checkmark	    &\Checkmark	     & 		   &\Checkmark	    &\Checkmark	     &\Checkmark	     &\Checkmark      &  \Checkmark \\[5pt] 
+\bfseries MDI        & \Checkmark	 &\Checkmark	& 		 & 	  & 	    & 	     & 		   &\Checkmark	    & 	     & 	     & 	     &  \Checkmark \\ [5pt]
+\bfseries Integration& \Checkmark	 &\Checkmark	& 		 &\Checkmark	  & 	    & 	     & 		   & 	    & 	     & 	     &\Checkmark	     &    \\[5pt]\hline
 \end{tabular}
 \caption{An overview of recent activities in the area of ILC-related detector R\&D and integration in Europe based on a 2015 survey~\cite{FusterECFA2016}.}
 \label{tab:PrePrep:detectors}
@@ -458,7 +460,7 @@ been dominated by European groups. Last but not least Europe has played a
 central role in the Machine-Detector-Interface (MDI) and integration issues of 
 both detectors.
 
-\subsection{ILC Detector preparation phase activities in Europe~\label{sec:prepphase:detectors}}
+\subsection{ILC Detector preparation phase activities in Europe~\label{sec:det:prepphase}}
 The community is well prepared to move forward quickly once the ILC turns into a 
 real project. We anticipate that the detector construction will follow a path 
 similar to that of the LHC detectors. Once the ILC laboratory has been formed, 
@@ -516,9 +518,9 @@ taken.
 \end{itemize}
 
 \subsubsection{Computing}
-Ties, what do we put there ...
+\ednote{Ties, what do we put there ...}
 
-\subsection{\label{Section:constructionmodel:ILCDet} Estimation of a
+\subsection{\label{sec:det:constructionmodel} Estimation of a
 European in-kind contribution to the ILC detectors}
 
 In high-energy physics, the financial contribution to the detector
@@ -530,8 +532,22 @@ in the community, possibly somewhere in between Belle-II and the LHC.
 
 Taking the cost numbers from the ILC TDR~\cite{Behnke:2013lya}, the European share for the detector construction 
 is approximately 270~M\euro{}, which is comparable to the cost for the ongoing upgrade of the LHC detector for the HL-LHC. 
-At the moment some 45 institutions from 14 European countries have {\bfseries where does this number come from ?} expressed 
+At the moment some 45 institutions from 14 European countries have \ednote{ where does this number come from ?} expressed 
 an interest to participate in ILC related detector work, a number, which is going to increase after the ILC approval.
+
+\subsection{\label{sec:det:Organisation} Organisation of the detector activities}
+Traditionally, European groups have participated in projects outside of CERN using bilateral agreements between the individual 
+European countries and the host nation. One examples for these is the European 
+participation in the B-factories at SLAC and KEK or in the Tevatron programme at 
+Fermilab.
+
+More recently, the European participation in the long-baseline neutrino 
+programme at Fermilab (LBNF/DUNE), while still being negotiated in the 
+traditional bilateral way, has been augmented by the European Neutrino Platform 
+hosted by CERN, which offers technical infrastructure and support for European 
+groups working on detector and other contributions to long-baseline neutrino 
+projects. CERN is also now formally a member of the DUNE collaboration.
+
 
 \section{\label{sec:discussion}Discussion}
 
