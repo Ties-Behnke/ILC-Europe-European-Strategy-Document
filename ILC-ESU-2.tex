@@ -81,6 +81,9 @@
   \doednote{#1} 
 \fi}
 
+\newcommand\Tstrut{\rule{0pt}{2.9ex}}         % "top" strut
+\newcommand\Bstrut{\rule[-1.2ex]{0pt}{0pt}}   % "bottom" strut
+\newcommand\TBstrut{\Tstrut\Bstrut}           % "top and bottom" strut
 \newcommand{\epem}{\mbox{${\rm e}^+{\rm e}^-$}}
 
 
@@ -331,8 +334,9 @@ technical components, not including CFS, installation or SCRF cryomodules.
 \ednote{Discuss European matrix (TABLE 3).}
 
 \begin{table*}
+
 \begin{tabular}{l|C{1.8cm}|C{1.8cm}|C{1.8cm}|C{1.8cm}|C{1.8cm}|C{1.8cm}|C{1.8cm}|C{1.8cm}|}
- 	&\bfseries SCRF	& \bfseries HLRF	&\bfseries Sources&\bfseries Damping Rings	&\bfseries Instru\-mentation&\bfseries Beam Dynamics	&\bfseries Beam Delivery System	&\bfseries Cryogenics \\\hline
+  	&\bfseries SCRF	& \bfseries HLRF	&\bfseries Sources&\bfseries Damping Rings	&\bfseries Instru\-mentation&\bfseries Beam Dynamics	&\bfseries Beam Delivery System	&\bfseries Cryogenics \\\hline\Tstrut
 CERN	&	&C,O	&O	&G,C,O		&C,G		&C,G		&C,G			&O\\
 France	&X,E,G	&	&G	&		&A,G		&G		&C,G			&\\
 Germany	&X,G	&	&G	&G		&		&G		&			&O\\
@@ -342,10 +346,11 @@ Russia	&X	&	&G	&		&		&		&			&\\
 Spain	&X,E	&	&	&		&A		&		&C,G			&\\
 Sweden	&E	&	&	&		&		&		&G			&\\
 Switzerland& 	&	&	&		&X,C		&		&			&\\
-UK	&E	&	&G	&G		&A,C,G		&C,G,A		&C,G,A			&\\                                        \hline
+UK	&E	&	&G	&G		&A,C,G		&C,G,A		&C,G,A			&\\ \hline
 \end{tabular}
+
 \caption{The past European capabilities for the ILC accelerator construction. This is based on two major construction projects, the  E-XFEL (X) and the ESS (E),  
-several more R\&D oriented efforts, the GDE/LCC (G), ATF-2 (A), CLIC and  experiences in other accelerator projects (O)}
+several more R\&D oriented efforts namely the GDE/LCC (G), ATF-2 (A), CLIC and  experiences in other accelerator projects (O)}
 \end{table*}
 
 
