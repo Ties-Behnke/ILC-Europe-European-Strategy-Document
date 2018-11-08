@@ -20,6 +20,7 @@
 %
 \documentclass[%
  reprint,
+ floatfix,
 %superscriptaddress,
 %groupedaddress,
 %unsortedaddress,
@@ -523,8 +524,17 @@ on these reports the final decisions on which detectors will be build will be
 taken. 
 \end{itemize}
 
-\subsubsection{Computing}
-\ednote{Ties, what do we put there ...}
+\subsection{Computing}
+As it has been pointed out in the overall document on ILC computing and data handling are key to a sucessful feasibility study for the ILC. The ILC community has from the start invested into generic, broadly usuable tools. Starting from the initial development of a generic and detector-independent data format, the LCIO framework, a powerful and at the same time comparativly simple software infrastructure has been developed. All parts needed to simulate and to analyse events from the ILC are available to the community. They are shared by ILC and CLIC, the concpet groups, and most of the R\&D groups working on ILC related studies. 
+
+Europe has played a central and driving force in this endeavour. Strongly supported by both DESY and CERN the software tools described in the ILC document have been developed and are maintained. European support in programs like EUDET, AIDA and AIDA2020 has been central to expand the system into the use at test beam experiments and beyond the ILC community.
+
+A key motivation for investing into this software and computing infrastructure has been to enable realistic and reliable studies on the science potential of the ILC. The availability of such centrally maintained software tools has been a key element in the capability of the community to develop serious and well tested scenarios, do feasibility analyses, and to include as  much as possible aspects of real detectors and of backgrounds into the studies. 
+
+Different from the LHC computing, where a lot of the efforts are driven by pure size and data volume, the anticipated data rate from an ILC experiment are smaller by at least one order of magnitude. This allows a very different approach to computing, where a lot even of the very first data screening is done in software and after the events have been stored. This requires the development of fast reconstruction algorithms, but at the same time allows sophisticated routines and approaches to data filtering. 
+
+The computing architechture needed for ILC will follow the one for the LHC, but will be less challinging in terms of data rate and data size. While significant resources are needed to serve the experiments, these demands could be met already today without problems. It is abticipated that a structure similar to the LHC computing grid structure in place when the ILC will start delivering data will be installed in Europe and will cope with the data flow easily. 
+The major computing challenge at the ILC will be the development and provision of advanced reconstruction and analysis tools, which will be capable of meeting the very challenging precision goals at the ILC. Significant further developments will be needed in the next years towards a startup of an ILC experiment, to meet the requirements. In many cases the requirements for these systems will go significantly beyond current LHC systems, and will require significant development work. Europe is in an excellent position to play a leading role in this part of the ILC project, based on its experience in LHC computing, and its contributions to the ongoing ILC computing efforts. 
 
 \subsection{\label{sec:det:constructionmodel} Estimation of a
 European in-kind contribution to the ILC detectors}
