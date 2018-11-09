@@ -564,7 +564,7 @@ The main boundary conditions are:
 \begin{figure}[tb]
  %\epsfysize=9.0cm
  \begin{center}
- \includegraphics[width=0.8\hsize,angle=-90]{figures/ILD.pdf}
+ \includegraphics[width=0.7\hsize,angle=-90]{figures/ILD.pdf}
 \caption{The ILD detector concept.
 \label{fig_ild}}
  \end{center}
@@ -573,7 +573,7 @@ The main boundary conditions are:
  
 \begin{itemize}
  \item The detector has to have an excellent track momentum
-   resolution. The benchmark reaction here is the analysis 
+   resolution, of about $2 \times 10^{-5} \mathrm{GeV}^-1$. The benchmark reaction here is the analysis 
 of the di-lepton mass in the process $HZ \to H \ell^+
 \ell^-$. This reaction allows the reconstruction of the 
 Higgs mass independent of its decay mode via the 
@@ -590,7 +590,7 @@ a large fraction of the Higgs decays has bottom
 quarks in the final state. Many other physics signatures will 
 produce complex final states with bottom or charm quarks as well. 
 A supreme vertex detector therefore is needed to reconstruct these 
-long lived particles with excellent resolution. 
+long lived particles with excellent resolution. As a typical number the position of the reconstructed secondary vertex should be found with a precision of better than $4 \mu m$. 
 \item The overall event is best reconstructed with the 
 particle flow measurement. The particle flow technique combines 
 the information from the tracking systems and from the 
@@ -599,7 +599,7 @@ energy and the direction of all charged and
 neutral particles in the event. To minimize overlaps between 
 neighboring particles, and to maximize the probability to 
 correctly combine tracking and calorimeter information, 
-excellent calorimeters are needed with very high granularity. 
+excellent calorimeters are needed with very high granularity. As a goal, a jet energy resolution of $3 \%$ has been agreed upon as a goal - which is about twice as good as the equivalent number for the LHC detectors. 
 \item Many physics signatures predict some undetectable particles, 
 which escape from the detector. They can only be reconstructed by 
 measuring the missing energy in the event. This requires 
@@ -619,7 +619,7 @@ beampipe in the forward direction.
  \end{figure}
 
 Compared to the last large scale detector project in particle physics, the construction and upgrade of the LHC detectors, the emphasis for linear collider detectors is shifted towards ultimate precision. This requires \jim{detector technologies} 
-with new levels of performance and minimisation of dead material in the detector, at an unprecedented level. This also requires management and control of services and, in particular, thermal management of the detector concept. Significant technological R\&D was needed to demonstrate the feasibility, and is, in fact, still ongoing, as \jim{is} discussed in the \jim{next} section.  
+with new levels of performance and minimisation of dead material in the detector, at an unprecedented level. This also requires management and control of services and, in particular, thermal management of the detector concept. As a benchmark the total material in fron of the electromagnetic calorimeter should not exceed a few percent. Significant technological R\&D was needed to demonstrate the feasibility, and is, in fact, still ongoing, as \jim{is} discussed in the \jim{next} section.  
 
 
 
@@ -722,10 +722,14 @@ This concepts follows in general terms that of other ongoing experiments at the 
 Grid-based computing resources distributed around the world. However, due to the much lower event rates at the ILC, compared to the LHC, we will be
 able to run in an un-triggered mode where collision data from every bunch crossing will be recorded. At the experiment site we require only limited computing
 resources for online monitoring, QA and data buffering capabilities for a few days. Prompt reconstruction, event building and filtering of the interesting collisions
-will be performed at the main ILC campus, resulting in a data reduction of around 97\%. The remainder of the data will be distributed to major participating Grid sites
-in the world for further skimming and final redistribution for physics analysis.
-Based on detailed physics and background simulations we estimate the total raw data rate of the ILC to be $\sim$1.5GB/s, resulting in about 10-15 PB/y storage needs.
-The estimated computing power that will be needed for simulation, reconstruction and analysis will be around 200-300 kHepSpec06.
+will be performed at the main ILC campus.
+%, resulting in a data reduction of around 97\%. The remainder of the data 
+A few percent of the initial data will be distributed to major participating Grid sites
+in the world for further skimming and final redistribution for physics analysis. A copy of the raw data from all bunch crossings will be kept to allow for future searches for new exotic signatures. 
+Based on detailed physics and background simulations we estimate the total raw data rate of the ILC to be $\sim$1.5GB/s.
+%, resulting in about 10-15 PB/y storage needs.
+The total estimated storage needs will be a few tens of PB/y and
+the the computing power needed for simulation, reconstruction and analysis will be few hundred kHepSpec06.
 Given that these numbers are already smaller than what is needed by the LHC experiments today and an expected annual increase of 15\% and 20\% for storage and CPU
 respectively at flat budget, we expect the overall computing costs for the ILC to be more than an order of magnitude smaller than those for the LHC.
 
