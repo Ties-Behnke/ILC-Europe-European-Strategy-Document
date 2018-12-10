@@ -4,11 +4,22 @@
 
 % CHAPTER ON ILC MACHINE
 
+{\it Status: Dec 9, 2018}
+
 {\it Some introduction here- 1 page. 
 
 Includes general design principle (low power consumption) and some history.}
 
 %===============================================================================
+ \begin{figure*}[tb]
+ %\epsfysize=9.0cm
+ \begin{center}
+ \includegraphics[width=\hsize]{chapters/figures/TDR-machine-layout-cartoon-staged-mirror.pdf}
+\caption{Schematic layout of the ILC in the $250\,{\mathrm{GeV}}$ staged configuration.
+\label{fig_ilc-schematic}}
+ \end{center}
+ \end{figure*}
+
 
 
 \subsection{Superconducting RF Technology}
@@ -51,7 +62,7 @@ This effect is partially offset for two reasons: both, the energy stored in the 
 The electromagnetic energy stored in the cavity must be replenished by the RF source during the filling time that precedes the time when the RF is used to accelerate the beam passing through the cavity; this energy is lost after each pulse and thus reduces the overall efficiency and requires more or more powerful modulators and klystrons.
 The overall cryogenic load is dominated by the dynamic heat load from the cavities, and thus operation at higher gradient requires larger cryogenic capacity.
 Cost models that parametrise these effects indicate that the minimum of the investment cost per GeV beam energy lies at \num{50} or more GeV, depending on the relative costs of tunnel, SCRF infrastructure and cryo plants, and depending on the achievable $Q_0$. 
-\remark{CHECK THIS; reference?}
+{\it CHECK THIS; reference?}
 At any rate, the optimal gradient is significantly higher than the value of approximately \siunit{35}{MV/m} that is currently realistic, underpinning the relevance of achieving higher gradients.
 
 However, it should be noted that in contrast to the initial invest, the operating costs invariably rise when the gradient is increased.
@@ -71,6 +82,16 @@ The gradient at which a SC cavity can be operated is limited by three factors:
 
 Infusion, cavity shapes
 
+\begin{figure}[htbp]
+   \includegraphics[width=\hsize]{chapters/figures/prab-20-042004-fig33}
+\caption{Distribution and yield of the ``as received'' maximum
+gradient of cavities produced for the European XFEL, separated by vendor \cite{Reschke:2017gjp}. 
+Vendor ``RI'' employs a production process that closely follows the ILC specifications, with a final electro polishing step.}
+% Paper published under CC-BY-4.0
+\label{fig:cavity-yield}
+\end{figure}
+
+
 
 \subsubsection{Basic Parameters}
 
@@ -87,7 +108,7 @@ The welding process is one of the critical and cost-intensive steps of the cavit
 Utmost care must be taken to avoid irregularities, impurities and inclusions in the weld itself, and deposition of molten material at the inner surface of the cavity that can lead to field emission.
 
 \begin{figure}[htbp]
-   \includegraphics[width=\hsize]{figures/tesla9cell-cavity-2}
+   \includegraphics[width=\hsize]{chapters/figures/tesla9cell-cavity-2}
 \caption{A $1.3\,{\mathrm{GHz}}$ superconducting niobium nine-cell cavity.
 }
 % Figure from TDR Executive Summary
@@ -111,11 +132,32 @@ EXPLAIN INTEGRATION WITH MAGNETIC SHIELD AND TUNER}
 
 \subsubsection{Power Coupler}
 
+The power coupler transfers the radio frequency (RF) power from the waveguide system to the cavity. 
+At the ILC, couplers with a variable coupling are employed, which is realised by a movable antenna.
+At the same time, it separates the cavity vacuum from the atmospheric pressure in the waveguide, and insulates the cavity at \siunit{2}{K} from the surrounding room temperature.
+In summary, the coupler has to fulfil a number of demanding requirements: transmission of high RF power with minimal losses and no sparking, vacuum tightness and robustness against window breaking, minimal heat conductivity.  
+As a consequence, the coupler design is highly complex, with a large number of components and several critical high-tech manufacturing steps.
+
+The baseline coupler design was originally developed in the 1990s for the Tesla Test Facility (TTF, now FLASH) at DESY,
+and has since been modified by a collaboration of LAL and DESY for use in the European XFEL.
+$800$ of these couplers (depicted in Fig. \ref{fig:xfelcoupler}) were fabricated for the European XFEL~\cite{Kaabi:2013wna} by two different companies and are now in operation.
+A lot of experience has been gained from this production~\cite{Sierra:2017wyc}.
+
+
+
+\begin{figure}[htbp]
+   \includegraphics[width=\hsize]{chapters/figures/xfelcoupler}
+\caption{An XFEL type coupler.
+  % Fig from ILC TDR, should be OK to use
+}
+\label{fig:xfelcoupler}
+\end{figure}
+
 
 \subsubsection{Cryomodules}
 
 \begin{figure}[htbp]
-   \includegraphics[width=\hsize]{figures/10_ILC_cryomodule}
+   \includegraphics[width=\hsize]{chapters/figures/10_ILC_cryomodule}
 \caption{An ILC type cryomodule. \copyright Rey.Hori/KEK.}
 % Figure from Rey.Hori - check copyright!
 % http://www.linearcollider.org/images/pid/1000890/gallery/10_ILC_cryomodule.jpg
@@ -123,9 +165,39 @@ EXPLAIN INTEGRATION WITH MAGNETIC SHIELD AND TUNER}
 \end{figure}
 
 
+\begin{figure}[htbp]
+   \includegraphics[width=\hsize]{chapters/figures/srf17-mopb106-fig1}
+\caption{Average of the operating (blue) and maximum
+(green) gradient for cavities in each European XFEL serial-production cryomodule.
+The specification of \siunit{23.6}{MV/m} is marked by a red line
+\cite{Kasprzak:2018kkr}.
+}
+% Paper is published under CC-BY-3.0
+\label{fig:cryomodules-performance}
+\end{figure}
 
-\subsubsection{High-Level Radiofrequency}
 
+\subsubsection{Plug-compatible design}
+
+In order to allow various designs of sub-components from different countries and vendors to work together in the same cryomodule, a set of interface definitions has been internationally agreed upon.
+This ``plug-compatible'' design ensures that components are interchangeable between modules from different regions and thus reduces the cost risk.
+Corresponding interface definitions exist for the cavity, the fundamental-mode power coupler, the mechanical tuner and the helium tank.
+The ``S1Global'' project~\cite{bib:s1g} has successfully built a single cryomodule from several cavities equipped with different couplers and tuners, demonstrating the viability of this concept.
+
+
+\subsubsection{High-Level Radio-frequency}
+
+The high-level radio-frequency (HLRF) system provides the RF power that drives the accelerating cavities.
+The system comprises modulators, pulsed klystrons, and a waveguide power distribution system.
+
+The modulators provide the short, high-power electrical pulses required by the pulsed klystrons from a continuous supply of electricity. 
+The ILC design foresees the use of novel, solid state Marx modulators.
+These modulators are based on a solid-state switched capacitor network, where capacitors are charged in parallel over the long time between pulses, and discharged in series during the short pulse duration,
+transforming continuous low-current, low voltage electricity into short high-power pulses of the required high voltage of \siunit{120}{kV} at a current of \siunit{140}{A}.
+Such Marx modulators have been developed at SLAC~\cite{Kemp:2011zz} successfully tested at KEK~\cite{Gaudreau:2014pza}.
+However, long-term data about the required large mean time between failures (MTFB) are not yet available.
+
+{\it CONTINUE HERE WITH KLYSTRONS AND PDS}
 
 \subsubsection{Cryogenics}
 
@@ -160,6 +232,15 @@ Moreover, European companies are well poised to win additional contracts from ot
 The niobium raw material and preparation of sheets  are a significant cost driver; R\&D is underway to re-evaluate the stringent limits on impurities, especially of tantalum, and the demand for a high residual resistivity ratio $RRR > 300$, to reduce the raw material cost. 
 Together with direct slicing of discs from large niobium ingots, without rolling, forging and grinding or polishing steps, the cost for niobium sheets has the potential to be reduced by $50\,\%$~\cite{Evans:2017rvt}.
 
+\begin{figure}[htbp]
+   \includegraphics[width=\hsize]{chapters/figures/sst-30-094004-fig5}
+\caption{Effect of successive cavity treatments on a single cavity: $\siunit{800}{^\circ C}$ bake for five days (black, lowest curve), followed by $48$ hours baking at $\siunit{120}{^\circ C}$ (red, middle curve). 
+A third heat treatment including nitrogen infusion (green, top curve) significantly  raises the breakdown gradient and the quality factor of the cavity
+\cite{Grassellino:2017bod}.
+}
+% Paper is published under CC-BY-3.0
+\label{fig:n2infusion}
+\end{figure}
 
 
 %===============================================================================
@@ -182,8 +263,8 @@ in the baseline design, both sources produce polarized beams with the same time 
 The electron source design~\cite{Adolphsen:2013kya} is based on the SLC polarized electron source, which has demonstarted that the bunch charge, polarisation and cathode lifetime parameters are feasible.
 Only the long bunch trains of the ILC require a newly developed laser system and powerful preaccelerator structures, for which preliminary designs are available.
 The design foresees a Ti:sapphire laser impinging on a photocathode based on a strained GaAs/GaAsP superlattice
-structure, which will produce electron bunches with an expected polarisation of \SIunit{85}{\%},
-sufficient for \SIunit{80}{\%} beam polarization at the interaction point, as demonstrated at SLAC~\cite{Alley:1995ia}.
+structure, which will produce electron bunches with an expected polarisation of \siunit{85}{\%},
+sufficient for \siunit{80}{\%} beam polarization at the interaction point, as demonstrated at SLAC~\cite{Alley:1995ia}.
 
 The positron source poses a larger challenge. 
 
@@ -238,27 +319,144 @@ and possible upgrades.
 
 \subsubsection{Damping Rings}
 
-{\it Mention ATF
-
-Nomura issues: Feedback system
-
-}
-
 The ILC comprises two oval damping rings of \siunit{3.2}{km} circumference, sharing a common tunnel in the central accelerator complex.
-The damping rings reduce the horizontal and vertical emittance of the beams by up to five orders of magnitude\footnote{The vertical emittance of the positrons is reduced from $\epsilon_{\mathrm{y}} \approx 0.8\,{\mathrm{\mu m}}$ to $10\,{\mathrm{pm}}$.} within a time span of only \siunit{100}{ms}, to provide the low emittance beams required at the interaction point. 
+The damping rings reduce the horizontal and vertical emittance of the beams by almost six orders of magnitude\footnote{The vertical emittance of the positrons is reduced from $\epsilon_{\mathrm{y}} \approx 0.8\,{\mathrm{\mu m}}$ to $2\,{\mathrm{pm}}$.} within a time span of only \siunit{100}{ms}, to provide the low emittance beams required at the interaction point. 
 Both damping rings operate at an energy of \siunit{5}{GeV}.
-To achieve the high synchrotron radiation damping required by the low damping time,  the rings are equipped with $54$ superconducting wigglers in each ring, bringing the energy loss per turn up to $7.7\,{\mathrm{MV}}$.
-This requires in $3.3\,{\mathrm{MW}}$ RF power per beam at the design current of $390\,{\mathrm{mA}}$, which actually surpasses the RF power of $2.6\,{\mathrm{MW}}$ needed to accelerate the beams in the main linacs at \siunit{125}{GeV} beam energy.
 
-Compared to today's fourth generation light sources, the target value for the beam emittance ($\siunit{4}{\mu m}$/\siunit{20}{nm} for the normalised horizontal / vertical beam emittance) is low, but not a record value, and thus considered to be a realistic goal.
+The damping rings' main objectives are
+\begin{itemize} 
+\item accept electron and positron beams at large emittance and produce the low-emittance beams required for high-luminosity production,
+\item dampen the incoming beam jitter to provide highly stable beams,
+delay bunches from the source to allow feed-forward systems to compensate for pulse-to-pulse variations in parameters such as the bunch charge.
+\end{itemize}
 
- 
+Compared to today's fourth generation light sources, the target value for the normalized beam emittance ($\siunit{4}{\mu m}$/\siunit{20}{nm} for the normalised horizontal / vertical beam emittance) is low, but not a record value, and thus considered to be a realistic goal.
 
-\subsubsection{Low Emittance Beam Transport}
+The main challenges for the damping ring design are:
+\begin{itemize} 
+\item a sufficient dynamic aperture to cope with the large injected emittance of the positrons,
+\item a low equilibrium emittance in the horizontal plane,
+\item a very low emittance in the vertical plane,
+\item a small damping time constant,
+\item instabilities from electron clouds (for the positron DR) and fast ions (for the electron DR),
+\item the small (\siunit{3.2-6.4}{ns}) bunch spacing, requiring very fast kickers for injection and ejection.
+\end{itemize}
+
+Careful optimization has resulted in a TME (Theoretical Minimum Emittance) style lattice for the arcs that balances a low horizontal emittance with the required large dynamic aperture~\cite[Chap. 6]{Adolphsen:2013kya}. 
+Recently, the horizontal emittance has been reduced further by lowering the dispersion in the arcs through the use of longer dipoles~\cite{bib:cr-0016}.
+The emittance in the vertical plane is minimised by careful alignment of the magnets and tuning of the closed orbit to compensate for misalignments and field errors, as demonstrated at the CESRTA accelerator~\cite{Billing:2011zc}.
+
+The required small damping time constant requires large synchrotron radiation damping, which is provided by the insertion of $54$ wigglers in each ring.
+This results in an energy loss of up to $7.7\,{\mathrm{MV}}$ per turn and up to $3.3\,{\mathrm{MW}}$ RF power necessary to 
+store the a positron beam at the design current of $390\,{\mathrm{mA}}$, which
+actually exceeds the average beam power of the accelerated positron beam of $2.6\,{\mathrm{MW}}$ at 
+a $250\,{\mathrm{GeV}}$.
+
+Electron cloud (EC) and fast ion (FI) instabilities limit the overall current in the damping rings to about \siunit{400-800}{mA}, where the EC limit that affects the positrons is assumed to be more stringent. 
+These instabilities arise from electrons and ions being attracted by the circulating beam towards the beam axis. 
+A low base vacuum pressure of \siunit{10^{-7}}{Pa} is required to limit these effects to the required level.
+In addition, gaps between bunch trains of around $50$ bunches are required in the DR filling pattern, which permits the use of clearing electrodes to mitigate EC formation.
+These techniques have been developed and tested at the CESR-TA facility~\cite{Conway:2012zza}
+
+In the damping rings, bunch separation is only \siunit{6.4}{ns} (\siunit{3.2}{ns} for a luminosity upgrade to $2625$ bunches). 
+Extracting individual bunches without affecting their emittance requires kickers with rise/fall times of \siunit{3}{ns} or less.
+Such systems have been tested at ATF~\cite{Naito:2010zzb}.
+
+The damping ring RF system will employ superconducting cavities operating at half the Main Linac frequency (\siunit{650}{MHz}).
+Klystrons and accelerator modules can be scaled from existing \siunit{500}{MHz} units in operation at CESR and KEK~\cite[Sec. 6.6]{Adolphsen:2013kya}. 
+
+
+\subsubsection{Low Emittance Beam Transport: Ring to Main Linac (RTML)}
+
+The Ring to Main Linac (RTML) system~\cite[Chap. 7]{Adolphsen:2013kya} is responsible for transporting and matching the beam from the Damping Ring to the entrance of the Main Linac.
+Its main objectives are
+\begin{itemize} 
+\item transport of the beams from the Damping Rings at the center of the accelerator complex to the upstream ends of the Main Linacs,
+\item collimation of the beam halo generated in the Damping Rings,
+\item and rotation of the spin polarisation vector from the vertical to the desired angle at the IP (typically, in longitudinal direction).
+\end{itemize}
+
+The RTML consists of two arms for the positrons and the electrons; 
+each arm comprises a damping ring extraction line transferring the beams from the damping ring extraction into the main linac tunnel, a long low emittance transfer line (LTL), the turnaround section at the upstream end of each accelerator arm, and a spin rotation and diagnostics section.
+
+The long transport line is the largest most costly part of the RTML.
+The main challenge is to transport the low emittance beam at \siunit{5}{GeV} with minimal emittance increase, and in a cost-effective manner, considering that its total length is about \siunit{14}{km} for the \siunit{250}{GeV} machine.
+
+In order to preserve the polarisation of the particles generated in the sources, their spins are rotated into a vertical direction (perpendicular to the Damping Ring plane) before injection into the Damping Rings. 
+A set of two rotators~\cite{Emma:1995kf} employing superconducting solenoids allows to rotate the spin into any direction required.
+
+At the end of the RTML, after the spin rotation section and before injection into the bunch compressors (which are considered part of the Main Linac, not the RTML~\cite{bib:cr-0010}), a diagnostics section allows to measure the emittance and coupling between horizontal and vertical plane; 
+a skew quadrupole system is included to correct for any such coupling.
+
+A number of circular, fixed aperture and rectangular, variable aperture collimators in the RTML provide betatron collimation at the beginning of the LTL, in the turn around and before the bunch compressors.
+
 
 \subsubsection{Bunch Compressors and Main Linac}
 
-{\it Figure: ML cross section}
+\begin{figure}[htbp]
+   \includegraphics[width=\hsize]{chapters/figures/ILC2016_tunnel_A1_160826-low4}
+\caption{Artist's rendition of the ILC Main Linac tunnel. The shield wall in the middle has been removed.
+\copyright Rey.Hori/KEK.}
+\label{fig:ilc-tunnel}
+\end{figure}
+
+The heart of the ILC are the two Main Linacs, which accelerate the beams from $5$ to \siunit{125}{GeV}.
+The linac tunnel, as depicted in Figs.~\ref{fig:ilc-tunnel} and \ref{fig:ml-tunnel}, has two parts, separated by a shield wall. 
+One side (right in Fig.~\ref{fig:ilc-tunnel}) houses the beamline with the accelerating cryo modules as well as the RTML beamline hanging on the ceiling.
+The other side contains power supplies, control electronics, and the modulators and klystrons of the High-Level RF system.
+The concrete shield wall (indicated as a dark-grey strip in in Fig.~\ref{fig:ilc-tunnel}) has a thickness of \siunit{1.5}{m}~\cite{bib:cr-0012}.
+The shield wall allows access to the electronics, klystrons and modulators during operation of the klystrons with cold, resonant cavities, protecting personnel from X-ray radiation emanating from the cavities caused by dark currents.
+Access during beam operation, which would require a wall thickness of \siunit{3.5}{m}, is not possible.
+
+\begin{figure}[htbp]
+   \includegraphics[width=\hsize]{chapters/figures/ML-cross-section}
+\caption{Cross section through the Main Linac tunnel.}
+\label{fig:ml-tunnel}
+\end{figure}
+
+The first part of the Main Linac is a two-stage bunch compressor system~\cite[Sec. 7.3.3.5]{Adolphsen:2013kya}, each consisting of an accelerating section followed by a wiggler. 
+The first stage operates at \siunit{5}{GeV}, with no net acceleration, the second stage accelerates the beam to \siunit{15}{GeV}.
+The bunch compressors reduce the bunch length from $6$ to \siunit{0.3}{mm}.
+
+After the bunch compressors, the Main Linac continues for about \siunit{6}{km} with four long strings of cryomodules. 
+
+\paragraph{RF distribution}
+
+Each \siunit{12.65}{m} long cromodule contains $9$ cavities, or for every third module, $8$ cavities and a package with a superconducting quadrupole, corrector magnets, and beam position monitor.
+Nine such modules, with a total of $117$ cavities, are powered by $2$ klystrons and provide \siunit{3.83 (4.29)}{GeV} at a gradient of \siunit{31.5 (35)}{MV/m}.
+The waveguide distribution system allows an easy refurbishment to connect a third klystron for a luminosity upgrade.
+The $50\,\%$ RF power increase would allow $50\,\%$ higher current through smaller bunch separation, and longer beam pulses because of a reduced filling time, so that the number of bunches per pulse and hence the luminosity can be doubled, while the RF pulse duration of \siunit{1.65}{ms} stays constant.
+
+\paragraph{Cryogenic supply}
+
+
+Each $9$ module unit \siunit{114}{m} long, forms a cryo string, which is connected to the helium supply line with a Joule-Thomson valve.
+All helium lines are part of the cryomodule, obliterating the need for a separate helium transfer line. 
+Up to $21$ strings with $189$ modules and \siunit{2.4}{km} total length can be connected to a single plant; 
+this is limited by practical plant sizes and the gas--return header pressure drop.  
+
+These strings are supplied with liquid helium by several cryogenic plants~\cite[Sec. 3.5]{Adolphsen:2013kya} of a size similar to those in operation at CERN for the LHC, at Fermilab, and DESY. 
+The \siunit{2}{K} and \siunit{4.5}{K} helium refrigerators are located in an underground access hall~\cite{bib:cr-0014} that is connected to the surface, where the helium compressors, gas tanks and further cryogenic infrastructure are located.
+
+\paragraph{Cost reduction from larger gradients}
+
+Fig.~\ref{fig:ml-cryo-opta} shows the layout of the cryogenic supply system for the \siunit{250}{GeV} machine.
+At the top, the situation is depicted for the gradient of \siunit{31.5}{MV/m} with a quality factor of $Q\sub{0}=1.0\cdot 10^10$, as assumed in the TDR~\cite{Adolphsen:2013kya}. 
+In this case, the access points PM$\pm 10$ would house two cryogenic plants, each supplying up to $189$ cryomodules or an equivalent cryogenic load.
+The bottom picture shows the situation for a gradient of \siunit{35}{MV/m} with $Q\sub{0}=1.6\cdot 10^10$, as could be expected from successful R\&D. 
+The increased gradient would  allow to reduce the total number of cryomodules by roughly $10\,\%$ from $987$ to $906$, and the increased quality factor would reduce the dynamic losses such that $4$ cryo plants would provide sufficient helium, while in the top configuration $6$ large plants in the access halls plus $2$ smaller plants in the central region would be needed.
+
+Thus, the accelerator is designed to make good use of any anticipated performance gain from continued high gradient R\&D, without incurring unwanted technology risk in the case that it turns out that raising the gradient is beneficial from an economical point of view.
+
+\begin{figure}[htbp]
+   \includegraphics[width=\hsize]{chapters/figures/arxiv-1711-00568-fig-3-4}
+   \includegraphics[width=\hsize]{chapters/figures/arxiv-1711-00568-fig-3-7}
+\caption{Cryogenic layout for a gradient of \siunit{31.5}{MV/m} (top) and \siunit{35}{MV/m} (bottom)~\cite{Evans:2017rvt}.
+``Module space'' indicates how many cryomodules can be physically installed, ``cryomodules'' and ``RF unit'' indicates the number of actually installed modules and klystrons (one klystron per 4.5 cryomodules). ``E gain'' indicates the energy gain in GeV. ``BC'', ``ML'', ``e+ inj'', ``e- inj'' and ``UND'' refer to the sections with need for liquid helium: bunch compressor, main linac, 5GeV boosters in the positron and electron source, and the positron source undulator section, respectively. PM$\pm8, 10, 12$ refer to access hall locations, ``C'' to cryo plants; meter numbers on top indicate the length of the corresponding section.}
+\label{fig:ml-cryo-opta}
+\end{figure}
+
+
 
 \subsubsection{Beam Delivery System and Machine Detector Interface}
 
@@ -268,12 +466,120 @@ Nomura issues: Dumps, crab cavities
 
 Mention beam dumps as well}
 
+The Beam Delivery System (BDS) transports the $e^+/e^-$ beams from the end of the main linacs, focusses them to the required small beam spot at the Interaction Point (IP), brings them into collision, and transports the spent beams to the main dumps~\cite[Chap. 8]{Adolphsen:2013kya}.
+The mainfunctions of the BDS are
+\begin{itemize}
+\item measuring the main linac beam and matching it into the final focus,
+\item protecting beamline and detector from mis-steered beams~\footnote{On the electron side, the protective fast beam abort system is actually located upstream of the positron source undulator.},
+\item remove large amplitude (beam--halo) and off--momentum particles from the beam to minimize background in the detector,
+\item accurately measure the key parameters energy and polarisation before and after the collisions.
+\end{itemize}
+The BDS must provide sufficient diagnostics and feedback systems to achieve these goals.
+
+The BDS is designed such that it can be upgraded to a maximum beam energy of \siunit{500}{GeV}; components such as the dumps that are not cost drivers for the overall project but would be cumbersome to replace later are dimensioned for the maximum beam energy from the beginning.
+In other places, such as the energy collimation dogleg, those components necessary for \siunit{125}{GeV} beam operation are installed and space for a later upgrade is reserved.
+
+Overall, the BDS is \siunit{2254}{m} long from the end of the main linac (or the undulator and target bypass insert of the positron source on the electron side, respectively) to the IP.
+It starts with a diagnostics section, where emittance, energy and polarisation are measured and any coupling between the vertical and horizontal planes is corrected by a set of skew quadrupoles.
+The energy measurement is incorporated into the machine protection system and can extract e.g. off--momentum bunches caused by a klystron failure in the main linac that would otherwise damage the machine or detector.
+An emergency dump~\cite{bib:cr-0013} is dimensioned such that it can absorb a full beam pulse at \siunit{500}{GeV}, sufficient for \siunit{1}{TeV} operation.
+
+\paragraph{Diagnostics and collimation section}
+
+
+The diagnostics section is followed by a collimation system, which first removes beam halo particles (betatron collimation). 
+then off--momentum particles are removed.
+In this energy collimation section, sufficient dispersion has to be generated by bending the beam in a dogleg, while avoiding excessive synchrotron radiation generation in dispersive regions that leads to an increase of the horizontal emittance.
+This emittance dilution effect grows as $E\sub{beam}^6$ at constant bending radius for the normalized emittance, and determines the overall length of the energy collimation section for a maximum \siunit{500}{GeV} beam energy to about \siunit{400}{m}.
+
+
+
+XXXXXXXXXXXXX CONTINUE HERE XXXXXXXXXXXXXX
+
+\paragraph {Final focus with feedback system and crab cavities}
+
+\paragraph {Test results from ATF2}
+
+The Accelerator Test Facility 2 (ATF2) was built at KEK in 2008 as a test bed for the ILC final focus scheme~\cite[Sec. 3.6]{Adolphsen:2013jya}.
+Its primary goals are~\cite{Grishanov:2005ek,Grishanov:2006kx} to achieve a \siunit{37}{nm} vertical beam size at the interaction point (IP), and demonstrate beam stabilisation at the nanometre level.
+After scaling for the different beam energies (ATF2 operates at $E\sub{beam}=\siunit{1.3}{GeV}$), the \siunit{37}{nm} beam size corresponds to the TDR design value of $\sigma\sub{y}^* = \siunit{5.7}{nm}$ at \siunit{250}{GeV} beam energy.
+As Fig.~\ref{fig:atf-results} shows, this goal has been reached within $10\,\%$~\cite{Okugi:2017jji} by the successive application of various correction and stabilisation techniques, 
+validating the final focus design, including the local chromaticity correction~\cite{White:2014vwa}.
+
+\begin{figure}[htbp]
+   \includegraphics[width=\hsize]{chapters/figures/ATF2trend2018}
+\caption{Beamsizes achieved at the Accelerator Test Facility 2 (ATF2) as a function of time~\cite{bib:atf2esu}. The latest result (\siunit{41}{nm}~\cite{Okugi:2017jji}) is within $10\,\%$ of the goal beam size of \siunit{37}{nm}.}
+\label{fig:atf-results}
+\end{figure}
+
+\paragraph {Machine detector interface (MDI)}
+
+\paragraph Extraction line
+
+\paragraph {Main dump}
+
 %===============================================================================
 
 \subsection{Upgrade Options}
 
 {\it 
 Description of luminosity and energy upgrades - 1 page }
+
+Given the high initial invest for a facility as large as the ILC, it is mandatory to have an interesting physics programme for several decades, with the possibility to adapt the programme to the needs arising from the knowledge obtained by the LHC, the ILC itself, all other particle physics experiments, and other branches of physics such as cosmology.
+Several options exist for upgrades of the ILC in terms of energy, luminosity, and beam polarisation.
+
+\paragraph{Energy upgrade}
+
+The obvious advantage of a linear collider is its upgradeability in energy.
+Basically, the main linacs can be extended as far as desired, at constant cost per added beam energy, with some added cost for the relocation of the turn arounds. and bunch compressors.
+Additional costs arise when the beam delivery system (BDS), including the beam dumps, has to be extended to handle the increased beam anergy; 
+the current ILC BDS is designed to be easily upgradeable for centre of mass energies up to \siunit{1}{TeV} at minimal cost.
+
+Depending on the actual gradient achieved for the construction of the ILC, there may be space for the installation of up to $171$ additional cryomodules, which would rise the centre--of--mass energy by about \siunit{54}{GeV} to around \siunit{304}{GeV}, as Fig.~\ref{fig:ml-cryo-opta} shows, 
+and possibly require the installation of two additional cryo plants.
+
+A further energy upgrade would require en extension of the tunnel.
+The Kitakami site can accommodate a total accelerator length of at least \siunit{50}{km}, more than enough for \siunit{1}{TeV} centre--of--mass energy.
+Any extension of the accelerator would proceed by adding new cryomodules at the low energy (upstream) ends of the accelerator, there is no need to move modules already installed. 
+
+An upgrade would likely proceed in two phases: a preparation phase while the accelerator is still operated and produces data, and a refurbishment phase where the accelerator is shut down.
+
+During the preparation phase, the necessary components would be acquired and built, in particular the cryomodules, klystrons, and modulators. 
+At the same time, civil engineering would proceed with the excavation of new access tunnels, underground halls, and the main tunnel.
+Recent studies conducted during road tunnel construction in the Kitakami area, in the same rock formation as foreseen for the ILC, indicate that the level of vibrations caused by tunnelling activities would allow to bring the new tunnels quite close to the existing ones before machine operation would be affected~\cite{bib:sanuki:lcws2018}, minimising the shutdown time necessary.
+
+During the installation phase, the newly built tunnels would be connected to the existing ones, the beam lines at the turn-around and the wiggler sections of the bunch compressors would be dismantled, and the new cryo modules would be installed as well as the new turn-around and bunch compressors. 
+At the same time, any necessary modifications to the positron source and the final focus can be made.
+With the cryo modules ready for installation at the beginning of the shut down period, it is estimated that the shutdown could be limited to about a year for an energy upgrade.
+
+\paragraph{Luminosity upgrade}
+
+Fundamentally, the luminosity of the ILC could be increased by increasing the luminosity per bunch (or per colliding charge), or increasing the number of bunches per second.
+
+Increasing the luminosity per bunch requires a smaller beam spot size, which may be achieved by tighter focussing and/or smaller beam emittance.
+Studies indicate that with enough operating experience, there is potential for a further luminosity increase. 
+This route to increased luminosity is, however, invariably linked to higher beam disruption, which brings larger energy spread and higher backgrounds and thus more challenging conditions for the experiments.
+
+The ILC design also has the potential to increase the number of colliding bunches per second, by doubling the number of bunches per pulse, and possibly by increasing the pulse repetition frequency.
+
+Doubling the number of bunches per pulse to $2625$ would coincide with a smaller bunch distance, require the installation of $50\,\%$ more klystrons and modulators. 
+As the RF pulse length of \siunit{1.65}{ms} is unchanged, the cryogenic load is essentially unchanged.
+Doubling the number of bunches would double to beam current in the damping rings;
+for the positron damping ring, this may surpass the limitations from electron cloud (EC) instabilities. 
+To mitigate this risk, the damping ring tunnel is large enough to house a third damping ring, so that the positron current would be distributed over two rings.
+
+The pulse repetition rate (\siunit{5}{Hz} in the baseline configuration) is limited by the available cryogenic capacity, the damping time in the damping rings, and the target heat load in the positron source target.
+The damping rings are designed for a \siunit{100}{ms} damping time and thus capable of a repetition rate of up to \siunit{10}{Hz}, twice the nominal rate.
+Operation at an increased repetition rate would be possible if after an energy upgrade the machine is operated below its maximum energy (e.g., \siunit{250}{GeV} operation of a \siunit{500}{GeV} machine for a larger low-energy data set), or if additional cryogenic capacity is installed.
+
+\paragraph{Polarisation upgrade}
+
+The baseline design foresees at least $80\,\%$ electron polarisation at the IP, combined with $30\,\%$ positron polarisation for the undulator positron source.
+At beam energies above \siunit{125}{GeV}, the undulator photon flux increases rapidly. 
+Photons polarisation is maximal at zero emission angle; it is decreased and even inverted at larger angles.
+Thus, collimating the surplus photon flux at larger emission angles increases the net polarisation. 
+Studies indicate that $60\,\%$ positron polarisation at the IP may be possible at \siunit{500}{GeV} centre--of--mass energy.
+ 
 
 
 %===============================================================================
@@ -283,24 +589,12 @@ Description of luminosity and energy upgrades - 1 page }
 {\it 
 Description of Civil engineering plans and Kitakami site - 3 pages
 
-Figures: Kitakami Site, Kitakami site cross section}
+Figures: Kitakami Site}
 
-\begin{figure}[htbp]
-   \includegraphics[width=\hsize]{figures/ML-cross-section}
-\caption{Cross section through the Main Linac tunnel.}
-\label{fig:ml-tunnel}
-\end{figure}
 
 
 \begin{figure}[htbp]
-   \includegraphics[width=\hsize]{figures/ILC2016_tunnel_A1_160826-low4}
-\caption{Artist's rendition of the ILC Main Linac tunnel. The shield wall in the middle has been removed.
-\copyright Rey.Hori/KEK.}
-\label{fig:ilc-tunnel}
-\end{figure}
-
-\begin{figure}[htbp]
-   \includegraphics[width=\hsize]{figures/Kitakami_Geology}
+   \includegraphics[width=\hsize]{chapters/figures/Kitakami_Geology}
 \caption{Geological situation at the Kitakami site.}
 \label{fig:kitakami-geology}
 \end{figure}
@@ -315,6 +609,8 @@ Description of Cost estimate and schedule - 1 page
 
 include human resources, cost reduction effect by R\&D, operating costs
 }
+
+
 
 
 
