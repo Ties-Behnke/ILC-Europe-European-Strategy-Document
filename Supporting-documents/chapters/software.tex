@@ -186,6 +186,9 @@ Most of the physics analyses in the next sections are based on simulations using
 The high level of detail in the simulation models as decried above is a key prerequisite for the
 realistic understanding of the expected detector performance and the physics reach of the ILC for both detector concepts.
 
+~~~\\
+\fix{ here we could add a short paragraph on fast simulations with SGV as this is used in the searches section}
+~~~\\
 
 \subsubsection{Digitzation}
 
@@ -203,7 +206,9 @@ from charge sharing, clustering and position reconstruction. Table~\ref{tab:ild_
 
 
 %-----------------------------------------------------------------------
-\begin{table}[htb]
+\begin{table}[htbp]
+\renewcommand{\arraystretch}{1.25}
+
 \centering\small
 \begin{tabular}{llcl}
 \hline
@@ -453,39 +458,85 @@ energy due to neutrinos.
 
 \subsubsection{High-Level Reconstruction}
 
-- vertexing
+After having reconstructed all the individual particles in the event, the next step in the processing is the reconstruction of
+primary and secondary vertices. This is carried out in iLCSoft with the LCFIPlus~\cite{Suehara:2015ura} package that is also used
+for the tagging of heavy flavor jets.
 
-- flavor tag: LCFIPlus
-  - some performance plots (SiD)
+The primary vertex of the event is found in a tear-down procedure. First an initial vertex is fitted by a $\chi^2$-minimization using
+all charged tracks in the event and a constraint from the expected beam spot
+$(\sigma_x=516~\rm{nm}, \sigma_y=7.7~\rm{nm},\sigma_z \sim 200~\mu\rm{m}~~\rm{at}~~~E_{cms}=250~\rm{GeV})$.
+Then all tracks with a $\chi^2$-contribution larger than a given threshold value are removed.
 
-- particle ID
-  - dE/dx
-  - other  ?
+In a second step LCFIPlus tries to identify secondary vertices, starting out from forming all possible track-pairs from tracks not
+used in the primary vertex. The pairs have to fulfill suitable requirements with respect to their invariant mass, momentum direction
+and $\chi^2$. $V^0$s are excluded from these initial pairs. Secondary vertices are then formed using so far leftover tracks in
+an iterative procedure and eventually adding compatible tracks originally used in the primary vertex.
 
-- jet clustering
-  - FastJet et al
+Secondary vertices and optionally isolated Leptons can be used by LCFIPlus for jet clustering, aiming at high efficiency for correctly identifying
+heavy flavor jets. The actual jet clustering is then performed by using a cone-based clustering with a Durham-like algorithm.
+Alternatively users can use $k_T$ jet clustering algorithms from the Fastjet~\cite{Cacciari:2006sm} that is interfaced to Marlin in a dedicated
+package MarlinFastJet.
+
+LCFIPlus also provides algorithms for jet flavor tagging using boosted decision trees (BDTs) based on suitable variables from tracks and vertices.
+Fig~\ref{fig:sid_flavor_tag} shows the mis-identification efficiency for jets from light quarks and c-quarks as a function of the b-tagging efficiency
+for the SiD detector using LCFIPlus.
+
+%%%%%%%%%%%%%%%%
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.9\hsize]{chapters/figures/SiD_flavor_tag.png}
+\end{center}
+\caption{Mis-identification efficiency of light quark jets (red points) and charm jets (green points) as beauty jets versus beauty identification efficiency in
+  di-jets events at $\sqrt{s} = 91~\rm{GeV}$ (from~\cite{Behnke:2013lya}).} 
+\label{fig:sid_flavor_tag}
+\end{figure}
+%%%%%%%%%%%%%%%%%
+
+
+There is a large palette of additional high level reconstruction algorithms available in iLCSoft addressing the needs for physics analyses, e.g.
+\begin{itemize}
+\item particle identification using dE/dx, shower shapes and multi-variate methods
+\item $\gamma\gamma$-finders for the identification of $\pi^0$s and $\eta$s
+\item reconstructed particle to Monte-Carlo truth linker for cross checking analysis and reconstruction efficiencies
+\item tools for jet clustering using Monte-Carlo truth information
+\item processors for the computation of various event shapes 
+\end{itemize}
+
+
 
 
 \subsection{Computing}
 
-- brief introduction \fix{from the short document:}
-
 An initial computing concept for the ILC, including a first estimate of the required resources, has been developed by the LCC Software and Computing Group.
-This concepts follows in general terms that of the LHC experiments and
-Belle~II,  with a strong on-site computing center complemented by large
-Grid-based computing resources distributed around the world. Due to the much lower event rates at the ILC compared to the LHC, we will be
+
+\subsubsection{Computing Concept}
+
+The foreseen computing concept follows in general terms that of the current LHC experiments and Belle~II, with a strong on-site computing center complemented by large
+Grid-based computing resources distributed around the world. This concept is schematically shown in Fig~\ref{fig:computing_scheme}.
+
+%%%%%%%%%%%%%%%%
+\begin{figure*}
+\begin{center}
+\includegraphics[width=0.6\hsize]{chapters/figures/ILC_computing_scheme.png}
+\end{center}
+\caption{Computing concept foreseen for the ILC, distributed over on-site computing at the interaction region, the main campus and Grid-like offline computing.}
+\label{fig:computing_scheme}
+\end{figure*}
+%%%%%%%%%%%%%%%%%
+
+Due to the much lower event rates at the ILC compared to the LHC, we will be
 able to run in an un-triggered mode in which  collision data from every bunch crossing will be recorded. At the experimental site, we require only limited computing
-resources for online monitoring, QA, and data-buffering for a few
-days.
- Prompt reconstruction, event building, and filtering of the interesting collisions
-will be performed at the main ILC campus.
-A few percent of the initial data will be distributed to major participating Grid sites
-in the world for further skimming and final redistribution for physics
-analysis. A copy of the raw data from all bunch crossings will be kept
-to allow
- for future searches for new exotic signatures. 
-Based on our detailed physics and background simulations,
- we estimate the total raw data rate of the ILC to be $\sim$1.5GB/s.
+resources for online monitoring, QA, and data-buffering for a few days.
+
+Prompt reconstruction, event building, and filtering of the interesting collisions will be performed at the main ILC campus.
+A few percent of the initial data will be distributed to major participating Grid sites in the world for further skimming and final redistribution for physics
+analysis. A copy of the raw data from all bunch crossings will be kept to allow  for future searches for new exotic signatures. 
+
+
+\subsubsection{Resource Estimate}
+
+Based on our detailed physics and background simulations,  we estimate the total raw data rate of the ILC to be $\sim$1.5GB/s.
+
 The total estimated storage needs will be a few tens of PB/y.
 The computing power needed for simulation, reconstruction, and analysis will be a few hundred kHepSpec06.
 Given that these numbers are already smaller than what is now
@@ -494,16 +545,7 @@ of 15\% and 20\%, respectively, for storage and CPU
 at flat budget, we expect the overall computing costs for the ILC
 will be more than an order of magnitude smaller than those for the LHC.
 
-
-\subsubsection{Computing Concept}
-
-- describe the (ILD) computing concept 
-
-\subsubsection{Resource Estimate}
-
-- recent (reviewed) resource estimate
-
-- based on recent  numbers compiled by A.Miyamoto for ILD
+\fix{extend this with a bit more detail, e.g. a small table with the main parameters relevant for the estimate ...}
 
 
 
