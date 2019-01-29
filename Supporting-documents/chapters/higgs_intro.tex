@@ -33,22 +33,41 @@ defined as ``{\it event selection level}" and are mainly dealing with discrimina
 between signal and background events. As expected, the detailed strategies 
 at the event selection level highly depend on what kind of observables we are going to
 measure, and are elaborated in each of the following sub-sections. Before that, it is worth
-emphasizing a few general features that are important to reach a solid estimate
+emphasizing a few general features included in the full simulation analyses here
+that are important to reach a solid estimate
 and often are not well noticed or not fully captured in 
 many fast simulation analyses in the literatures:
 %{\color{red} JL: shouldn't the modelling of these be described in the software and MC sample chapter? We can mention them again here to rub the point in, of course, but the basic explanations ``[to be filled]'' should be in the previous chaper...}
 %{JT: no, [to be filled] is not for "the basic explanations"}
 \begin{itemize}
-\item beamstrahlung and ISR
-[to be filled]
-\item overlay of beam background events
-[to be filled]
-\item full standard model background
-[to be filled]
-\item jet clustering and jet paring
-[to be filled]
-\item control of systematics 
-[to be filled]
+\item {\it beamstrahlung and ISR}
+are implemented in the event generators for both signal and background processes,
+as introduced in previous section. These effects are important for estimation of 
+signal and background contributions in the analyses that make use of the 
+nominal value of center-of-mass energy. A representative example is seen in
+Section~\ref{sec:higgs:sigmazh} Fig.~\ref{fig:RecoilMassLep250} for recoil
+mass calculation: both beamstrahlung and ISR effects will drag signal events
+from the more sensitive peak region to the less sensitive tail region, and meanwhile
+will induce more background contribution in the signal region.
+\item {\it overlay of beam background events} is implemented in every signal 
+and background events. This will clearly affect the performance of 
+reconstructed variables related to jets hence degrade the signal and background
+discrimination. There is some method to remove partially the overlay, which will 
+be introduced in next section. 
+\item {\it full standard model background} is checked in all the analyses, 
+in order not to miss any significant contribution. For example 2-fermion 
+events after parton shower can well become background of 4-fermion signal.
+For another example, often the background contribution in Higgs observables
+comes from tail part of B-W structure for $Z$ propagator, hence neither neglecting 
+$Z$ natural width nor ignoring similar diagram from $\gamma$ propagator is correct.
+\item {\it realistic jet clustering and jet paring} algorithms often become the 
+limiting factors for many of the analyses with $\ge 4$ jets in the signal final states.
+The confusion between two color singlets, for instance $Z$ and $h$ in $\ee\to Zh\to 4 jets$,
+could produce much wider spread on the reconstructed di-jet invariant masses 
+than that by the pure detector resolution. Hence a simply smearing on di-jet mass
+at parton level according to the detector resolution is often too optimistic. 
+\item {\it control of systematics} is taken into account in the design of every
+selection cut.
 \end{itemize}
 
 \begin{table}[htb]

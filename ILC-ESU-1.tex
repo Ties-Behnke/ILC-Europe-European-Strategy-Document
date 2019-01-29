@@ -20,6 +20,7 @@
 %
 \documentclass[%
  reprint,
+ floatfix,
 %superscriptaddress,
 %groupedaddress,
 %unsortedaddress,
@@ -45,8 +46,8 @@
 \usepackage{bm}% bold math
 \usepackage{color}
 \usepackage{lineno}
-\linenumbers
-%\usepackage{hyperref}% add hypertext capabilities
+%\linenumbers
+\usepackage{hyperref}% add hypertext capabilities
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 
@@ -102,17 +103,16 @@
 \author{\textbf{Prepared by:}
 Hiroaki Aihara$^1$, Jonathan Bagger$^2$, Philip Bambade$^3$, Barry Barish$^4$,  Ties Behnke$^5$, Alain Bellerive$^6$, Mikael Berggren$^5$, James Brau$^7$, Martin Breidenbach$^8$, 
 Ivanka Bozovic-Jelisavcic$^9$,
-Philip Burrows$^{10}$, Massimo Caccia$^{11}$, Paul Colas$^{12}$, Dmitri Denisov$^{13}$, Gerald Eigen$^{14}$, Lyn Evans$^{15}$, Angeles Faus-Golfe$^{3}$, Brian Foster$^{5,10}$, Keisuke Fujii$^{16}$, Juan Fuster$^{17}$, Frank Gaede$^{5}$, Jie Gao$^{18}$, Paul Grannis$^{19}$, Christophe Grojean$^{5}$, Andrew Hutton$^{20}$, Marek Idzik$^{21}$, Andrea Jeremie$^{22}$, Kiyotomo Kawagoe$^{23}$, Sachio Komamiya$^{1}$, Tadeusz Lesiak$^{24}$, Aharon Levy$^{25}$, Benno List$^{5}$, Jenny List$^{5}$, Shinichiro Michizono$^{16}$, Akiya Miyamoto$^{16}$, Joachim Mnich$^{5}$, Hugh Montgomery$^{20}$, Hitoshi Murayama$^{26}$, Olivier Napoly$^{12}$, Yasuhiro Okada$^{16}$, Carlo Pagani$^{27}$, Michael Peskin$^{8}$, Roman Poeschl$^{3}$, Francois Richard$^{3}$, Aidan Robson$^{28}$, Thomas Schoerner-Sadenius$^{5}$, Marcel Stanitzki$^5$, Steinar Stapnes$^{15}$, Jan Strube$^{29,7}$, Atsuto Suzuki$^{30}$, Junping Tian$^{1}$, Maksym Titov$^{12}$, Marcel Vos$^{17}$, Nicholas Walker$^{5}$, Hans Weise$^{5}$, Andrew White$^{31}$, Graham Wilson$^{32}$, Marc Winter$^{33}$, Sakue Yamada$^{1,16}$, Akira Yamamoto$^{16}$, Hitoshi Yamamoto$^{34}$ and Satoru Yamashita$^{1}$. }
+Philip Burrows$^{10}$, Massimo Caccia$^{11}$, Paul Colas$^{12}$, Dmitri Denisov$^{13}$, Gerald Eigen$^{14}$, Lyn Evans$^{15}$, Angeles Faus-Golfe$^{3}$, Brian Foster$^{5,10}$, Keisuke Fujii$^{16}$, Juan Fuster$^{17}$, Frank Gaede$^{5}$, Jie Gao$^{18}$, Paul Grannis$^{19}$, Christophe Grojean$^{5}$, Andrew Hutton$^{20}$, Marek Idzik$^{21}$, Andrea Jeremie$^{22}$, Kiyotomo Kawagoe$^{23}$, Sachio Komamiya$^{1,24}$, Tadeusz Lesiak$^{25}$, Aharon Levy$^{26}$, Benno List$^{5}$, Jenny List$^{5}$, Shinichiro Michizono$^{16}$, Akiya Miyamoto$^{16}$, Joachim Mnich$^{5}$, Hugh Montgomery$^{20}$, Hitoshi Murayama$^{27}$, Olivier Napoly$^{12}$, Yasuhiro Okada$^{16}$, Carlo Pagani$^{28}$, Michael Peskin$^{8}$, Roman Poeschl$^{3}$, Francois Richard$^{3}$, Aidan Robson$^{29}$, Thomas Schoerner-Sadenius$^{5}$, Marcel Stanitzki$^5$, Steinar Stapnes$^{15}$, Jan Strube$^{7,30}$, Atsuto Suzuki$^{31}$, Junping Tian$^{1}$, Maksym Titov$^{12}$, Marcel Vos$^{17}$, Nicholas Walker$^{5}$, Hans Weise$^{5}$, Andrew White$^{32}$, Graham Wilson$^{33}$, Marc Winter$^{34}$, Sakue Yamada$^{1,16}$, Akira Yamamoto$^{16}$, Hitoshi Yamamoto$^{35}$ and Satoru Yamashita$^{1}$. }
 % \altaffiliation[Also at ]{Physics Department, XYZ University.}%Lines break automatically or can be forced with \\
 %\author{et.al.}%
 % \email{Second.Author@institution.edu}
-\affiliation{\vspace{.2 cm}$^1$U. Tokyo, $^2$TRIUMF, $^3$LAL-Orsay/CNRS, $^4$Caltech, $^5$DESY, $^6$Carleton U., $^7$U. Oregon, $^8$SLAC, $^9$INN VINCA, Belgrade, $^{10}$Oxford U., $^{11}$U. Insubria, $^{12}$CEA/Irfu, U. Paris-Saclay, $^{13}$Fermilab, $^{14}$U. Bergen, $^{15}$CERN, $^{16}$KEK, $^{17}$IFIC, U. Valencia-CSIC, $^{18}$IHEP, $^{19}$Stony Brook U., $^{20}$Jefferson Lab, $^{21}$AGH Krakow $^{22}$LAPP/CNRS, $^{23}$Kyushu U., $^{24}$IFJPAN Krakow,$^{25}$Tel Aviv U., $^{26}$U. California, Berkeley, $^{27}$INFN, $^{28}$U. Glasgow, $^{29}$PNNL, $^{30}$Iwate Prefecture U., $^{31}$U. Texas, Arlington, $^{32}$U. Kansas, $^{33}$IPHC/CNRS, $^{34}$U. Tohoku }
+\affiliation{\vspace{.2 cm}$^1$U. Tokyo, $^2$TRIUMF, $^3$LAL-Orsay/CNRS, $^4$Caltech, $^5$DESY, $^6$Carleton U., $^7$U. Oregon, $^8$SLAC, $^9$INN VINCA, Belgrade, $^{10}$Oxford U., $^{11}$U. Insubria, $^{12}$CEA/Irfu, U. Paris-Saclay, $^{13}$Fermilab, $^{14}$U. Bergen, $^{15}$CERN, $^{16}$KEK, $^{17}$IFIC, U. Valencia-CSIC, $^{18}$IHEP, $^{19}$Stony Brook U., $^{20}$Jefferson Lab, $^{21}$AGH, Krak\'ow, $^{22}$LAPP/CNRS, $^{23}$Kyushu U., $^{24}$Waseda U., $^{25}$IFJPAN, Krak\'ow, $^{26}$Tel Aviv U., $^{27}$U. California, Berkeley, $^{28}$INFN, $^{29}$U. Glasgow, $^{30}$PNNL, $^{31}$Iwate Prefecture U., $^{32}$U. Texas, Arlington, $^{33}$U. Kansas, $^{34}$IPHC/CNRS, $^{35}$U. Tohoku }
 
  % Authors' institution and/or address\\
 % This line break forced with \textbackslash\textbackslash
 %}%
-  
-\collaboration{Representing the Linear Collider Collaboration and the global ILC community.}%\noaffiliation
+\collaboration{\textbf{\textit{Representing the Linear Collider Collaboration and the global ILC community.}}}%\noaffiliation
 
 \date{
 %$^1$U. Tokyo, $^2$Triumf \\[2ex]
@@ -170,7 +170,15 @@ collaboration, followed by a construction phase of 9 years.
 %display desired
 \maketitle
 \onecolumngrid
-\textbf{Supporting documents}: https://linearcollider.web.cern.ch/content/ilc-european-strategy-document
+\textbf{Supporting documents web page:} 
+
+\vspace{-0.8cm}
+%https://linearcollider.web.cern.ch/content/ilc-european-strategy-document 
+%\vspace{-1.0cm}
+\url{https://ilchome.web.cern.ch/content/ilc-european-strategy-document}
+
+\textbf{Contact persons:} 
+James Brau (jimbrau@uoregon.edu), Juan Fuster(Juan.Fuster@ific.uv.es), Steinar Stapnes (Steinar.Stapnes@cern.ch)
 \vspace{1cm}
 
 \pagebreak
@@ -211,16 +219,16 @@ other issues motivate intense efforts to challenge the predictions of
 the SM and search for clues to what lies beyond it.
  
 The Higgs boson,
- discovered in 2012 at the Large Hadron Collider, is
+ discovered in 2012 at the Large Hadron Collider (LHC), is
 central to the SM,  since it is the  origin of 
  electroweak symmetry-breaking and gives mass to all 
 known elementary particles.   The study of the properties and
 interactions of the Higgs boson is thus of utmost importance.
 
 The International Linear Collider (ILC) has the capabilities needed
-to address these central physics issues.  First and most importantly, it provides
-unprecedented precision in the measurements and searches needed to
-pursue these questions.  Already in its first stage, the 
+to address these central physics issues.  It will extend and complement the LHC physics program. First and most importantly, it provides
+unprecedented precision in the measurements and searches needed to detect deviations from the SM.
+Already in its first stage, the 
 ILC will have a new level of sensitivity to test the well-defined SM
 expectations for the Higgs boson properties, and to advance many other 
 tests of SM expectations.  
@@ -269,6 +277,7 @@ international collaboration, the Global Design Effort (GDE).
 Since 2013, ICFA has placed the  international activities for both the ILC and CLIC
 projects under a single organisation, 
 the Linear Collider Collaboration (LCC).
+Today the European XFEL provides an operating 1/10-scale demonstration of the fundamental SCRF technology.
 
 
 Once the mass of the Higgs boson was known, it was established that the
@@ -296,6 +305,8 @@ running and $2\,{\mathrm{ab}}^{-1}$ in a little over a decade. The electron beam
 undulator-based
 positron source which will  deliver
 $30\,\%$ positron  polarisation. 
+Positron production by a 3 GeV S-band injector
+is an alternative being considered.
 
 
 The experimental community has developed
@@ -332,7 +343,7 @@ couples to every elementary particle and provides the mass for all
 quarks, charged leptons, and heavy vector bosons.   The LHC has discovered
 the Higgs particle and confirmed the presence of the couplings responsible for the
 masses of the $W$, $Z$, $t$, $b$, and $\tau$~\cite{LHCHiggssummary}. 
- However, many mysteries are still
+ However, mysteries are still
 buried here.   The Higgs couplings are not universal, as the gauge
 couplings are, and their pattern (which is also the pattern of lepton
 and quark masses) is not explained by the SM.  The basic phenomenon that provides
@@ -365,14 +376,14 @@ presence of physics beyond the SM and to {\it learn}  about its nature.
 using the model-dependent assumptions appropriate to the LHC Higgs
 coupling fit.   The
 dark- and light-red bars represent the projections in the scenarios S1
-and S2 presented in \cite{Yellow}.  The scenario S1 refers to
+and S2 presented in \cite{Yellow,CMSYellow}.  The scenario S1 refers to
 analyses with our current understanding; the scenario S2 refers to
 more optimistic assumptions in which experimental errors decrease with
 experience.  The dark- and light-green bars represent the
 projections in the ILC scenarios in similar S1 and S2 scenarios defined in \cite{ILCforESS}. 
  The dark- and light-blue bars show the projections for scenarios S1 and S2
 when
-data from the 500~GeV run of the ILC is included. The same integrated luminosities are assumed as for Figure \ref{fig:ILCmodelindep}. The projected uncertainties in the Higgs couplings to $Z\gamma$, $\mu\mu$, $tt$, and the self-coupling are divided by the indicated factors to fit on the scale of this plot.}
+data from the 500~GeV run of the ILC is included. The same integrated luminosities are assumed as for Figure \ref{fig:ILCmodelindep}. The projected uncertainties in the Higgs couplings to $\mu\mu$, $tt$, and the self-coupling are divided by the indicated factors to fit on the scale of this plot.}
  \label{fig:ILCLHC}
 \end{center}
 \vspace{-0.7cm}
@@ -442,7 +453,7 @@ The uncertainties in  cross section and $\sigma\cdot BR$ measurements that contr
 %Section~IV~A 
 and the performance levels justified by R\&D as reviewed in Section~\ref{sec:detectrd}.
 %Section~IV~B. 
-This gives our estimates denoted S1*.  The inputs are described in more detail in \cite{ILCforESS}. 
+This gives our estimates denoted S1* (See Figure 2 caption).  The inputs are described in more detail in \cite{ILCforESS}. 
 For the nominal ILC program at 250~GeV, the Higgs
 coupling to $b$ quarks is expected to be measured to 1.1\% accuracy and the
 couplings to $W$ and $Z$ to 0.7\% accuracy. 
@@ -477,7 +488,7 @@ can robustly search for all types of exotic decays  to the
 part-per-mille level of branching fractions~\cite{Liu:2016zki}.
 
 The ILC can also search for particles produced through electroweak
-interactions, closing gaps that are left by searches at the LHC.  An
+interactions, closing gaps that are left by searches at the LHC. These include searches for dark matter candidates and for the radion and dilaton of extra-dimensional models. An
 important example is the Higgsino of supersymmetric models.   If the
 mass  differences among Higgsinos are smaller than a few GeV---as predicted in currently allowed models---then Higgsinos
 of 100~GeV mass would be produced copiously at the LHC, but this
@@ -489,13 +500,12 @@ studied with percent-level precision~\cite{Higgsino}.
 
 ILC precision measurements of $\ee\to f\bar f$ processes at 250~GeV have a sensitivity to new
 electroweak gauge bosons comparable to (and complementary with) 
-direct searches at the LHC.  Polarisation plays a
+direct searches at the LHC. Though the center of mass energy is only a little higher than that of LEP 2, the ILC will collect an event sample 1000 times greater, with detectors dramatically superior in their heavy flavor identification and other capabilities.  Polarisation plays a
 key role since it allows  the electroweak couplings to be
 disentangled, with particular 
-sensitivity to right-handed couplings. The reaction $\ee\to b\bar b$ 
-is of special interest since it either receives corrections from BSM physics that act on electroweak couplings of all fermions or from BSM physics 
-that acts primarily on the Higgs and the heavy quark doublet $(t,b)$, as happens in many composite 
-models of the Higgs boson~\cite{eetobb1,eetobb2}. 
+sensitivity to right-handed couplings.   The reaction $\ee\to b\bar b$ 
+is of special interest since it can receive corrections not only from new electroweak interactions but also from new physics 
+that acts primarily on the Higgs and the heavy quark doublet $(t,b)$~\cite{eetobb1,eetobb2}. 
 
 The ILC at 250~GeV can be the first step to the study of $\ee$
 reactions at higher energy.   A linear $\ee$ collider is extendable in
@@ -510,11 +520,9 @@ measurement of the top-quark mass with a precision of 40~MeV,
 measurements of the top-quark
 electroweak couplings to the per-mille level, measurement of the
 Higgs coupling to the top quark to 2\% accuracy, and measurement of
-the triple-Higgs boson coupling to 10\%  accuracy. Higher energy
-stages of the ILC  would also allow 
-much more sensitive searches for new particles with electroweak interactions.
+the triple-Higgs boson coupling to 10\%  accuracy.   Higher energy stages of the ILC will also extend searches for new particles with electroweak interactions and will give sensitivity to new $Z'$ bosons of mass 7--12~TeV. 
 Eventually, the ILC tunnel could be the host for  very high
-gradient electron accelerators reaching energies higher than 1 TeV.   The 
+gradient electron accelerators reaching energies much higher than 1 TeV.   The 
 ILC promises a long and bright future beyond its initial 250~GeV stage.
 
 
@@ -567,13 +575,13 @@ At accelerating gradients of $31.5$ to $35\,{\mathrm{MV/m}}$, this
 technology offers high overall efficiency and reasonable investment
 costs, even considering the cryogenic infrastructure needed for the
 operation 
-at $2^\circ{\mathrm{K}}$. Some relevant parameters are given in Table~\ref{tab:ilc-params}.
+at $2~\mathrm{K}$. Some relevant parameters are given in Table~\ref{tab:ilc-params}.
 
 The underlying TESLA SCRF technology is mature, with a broad industrial
 base throughout the world, and is in use at a number of free-electron-laser
 facilities that are in operation (European XFEL at DESY), under construction (LCLS-II at SLAC),
  or in preparation (SHINE in Shanghai) in the three regions that have
- contributed to the ILC design. In preparation for the ILC, Japan and
+ contributed to the ILC technology. In preparation for the ILC, Japan and
  the U.S.\ 
 have founded a collaboration for further cost optimisation of the TESLA technology.
 In recent years, new surface treatments during the cavity preparation
@@ -629,7 +637,7 @@ impinges on a photocathode with a strained GaAs/GaAsP superlattice
 structure, which will provide  $90\,\%$ electron polarisation at the
 source, resulting in more than $80\,\%$ polarisation at the interaction
 point. The design is based on the electron source of the SLAC
-Linear Collider. 
+Linear Collider (SLC). 
 
 Two concepts for positron production are considered.
 The baseline solution employs superconducting helical undulators at
@@ -647,7 +655,7 @@ An alternative design, the electron-driven source, utilises a dedicated S-band e
 % on a rotating titanium target. 
 %Electrons are produced over a timespan of $66\,{\mathrm{ms}}$, reducing the target heat load and the necessary rotation speed.
 %Technical challenges for this concept are radiation in the capture device and beam loading in the first accelerating cavities. 
-This source would not provide positron polarisation,
+This source might not provide positron polarisation,
 but would have advantages for operation at lower electron beam energies and during commissioning.
 % as its operation is independent  from the main linac electron beam, operation at lower electron beam energies is possible and commissioning can begin in parallel to electron source commissioning.
 Both concepts are
@@ -679,10 +687,9 @@ Cavities are mounted in $12\,{\mathrm{m}}$-long cryomodules that house $9$ cavit
 The cryomodules provide cooling and thermal shielding and contain all
 necessary pipes for fluid and gaseous helium at various temperatures. 
 No separate helium transport line is necessary.
-Cryomodules of this type have been in continuous 
-operation since 2000 in the TESLA Test Facility (TTF, now FLASH), and, 
-since 2017, 97 of these cryomodules have been in operation at the
-European XFEL.   This proves their 
+
+Cryomodules of this type have been in continuous operation since 2000 in the TESLA Test Facility (TTF, now FLASH), since 2016 at the FAST facility at Fermilab where the ILC specification of the 31.5 MeV/m beam acceleration gradient was demonstrated~\cite{Broemmelsiek:2018iqr},  and, since 2017, 97 of these cryomodules have been in operation at the European XFEL.
+This proves their 
 long-term stability. 
 Cost and performance estimates for the ILC cryomodules are based on
 the 
@@ -701,13 +708,7 @@ Finally, the beam-delivery system focuses the beams
 to the required size of $516\,{\mathrm{nm}} \times 7.7\,{\mathrm{nm}} $. 
 A feedback system, which profits from the relatively long
  inter-bunch separation of $554\,{\mathrm{ns}}$, ensures the necessary beam stability. 
-The necessary nano-beam technology and feedback control 
-has been tested at the Accelerator
-Test Facility 2 (ATF-2) at KEK, where beam sizes within $10\,\%$ of
-the goal for ILC have 
-been demonstrated\footnote{A $41\,{\mathrm{nm}}$ beam size was
-  achieved at TF2; this corresponds to the ILC design goal after
-  scaling for the different beam energies.}.
+The necessary nano-beam technology and feedback control has been tested at the Accelerator Test Facility 2 (ATF-2) at KEK, where beam sizes of $41\,{\mathrm{nm}}$ have been demonstrated~\cite{Okugi:2017jji}; these correspond to the ILC design goal within $10\,\%$ after scaling for different beam energies.
  
 
 The TDR baseline design assumed
@@ -803,7 +804,7 @@ of the di-lepton mass in the process $\ee \to HZ \to H \ell^+
 Higgs mass,  independently of its decay mode,  via the 
 reconstruction of the lepton recoil momentum. The Higgs boson mass is
 important by itself, but it is also a crucial input in the precise SM
-prediction of the Higgs boson properties.  Stringent momentum resolution requirements have to be met
+prediction of the Higgs boson properties.  Stringent momentum resolution requirements must be reached
 to meet the mass resolution goal. 
 \item Many physics measurements depend on the flavor  identification of heavy
   quarks
@@ -814,7 +815,8 @@ third-generation
 species.   Many other physics processes also lead to 
 complex  final states containing  bottom or charm quarks.
 A superb  vertex detector  is needed to reconstruct these 
-long-lived particles with specificity and high efficiency.
+long-lived particles 
+precisely and with high efficiency.
  For example, the position of the reconstructed secondary
  vertex
  should be found with a precision of better than $4\,\mu$m.
@@ -838,7 +840,7 @@ which escape from the detector. These  can only be reconstructed by
 measuring the missing energy and 3-momentum  in the event. This requires 
 that the detector is as hermetic as possible. 
 Particular care must be given to the region at small angles surrounding the 
-beampipe. Section~\ref{sec:detect-a}
+beampipe. %Section~\ref{sec:detect-a}
 \end{itemize}
 
 \begin{figure}[tb]
@@ -851,7 +853,6 @@ beampipe. Section~\ref{sec:detect-a}
  \vspace{-0.7cm}
  \end{figure}
  
-
 Compared to the last large-scale detector project in particle physics,
 the construction and upgrade of the LHC detectors, the 
 emphasis for linear collider detectors
@@ -861,7 +862,10 @@ passive material in the detector at an unprecedented level, with strict
 management and control of services and, in particular,
 thermal management of the detector.  As a benchmark,  the total
 material in front of the electromagnetic calorimeter should not exceed
-a few percent of a radiation length. Significant technological R\&D was needed to
+a few percent of a radiation length. 
+This is possible due to the relatively low levels
+of radiation, compared to the LHC, for example.
+Significant technological R\&D was needed to
 demonstrate the feasibility of this goal. 
 
 
@@ -967,7 +971,7 @@ questions were answered and the feasibility
 
 The physics demands for high precision challenge
 the ILC detector designs.  Optimal 
-Trade-offs between
+trade-offs between
 granularity, material, speed and power, and 
 resolution were needed to achieve
 the performance parameters  discussed
@@ -977,7 +981,7 @@ improvement in state-of-the-art.
 Intensive R\&D was needed to realise this performance,
 reliably and at minimal cost,
 on the subsystem level, and  within the complete,
-integrated detector system.\cite{RDliaision}
+integrated detector system \cite{RDliaision}.
 
 
 %The ILC accelerator will produce well-characterized 
@@ -1264,9 +1268,10 @@ An example of individual particles reconstructed using PFA
 \end{center}
 \caption{Fully simulated and reconstructed $t\bar t$-event in the ILD
   detector, showing the individually reconstructed neutral and charged
-  particles. Note that the colour code is based entirely on the
-  particle flow algorithm 
-and does not use any Monte Carlo truth information.}
+  particles. The colour code presents the
+  particle flow algorithm reconstruction without
+  reference to the Monte Carlo generator
+  information.}
 \label{fig:ttbarevent}
 \vspace{-0.7cm}
 \end{figure}
@@ -1297,7 +1302,7 @@ focus on adapting the software tools for
 improve the computing and physics performance of the algorithms.
 
 
-An initial computing concept for the ILC, including a first estimate of the required resources, has been developed by the LCC Software and Computing Group.
+An initial computing concept for the ILC, including a first estimate of the required resources, has been developed by the LCC Software and Computing Group~\cite{bib:lcc_computing}.
 This concept follows in general terms that of the LHC experiments and
 Belle~II,  with a strong on-site computing center complemented by large
 Grid-based computing resources distributed around the world. Due to the much lower event rates at the ILC compared to the LHC, 
@@ -1354,10 +1359,9 @@ the ILC will give access to the properties of the top quark,
  including the top-quark Yukawa coupling, and  to the Higgs self-coupling.
 Above  the top-quark production threshold,  the ILC will be
  a precision top-quark factory. Throughout its energy evolution,  the
- ILC will be able to produce new BSM particles of mass 
+ ILC will be able to produce pairs of new BSM particles of mass 
 up to half its centre-of-mass energy and to  provide
- sensitivity to new force particles $Z'$ with masses ranging up to 7-12 TeV. 
-
+ sensitivity to new force particles $Z'$ well beyond the direct search reach of the LHC.
 
 Since no new particles beyond the SM have been 
 discovered at the LHC, the search for new physics through
@@ -1388,8 +1392,9 @@ deliver higher luminosity at energies up to about 300~GeV.  However,
 the ILC, operated as a Higgs factory, can take advantage of  beam 
 polarisation to achieve similar physics
 performance~\cite{Barklow:2017suo}.
-More importantly, the possibility to easily upgrade the ILC to higher
-energies makes the Higgs factory stage of the  ILC  only
+More importantly, the straightforward energy
+upgrade path of the ILC
+makes the Higgs factory stage  only
 the first phase of its potential for exploration. 
 
 As emphasised in the previous sections, the ILC proposal
@@ -1499,7 +1504,7 @@ in the US  neutrino program.
 ILC is an energy-frontier project that
 can be started today.   It will provide a new opportunity for European
 physicists in the time frame of the HL-LHC and beyond, as Europe plans
-and marshalls its resources for the next major CERN project. In this 
+and marshals its resources for the next major CERN project. In this 
 way, the ILC will play a crucial role in encouraging a new
 generation of researchers to enter particle physics and maintain the
 continuous tradition and the scientific strength of our enterprise.
@@ -1525,8 +1530,8 @@ has become irresistible.
 %and advancing the proposal to host the ILC. Some potential partner
 %countries are being approached by Japan, and others will follow. 
 
-
-\vspace{-.4cm}
+\newpage
+%\vspace*{3.0cm}
 
 %\bibliographystyle{utphysmod}
 \bibliography{ILC-ESU-refs}
@@ -1548,7 +1553,7 @@ has become irresistible.
  %\epsfysize=9.0cm
  \begin{center}
  \includegraphics[width=18cm, height=11cm]{figures/Cost.png}
-\caption{Costs of the ILC250 project in MILC as evaluated by the Linear Collider Collaboration (LCC), converted to JPY and re-evaluated by KEK, and summarised in the MEXT ILC Advisory Panel report, in July, 2018.
+\caption{Costs of the ILC250 project in ILCU as evaluated by the Linear Collider Collaboration (LCC), converted to JPY and re-evaluated by KEK, and summarised in the MEXT ILC Advisory Panel report, in July, 2018.
  \label{Cost}}
  \end{center}
  \end{figure*}
@@ -1556,16 +1561,16 @@ has become irresistible.
 \textbf{The above summary is based on the information given in:} 
 \begin{enumerate}
 \item 
-\textit{ILC-TDR} (note: it is a reference for the ILC500 in MILCU): http://www.linearcollider.org/ILC/Publications/Technical-Design-Report;
+\textit{ILC-TDR} (note: it is a reference for the ILC500 in B ILCU): \url{http://www.linearcollider.org/ILC/Publications/Technical-Design-Report};
 \item
-\textit{The International Linear Collider Machine Staging Report 2017} (note: it is a reference for ILC250 cost in MILCU): arXiv:1711.00568[hep-ex;
+\textit{The International Linear Collider Machine Staging Report 2017} (note: it is a reference for ILC250 cost in B ILCU): arXiv:1711.00568[hep-ex, \url{https://arxiv.org/abs/1711.00568};
 \item
-\textit{Summary of the ILC Advisory Panel's discussions to date after Revision} (conversion to JYen). Report by the International Linear Collider (ILC) Advisory Panel, MEXT, Japan on July 4, 2018: http://www.mext.go.jp/component/b\_menu/shingi/toushin/\_\_icsFiles/afieldfile/2018/09/20/1409220\_2\_1.pdf.
+\textit{Summary of the ILC Advisory Panel's discussions to date after Revision} (conversion to JYen). Report by the International Linear Collider (ILC) Advisory Panel, MEXT, Japan on July 4, 2018: \url{http://www.mext.go.jp/component/b\_menu/shingi/toushin/\_\_icsFiles/afieldfile/2018/09/20/1409220\_2\_1.pdf}.
 \end{enumerate}
  
 The ILC currency unit (ILCU) is defined as 1 US Dollar (USD) in Jan., 2012. The cost conversion to Japanese Yen (JPY) has assumed that 1 Euro=115 JPY and 1 USD=100 JPY. The accelerator labor-estimate unit of ‘person-hours’ may be simply converted to ‘person-years’ by using a factor of 1,700 working-hours per year.
 
-The total value cost for the 250 GeV accelerator construction was estimated to be in a range of 4.78-5.26 BILCU, and has been converted to 515.2-583.0 B JPY, by taking into account various effects of cost-reduction R\&D, smaller mass production because of ILC500 to ILC250, and time-dependent variations specially in tunnelling and building works. 
+The total value cost for the 250 GeV accelerator construction was estimated to be in a range of 4.78-5.26 B ILCU and has been converted to 515.2-583.0 B JPY, by taking into account various effects of SCRF cost-reduction R\&D, smaller mass production because of ILC500 to ILC250, and time-dependent variations specially in tunnelling and building works. 
 
 These numbers include the cost for civil engineering (tunnelling, building etc.) and the laboratory. Costs not included are land acquisition, living environment for visiting researchers, access roads, groundwater handling, energy service enterprise for power transmission, part of low power voltage supplies and physic-analysis computer centre. The cost premium to cover the project cost with 85\% instead of 50\% confidence level (loosely speaking, the 1 sigma  uncertainty of the cost estimate) has been estimated to be 25\% of the estimated cost.
 
@@ -1608,25 +1613,31 @@ These numbers include the cost for civil engineering (tunnelling, building etc.)
 \newpage
 
 \section*{\label{Appendix3} \Large{Appendix C: List of supporting documents} }
-Description of supporting documents:
+%Description of supporting documents:
 \begin{itemize}
 \item
 ILC TDR documents;
 \item
-ILC project overview, being specifically produced for the European Strategy Process \cite{ILCforESS};
+ILC general overview, being specifically produced for the European Strategy Process;
 \item
 European ILC Preparation Plan (EIPP), produced under the E-JADE project;
 \item
-linear collider Detectors R\&D Liasion Report;
+Linear collider Detectors R\&D Liasion Report;
 \item
-Green ILC project: reports and web page.
+Green ILC project: reports and web page;
+\item
+Letter from the KEK’s ILC Planning Office.
 
 \end{itemize}
 
-Supporting documents web page: https://linearcollider.web.cern.ch/content/ilc-european-strategy-document.
+\textbf{Supporting documents web page:} 
+
+%https://linearcollider.web.cern.ch/content/ilc-european-strategy-document
+
+\url{https://ilchome.web.cern.ch/content/ilc-european-strategy-document}
 
 \section*{\label{Appendix4} \Large{Appendix D: Glossary} }
-Abbreviations and definitions used in the text:
+%Abbreviations and definitions used in the text:
 \begin{itemize}
 \item
 \textbf{AAA:} The Japanese Advanced Accelerator Association promoting science and technology (\url{http://aaa-sentan.org/en/association/index.html}).
@@ -1659,7 +1670,7 @@ Abbreviations and definitions used in the text:
 \item
 \textbf{MEXT:} Ministry of Education, Culture, Sports, Science and Technology (\url{http://www.mext.go.jp/en/}).
 \item
-\textbf{SHINE:} Hard X-Ray free electron laser facility in SINAP, Shangai.
+\textbf{SHINE:} Hard X-Ray free electron laser facility in Shanghai.
 
 \end{itemize}
 

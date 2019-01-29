@@ -15,7 +15,7 @@
 %
 %  1)  latex apssamp.tex
 %  2)  bibtex apssamp
-%  3)  latex apssamp.tex
+% https://www.overleaf.com/project/5b0c51828e746f209754cf04 3)  latex apssamp.tex
 %  4)  latex apssamp.tex
 %
 \documentclass[%
@@ -107,9 +107,9 @@ Input from the International Linear Collider community for the European Strategy
 
   15 pages B. List + Michizono
   
-%\input{./chapters/machine.tex}
+\input{./chapters/machine.tex}
   
-\section{\label{sec:runscenarios}ILC running scenario (w. pol.)  }
+\section{\label{sec:runscenarios}ILC Running Scenarios  }
    5 pages J. List
    
 \input{./chapters/runscenarios.tex}
@@ -128,18 +128,28 @@ Input from the International Linear Collider community for the European Strategy
   
 \input{./chapters/detectors.tex}
 
-\section{\label{sec:software}Software and Monte-Carlo samples}
+\section{\label{sec:software}Software and Monte-Carlo samples: Modeling the experimental environment}
 
    10 pages Gaede + Miyamoto
    
    \input{./chapters/software.tex}
 
-\section{\label{sec:higgs}Physics Simulations: Higgs and Electroweak}
+\section{\label{sec:higgs}Physics Simulations: Higgs
+%and Electroweak
+}
 
 
   20 pages Tian + J. List
   
   \input{./chapters/higgs.tex}
+
+\section{\label{sec:ew}Physics Simulations: Electroweak Production of 2- and 4-Fermion Final States }
+
+
+  5 pages J. List
+  
+\input{./chapters/ew.tex}
+
 
 \section{\label{sec:searches}Physics Simulations: Searches }
 
@@ -152,14 +162,14 @@ Input from the International Linear Collider community for the European Strategy
   10 pages Peskin, Fujii and Vos \\
   
 \input{./chapters/highenergy.tex}
-
+  10 pages Peskin, Fujii and Vos
 \section{\label{sec:conclusion}Conclusion}
 
 \input{./chapters/conclusions.tex}
 
 
 %\bibliographystyle{jhep}
-\bibliography{ILC-supplement-refs,chapters/machine-refs}
+\bibliography{ILC-supplement-refs,chapters/machine-refs,chapters/runscen-refs,chapters/highenergy-refs}
 
 
 \end{document}

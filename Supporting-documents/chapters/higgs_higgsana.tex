@@ -1,6 +1,80 @@
 
 \subsubsection{$m_h$ and $\sigma_{Zh}$}
-[recoil mass analysis, Fig.\ref{fig:RecoilMassLep250}, to be filled]
+\label{sec:higgs:sigmazh}
+The signal processes are $\ee\to Zh$, $Z\to l^+l^-$ or $q\bar{q}$ and 
+$h\to$anything. Thanks to the known four momenta of initial states, 
+the four momentum of final state $h$ can be reconstructed 
+as the recoil against the four momentum of $Z$, which is directly
+measured from its decay products $l^+l^-$ or $q\bar{q}$. 
+The mass of $h$ ($m_X$) can therefore be reconstructed as
+\beq
+m_X^2=s+m_Z^2-2E_Z\sqrt{s},
+\eeq{eqn:recoilmass}
+where $m_Z$ and $E_Z$ are measured mass and energy of $Z$
+respectively. The signal events can hence be tagged without looking
+at the decay products of $h$. This technique is traditionally called
+{\it recoil mass} technique, and the two types of signal processes 
+($Z\to l^+l^-$ and $Z\to q\bar{q}$) are called
+leptonic recoil and hadronic recoil channels. The recoil mass technique
+makes possible the measurement of the inclusive cross section of $\ee\to Zh$ ($\sigma_{Zh}$),
+that plays a unique role in the determination of the absolute values of
+Higgs couplings as explained in Sec.~\ref{sec:physics}.
+Meanwhile, the Higgs mass ($m_h$) can be straightforwardly determined by 
+the $m_X$ spectrum. The detailed analyses for leptonic recoil channels
+$\mu^+\mu^-h$ and $e^+e^-h$ and for hadronic recoil channel $q\bar{q}h$
+can be found respectively in references~\cite{Yan:2016xyx} and 
+~\cite{Tomita:2015,Thomson:2015jda,Miyamoto:2013zva}. For simplicity only the analysis for $\mu^+\mu^-h$ channel is illustrated in detail here.
+
+The event pre-selection in $\mu^+\mu^-h$ channel starts with requiring at least 
+two isolated muons with opposite charges and invariant mass ($m_{ll}$) consistent 
+with $Z$ mass ($m_{ll}\in[50,130]$ GeV). 
+It is well possible that one or two muons in such a candidate 
+muon pair are actually from Higgs decay, for instance from 
+$h\to ZZ^*/WW^*/\tau^+\tau^-\to \mu^+\mu^-+others$. To minimize the possibility of
+this case, or to maximize the possibility that the candidate muon pair is 
+indeed from the primary $Z$ decay, a strategy is taken:
+when there are more than one such candidate muon pairs,
+the pair which minimizes following $\chi^2$ 
+\beq
+\chi^2=(\frac{m_{ll}-M_Z}{\sigma_Z})^2+(\frac{m_{X}-M_H}{\sigma_h})^2
+\eeq{eqn:chi2forleptonpair}
+is identified as from the primary $Z$ decay. Here $M_Z$ is 91.2 GeV,
+$M_H$ is 125 GeV, $\sigma_Z$ and $\sigma_h$ are resolutions for 
+$Z$ mass and recoil mass reconstructions. 
+After the pre-selection, the remaining background events are dominated by
+leptonic and semi-leptonic decays of $\ee\to ZZ$, leptonic decay of $\ee\to WW$, 
+and leptonic decay of $\ee\to \gamma Z$. 
+
+In the final-selection, cuts $p_T^{ll}>10$ GeV and $|\cos\theta_{mis}|<0.98$,
+where $p_T^{ll}$ is the transverse momentum of muon pair and $\theta_{mis}$
+is the polar angle of missing four momentum, are applied to suppress
+$\gamma Z$ background events. $E_{vis}>10$ GeV,
+where $E_{vis}$ is the visible energy other than the muon pair,
+and $m_{ll}\in[73,120]$ GeV
+are applied to suppress $WW$ background events. 
+$ZZ$ as well as $WW$ and $\gamma Z$ background events are
+further suppressed by a dedicated BDT cut 
+which is trained using angular distributions of each muon,
+between two muon and muon pairs. After a final cut that requires
+$m_X\in[110, 155]$ GeV, the remained signal and background events are 
+shown in the $m_X$ spectrum in Fig.~\ref{fig:RecoilMassLep250} 
+for the $Z\to\mu^+\mu^-$ channel, where the signal peak is clearly seen.
+The overall signal efficiency is 88\%, with an
+average signal over background ratio of 1/1.3.
+
+The number of signal events and its statistical uncertainty are obtained by 
+fitting $m_X$ spectrum with signal component modeled by a kernel function
+and background component modeled by a third order polynomial, 
+shown in Fig.~\ref{fig:RecoilMassLep250}. As shown by the green histogram in Fig.~\ref{fig:RecoilMassLep250},
+the signal spectrum has a 
+considerable non-Gaussian tail in the high mass end, which is due to
+the overestimate of effective $\sqrt{s^\prime}$ in $\ee\to Zh$ reaction 
+when beamstrahlung and ISR effects are included, recall Eqn.~\ref{eqn:recoilmass}.
+It's worth noting that these effects become so significant at $\sqrt{s}=500$ GeV,
+as shown in Fig.~\ref{fig:RecoilMassLep500},
+that the measurement uncertainty could be underestimated by a factor of 2
+if the effects are not properly included in the simulation. 
+
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.85\hsize]{chapters/figures/RecoilMassLep250.eps}
@@ -11,8 +85,110 @@
   \label{fig:RecoilMassLep250}
 \end{figure}
 
-\subsubsection{$\sigma_{\nu\bar{\nu}h}$ and $\sigma_{eeh}$}
-[$W$-fusion and $Z$-fusion analyses, Fig.~\ref{fig:vvHbb}, to be filled]
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.85\hsize]{chapters/figures/RecoilMassLep500.eps}
+\end{center}
+  \caption{Recoil mass spectrum against
+ $Z\to\mu^+\mu^-$ for signal $e^+e^-\to Zh$ and SM background 
+  at 500 GeV \cite{Yan:2016xyx}.}
+  \label{fig:RecoilMassLep500}
+\end{figure}
+
+For $e^-_Le^+_R$, the estimate of relative 
+uncertainty on $\sigma_{Zh}$ measurement ($\delta\sigma_{Zh}$) 
+is 2.5\% for the leptonic
+recoil channel, where the contribution from $e^+e^-h$ channel is
+slightly smaller than $\mu^+\mu^-h$ channel due to the higher 
+electron bremsstrahlung. For $e^-_Re^+_L$, $\delta\sigma_{Zh}$
+is estimated to be 2.9\%. By combining the hadronic recoil channel,
+$\delta\sigma_{Zh}$  is estimated to be 2.0\% for both $e^-_Le^+_R$
+and $e^-_Re^+_L$, as shown in~\ref{tab:higgserrors}. 
+The enabled measurement of left-right asymmetry 
+for $\sigma_{Zh}$ plays a very important role in the EFT fit as
+explained in Sec.~\ref{sec:physics}. 
+The Higgs mass $m_h$ is also measured from the fit shown
+in Fig.~\ref{fig:RecoilMassLep250}. The estimate of $m_h$ uncertainty 
+is 14 MeV for ILC250, with the dominant contribution 
+from $\mu^+\mu^-h$ channel. 
+The uncertainty in the Higgs boson mass ($\delta m_h$) does play a role 
+as a source of systematic error for predictions of Higgs boson couplings. 
+In most cases, $\Delta m_h\sim 100$ MeV 
+would be already sufficient, but this is not true
+for $h\to ZZ^*$ or $h\to WW^*$. 
+It has been pointed out in  \cite{Lepage:2014fla} that 
+\beq
+\delta_W =6.9\cdot\delta m_h,~~~~\delta_Z =7.7\cdot \delta m_h,
+\eeq{eqn:MassH}
+where $\delta_W$ and $\delta_Z$ are the 
+relative errors for $g(hWW)$ and $g(hZZ)$ respectively. 
+At ILC250, the 14 MeV accuracy for Higgs boson mass results in 
+systematic errors of 0.1\% for $\delta_W$ and
+$\delta_Z$.
+
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{l|c|c|c|c|c|c|c|c}
+\hline
+${h\to }$ & bb & cc & gg & $\tau\tau$ & $\mathrm{WW^{*}}$ & 
+$ZZ^{*}$ & $\gamma\gamma$ & $\gamma Z$ \\
+\hline
+eff. [\%] & 88.25 & 88.35 & 87.98 & 88.43 & 88.33 & 88.52 & 88.21 & 87.64 \\
+\hline
+\end{tabular}
+\caption{The efficiencies of the major SM Higgs decay modes,
+after all the event selection cuts, shown here for the case 
+of the $\mathrm{\mu^{+}\mu^{-}h}$
+channel and $e_{L}^{-}e_{R}^{+}$ at $\sqrt{s}$=250 GeV~\cite{Yan:2016xyx}.
+The uncertainties due to finite MC statistics on these values are below 0.14\%.}
+\label{tab:recoilmass}
+\end{table}
+
+As pointed out in the very beginning of this analysis, the key idea which enables
+the inclusive $\sigma_{Zh}$ measurement is that the signal is tagged
+independent of Higgs decay modes. Hence it is crucial to examine whether all
+the pre-selection and final-selection cuts satisfy this criterion. This can be verified 
+by checking the signal efficiency for each individual Higgs decay mode
+and evaluating the efficiency uniformity among all the decay modes.
+Table~\ref{tab:recoilmass} lists the efficiencies of major SM Higgs decay modes 
+after all cuts in the $\mu^+\mu^-h$ channel. It is seen that there is no
+discrepancy in efficiencies of SM decay modes beyond 1\%. 
+This is not a surprise because the analysis strategies and selection cuts
+are carefully designed to make it so. The cut $E_{vis}>10$ GeV may
+deserve a few more words, since it apparently suppresses the 
+$h\to invisible$ mode. The strategy behind is that $\sigma_{Zh}$ can be
+measured as 
+\beq
+\sigma_{Zh}=\sigma_{Zh}^{vis}+\sigma_{Zh}^{inv},
+\eeq{eqn:sigmazh}
+where $\sigma_{Zh}^{vis}$ is the total cross section for all $h\to visible$
+modes, which is measured here, and $\sigma_{Zh}^{inv}$ is the cross section
+for $h\to invisible$ mode, which can be measured separately, described in
+Sec.~\ref{sec:higgs:invisible}. A detailed and quantitative analysis taking into 
+account the possibility of existing BSM decay modes is performed in~\cite{Yan:2016xyx}.
+It concludes that the relative bias on $\sigma_{Zh}$,
+induced by the Higgs decay modes dependence, can be
+controlled at below 0.1\% (0.2\%) for the $\mu^+\mu^-h$ ($e^+e^-h$) channel,
+which is much smaller than the
+expected statistical uncertainty even at the full ILC250.
+
+[t.b.f.: a few comments on decay mode independence in hadronic recoil channel~\cite{}.]
+
+\subsubsection{$\sigma_{\nu\nu h}$ and $\sigma_{eeh}$}
+The second leading Higgs production process, 
+$\ee\to\nu\bar{\nu}h$ via $W$-fusion, provides a direct measurement
+for $hWW$ coupling. It plays a crucial role in the global fit based on $\kappa$ formalism,
+and still helps improve the global fit results based on EFT formalism even though 
+the cross section is not very large at $\sqrt{s}=250$ GeV, 
+$\sigma_{\nu\nu h}=$ 14 fb for $e^-_Le^+_R$. 
+The signal channel used is 
+$e^+e^-\to\nu\bar{\nu}h,~h\to b\bar{b}$, in which direct observable is
+$\sigma_{\nu\nu h}\cdot BR_{bb}$. Together with $BR_{bb}$ measurement
+by $Zh$ process, $\sigma_{\nu\nu h}$ is then measured.
+The analysis is briefly described here, and more details can be found 
+in~\cite{Durig:2014lfa,Tian:2017}. 
+
 \begin{figure}
 %\begin{center}
 \begin{tabular}[c]{c}
@@ -22,12 +198,74 @@
 %\end{center}
   \caption{Missing mass spectrum (upper) and Higgs mass spectrum (lower) 
   for the signal $e^+e^-\to\nu\bar\nu h, h\to b \bar{b}$ and the SM background 
-  at 250 GeV and 500 GeV respectively \cite{H2bb1,H2bb2}.}
+  at 250 GeV and 500 GeV respectively \cite{Durig:2014lfa,Tian:2017}.}
   \label{fig:vvHbb}
 \end{figure}
 
+The signal final states consist of two b-jets and two missing neutrinos.
+The pre-selection starts with vetoing events with one or more isolated 
+leptons. Then jet-clustering and flavor tagging are performed with number of
+expected jets equals 2. The two jets are required that in each jet there are at least 6
+reconstructed particles and $Y_{3\to2}<0.1$, where $Y_{3\to 2}$ is the 
+jet distance value from 3 jets to 2 jets step defined by Durham algorithm. The 
+b-tagging of the two jets are required to be $btag1>0.8$ and $btag2>0.2$.
+The di-jet invariant mass is required to be $m_{bb}\in[110,150]$ GeV.
+The missing mass is required to be larger than 20 GeV.
+After the pre-selection, the remaining dominant background events are
+from $\gamma Z$ ($Z\to b\bar{b}$), $\nu\bar{\nu}Z$ ($Z\to b\bar{b}$) 
+and $Zh$ ($Z\to\nu\bar{\nu}$, $h\to b\bar{b}$).
+
+In the final-selection, $\gamma Z$ and $\nu\bar{\nu}Z$ background 
+events are further highly suppressed by a BDT cut, which is trained 
+using input variables di-jet mass, polar angle of di-jet, angle between
+two jets, and $Y_{2\to1}$. The remained signal and background events
+are plotted in the missing mass spectrum, shown in Fig.~\ref{fig:vvHbb} (upper).
+The signal efficiency is 36\% and the average signal over background ratio is around 1/4.
+The most dominant background events turn out to come from $Zh$ ($Z\to\nu\bar{\nu}$) and 
+have significant overlap with signal events in the missing mass spectrum.
+This is because the invariant mass of $\nu\bar{\nu}$ of signal events
+can not be far away from $M_Z$, limited by available phase space at $\sqrt{s}=250$ GeV.
+Therefore it is necessary to fit simultaneously $\sigma_{\nu\nu h}\cdot BR_{bb}$
+and $\sigma_{Zh}\cdot BR_{bb}$. Note a useful constraint can be added into the fit
+that $\sigma_{Zh}\cdot BR_{bb}$ is also measured 
+using $Z\to l^+l^-$ and $Z\to q\bar{q}$ channels. 
+As a result, the estimate of relative uncertainty on $\sigma_{\nu\nu h}\cdot BR_{bb}$
+is 8.1\%, shown in Table~\ref{tab:higgserrors}, 
+and the correlation between $\sigma_{\nu\nu h}\cdot BR_{bb}$ and
+$\sigma_{Zh}\cdot BR_{bb}$ is -34\%.
+
+The left-handed beam polarization does helps significantly the $\sigma_{\nu\nu h}$
+measurement here, simply because it enhances the cross section by a factor of 2.34.
+The $\sigma_{\nu\nu h}$ can be measured much better at $\sqrt{s}=500$ GeV, 
+shown in~\ref{fig:vvHbb} (lower), thanks
+to a fact of 10 increase on cross section and much easier separation with $Zh$ ($Z\to\nu\bar{\nu}$).
+
+The third leading Higgs production process, $\ee\to e^+e^- h$ via $Z$-fusion, is not easy to measure
+due to its very small cross section at $\sqrt{s}=250$ GeV. 
+A full simulation analysis is performed and 
+suggests that this process is already discoverable at $\sqrt{s}=250$ GeV
+with $\sigma_{eeh}$ measured at a significance of 9$\sigma$~\cite{}. 
+
 \subsubsection{$\mathrm{BR}(h\to b\bar{b}/c\bar{c}/gg)$}
-[Fig.~\ref{fig:qqHbbccgg250}, to be filled]
+The capabilities of precise measurements for $\mathrm{BR}(h\to c\bar{c}/gg)$ 
+mark down another unique advantage of a lepton collider, enabled by:
+clear separation between b-jet, c-jet and light quark/gluon-jet thanks to the
+excellent flavor tagging performance introduce in Sec.~\ref{sec:software};
+more importantly the democracy about cross sections between Higgs processes and
+other SM background processes induced by electroweak interactions.
+$\mathrm{BR}(h\to b\bar{b}/c\bar{c})$ offer important measurements of 
+Yukawa couplings between Higgs and third/second generation quarks. 
+$\mathrm{BR}(h\to gg)$ offers direct measurement of $hgg$ coupling 
+using, complementary to that at the LHC. These measurements are performed
+using the leading Higgs production process $\ee\to Zh$. All the major $Z$ decay
+channels $Z\to l^+l^-$, $Z\to\nu\bar{\nu}$ and $Z\to q\bar{q}$ are used in the analyses,
+see details in~\cite{Ono:2013sea}. [Here illustrated is the analysis procedure 
+for $Z\to q\bar{q}$ channel, see Fig.~\ref{fig:qqHbbccgg250}, details t.b.f.].
+
+The estimates of statistical uncertainties for $\sigma_{Zh}\cdot BR_{bb}$,
+$\sigma_{Zh}\cdot BR_{cc}$ and $\sigma_{Zh}\cdot BR_{gg}$ are respectively
+1.3\%, 8.3\% and 7.0\%, shown in Table~\ref{tab:higgserrors}.
+
 \begin{figure*}
 \begin{center}
 \includegraphics[width=0.85\hsize]{chapters/figures/qqh_bbccgg_template_250.eps}
@@ -39,43 +277,85 @@ and for all events / $h\to others$ / SM background (top left/middle/right).}
 \end{figure*}
 
 \subsubsection{$\mathrm{BR}(h\to WW^*/ZZ^*)$}
-[Fig.~\ref{fig:vvHWW500}, to be filled]
+The measurements of branching ratios of $h\to WW^*/ZZ^*$ play an important role
+in the global fit as the Higgs total width determined by
+$$\Gamma_h=\frac{\Gamma_{WW}}{BR_{WW}}=\frac{\Gamma_{ZZ}}{BR_{ZZ}}.$$
+Depending on how each $W/Z$ decays and how Higgs is produced, there
+are quite many signal channels that can be used. [here describes analysis of one channel 
+$\nu\bar{\nu}h, h\to WW^*\to 4 jets$~\cite{Durig:2014lfa}, see Fig.~\ref{fig:vvHWW500}, t.b.f.]
+
+The estimates of statistical uncertainties for $\sigma_{Zh}\cdot BR_{WW}$ and
+$\sigma_{Zh}\cdot BR_{ZZ}$ are respectively
+4.6\%, and 18\%, shown in Table~\ref{tab:higgserrors}.
+
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.85\hsize]{chapters/figures/vvH_WW4j500_MassH.eps}
 \end{center}
   \caption{Higgs mass spectrum for the signal $e^+e^-\to\nu\bar\nu h, h\to WW^{*}$
   and $WW^{*}\to 4-jets$, and the SM background 
-  at 500 GeV \cite{H2WW500}.}
+  at 500 GeV \cite{Durig:2014lfa}.}
   \label{fig:vvHWW500}
 \end{figure}
 
 \subsubsection{$\mathrm{BR}(h\to \tau^+\tau^-/\mu^+\mu^-)$}
-[Fig.~\ref{fig:qqHtautau250}, to be filled]
+[describe analysis in~\cite{Kawada:2015wea}, remained signal and
+ background events in $Z\to q\bar{q}$ channel are shown in 
+ Fig.~\ref{fig:qqHtautau250}, t.b.f.]
+ 
+ The estimates of statistical uncertainties for $\sigma_{Zh}\cdot BR_{\tau\tau}$ and
+$\sigma_{Zh}\cdot BR_{\mu\mu}$ are respectively
+3.2\%, and 72\%, shown in Table~\ref{tab:higgserrors}.
+
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.85\hsize]{chapters/figures/ZH_qqtautau250_TMVA.eps}
 \end{center}
   \caption{MVA output for the signal $e^+e^-\to q\bar{q} h, h\to\tau^+\tau^-$
- and the SM background at 250 GeV \cite{H2tautau250}.}
+ and the SM background at 250 GeV \cite{Kawada:2015wea}.}
   \label{fig:qqHtautau250}
 \end{figure}
 
 \subsubsection{$\mathrm{BR}(h\to \mathrm{invisible/exotic})$}
-[invisible analysis, Fig.\ref{fig:qqHinv250}, to be filled]
+\label{sec:higgs:invisible}
+[invisible analysis using signal channels $Z\to q\bar{q}$ and $Z\to l^+l^-$~\cite{},
+recoil mass technique is applied, analysis in~\cite{Ishikawa:2014,Tian:2015}; 
+see Fig.\ref{fig:qqHinv250}, t.b.f.]
+
+The estimates of 95\% C.L. upper limit for $BR(h\to invisible)$
+is 0.86\%, shown in Table~\ref{tab:higgserrors}.
+
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.85\hsize]{chapters/figures/ZH_qqinv250_right.eps}
 \end{center}
   \caption{Recoil mass spectrum against
  $Z\to q\bar{q}$ for signal $e^+e^-\to Zh, h\to invisible$ assuming $BR(h\to invisible)=10\%$
-  and SM background  at 250 GeV \cite{H2inv250}.}
+  and SM background  at 250 GeV \cite{Ishikawa:2014}.}
   \label{fig:qqHinv250}
 \end{figure}
 
 
 \subsubsection{Higgs CP Properties}
-[Fig.~\ref{fig:qqHtautauCP}, to be filled]
+\label{subsubsec:higgstautauCP}
+
+Higgs CP properties can be measured via the
+$h\tau\tau$ coupling at the tree level, 
+\beq
+\Delta{\cal L}_{h\tau\tau}=-\frac{\kappa_\tau y_\tau}{\sqrt{2}}h{\tau^+}
+(\cos\phi+i\sin\phi\gamma_5)\tau^-,
+\eeq{eqn:CPHtautau}
+where the CP phase angle $\phi$ is determined using the transverse spin
+correlation between the two $\tau$, as shown in Fig.~\ref{fig:qqHtautauCP} (upper). 
+The spin of each $\tau$ is estimated using
+the polarimeter vector which can be fully reconstructed in several $\tau$ decay modes,
+taking advantage of precise measurements for impact parameters, see the method detail
+in~\cite{Jeans:2015vaa}, and the analysis details using signal channels 
+$Z\to q\bar{q}$ and $Z\to l^+l^-$ in~\cite{Jeans:2018anq}. 
+[analysis illustration in $Z\to q\bar{q}$ channel, Fig.~\ref{fig:qqHtautauCP} (lower); t.b.f.]
+
+The estimate of statistical uncertainties for CP phase angle is $4.3^\circ$ with full ILC250.
+
 \begin{figure}
 \begin{tabular}[c]{c}
 \includegraphics[width=0.85\hsize]{chapters/figures/ZH_qqtautau250_CP1.eps} \\
@@ -84,13 +364,25 @@ and for all events / $h\to others$ / SM background (top left/middle/right).}
   \caption{Upper: $\Delta\phi$ distributions at MC Truth level for different 
   values of $\Phi_{CP}$ for the signal $e^+e^-\to q\bar{q} h, h\to\tau^+\tau^-$ at 250 GeV;
   Lower: reconstructed $\Delta\phi$ distributions after all cuts in the dominant category
-  for the SM signal (in red) and the SM background (blue) respectively \cite{H2tautauCP}.}
+  for the SM signal (in red) and the SM background (blue) respectively \cite{Jeans:2018anq}.}
   \label{fig:qqHtautauCP}
 \end{figure}
 
 
 \subsubsection{Angular Analyses for Anomalous $HVV$ Couplings}
-[Fig.~\ref{fig:ZHanomHVV1} and~\ref{fig:ZHanomHVV2}, to be filled]
+The $hZZ$ coupling can be deviated from SM not only in total strength but also
+in Lorentz structures, which can be detected by measuring differential cross sections,
+\beq
+\Delta{\cal L}_{hZZ}=(1+a)\frac{m_Z^2}{v}hZ_\mu+Z^\mu+
+\frac{1}{2}\frac{b}{v}hZ_{\mu\nu}{Z}^{\mu\nu}+
+\frac{1}{2}\frac{\tilde{b}}{v}hZ_{\mu\nu}\tilde{Z}^{\mu\nu}.
+\eeq{eqn:CPHZZ}
+
+[analysis detail see~\cite{Ogawa:2017bmg},
+Fig.~\ref{fig:ZHanomHVV1} and~\ref{fig:ZHanomHVV2}, to be filled]
+
+The estimate of statistical uncertainties for $a$, $b$ and $\tilde{b}$ are 
+0.076, 0.027 and 0.05, with a large correlation between $a$ and $b$, $\rho=-99.17\%$.
 \begin{figure}
 \begin{tabular}[c]{c}
 \includegraphics[width=0.85\hsize]{chapters/figures/ZH_anomHVV250_b.eps} \\

@@ -1,3 +1,59 @@
-[pre-selection: isolated lepton finder or isolated lepton veto; overlay removal; jet clustering; 
-final-selection; to be filled]
+%[pre-selection: isolated lepton finder or isolated lepton veto; overlay removal; jet clustering; 
+%final-selection; to be filled]
+The full simulation analysis at the event selection level can be described 
+in two steps: {\it pre-selection} and {\it final-selection}. At the pre-selection step
+each signal event is characterized according to its final states at parton level by
+numbers of isolate leptons (meaning electron or muon unless otherwise stated), 
+isolated taus, isolated photons and jets, and nature of missing momentum.
+Here isolated particle is meant to be not coming from a jet. The procedures
+for the pre-selection are typically as follows:
+\begin{itemize}
+%\begin{enumerate}[i]
+\item {\it isolated lepton finder}, which will try to reconstruct the isolated leptons
+in each event. The main algorithms are implemented in the processor called
+IsolatedLeptonTagging~\cite{}, based on a multivariate method [as introduced in 
+previous section?]. [in case not yet introduced]
+It starts with selecting energetic electron/muon (momentum $P>5$ GeV), 
+from the reconstructed particles collection, by requiring the particle has characteristic
+energy fractions deposited in each sub-detector, namely $E_{ecal}/E_{tot}$,
+$E_{tot}/P$, $E_{yoke}$, where $E_{ecal}$ ($E_{hcal}$) is the energy deposited 
+in ECAL (HCAL), $E_{tot}$ is the sum of $E_{ecal}$ and $E_{hcal}$, and
+$E_{yoke}$ is the energy deposited in Yoke. For electron, 
+it is required that $E_{ecal}/E_{tot}>0.9$ and $0.5<E_{tot}/P<1.3$. For muon,
+it is required that $E_{tot}/P<0.3$ and $E_{yoke}>1.2$ GeV. The selected
+electron/muon is then further required to have impact parameters consistent with
+that from primary vertex. Double cones are then defined around that electron/muon,
+and variables such as the energies of the charged and neutral particles within a cone 
+are utilized for isolation requirement. The exact criteria for isolation 
+are realized by a MVA, trained using true isolated leptons and leptons from jets.
+A cut on the MVA output is then required as the last step of isolated lepton finder.
+\item {\it isolated tau/photon selection}.
+\item {\it overlay removal}, which will try to remove the pile-up beam background
+events in every event. An exclusive jet clustering is performed using $k_t$ algorithm
+on all the particles except the selected isolated lepton/tau/photon in above step. 
+As a result, the particles from beam background events, which usually have very low-$p_t$, 
+will be effectively removed by the exclusive jet clustering process in which the 
+input parameters such as $R$ and number of required jets are carefully optimized 
+for each signal process. Alternative algorithms include anti-$k_t$ and Valencia.
+\item {\it jet clustering and flavor tagging}, using LCFIPlus. 
+All the particles belonging to the
+jets obtained in previous step are then re-clustered into a few jets using another inclusive 
+jet clustering algorithm, Durham algorithm~\cite{}.
+Each jet is flavor tagged using the reconstructed information of 
+its secondary and tertiary vertices. 
+\end{itemize}
+%\end{enumerate}
 
+At the final-selection step, the reconstructed leptons, taus, photons and jets 
+will be first combined to reconstruct $W$, $Z$, $h$ or $top$ according to the signal. 
+Then various cuts will be applied to further suppress background events.
+Details are explained measurement by measurement in the following. 
+Unless stated otherwise, the analysis is done at $\sqrt{s}=250$ GeV,
+a nominal integrated luminosity of 250 fb$^{-1}$ is assumed, and
+the cuts and results are illustrated with left-handed beam polarization
+$e^-_Le^+_R: P(e^-,e^+)=(-0.8,+0.3)$. Additional comments will be given
+when $\sqrt{s}$ or right-handed beam polarization 
+$e^-_Re^+_L: P(e^-,e^+)=(+0.8,-0.3)$ has a significant impact on the results.
+The results are straightforwardly extrapolated into that for the running scenario
+introduced in Sec.~\ref{sec:runscenario} and are then used as input for the 
+Higgs coupling determination by a global fit introduced in Sec.~\ref{sec:physics}.
