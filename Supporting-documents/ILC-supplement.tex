@@ -27,7 +27,7 @@
 %frontmatterverbose, 
 %preprint,
 %showpacs,preprintnumbers,
-%nofootinbib,
+nofootinbib,
 %nobibnotes,
 %bibnotes,
  amsmath,amssymb,
@@ -45,7 +45,9 @@
 \usepackage{xcolor}
 \usepackage{hepunits}
 \usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{wasysym}
 \usepackage{bm}% bold math
+\usepackage{subfigure}
 %\usepackage{hyperref}% add hypertext capabilities
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
@@ -167,7 +169,7 @@ Input from the International Linear Collider community for the European Strategy
 
   5 pages Berggren
   
-  \input{./chapters/searches.tex}
+ \input{./chapters/searches.tex}
 
 \section{\label{sec:ILC-HE}Program of the ILC beyond 250 GeV }
   10 pages Peskin, Fujii and Vos \\
@@ -180,7 +182,7 @@ Input from the International Linear Collider community for the European Strategy
 
 
 %\bibliographystyle{jhep}
-\bibliography{ILC-supplement-refs,chapters/machine-refs,chapters/runscen-refs,chapters/software-refs,chapters/highenergy-refs}
+\bibliography{ILC-supplement-refs,chapters/runscen-refs,chapters/machine-refs,chapters/software-refs,chapters/highenergy-refs,chapters/searches-refs}
 
 
 \end{document}
