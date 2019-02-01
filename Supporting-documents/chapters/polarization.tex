@@ -1,0 +1,130 @@
+% \subsection{Systematic uncertainties and the importance of beam polarization for precision measurements at $\ee$  colliders}
+% \label{subsec:polarization}
+% 
+% \input{chapters/polarization.tex}
+
+Beam polarization is considered as an essential ingredient of the ILC physics program because of three important advantages:
+\begin{enumerate}
+\item Suppression of backgrounds and enhancement of signals
+\item Analysis of the chiral properties
+\item Control of systematic uncertainties
+\end{enumerate}
+The first two items often (but not always!) apply to a large extent already when only electron polarisation is available. 
+However for the third aspect, the positron polarisation is crucial in many cases --- in particular whenever the left-right asymmetry \ALR\ itself is the physics observable, like \eg\ for 2-fermion processes (see Sec.~\ref{subsec:ew_ffana}) or for the Higgs precision measurements (see Sec.~\ref{subsec:ew_WWana}).
+All three aspects will be discussed and illustrated with concrete physics examples in the following subsections. 
+
+A comprehensive review of the role of polarization with many more examples can be found in~\cite{MoortgatPick:2005cw}, and a recent discussion of positron polarization in particular in~\cite{Fujii:2018mli}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\subsubsection{Suppression of backgrounds and enhancement of signals} 
+\label{subsubsec:pol:s_over_b}
+Due to the chiral structure of the weak interaction, and especially since right-handed fermions form isospin-singlets and therefore don't participate in charged current interactions, every $e^+e^-$ cross section depends on the chirality of the incoming beam particles.  For any given polarization of the electron and positron beams, \Pem\ and \Pep, respectively, the polarised cross section is caluculated from the chiral cross sections in the following way:
+\begin{eqnarray}
+\sigma_{\Pem\Pep} &=& \frac{1}{4}\bigl\{
+     (1+\Pem)(1+\Pep) \quad \sigmaRR  \nonumber \\
+&& + (1-\Pem)(1-\Pep) \sigmaLL \nonumber \\
+&& + (1+\Pem)(1-\Pep) \sigmaRL \nonumber \\ 
+&& + (1-\Pem)(1+\Pep) \sigmaLR \bigr\},
+\label{eq:pol:xsec}
+\end{eqnarray}
+
+
+For charged current $t$-channel processes, like $e^+e^- \to W^+W^-$, $e^+e^- \to \nu_e\bar{\nu}_e$ or Higgs production via $WW$ fusion, only the \sigmaLR\ contribution is allowed, so that their rate can be dialed up or down by a factor 17 for $\Pmp=(\pm 80\%,\mp 30\%)$ (36 for $\Pmp=(\pm 80\%,\mp 60\%)$) via the choice of the polarisation sign. 
+
+For $s$-channel processes in the SM, including Higgsstrahlung, \sigmaLR\ and \sigmaRL\ contribute. In this case, Eqn~\ref{eq:pol:xsec} can be reduced to
+\begin{equation}
+ \sigma_{\Pem\Pep} = 2 \sigma_0 (\Leff/\mathcal{L}) \left[1 - \ALR \Peff \right]
+\label{eq:pol:xsecschan}
+\end{equation}
+Here, $\sigma_0$ is the unpolarized cross section and \ALR\ 
+the left-right asymmetry, defined in Eqn.~\ref{eq:defALR}. \Leff\ and \Peff\  
+are the effective luminosity and polarization, respectively, defined as
+\begin{equation}
+\Peff= \frac{\Pem - \Pep}{1 - \Pep\Pem}
+\label{eq:def-leff-peff}
+\quad\mbox{\rm and }\quad
+\Leff=\frac{1}{2}(1 -\Pep\Pem)\L
+\end{equation}
+
+In practice, for $\Pmp=(\pm 80\%,\mp 30\%)$, $\Peff = \pm 89\%$ and $\Leff = 62\% \mathcal{L}$, whereas for $\Pmp=(0,0)$ and , $\Peff = 0$ and $\Leff = 50\% \mathcal{L}$, since in half of the cases a left-handed electron will meet a left-handed positron --- for which the cross section for $s$-channel processes is zero. 
+
+With \ALR = 0.151 for Higgsstrahlung, this means that the cross section for $\Pmp=(-80\%,+30\%)$ is 41\% larger than the unpolarised cross section, while it is
+still 7\% larger than the unpolarised cross section for the opposite sign combination  $\Pmp=(+80\%,-30\%)$. Since, as we saw above, important background processes like $e^+e^- \to W^+W^-$ are strongly suppressed in this configuration, the $\Pmp=(+80\%,-30\%)$ gives comparable and in some cases even better results than the $\Pmp=(-80\%,+30\%)$ configuration. 
+
+However the signal-to-background ratio ($S/B$ or $S/sqrt{B}$) cannot be maximized for all processes at the same time. But it is very important to realize that the combination of a high-$S/B$ data set with a low-$S/B$ data set is statistically {\em not} equivalent to taking 
+the same amount of data with the average $S/B$, simply because significances don't add up linearly. Therefore the overall precision increases even if the total intergrated luminosity is split between ``optimal'' and ``non-optimal'' configurations. 
+
+This is illustrated in Fig.~\ref{fig:polWIMPstat}, which compares the reach of the search for WIMP production in the mono-photon channel for different assumptions on luminosity and polarization (see Sec.~\ref{sec:searches} for a description of the analysis). It clearly shows the large increase in sensitivity for \Pmp=(+80\%, -30\%) w.r.t.\ the unpolarised case, and that the result for splitting the data on all four helicity configurations as forseen in the H20 running scenario, albeit completely dominated by the 1.6\,\iab\ collected with \Pmp=(+80\%, -30\%), is still probing significantly higher scales than the unpolarised case. Note that this figure omits all systematic uncertainties in order to highlight the statistical $S/B$ effect. 
+\begin{figure}
+\centering
+\includegraphics[width=0.95\linewidth]{./chapters/figures/vector_noSystematics.pdf}
+		
+\caption{{\color{red}[Figure layout will be improved!]} Comparison of the reach of the search for WIMP production in the mono-photon channel for different assumptions on luminosity and polarization (see Sec.~\ref{sec:searches} for a description of the analysis)~\cite{Habermehl:417605}. Note that this plot is considering {\em statistical uncertainties only}. The corresponding comparison {\em including systematic uncertainties} is shown in Fig.~\ref{fig:polWIMPsys}.}
+\label{fig:polWIMPstat}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\subsubsection{Analysis of chiral properties} 
+\label{subsubsec:pol:chiral}
+Beam polarisation is essential to analyze the chiral structure of SM processes in search for deviations from a pure $V-A$ structure due to new physics contributions --- and, in case of a discovery of new particles at the LHC or the ILC itself, of these new particles and their interaction. The list of example applications is long and comprises for instance:
+\begin{itemize}
+\item Measurements fermion couplings in 2-fermion production: Beam polarisation is essential to disentangle the left- and right-handed couplings of each fermion species to the photon and the $Z$ boson, as discussed in Sec.~\ref{subsec:ew_ffana}. 
+\item Measurements of triple gauge couplings: With both beams polarized and using various orientations of the polarisation vectors, all 14 complex couplings (thus 28 real parameters) of the most general Lagrangian for triple gauge vertices, including $CP$ violation, can be extracted simultaneously, as  discussed in Sec.~\ref{subsec:ew_WWana}.
+\item Higgs coupling determination: The left-right asymmetry of the $ZH$ cross section has been found to be an important ingredient for constraining the full set of $CP$ conserving dimension-6 operators consistent with $SU(2) \times\ U(1)$ symmetry. This will be discussed in detail in Sec.~\ref{sec:global}.
+\item Generic BSM effects: The chiral structure of physics beyond the SM is apriory not known - it could be similar to the SM or completely different. When parametrising new physics in terms of effective operators, the tensor structure of the operator immediately relates to the chiral cross sections: For instance the $s$-channel exchange of a vector mediator allows only for \sigmaLR\ and \sigmaRL\ by angular momentum conservation,
+while the exchange of a scalar also has non-zero \sigmaLL\ and \sigmaRR. Since these
+vanish in the SM, like-sign polarisation configurations are extremely sensitive to 
+such types of new interactions. An example is e.g.\ the distinction between different WIMP models in the mono-photon channel, as discussed in Sec.~\ref{subsec:searches_monophoton}.
+\end{itemize}  
+% Many more applications can be found e.g.\ in~\cite{MoortgatPick:2005cw, Fujii:2018mli}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\subsubsection{Control of systematic uncertainties} 
+\label{subsubsec:pol:systematics}
+
+Last but not least, the redundancies provided by the combination of data sets with different beam polarization configurations are invaluable for the control of systematics uncertainties. Thereby it important to always have one more degree of freedom that (statistically) absolutely required: For physics measurements which do not aim at the analysis of a chiral structure, e.g.\ measurements of total unpolarised cross sections, two data sets with with different polarisations (e.g.\ $\Pmp=(\pm 80\%, \mp 30\%)$ or $\Pmp=(\pm 80\%, 0)$ often suffice to constrain the most important nuisance parameters. However if the chiral structure itself is among the observables, e.g.\ when measuring \ALR\ of 2-fermion processes or of Higgsstrahlung, one flip of the polarisation sign(s) is already contained in the observable itself, and thus a non-zero positron polarisation becomes essential to provide enough independent information to constrain nuisance parameters.
+
+{\color{blue} Points to make here:
+\begin{itemize}
+\item Fast-helicity reversal creates of the systematic effects between data sets with different polarisations. Note that this does not apply for data sets with different center-of-mass energies, which are typically taken in different years, thus all effects from changes to the configuration, calibration or alignment of the detector and the accelerator do not correlate between such data sets.
+\item In case of correlated uncertainties, the data sets with different polarisations serve mutually as control samples, allowing for large cancellations of systematic uncertainties. Plot from Robert's thesis Fig. 10.13. $\Rightarrow$ factor 2 on $WW$, factor 4 on $Z$.
+\item Help of positron polarisation to control uncertainty on \ALR\ measurement: Digest of Tab 10.6 in Robert's thesis, make graphical version: w/o positron polarisation, uncertainties on \ALR\ increase by 2 factor 2 on $WW$ production and by a factor of $10$ on $s$-channel $Z$ exchange.
+\item For ILC precisions, a residual polarisation of 0.25\% would already create a bias on cross sections and asymmetries when not allowed for as nuissance parameter $\to$ plot from Robert's thesis Fig 10.2
+\item WIMP example: discuss Fig.~\ref{fig:polWIMPsys} The limit calculation uses a fractional event counting based on the 
+energy spectrum of the photon. With larger WIMP masses, the maximum energy of the ISR photons becomes lower. At the highest WIMP masses, the signal-free part of the spectrum becomes large enough to also help to constrain the nuisance parameters and thus to limited the impact of the systematic uncertainties. This effect is visible in form of the ``bump'' in the limit curves near $M_X=220$\,GeV. In case of the unpolarised data set, the effect starts to become visible already from $M_X=150$\,GeV onwards. 
+%The study includes a careful evaluation of the systematic uncertainties, comprising those on selection efficiencies, luminosity, beam energy (spectrum) and polarization as well as on the theoretical modelling of the background. 
+\end{itemize}
+}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.95\linewidth]{./chapters/figures/vector_withSystematics.pdf}
+		
+\caption{{\color{red}[Figure layout will be improved!]} Comparison of the reach of the search for WIMP production in the mono-photon channel for different assumptions on luminosity and polarization, {\em including} systematic uncertainties (see Sec.~\ref{sec:searches} for a description of the analysis)~\cite{Habermehl:417605}. }
+\label{fig:polWIMPsys}
+\end{figure}
+
+
+%%%%%%%% to be moved to IX C %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\color{red}[THE FOLLOWING IS TO BE MOVED TO SECTION~\ref{subsec:lincirc}]}\\
+Figure~\ref{fig:polWIMPmanhattans} shows the 95\% CL reach in new physics scale $\Lambda$ for pair production of a light ($M_{X} = 1$\,GeV) WIMP mediated by a vector operator for different assumptions on luminosity, energy and polarization 
+as they are typical for linear and circular colliders. In particular the polarised
+configurations al refer to the ILC reference running scenario H20, see Sec.~\ref{sec:runscenarios}. Input to the limit calculation is the ILC study performed in full detector simulation of the ILD detector concept described in~Sec.~\ref{sec:searches}, and its extrapolation to other center-of-mass energies~\cite{Habermehl:417605}. The study includes a careful evaluation of the systematic uncertainties, comprising those on selection efficiencies, luminosity, beam energy (spectrum) and polarization as well as on the theoretical modelling of the background. The limit calculation uses a fractional event counting based on the 
+energy spectrum of the photon. It can be seen that at 250\,GeV, 2\,\iab\ with polarized beams offer a greater reach than 5 or even 10\,\iab\ without beam polarization. Even at a higher center-of-mass energy of 350\,GeV, about 10\,\iab\ of unpolarised data  would be required to catch up with 2\,\iab\ of polarised data at 250\,GeV. The higher center-of-mass energies reachable by linear colliders, in conjuction with beam polarisation, improve the reach considerably. For instance the reach of the full H20 running scenario of the ILC roughly doubles the reach in $\Lambda$ compared to the 250\,GeV stage.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.95\linewidth]{./chapters/figures/manhattan_vector_v3.pdf}
+		
+\caption{{\color{red}[Michael, I think this plot and its description would better fit into section~\ref{subsec:lincirc}, but I didn't want to mess with `your' tex file. Please move it to your section if you agree!]} Comparison of the reach for WIMP searches in the mono-photon channel for different assumptions on luminosity, polarization and energy, including systematic uncertainties (see Sec.~\ref{sec:searches} for a description of the analysis)~\cite{Habermehl:417605}. }
+\label{fig:polWIMPmanhattans}
+\end{figure}
+
+
+
+
