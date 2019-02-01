@@ -2,19 +2,45 @@
 
 {\it PLEASE DO NOT EDIT THIS PART IN OVERLEAF! This is work in progress! }
 
-
-Includes general design principle (low power consumption) and some history.
+% CHAPTER ON ILC MACHINE
 
 % CHAPTER ON ILC MACHINE
 
-{\it Status: Dec 31, 2018}
+{\it Status: Feb 1, 2019}
 
-{\it Some introduction here- 1 page. 
+The International Linear Accelerator (ILC) is a $250\,{\mathrm{GeV}}$ (extendable up to $1\,{\mathrm{TeV}}$) linear $e^+e^-$ collider, based on $1.3\,{\mathrm{GHz}}$ superconducting radio-frequency (SCRF) cavities.
+It is designed to  achieve a luminosity of $1.5\cdot 10^{34}~{\mathrm{cm}}^{-1}{\mathrm{s}}^{-1}$ and provide an integrated luminosity of $350\,{\mathrm{fb}}^{-1}$ in the first four years of running.
+The electron beam will be polarised to $80\,\%$, and positrons with $30\,\%$ polarization will be provided if the undulator based positron source concept is employed. 
 
-Includes general design principle (low power consumption) and some history.
+Its parameters have been set by physics requirements first outlined in 2003,
+updated in 2006, and thoroughly discussed over many years with the physics user community. 
+After the discovery of the Higgs boson it was decided that an initial energy of $250\,{\mathrm{GeV}}$ provides the opportunity for a precision physics programme at a reasonable initial cost~\cite{Evans:2017rvt}.
+Some relevant parameters are given in Tab.~\ref{tab:ilc-params}.
 
+The collider design is the result of nearly twenty years of R\&D. 
+The heart of the ILC, the superconducting cavities, is based on over a decade of pioneering work by the TESLA collaboration in the 1990s. 
+Some other aspects were based on the R\&D carried out for the JLC/GLC and NLC projects, which were based on room-temperature accelerating structures. 
+From 2005 to the publication of the Technical Design Report (TDR)~\cite{Adolphsen:2013kya} in 2013, the design of the ILC accelerator was conducted as a worldwide international collaboration coordinated by the Global Design Effort (GDE) under a mandate from the International Committee for Future Accelerators (ICFA).
+Since then, the Linear Collider Collaboration (LCC) has been coordinating the international activities for both, the ILC and CLIC projects, again mandated by ICFA.
 
-}
+The fundamental goal of the design of the ILC accelerator is a high energy efficiency, which limits the overall power consumption of the accelerator complex during operation to $129\,{\mathrm{MW}}$ at  $250\,{\mathrm{GeV}}$ and $300\,{\mathrm{MV}}$ at  $1\,{\mathrm{TeV}}$, which is comparable to the power consumption of CERN.
+% Stapnes at ALCW2018: 1.35TWh in 2012 -> 154MW on average in 2012
+This is achieved by the use of SCRF technology for the main accelerator, which offers a high RF-to-beam efficiency through the use of superconducting cavities, operating at $1.3\,{\mathrm{GHz}}$, where high-efficiency klystrons are commercially available.
+At accelerating gradients of $31.5$ to $35\,{\mathrm{MV/m}}$ this technology offers high overall efficiency and reasonable investment costs, even considering the cryogenic infrastructure needed for the operation at $2\,{\mathrm{K}}$.
+
+The underlying TESLA technology is mature, with a broad industrial base throughout the world, and is in use at a number of free electron laser facilities that are in operation (European XFEL at DESY, Hamburg), under construction (LCLS-II at SLAC, Stanford) or in preparation (SCLF in Shanghai) in the three regions Asia, Americas, and Europe that contribute to the ILC project.
+In preparation for the ILC, Japan and the U.S. have founded a collaboration for further cost optimisation of the TESLA technology.
+In recent years, new surface treatment technologies utilising nitrogen during the cavity preparation process, such as the so-called   nitrogen infusion technique, have been developed at Fermilab, with the prospect to achieve higher gradients and lower loss rates with a less expensive surface preparation scheme than assumed in the TDR.
+
+When the Higgs discovery was imminent in 2012, the Japan Association of High Energy Physicists (JAHEP) made a proposal to host the ILC in Japan~\cite{JAHEP:2012a,JAHEP:2012b}. 
+Subsequently, the Japanese ILC Strategy Council conducted a survey of possible sites for the ILC in Japan, looking for  suitable geological conditions for a tunnel up to $50\,{\mathrm{km}}$ in length (as required for a $1\,{\mathrm{TeV}}$  machine), and the possibility to establish a laboratory where several thousand international scientists can work and live. 
+As a result, the candidate site in the Kitakami region in northern Japan, close to the larger cities of Sendai and Morioka, was found to be the best option. 
+The site offers a large, uniform granite formation with no currently active faults that is well suited for tunnelling.
+Even at the great Tohoku earthquake in 2011 underground installations in this rock formation were essentially unaffected, which underlines the suitability of this candidate site. 
+
+This section starts with a short overview over the changes of the ILC design between the publication of the TDR in $2013$ and today, followed by a description of the SCRF technology, and an description of the overall accelerator design and its subsystems. 
+Thereafter, possible upgrade options are laid out, the Japanese candidate site in the Kitakami region is presented, and costs and schedule of the accelerator construction project are shown.
+
 
 %===============================================================================
  \begin{figure*}[tb]
@@ -29,15 +55,50 @@ Includes general design principle (low power consumption) and some history.
 \subsection{Design Evolution since the TDR}
 \label{sec:design_evo}
 
-{\it Describe how design has evolved since TDR:
+%{\it Describe how design has evolved since TDR:
+%
+%Staging to 250GeV,
+%longer undulator,
+%Shield wall reduction,
+%common L*,
+%new lumi parameters for 250GeV,
+%mention longer tunnel at 500GeV
+%}
 
-Staging to 250GeV,
-longer undulator,
-Shield wall reduction,
-common L*,
-new lumi parameters for 250GeV,
-mention longer tunnel at 500GeV
-}
+Briefly after the discovery of the Higgs boson, the Technical Design Report (TDR) for the ILC accelerator was published in 2013~\cite{Adolphsen:2013jya,Adolphsen:2013kya}, after 8 years of work by the Global Design Effort (GDE).
+The TDR design was based on the requirements set forth by the ICFA mandated parameters committee~\cite{Heuer:2006}:
+\begin{itemize}
+\item a centre-of-mass energy of up to \siunit{500}{GeV},
+\item tuneable between $\sqrt{s} = \siunit{200}{GeV}$ and \siunit{500}{GeV},
+\item with a luminosity sufficient to collect \siunit{500}{fb^{-1}} within four years of operation, taking into account three-year a ramp up, corresponding to a final luminosity of \siunit{250}{fb^{-1}} per year and an instantaneous luminosity of ${\mathcal{L}} = \siunit{2 \cdot 10^{34}}{cm^{-2}\,s^{-1}}$,
+\item an electron polarisation of at least $80\,\%$,
+\item and the option for a later energy upgrade to up to \siunit{1}{TeV}.
+\end{itemize}
+
+The accelerator design presented in the TDR met these requirements (see Tab.~\ref{tab:ilc-params}), at an estimated construction cost of \siunit{7,982}{MILCU} for a Japanese site, plus \siunit{22.9}{Mh} (million hours) of labour in participating institutes~\cite[Sec. 15.8.4]{Adolphsen:2013kya}. 
+Costs were expressed in ILC Currency Units ILCU, where \siunit{1}{ILCU} corresponds to \siunit{1}{US\$} at 2012 prices.
+
+In the wake of the Higgs discovery, and the proposal by the Japan Association of High Energy Physicists (JAHEP) to host the ILC in Japan\cite{JAHEP:2012a} with its recommendation to start with a \siunit{250}{GeV} machine~\cite{JAHEP:2012b}, plans were made for a less expensive machine configuration with a centre--of--mass energy of $\sqrt{s} = \siunit{250}{GeV}$, around the maximum of the $Zh$ production cross section, half the TDR value.
+Various options were studied in the TDR~\cite[Sect. 12.5]{Adolphsen:2013kya} and later~\cite{Dugan:2014}.
+This resulted in a revised proposal~\cite{Evans:2017rvt} for an accelerator with an energy of \siunit{250}{GeV} and a luminosity of ${\mathcal{L}} = \siunit{1.35 \cdot 10^{34}}{cm^{-2}\,s^{-1}}$, capable of delivering about \siunit{200}{fb^{-1}} per year, or \siunit{200}{fb^{-1}} within the first four years of operation, taking into account the ramp-up.
+
+Several other changes of the accelerator design have been approved by the ILC Change Management Board since 2013, in particular:
+\begin{itemize}
+\item The free space between the interaction point and the edge of the final focus quadrupoles ($L^*$) was unified between the ILD and SiD detectors~\cite{bib:cr-0002}, facilitating a machine layout with an optimised luminosity for both detectors. 
+\item A vertical access shaft to the experimental cavern was foreseen~\cite{bib:cr-0003}, allowing a CMS-style assembly concept for the detectors, where large detector parts are built in an above-ground hall while the underground cavern is still being prepared. 
+\item A reduction of the shield wall thickness in the Main Linac tunnel from $3.5$ to \siunit{3.5}{m}~\cite{bib:cr-0012}, leading to a significant cost reduction, was made possible by dropping the requirement for personnel access during beam operation of the main linac.
+\item Power ratings for the main beam dumps, and intermediate beam dumps for beam aborts and machine tuning, were reduced to save costs~\cite{bib:cr-0013}.
+\item A revision of the expected horizontal beam emittance at the interaction point at \siunit{125}{GeV} beam energy, based on improved performance expectations for the damping rings and a more thorough scrutiny of beam transport effects at lower beam energies, lead to an increase of the luminosity expectation from $0.82$ to \siunit{1.35 \cdot 10^{34}}{cm^{-2}\,s^{-1}}~\cite{bib:cr-0016}.
+\end{itemize}
+
+All these changes contributed to an overall cost reduction, risk reduction, and improved performance expectation.
+
+Several possibilities were evaluated for the length of the initial tunnel. 
+Options that include building tunnels with the length required for a machine with $\sqrt{s} = \siunit{350}{GeV}$ or \siunit{500}{GeV}, were considered.
+In these scenarios, an energy upgrade would require the installation of additional cryomodules (with RF and cryogenic supplies), but only little or no civil engineering activities.
+In order to be as cost effective as possible, the final proposal, endorsed by ICFA~{ICFA:2017}, does without these empty tunnel options. 
+
+While the length of the main linac tunnel was reduced, the beam delivery system and the main dumps are still designed to allow for an energy upgrade up to  $\sqrt{s} = \siunit{1}{TeV}$.
 
 
 \subsection{Superconducting RF Technology}
@@ -62,7 +123,21 @@ which are assembled into cryo modules comprising eight to nine cavities, an opti
 Pulsed klystrons supply the necessary radio frequency power (High-Level RF HLRF) to the cavities by means of a waveguid power distribution system and input couplers, one per cavity.
 
 This technology was primarily developed at DESY for the TESLA accelerator project that was proposed in 2001.
-Since then, the TESLA technology collaboration~\cite{bib:ttc} has been improving this technology, which is now being used in several accelerators in operation (FLASH at DESY~\cite{bib:flash}, European XFEL in Hamburg~\cite{bib:xfel}), under construction (LCLS-II at SLAC, Stanford, CA~\cite{bib:lcls-ii}) or planned (SHINE in Shanghai~\cite{Zhao:2018lcl}).
+Since then, the TESLA technology collaboration~\cite{bib:ttc} has been improving this technology, which is now being used in several accelerators in operation (FLASH at DESY~\cite{schreiber_faatz_2015,Vogt:2018wvy}, European XFEL in Hamburg~\cite{bib:xfel}), under construction (LCLS-II at SLAC, Stanford, CA~\cite{bib:lcls-ii}) or planned (SHINE in Shanghai~\cite{Zhao:2018lcl}).
+
+
+\subsubsection{The Economics of Superconducting Linacs}
+
+The total energy dissipation $P\sub{d}$ in a linac cavity of length $L$ and a total voltage $V = g L$ at a the accelerating gradient $g$ is given by
+$$
+  P\sub{d} = g V R\sub{s} \lambda / C
+$$
+where $R\sub{s}$ is the material's surface resistance, $\lambda$ is the RF frequency, and $C$ (in ${\mathrm{\Omega^2}}$) depends only on the cavity shape, not its size.
+The dissipated power in a single cavity grows with the square of the gradient, 
+and the overall power grows linearly with the gradient for a given accelerating voltage.
+
+XXXXXX CONTINUE HERE XXXXXXXX
+
 
 \subsubsection{The Quest for High Gradients}
 
@@ -117,7 +192,17 @@ The gradient at which a SC cavity can be operated in practice is limited by thre
 The onset of these adverse effects is mostly caused by micro-metre sized surface defects of various kinds. 
 Producing a sufficiently defect-free surface in an economic way is thus the central challenge in cavity production.
 
-More than $20$ years of industrial production of TESLA type cavities have resulted in a good understanding which production steps steps and quality controls are necessary to produce cavities with high-quality, nearly defect-free surfaces that are capable of achieving the desired high field strengths at a reasonable production yiels.
+More than $20$ years of industrial production of TESLA type cavities have resulted in a good understanding which production steps steps and quality controls are necessary to produce cavities with high-quality, nearly defect-free surfaces that are capable of achieving the desired high field strengths at a reasonable production yield.
+
+\begin{figure*}[htbp]
+   \includegraphics[width=\hsize]{chapters/figures/LBandSRFNbCavityGradientEvolution_ProjectImpact_rev28dec2018}
+\caption{Development of gradient of SRG cavities
+\cite[updated]{Geng:2015glc}.
+}
+% Paper is published under CC-BY-3.0
+\label{fig:gradients}
+\end{figure*}
+
 
 \paragraph{Results from XFEL cavity production}
 
@@ -179,7 +264,7 @@ Experimental results seem to indicate that Nitrogen infusion may offer a combina
 \item with a simplified and less expensive production process that does away with the final electropolishing step.
 \end{itemize}
 
-Fig.~\ref{Grassellino:2017bod} \cite[Fig. 5]{Grassellino:2017bod} shows how the addition of nitrogen during the final \siunit{48}{h} long \siunit{120}{^\circ C} bake of a one--cell cavity drastically improves the cavity quality factor as well as the maximum gradient, which comes close to the best XFEL cavity results, but at higher $Q_0$.
+Fig.~\ref{fig:n2infusion} \cite[Fig. 5]{Grassellino:2017bod} shows how the addition of nitrogen during the final \siunit{48}{h} long \siunit{120}{^\circ C} bake of a one--cell cavity drastically improves the cavity quality factor as well as the maximum gradient, which comes close to the best XFEL cavity results, but at higher $Q_0$.
 
 % Add nine-cell result
 
@@ -315,6 +400,8 @@ The specification of \siunit{23.6}{MV/m} is marked by a red line
 \end{figure}
 
 
+
+Record at DESY: \cite{Kostin:2009a} PXFEL1
 Record at Fermilab: \cite{Broemmelsiek:2018iqr}
 record at STF2: \cite{Yamamoto:2018kml}
 
@@ -489,6 +576,23 @@ and possible upgrades.
 \label{tab:ilc-params}}
 \end{table*}
 
+\paragraph{Beam polarisation and spin reversal}
+\label{par:beampol}
+
+At the ILC, the electron beam and potentially the positron beam are longitudinally polarised at the source, i.e., the polarisation vector is oriented (anti)parallel to the beam direction.
+Whenever a longitudinally polarised beam of energy $E\sub{beam}$ is deflected by an angle $\theta\sub{bend}$, the polarisation vector undergoes a BMT precession though through an angle $\theta\sub{pol} =  \gamma a \theta\sub{bend}$~\cite{Moffeit:2005pb}, 
+with the Lorentz factor $\gamma = E\sub{beam}/m\sub{e}$ and the electron's anomalous magnetic moment $a = (g-2)/2$. 
+To preserve the longitudinal beam polarisation during the long transport from the source through the damping rings to the start of the main linac, which involves many horizontal bends, the beam polarisation vector is rotated into the transverse plane, perpendicular to the damping ring plane, before the beam is transferred to the damping rings, and rotated back to a longitudinal direction by a set of spin rotators at the end of the RTML (see Sec.~\ref{sec:rtml}).
+Through the use of two rotators, it is possible to bring the polarisation vector into any desired direction, and compensate any remaining net precession between these spin rotators and the interaction point, so that any desired longitudinal or transverse polarisation at the IP can be provided.
+
+To control systematic effects, a fast (from pulse to pulse) helicity reversal is required, which cannot be achieved by a change of the magnet fields of the spin rotator magnets.
+For the electron beam, a fast helicity reversal is possible through a flip of the cathode laser polarisation.
+
+For the undulator based positron source, the photon polarisation is given by the undulator field; here, two parallel sets of spin rotators in front of the damping rings are used that rotate the polarisation vector either to the $+y$ or $-y$ direction. 
+Fast kickers select a path through either of the two spin rotators and thus provide a fast spin reversal capability~\cite{Moffeit:2005pb,Malysheva:2016jdr}.
+
+
+
 
 \subsubsection{Damping Rings}
 
@@ -540,6 +644,7 @@ Klystrons and accelerator modules can be scaled from existing \siunit{500}{MHz} 
 
 
 \subsubsection{Low Emittance Beam Transport: Ring to Main Linac (RTML)}
+\label{sec:rtml}
 
 The Ring to Main Linac (RTML) system~\cite[Chap. 7]{Adolphsen:2013kya} is responsible for transporting and matching the beam from the Damping Ring to the entrance of the Main Linac.
 Its main objectives are
@@ -725,7 +830,7 @@ With the cryo modules ready for installation at the beginning of the shut down p
 \subsubsection{Luminosity upgrade}
 \label{subsubsec:upg-optL}
 
-Fundamentally, the luminosity of the ILC could be increased by increasing the luminosity per bunch (or per colliding charge), or increasing the number of bunches per second.
+Fundamentally, the luminosity of the ILC could be increased by increasing the luminosity per bunch (or per colliding charge), or increasing the number of bunches per second~\cite{Harrison:2013nva}.
 
 Increasing the luminosity per bunch requires a smaller beam spot size, which may be achieved by tighter focussing and/or smaller beam emittance.
 Studies indicate that with enough operating experience, there is potential for a further luminosity increase. 
@@ -781,6 +886,10 @@ Description of Cost estimate and schedule - 1 page
 
 include human resources, cost reduction effect by R\&D, operating costs
 }
+
+
+
+
 
 
 

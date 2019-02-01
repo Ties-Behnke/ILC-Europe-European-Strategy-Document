@@ -2,7 +2,7 @@ The compelling physics case in Section~\ref{sec:physics} is constructed
 based on a set of solid estimates for measurements of various observables at the ILC. 
 The observables related to Higgs physics are outlined in Table~\ref{tab:higgserrors}, 
 mostly $\sigma$ and $\sigma\cdot BR$ measurements
-using the Higgs production processes shown in Fig.\ref{fig:HiggsProdILC},
+using the Higgs production processes shown in Fig. \ref{fig:HiggsProdILC},
  and will be explained in detail in this section. 
 By solid it means that the estimates are obtained after having performed
 full simulation of experimental physics analyses. 
@@ -21,7 +21,7 @@ from~\cite{Baer:2013cma}.}
 Section~\ref{sec:software} has introduced a few aspects of the full simulation
 which can be defined as ``{\it detector simulation level}" and are absolutely essential: 
 realistic interaction between each final state particle and 
-and any part of the detector that the particle passes through, including new creation of
+any part of the detector that the particle passes through, including new creation of
 particles during the interaction; realistic algorithms for tracking,
 particle flow analysis, vertex reconstruction and particle identification; 
 resulting realistic performance of various detector resolutions for track momentum, jet energy,
@@ -58,7 +58,7 @@ be introduced in next section.
 in order not to miss any significant contribution. For example 2-fermion 
 events after parton shower can well become background of 4-fermion signal.
 For another example, often the background contribution in Higgs observables
-comes from tail part of B-W structure for $Z$ propagator, hence neither neglecting 
+comes from tail part of Breit-Wigner structure for $Z$ propagator, hence neither neglecting 
 $Z$ natural width nor ignoring similar diagram from $\gamma$ propagator is correct.
 \item {\it realistic jet clustering and jet paring} algorithms often become the 
 limiting factors for many of the analyses with $\ge 4$ jets in the signal final states.
@@ -108,7 +108,7 @@ the Standard Model and  the 95\% confidence upper limit on the branching ratio f
 Higgs to invisible decays.  The bottom lines in each half give the
 expected errors on the $a$ and $b$ parameters and their correlation
 (all in \%)  for $\ee\to Zh$ (see
-\leqn{genZhform}.    All error estimates in this table are
+\leqn{eqn:CPHZZ}.    All error estimates in this table are
 based on full simulation, and the entries marked with a $^*$ are 
 extrapolated from full simulation results. }  
 \label{tab:higgserrors}
@@ -149,12 +149,13 @@ Table~\ref{tab:ILCEffSB} gives the typical signal efficiencies and signal over
 background ratios (S/B) after final cuts. The difference with
 LHC can be clearly seen using the example of $h\to b\bar{b}$ measurements
 as shown in Fig.~\ref{fig:LHCILCHbb}. The decay of $h\to b\bar{b}$
-is discovered by ATLAS (CMS)~\cite{} after around 4 million Higgs events are produced
+has been discovered by ATLAS (CMS)~\cite{Aaboud:2018zhk,Sirunyan:2018kst} 
+after around 4 million Higgs events are produced
 with a significance of 5.4$\sigma$ (5.5$\sigma$). In contrast, at the ILC, 
 with only 400 Higgs events which will be produced with an integrated luminosity of 1.3 fb$^{-1}$
 corresponding to around 2 days of running, the decay of $h\to b\bar{b}$ will be 
 measured with a similar significance, around 5.2$\sigma$ according to the full 
-simulation result~\cite{}.
+simulation result~\cite{Ogawa:2018}.
 
 \begin{table}
 \begin{center}
@@ -185,8 +186,16 @@ representative Higgs measurements (first column) at the ILC.}
 \includegraphics[width=0.85\hsize]{chapters/figures/qqH_bb250_ILC.pdf}
 \end{tabular}
   \caption{Upper: signal $h\to b\bar{b}$ and background events in different categories of S/B
-  measured by ATLAS~\cite{} using LHC Run 2 data; lower: signal $h\to b\bar{b}$ 
+  measured by ATLAS~\cite{Aaboud:2018zhk,Sirunyan:2018kst} using LHC Run 2 data; lower: signal $h\to b\bar{b}$ 
   and background events in the $b\bar{b}$ mass spectrum expected from the 
-  ILC full simulation~\cite{}.}
+  ILC full simulation~\cite{Ogawa:2018}.}
   \label{fig:LHCILCHbb}
 \end{figure}
+
+This section is organized as follows. In Sec.~\ref{subsec:higgs_common} the common
+procedures for event selections will be introduced. In Sec.~\ref{subsec:higgs_ana} the 
+analyses for main Higgs observables will be introduced. The analysis strategies and 
+selection cuts in some representative channels are discussed in great detail. 
+In Sec.~\ref{subsec:higgs_syst} the systematic errors which are included in 
+the global fit are introduced. In Sec.~\ref{subsec:higgs_improve} some optimistic estimates
+from improvements of key algorithms in future are introduced.
