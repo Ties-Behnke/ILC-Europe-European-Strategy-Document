@@ -104,9 +104,9 @@ allowed radius of the innermost layer of the vertex detector.
 %%%%%%%%%%%%%%%%
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.80\hsize]{chapters/figures/lumi_spectrum_placeholder.png}
+\includegraphics[width=1.\hsize]{chapters/figures/beam_spectrum_gp_250Gev_SetA.pdf}
 \end{center}
-\caption{Luminosity spectrum for 250 GeV.\fix{need nice plot w/ correct spectrum}}
+\caption{Beam energy spectra for $\sqrt{s}=250~\rm{GeV}$ Set-A, created with GuineaPig (blue-dashed: $e^-$, red-solid $e^+$).}
 \label{fig:lumi_spectrum}
 \end{figure}
 %%%%%%%%%%%%%%%%%
@@ -186,9 +186,6 @@ Most of the physics analyses in the next sections are based on simulations using
 The high level of detail in the simulation models as decried above is a key prerequisite for the
 realistic understanding of the expected detector performance and the physics reach of the ILC for both detector concepts.
 
-~~~\\
-\fix{ here we could add a short paragraph on fast simulations with SGV as this is used in the searches section}
-~~~\\
 
 \subsubsection{Digitzation}
 
@@ -231,14 +228,16 @@ from charge sharing, clustering and position reconstruction. Table~\ref{tab:ild_
      FTD       &  $ \sigma_{\alpha_r}   $ & $=$ & $ 7.0 \mu\mathrm{m}$    \\
   \emph{Strip} &  $ \alpha_{r}         $ & $=$ & $ \pm 5.0^\circ $ (angle with radial direction)        \\
 
-       TPC    &  $ \sigma^2_{r\phi} $ & $=$ & $ (50^2+900^2\sin^2\phi + \left( (25^2/22)\times (4T/B)^2\sin\theta\right)$ \\
-              &                      &     &   $(z/\mathrm{cm}) )\,\mu\mathrm{m}^2$  \\
+       TPC    &  $ \sigma^2_{r\phi} $ & $=$ & $ \bigl( 50^2+900^2\sin^2\phi + \bigl( (25^2/22)\times$  \\
+              &                      &     &   $(4T/B)^2\sin\theta\bigr) (z/\mathrm{cm}) \bigr)\,\mu\mathrm{m}^2$  \\
                &  $ \sigma^2_{z}    $ & $=$ & $ (400^2+80^2\times (z/\mathrm{cm})) \,\mu\mathrm{m}^2 $ \\
                &   \multicolumn{3}{c}{ where $\phi$ and $\theta$ are the azimuthal and} \\
                &   \multicolumn{3}{c}{ polar angle of the track direction } \\
 \hline
 \end{tabular}
-\caption[Simulated ILD tracking point resolutions.]{Effective point resolution as used in the digitization of the ILD tracking detectors.
+\caption[Simulated ILD tracking point resolutions.]{Effective point resolutions as used in the digitization of the ILD tracking detectors.
+  The parameterization for the TPC takes into account geometric effects due to the direction of the track with respect to the pad row and
+  has been established from test beam data.
         \label{tab:ild_trk_res} }
 \end{table}
 %-----------------------------------------------------------------------
@@ -319,12 +318,13 @@ $\rm{cos}(\theta)$ in Fig~\ref{fig:ild_trkeff}.
 %%%%%%%%%%%%%%%%
 \begin{figure}
   \begin{tabular}[c]{c}
-    \includegraphics[width=0.95\hsize]{chapters/figures/trkEff_Momentum_ttbar_ILD_ls5_v02_publish2.png} \\
-    \includegraphics[width=0.95\hsize]{chapters/figures/trkEff_theta_ttbar_ILD_ls5_v02_publish1.png}
+    \includegraphics[width=0.85\hsize]{chapters/figures/trkEff_Momentum_ttbar_ILD_l5_v02_v02-00-02_New_publish_cuts2.png} \\
+    \includegraphics[width=0.85\hsize]{chapters/figures/trkEff_theta_ttbar_ILD_l5_v02_v02-00-02_New_publish_cuts1.png}
 \end{tabular}
-  \caption{Tracking efficiency for the ILD detector as a function of momentum (upper) and $\rm{cos}(\theta)$ (lower).
-    Blue: the standard ILD detector, Red: an alternative smaller version of ILD. \fix{make nicer plots}
-of ILD.}
+  \caption{Tracking efficiency for $t\bar t$-events at $\sqrt{s}=500~\rm{GeV}$ in the ILD detector as a function of
+    momentum ($\rm{cos}(\theta)>.99$) [upper]
+    and $\rm{cos}(\theta)$ ($p>1~\rm{GeV}$) [lower].}
+
 \label{fig:ild_trkeff}
 \end{figure}
 %%%%%%%%%%%%%%%%%
@@ -443,12 +443,11 @@ energy due to neutrinos.
 %%%%%%%%%%%%%%%%
 \begin{figure}
   \begin{tabular}[c]{c}
-    \includegraphics[width=0.85\hsize]{chapters/figures/JERLargeSmall_v02-00-01.pdf} \\
-    \includegraphics[width=0.85\hsize]{chapters/figures/JESLargeSmall_v02-00-01.pdf}
+    \includegraphics[width=0.85\hsize]{chapters/figures/JER_IDR_Large.pdf} \\
+    \includegraphics[width=0.85\hsize]{chapters/figures/JES_IDR_Large.pdf}
   \end{tabular}
-  \caption{Upper: Jet energy resolution for $Z\rightarrow u,d,s$ events as a function of the jet energy in the standard ILD simulation model
-    (\emph{ILD\_l5\_v02}) and an alternative smaller version of ILD  (\emph{ILD\_s5\_v02}).
-    Lower: The resulting jet energy scale for the same models and events.} 
+  \caption{Upper: Jet energy resolution for $Z\rightarrow u,d,s$ events as a function of the jet energy in the standard ILD simulation model.
+    Lower: The resulting jet energy scale for the same events.}
 \label{fig:ild_jer_jes}
 \end{figure}
 %%%%%%%%%%%%%%%%%
@@ -504,6 +503,56 @@ There is a large palette of additional high level reconstruction algorithms avai
 
 
 
+\subsubsection{Fast Simulation}
+
+In addition to the full simulation and reconstruction 
+outlined in the previous sections,
+there is a need for simulation that can quickly generate
+substantial samples of simulated and reconstructed events.
+Situations were this is desirable include detector optimisation
+and new physics searches. In these cases,
+similar processes need to be simulated and reconstructed at
+a, possibly very large, number of different conditions.
+In the first case, it would amount to modifying various aspects
+of the detector in steps, in the latter,
+one would like to exploit the entire allowed parameter space
+of a theory for new physics.
+In addition to these cases,
+fast simulation is also an asset for simulating high-crossection
+SM processes, such as $\gamma\gamma$ processes, where the investment 
+in processor power and intermediate storage might be
+prohibitively large to attain the goal that simulation statistics
+should be a negligible source of systematic uncertainty.
+
+To meet these needs,
+a fast simulation program needs to be fast, flexible, and
+accurate. 
+The SGV program used at ILC meets these needs.
+The time to simulate and reconstruct an event is similar to
+the time it takes to generated it ($\sim 1-10$~ms),
+the response of the detector is as far as possible calculated
+from the detector design (i.e. there is no need to parametrisise
+pre-existing full simulation results),
+and has been shown to well compare both with full simulation
+and real data.
+
+The program uses a simplified ``{\it cylinders-and-discs}'' description
+of the detector,
+which is used to calculate the Kalman-filtered track-helix covariance matrix
+of each generated charged particle.
+The calorimetric response is calculated from the expected single-particle
+performance of the different components of the calorimetric system,
+for each particle impinging on it. Optionally,
+the effects of shower-confusion can be included.
+To reduce the needed storage for Giga-event size sample,
+event filtering can be applied at different steps of the processing,
+directly after generation, after the detector response is known,
+or after higher-level event analysis is done.
+Events passing all filters are output in LCIO DST-format,
+and can seamlessly be further analysed within the Marlin framework.
+
+
+
 
 \subsection{Computing}
 
@@ -511,26 +560,29 @@ An initial computing concept for the ILC, including a first estimate of the requ
 
 \subsubsection{Computing Concept}
 
-The foreseen computing concept follows in general terms that of the current LHC experiments and Belle~II, with a strong on-site computing center complemented by large
-Grid-based computing resources distributed around the world. This concept is schematically shown in Fig~\ref{fig:computing_scheme}.
+The foreseen computing concept follows in general terms that of the current LHC experiments and Belle~II, with a strong on-site computing
+center complemented by large Grid-based computing resources distributed around the world. This concept is schematically shown in
+Fig~\ref{fig:computing_scheme}.
 
 %%%%%%%%%%%%%%%%
 \begin{figure*}
 \begin{center}
 \includegraphics[width=0.6\hsize]{chapters/figures/ILC_computing_scheme.png}
 \end{center}
-\caption{Computing concept foreseen for the ILC, distributed over on-site computing at the interaction region, the main campus and Grid-like offline computing.}
+\caption{Computing concept foreseen for the ILC, distributed over on-site computing at the interaction region, the main campus and Grid-like
+  offline computing.}
 \label{fig:computing_scheme}
 \end{figure*}
 %%%%%%%%%%%%%%%%%
 
 Due to the much lower event rates at the ILC compared to the LHC, we will be
-able to run in an un-triggered mode in which  collision data from every bunch crossing will be recorded. At the experimental site, we require only limited computing
-resources for online monitoring, QA, and data-buffering for a few days.
+able to run in an un-triggered mode in which  collision data from every bunch crossing will be recorded. At the experimental site,
+we require only limited computing resources for online monitoring, QA and data-buffering for a few days.
 
 Prompt reconstruction, event building, and filtering of the interesting collisions will be performed at the main ILC campus.
-A few percent of the initial data will be distributed to major participating Grid sites in the world for further skimming and final redistribution for physics
-analysis. A copy of the raw data from all bunch crossings will be kept to allow  for future searches for new exotic signatures. 
+A small fraction of the initial raw data will be distributed to major participating Grid sites in the world for further skimming and
+final redistribution for physics analysis.
+A copy of the raw data from all bunch crossings will be kept to allow  for future searches for new exotic signatures.
 
 
 \subsubsection{Resource Estimate}
