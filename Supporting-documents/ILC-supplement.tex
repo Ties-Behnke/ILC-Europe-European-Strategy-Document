@@ -48,6 +48,7 @@ nofootinbib,
 \usepackage{wasysym}
 \usepackage{bm}% bold math
 \usepackage{subfigure}
+\usepackage{eurosym}
 %\usepackage{hyperref}% add hypertext capabilities
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
@@ -62,6 +63,7 @@ nofootinbib,
 
 \input{chapters/mymacros.tex}
 % this is a very convenient small macropackage, which was used for previous Physics WG documents.  Please use it here rather than inputing your own larger package --  MEP
+\def\matheuro{{ \mbox{\euro}}}
 
 \input{chapters/detmacros.tex}
 \input{chapters/machine-macros.tex}
@@ -74,14 +76,18 @@ nofootinbib,
 \title{The International Linear Collider \\ A Global Project}% Force line breaks with \\
 \thanks{Version 1.3}%
 
-\author{Jim Brau}
+\author{\textbf{Prepared by:}
+Hiroaki Aihara$^1$, Jonathan Bagger$^2$, Philip Bambade$^3$, Barry Barish$^4$,  Ties Behnke$^5$, Alain Bellerive$^6$, Mikael Berggren$^5$, James Brau$^7$, Martin Breidenbach$^8$, 
+Ivanka Bozovic-Jelisavcic$^9$,
+Philip Burrows$^{10}$, Massimo Caccia$^{11}$, Paul Colas$^{12}$, Dmitri Denisov$^{13}$, Gerald Eigen$^{14}$, Lyn Evans$^{15}$, Angeles Faus-Golfe$^{3}$, Brian Foster$^{5,10}$, Keisuke Fujii$^{16}$, Juan Fuster$^{17}$, Frank Gaede$^{5}$, Jie Gao$^{18}$, Paul Grannis$^{19}$, Christophe Grojean$^{5}$, Andrew Hutton$^{20}$, Marek Idzik$^{21}$, Andrea Jeremie$^{22}$, Kiyotomo Kawagoe$^{23}$, Sachio Komamiya$^{1,24}$, Tadeusz Lesiak$^{25}$, Aharon Levy$^{26}$, Benno List$^{5}$, Jenny List$^{5}$, Shinichiro Michizono$^{16}$, Akiya Miyamoto$^{16}$, Joachim Mnich$^{5}$, Hugh Montgomery$^{20}$, Hitoshi Murayama$^{27}$, Olivier Napoly$^{12}$, Yasuhiro Okada$^{16}$, Carlo Pagani$^{28}$, Michael Peskin$^{8}$, Roman Poeschl$^{3}$, Francois Richard$^{3}$, Aidan Robson$^{29}$, Thomas Schoerner-Sadenius$^{5}$, Marcel Stanitzki$^5$, Steinar Stapnes$^{15}$, Jan Strube$^{7,30}$, Atsuto Suzuki$^{31}$, Junping Tian$^{1}$, Maksym Titov$^{12}$, Marcel Vos$^{17}$, Nicholas Walker$^{5}$, Hans Weise$^{5}$, Andrew White$^{32}$, Graham Wilson$^{33}$, Marc Winter$^{34}$, Sakue Yamada$^{1,16}$, Akira Yamamoto$^{16}$, Hitoshi Yamamoto$^{35}$ and Satoru Yamashita$^{1}$. }
 % \altaffiliation[Also at ]{Physics Department, XYZ University.}%Lines break automatically or can be forced with \\
-\author{etal}%
- \email{Second.Author@institution.edu}
-\affiliation{%
- Authors' institution and/or address\\
+%\author{et.al.}%
+% \email{Second.Author@institution.edu}
+\affiliation{\vspace{.2 cm}$^1$U. Tokyo, $^2$TRIUMF, $^3$LAL-Orsay/CNRS, $^4$Caltech, $^5$DESY, $^6$Carleton U., $^7$U. Oregon, $^8$SLAC, $^9$INN VINCA, Belgrade, $^{10}$Oxford U., $^{11}$U. Insubria, $^{12}$CEA/Irfu, U. Paris-Saclay, $^{13}$Fermilab, $^{14}$U. Bergen, $^{15}$CERN, $^{16}$KEK, $^{17}$IFIC, U. Valencia-CSIC, $^{18}$IHEP, $^{19}$Stony Brook U., $^{20}$Jefferson Lab, $^{21}$AGH, Krak\'ow, $^{22}$LAPP/CNRS, $^{23}$Kyushu U., $^{24}$Waseda U., $^{25}$IFJPAN, Krak\'ow, $^{26}$Tel Aviv U., $^{27}$U. California, Berkeley, $^{28}$INFN, $^{29}$U. Glasgow, $^{30}$PNNL, $^{31}$Iwate Prefecture U., $^{32}$U. Texas, Arlington, $^{33}$U. Kansas, $^{34}$IPHC/CNRS, $^{35}$U. Tohoku }
+
+ % Authors' institution and/or address\\
 % This line break forced with \textbackslash\textbackslash
-}%
+%
 
 \collaboration{Linear Collider Collaboration}%\noaffiliation
 

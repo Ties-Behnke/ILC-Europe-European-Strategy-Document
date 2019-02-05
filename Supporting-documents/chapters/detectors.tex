@@ -133,13 +133,44 @@ time-stamping of each hit with sufficient precision to assign it to
 a particular bunch crossing. This significantly suppresses
 backgrounds. 
 
-Several technologies are being developed. One of them is a CMOS-based
-monolithic pixel sensor called Chronopixel. The main goal for the design is a
-pixel size of about $10~\times~10~\micron^2$ with 99\% charged-particle
- efficiency. Prototype devices have demonstrated that the concept works; 
-what should be a fully functional chip is presently under test. More 
-challenging is the 3D vertical integrated silicon technology, for which a full 
+%Several technologies are being developed. One of them is a CMOS-based
+%monolithic pixel sensor called Chronopixel. The main goal for the design is a
+%pixel size of about $10~\times~10~\micron^2$ with 99\% charged-particle
+% efficiency. Prototype devices have demonstrated that the concept works; 
+%what should be a fully functional chip is presently under test. More 
+%challenging is the 3D vertical integrated silicon technology, for which a full 
+%demonstration is also close.
+
+Several vertex detector sensor technologies are being developed.  One of these is a 
+monolithic CMOS pixel detector with time-stamping capability (Chronopixel~\cite{Sinev:2015iwr}),
+being developed in collaboration with SRI International. 
+The pixel size is about  $10~\times~10~\micron^2$ with 99\% designed charged-particle
+ efficiency.
+The time-stamping feature of the design means each hit is accompanied by a time tag with sufficient precision to assign it to a particular bunch crossing of
+the ILC - thus the name Chronopixel. This reduces the occupancy to negligible levels, even in the
+innermost vertex detector layer, yielding a robust vertex detector which operates at background
+levels significantly in excess of those currently foreseen for the ILC. Chronopixel differs from the
+similar detectors developed by other groups by its capability to record time stamps for two hits in
+each pixel while using standard CMOS processing for manufacturing. 
+Following a series of prototypes, the Chronopixel has been proven to be
+a feasible concept for the ILC. The first set of prototype
+devices was fabricated in 2008, the second prototype in 2012, and the third prototype in 2014.
+The main goal of the third prototype was to test possible solutions for a high capacitance problem
+discovered in prototype 2. The problem was traced to the TSMC 90 nm technology design rules,
+which led to an unacceptably large value of the sensor diode capacitance. Six different layouts
+for the prototype 3 sensor diode were tested in prototype 3, and tests have shown that the high capacitance
+problem was solved.
+
+With prototype 3 proving that a Chronopixel sensor can be successful with all known problems solved, optimal sensor design would be the focus of future tests.
+The charge collection efficiency for different sensor diode options needs to be measured to determine
+the option with the best signal-to-noise ratio. Also, sensor efficiency for charged particles with sufficient energy to penetrate the sensor thickness and ceramic package, along with a trigger telescope measurement, needs to be determined. Beyond these fundamental measurements, a prototype of a few cm$^2$ with a final readout scheme would
+test the longer trace readout resistance, capacitance, and crosstalk.
+
+A more challenging approach is the 3D vertical integrated silicon technology, for which a full 
 demonstration is also close.
+
+
+
 
 Minimising the support material is critical to the development of a high-performance 
 vertex detector. An array of 
@@ -201,14 +232,37 @@ The combined ECAL and HCAL systems consist of a
 central barrel part and two endcaps, nested inside the barrel. The entire barrel system is contained
 within the volume of the cylindrical superconducting solenoid. 
 
-The
-electromagnetic calorimeter has silicon active layers between tungsten absorber
-layers. The active layers use 5$\times$5~mm$^2$ silicon pixels, which provide excellent spatial resolution.
-The structure has 30 layers in total, the first 20 layers having a
-thinner absorber than the last ten layers. This configuration is a 
-compromise between cost, electromagnetic shower radius, sampling frequency, and
-shower containment. The total depth of the electromagnetic calorimeter is 26
-radiation lengths (\xo) and one nuclear interaction length. 
+%The
+%electromagnetic calorimeter has silicon active layers between tungsten absorber
+%layers. The active layers use 5$\times$5~mm$^2$ silicon pixels, which provide excellent spatial resolution.
+%The structure has 30 layers in total, the first 20 layers having a
+%thinner absorber than the last ten layers. This configuration is a 
+%compromise between cost, electromagnetic shower radius, sampling frequency, and
+%shower containment. The total depth of the electromagnetic calorimeter is 26
+%radiation lengths (\xo) and one nuclear interaction length. 
+
+The SiD reliance on Particle Flow Algorithm-based (PFA) calorimetry to obtain a jet energy resolution of  $\sim$3\% demands a highly segmented (longitudinally and laterally) electromagnetic calorimeter. It also calls for a minimized lateral electromagnetic shower size, by minimizing the Moliere radius to efficiently separate photons, electrons and charge hadrons~\cite{calor:2018}.
+
+The SiD design employs thirty longitudinal layers, the first twenty each with 2.50 mm tungsten alloy thickness and 1.25 mm readout gaps, and the last ten with 5.00 mm tungsten alloy.  The total depth is 26 radiation lengths, providing good containment of electromagnetic showers.
+
+Simulations have shown the energy resolution for electrons or photons to be well described by 0.17 / $\sqrt{E}$ $\oplus$ 0.009, degrading some at higher energies due to changes in sampling fraction and a small leakage.
+
+The baseline design employs tiled, large, commercially produced silicon sensors (currently assuming 15 cm wafers). The sensors are segmented into pixels that are individually read out over the full range of charge depositions. The complete electronics for the pixels is contained in a single chip, the KPiX ASIC~\cite{Brau:2013yb}, which is bump bonded to the wafer. The low beam-crossing duty cycle ($10^{-3}$ ) allows reducing the heat load using power pulsing, thus allowing passive thermal management within the ECal modules.
+
+Bench tests of the KPiX bonded sensor  with a cosmic ray telescope trigger yielded 
+a Landau distribution with a peak of the signal at about 4 fC is consistent with our expectation for minimum-ionizing particles (MIP) passing through the fully-depleted 320 $\mu$m thick sensors. Crosstalk between channels has been managed and the 
+ noise distribution shows an RMS of 0.2 fC, well below the 4 fC MIP signal, and exceeding the ECal requirement.
+
+The overall mechanical structure of the ECal barrel has been designed for minimal uninstrumented gaps. Input power and signals are delivered with Kapton flex cables.
+The KPiX chip has an average power less than 20 mW, resulting in a
+total heat load  that is managed with a cold plate and water pipes routed 
+into the calorimeter.
+
+A first SiD ECal prototype stack of nine (of thirty) layers has been constructed and was exposed to a 12.1 GeV electron beam at the SLAC End Station Test Beam Facility. 
+This data collection demonstrated good measurements of multiple particle overlap and reconstruction of overlapping showers~\cite{Steinhebel:2017qze}.  Comparison of the deposited energy distribution in each of the nine layers also agrees well with simulations.
+An algorithm developed to count the number of incident electrons in each event. The algorithm was used to assess the ability of the calorimeter to separate two showers as a function of the separation of the showers, achieving 100\% for separations of $>$10 mm.
+
+
 
 The hadronic
 calorimeter has a depth of 4.5 nuclear interaction lengths, consisting of
@@ -290,6 +344,7 @@ The ILD detector concept has been designed as a multi-purpose detector. It shoul
 The science which will be done at the ILC requires a true multi-purpose detector. A central element of the design has been the capability of the detector to reconstruct precisely complex hadronic final states as well as more events with leptons or missing energy in the final state. Thus traditional precision detector elements as vertex detectors are combined in an overall design philosophy called particle flow, which has been developed for optimal hadronic event reconstruction.
 
 \subsubsection{Vertexing and Tracking}
+\label{subsubsec:ILDtracker}
 The high precision vertex detector positioned very closely to the interaction point is followed by a hybrid tracking layout, realised as a combination of silicon tracking with a time projection chamber, and a calorimeter system. The complete system is located inside a large solenoid providing a magnetic field of 3.5-4 T. On the outside of the coil, the iron return yoke is instrumented as a muon system and as a tail catcher calorimeter. 
 
 The vertex detector is realised as a multi-layer pixel-vertex detector (VTX), with three super-layers each comprising two layers. The detector has a pure barrel geometry. To minimise the occupancy from background hits,

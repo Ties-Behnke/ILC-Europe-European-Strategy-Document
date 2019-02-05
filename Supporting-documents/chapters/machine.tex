@@ -1,10 +1,6 @@
 % CHAPTER ON ILC MACHINE
 
-{\it PLEASE DO NOT EDIT THIS PART IN OVERLEAF! This is work in progress! }
-
-% CHAPTER ON ILC MACHINE
-
-{\it Status: Feb 3, 2019}
+{\it Status: Feb 4, 2019}
 
 The International Linear Accelerator (ILC) is a $250\,{\mathrm{GeV}}$ (extendable up to $1\,{\mathrm{TeV}}$) linear $e^+e^-$ collider, based on $1.3\,{\mathrm{GHz}}$ superconducting radio-frequency (SCRF) cavities.
 It is designed to  achieve a luminosity of $1.5\cdot 10^{34}~{\mathrm{cm}}^{-1}{\mathrm{s}}^{-1}$ and provide an integrated luminosity of $350\,{\mathrm{fb}}^{-1}$ in the first four years of running.
@@ -46,7 +42,7 @@ Thereafter, possible upgrade options are laid out, the Japanese candidate site i
  \begin{center}
  \includegraphics[width=\hsize]{chapters/figures/TDR-machine-layout-cartoon-staged-mirror.pdf}
 \caption{Schematic layout of the ILC in the $250\,{\mathrm{GeV}}$ staged configuration.
-\label{fig_ilc-schematic}}
+\label{fig:ilc-schematic}}
  \end{center}
  \end{figure*}
 
@@ -84,7 +80,7 @@ All these changes contributed to an overall cost reduction, risk reduction, and 
 Several possibilities were evaluated for the length of the initial tunnel. 
 Options that include building tunnels with the length required for a machine with $\sqrt{s} = \siunit{350}{GeV}$ or \siunit{500}{GeV}, were considered.
 In these scenarios, an energy upgrade would require the installation of additional cryomodules (with RF and cryogenic supplies), but only little or no civil engineering activities.
-In order to be as cost effective as possible, the final proposal, endorsed by ICFA~{ICFA:2017}, does without these empty tunnel options. 
+In order to be as cost effective as possible, the final proposal, endorsed by ICFA~\cite{ICFA:2017}, does without these empty tunnel options. 
 
 While the length of the main linac tunnel was reduced, the beam delivery system and the main dumps are still designed to allow for an energy upgrade up to  $\sqrt{s} = \siunit{1}{TeV}$.
 
@@ -114,18 +110,24 @@ This technology was primarily developed at DESY for the TESLA accelerator projec
 Since then, the TESLA technology collaboration~\cite{bib:ttc} has been improving this technology, which is now being used in several accelerators in operation (FLASH at DESY~\cite{schreiber_faatz_2015,Vogt:2018wvy}, European XFEL in Hamburg~\cite{bib:xfel}), under construction (LCLS-II at SLAC, Stanford, CA~\cite{bib:lcls-ii}) or planned (SHINE in Shanghai~\cite{Zhao:2018lcl}).
 
 
-\subsubsection{The Economics of Superconducting Linacs}
+%\subsubsection{The Economics of Superconducting Linacs}
+%
+%The total energy dissipation $P\sub{d}$ in a linac cavity of length $L$ and a total voltage $V = g L$ at a the accelerating gradient $g$ is given by
+%$$
+%  P\sub{d} = g V R\sub{s} \lambda / C
+%$$
+%where $R\sub{s}$ is the material's surface resistance, $\lambda$ is the RF frequency, and $C$ (in ${\mathrm{\Omega^2}}$) depends only on the cavity shape, not its size.
+%The dissipated power in a single cavity grows with the square of the gradient, 
+%and the overall power grows linearly with the gradient for a given accelerating voltage.
 
-The total energy dissipation $P\sub{d}$ in a linac cavity of length $L$ and a total voltage $V = g L$ at a the accelerating gradient $g$ is given by
-$$
-  P\sub{d} = g V R\sub{s} \lambda / C
-$$
-where $R\sub{s}$ is the material's surface resistance, $\lambda$ is the RF frequency, and $C$ (in ${\mathrm{\Omega^2}}$) depends only on the cavity shape, not its size.
-The dissipated power in a single cavity grows with the square of the gradient, 
-and the overall power grows linearly with the gradient for a given accelerating voltage.
-
-XXXXXX CONTINUE HERE XXXXXXXX
-
+\begin{figure*}[htbp]
+   \includegraphics[width=0.8 \hsize]{chapters/figures/LBandSRFNbCavityGradientEvolution_ProjectImpact_rev28dec2018}
+\caption{Development of gradient of SRG cavities
+\cite[updated]{Geng:2015glc}.
+}
+% Paper is published under CC-BY-3.0
+\label{fig:gradients}
+\end{figure*}
 
 \subsubsection{The Quest for High Gradients}
 
@@ -142,8 +144,7 @@ To the extent that the cost of cavities, cryomodules and tunnel infrastructure i
 This effect is partially offset for two reasons: both, the energy stored in the electromagnetic field of the cavity, and the dynamic heat load to the cavity from the electromagnetic field, grow quadratically with the gradient, and thus linearly for a given beam energy.
 The electromagnetic energy stored in the cavity must be replenished by the RF source during the filling time that precedes the time when the RF is used to accelerate the beam passing through the cavity; this energy is lost after each pulse and thus reduces the overall efficiency and requires more or more powerful modulators and klystrons.
 The overall cryogenic load is dominated by the dynamic heat load from the cavities, and thus operation at higher gradient requires larger cryogenic capacity.
-Cost models that parametrise these effects indicate that the minimum of the investment cost per GeV beam energy lies at \num{50} or more GeV, depending on the relative costs of tunnel, SCRF infrastructure and cryo plants, and depending on the achievable $Q_0$. 
-{\it CHECK THIS; reference?}
+Cost models that parametrise these effects indicate that the minimum of the investment cost per GeV beam energy lies at \num{50} or more GeV, depending on the relative costs of tunnel, SCRF infrastructure and cryo plants, and depending on the achievable $Q_0$~\cite{Adolphsen:2011a}. 
 At any rate, the optimal gradient is significantly higher than the value of approximately \siunit{35}{MV/m} that is currently realistic, underpinning the relevance of achieving higher gradients.
 
 However, it should be noted that in contrast to the initial invest, the operating costs invariably rise when the gradient is increased.
@@ -153,7 +154,7 @@ However, it should be noted that in contrast to the initial invest, the operatin
 Fundamentaly, the achievable gradient of a SC cavity is limited by the point where the magnetic field at the cavity walls surpasses the critical field $H\sub{crit,RF}$ of the superconductor, which 
 This gradient depends on the material, operating temperature, and the cavity geometry. 
 For the TESLA type cavities employed at the ILC, this limit is about \siunit{48}{MV/m} at \siunit{2}{K},
-the best XFEL production cavity reached \siunit{44.6}{MV/m} (XXX CHECK XXX) (Fig.~\ref{fig:cavity-gradient}).
+the best XFEL production cavity reached \siunit{44.6}{MV/m} (Fig.~\ref{fig:cavity-gradient}).
 The record for single cell cavities operating at \siunit{1.3}{GHz} is \siunit{59}{MV/m}~\cite{Eremeev:2007zza}.
 %
 % Explanation:  
@@ -180,27 +181,10 @@ The gradient at which a SC cavity can be operated in practice is limited by thre
 The onset of these adverse effects is mostly caused by micro-metre sized surface defects of various kinds. 
 Producing a sufficiently defect-free surface in an economic way is thus the central challenge in cavity production.
 
-More than $20$ years of industrial production of TESLA type cavities have resulted in a good understanding which production steps steps and quality controls are necessary to produce cavities with high-quality, nearly defect-free surfaces that are capable of achieving the desired high field strengths at a reasonable production yield.
-
-\begin{figure*}[htbp]
-   \includegraphics[width=\hsize]{chapters/figures/LBandSRFNbCavityGradientEvolution_ProjectImpact_rev28dec2018}
-\caption{Development of gradient of SRG cavities
-\cite[updated]{Geng:2015glc}.
-}
-% Paper is published under CC-BY-3.0
-\label{fig:gradients}
-\end{figure*}
+More than 20 years of industrial production of TESLA type cavities have resulted in a good understanding which production steps steps and quality controls are necessary to produce cavities with high-quality, nearly defect-free surfaces that are capable of achieving the desired high field strengths at a reasonable production yield.
 
 
 \paragraph{Results from XFEL cavity production}
-
-The production and testing of $831$ cavities for the European XFEL~\cite{Singer:2016fbf,Reschke:2017gjp} provides the biggest sample of cavity production data so far. 
-Cavities were acquired from two different vendors RI and EZ,
-of which vendor RI employed a production process with a final surface treatment closely following the ILC specifications, including a final electropolishing (EP) step,
-while the second vendor EZ used buffered chemical polishing (BCP).
-The XFEL specifications asked for a usable gradient of \siunit{23.6}{MV/m} with a $Q_0 \ge 1  \cdot 10^{10}$ for operation in the cryomodule;
-with a $10\,\%$ margin this corresponds to a target value of \siunit{26}{MV/m} for the performance in the vertical test stand for single cavities.
-Fig.~\ref{fig:cavity-gradient} shows the $Q_0$ data versus accelerating gradient of the best cavities received, with several cavities reaching more than \siunit{40}{MV/m}, significantly beyond the ILC goal, already with $Q_0$ values that approach the target value $1.6\cdot10^{10}$ that is the goal of future high-gradient R\&D.
 
 \begin{figure}[htbp]
    \includegraphics[width=\hsize]{chapters/figures/prab-19-092001-fig19-mod}
@@ -214,8 +198,13 @@ The ILC gradient / $Q_0$ goals are overlaid.}
 \label{fig:cavity-gradient}
 \end{figure}
 
-XFEL production data, in particular from vendor RI, provide excellent statistics for the cavity performance as received from the vendors, as shown in Fig.~\ref{fig:cavity-yield}.
-For vendor ``RI'', the yield for cavities above \siunit{28}{MV/m} is $85\,\%$ of for the maximum gradient, with an average of \siunit{35.2}{MV/m}.
+The production and testing of $831$ cavities for the European XFEL~\cite{Singer:2016fbf,Reschke:2017gjp} provides the biggest sample of cavity production data so far. 
+Cavities were acquired from two different vendors RI and EZ,
+of which vendor RI employed a production process with a final surface treatment closely following the ILC specifications, including a final electropolishing (EP) step,
+while the second vendor EZ used buffered chemical polishing (BCP).
+The XFEL specifications asked for a usable gradient of \siunit{23.6}{MV/m} with a $Q_0 \ge 1  \cdot 10^{10}$ for operation in the cryomodule;
+with a $10\,\%$ margin this corresponds to a target value of \siunit{26}{MV/m} for the performance in the vertical test stand for single cavities.
+Fig.~\ref{fig:cavity-gradient} shows the $Q_0$ data versus accelerating gradient of the best cavities received, with several cavities reaching more than \siunit{40}{MV/m}, significantly beyond the ILC goal, already with $Q_0$ values that approach the target value $1.6\cdot10^{10}$ that is the goal of future high-gradient R\&D.
 
 \begin{figure}[htbp]
    \includegraphics[width=\hsize]{chapters/figures/prab-20-042004-fig33}
@@ -225,6 +214,10 @@ Vendor ``RI'' employs a production process that closely follows the ILC specific
 % Paper published under CC-BY-4.0
 \label{fig:cavity-yield}
 \end{figure}
+
+
+XFEL production data, in particular from vendor RI, provide excellent statistics for the cavity performance as received from the vendors, as shown in Fig.~\ref{fig:cavity-yield}.
+For vendor ``RI'', the yield for cavities above \siunit{28}{MV/m} is $85\,\%$ of for the maximum gradient, with an average of \siunit{35.2}{MV/m}.
 
 Since the XFEL performance goal was substantially lower than the ILC specifications, cavities with gradient below \siunit{28}{MV/m}, which would not meet ILC specifications, were not generally re-treated for higher gradients, limiting our knowledge of the effectiveness of re-treatment for large gradients.
 Still, with some extrapolation it is possible to extract yield numbers applicable to the ILC specifications ~\cite{bib:Walker:2017.lcws}.
@@ -238,10 +231,20 @@ Overall, the XFEL cavity production data prove that it is possible to mass-produ
 
 \paragraph{High-gradient R\&D: nitrogen infusion}
 
+\begin{figure}[htbp]
+   \includegraphics[width=\hsize]{chapters/figures/sst-30-094004-fig5}
+\caption{Effect of successive cavity treatments on a single cavity: $\siunit{800}{^\circ C}$ bake for five days (black, lowest curve), followed by $48$ hours baking at $\siunit{120}{^\circ C}$ (red, middle curve). 
+A third heat treatment including nitrogen infusion (green, top curve) significantly  raises the breakdown gradient and the quality factor of the cavity
+\cite[Fig. 5]{Grassellino:2017bod}.
+}
+% Paper is published under CC-BY-3.0
+\label{fig:n2infusion}
+\end{figure}
+
 In recent years, new techniques have emerged that seem to indicate that higher fields combined with higher quality factors are attainable in bulk niobium cavities.
 
-In the early 2010s, nitrogen doping was developed as a method to substantially increase $Q_0$ by adding nitrogen during the \siunit{800}{^\circ C} baking, which leads to interstitial nitrogen close to the niobium surface.
-This technique has been employed successfully in the production of the cavities for LCLS-II~\cite{XXX}.
+In the early 2010s, nitrogen doping was developed as a method to substantially increase $Q_0$ by adding nitrogen during the \siunit{800}{^\circ C} baking, which leads to interstitial nitrogen close to the niobium surface~\cite{Grassellino:2013nza}.
+This technique has been employed successfully in the production of the cavities for LCLS-II, with an average $Q_0$ of $3.0\cdot 10^{10}$ achieved in a prototype cryomodule~\cite{Wu:2018qyl}.
 However, nitrogen doping reduces the critical RF field of the material and thus limits the achievable gradients to values below \siunit{30}{MV/m}, rendering doped material useless for high gradient applications.
 
 By contrast, in nitrogen infusion the nitrogen is added during the low temperature baking at \siunit{120}{^\circ C}.
@@ -254,28 +257,16 @@ Experimental results seem to indicate that Nitrogen infusion may offer a combina
 
 Fig.~\ref{fig:n2infusion} \cite[Fig. 5]{Grassellino:2017bod} shows how the addition of nitrogen during the final \siunit{48}{h} long \siunit{120}{^\circ C} bake of a one--cell cavity drastically improves the cavity quality factor as well as the maximum gradient, which comes close to the best XFEL cavity results, but at higher $Q_0$.
 
-% Add nine-cell result
+% XXX CONTINUE HERE XXX experimental status, success, transfer to other labs
 
+Up to now, it has proven difficult to reproduce these exciting results in other laboratories.
+Success has been reported by groups at JLAB~\cite{Dhakal:2017xxq}, at Cornell~\cite{Koufalis:2017blg}, KEK has reported mixed results \cite{bib:Umemori:2018.lcws}, at DESY has not yet successfully reproduced these results.
+These difficulties seem to indicate that the recipe for a successful application of nitrogen infusion is not yet fully understood, and that further research an development will be necessary before this process can be transferred to industry. 
 
-XXX CONTINUE HERE XXX experimental status, success, transfer to other labs
+%The role of the \siunit{120}{^\circ C} bake in in the formation of a dirty surface layer was elucidated in a study measuring the B field penetration depth with muon spin rotation (muSR) \cite{Romanenko:2013saa}. 
 
-% The role of the 120°C bake in in the formation of a dirty surface layer was elucidated in a study measuring the B field penetration depth with muon spin rotation (muSR) \cite{Romanenko:2013saa}. 
-
-% JLAB result: \cite{Dhakal:2017xxq},\cite{Konomi:2018vni}
-% Cornell result: \cite{Koufalis:2017blg}
-% KEK: mixed results {bib:Umemori:2018.lcws}
-
-% New FNAL result: 49MV/m: {Grassellino:2018tqg}
-
-\begin{figure}[htbp]
-   \includegraphics[width=\hsize]{chapters/figures/sst-30-094004-fig5}
-\caption{Effect of successive cavity treatments on a single cavity: $\siunit{800}{^\circ C}$ bake for five days (black, lowest curve), followed by $48$ hours baking at $\siunit{120}{^\circ C}$ (red, middle curve). 
-A third heat treatment including nitrogen infusion (green, top curve) significantly  raises the breakdown gradient and the quality factor of the cavity
-\cite[Fig. 5]{Grassellino:2017bod}.
-}
-% Paper is published under CC-BY-3.0
-\label{fig:n2infusion}
-\end{figure}
+Nevertheless, the infusion results have triggered a renewed interest in the research on highest gradients in niobium cavities, with a host of experimental results, increased activity to achieve a more thorough theoretical understanding~\cite{Kubo:2017cww,Gurevich:2017vnn}, and the application of state of the art analytical methods such as   muon spin rotation (muSR) \cite{Romanenko:2013saa}.
+This provides reason for optimism that an improved understanding of the mechanisms that stabilise superconductivity in the presence of high fields will result in improved performance of industrially produced cavities for the ILC.
 
 \paragraph{High-gradient R\&D: alternative cavity shapes}
 
@@ -295,13 +286,14 @@ The LSF shape aims to constitutes a good compromise between the goal of a low ma
 
 The niobium raw material and preparation of sheets  are a significant cost driver; R\&D is underway to re-evaluate the stringent limits on impurities, especially of tantalum, and the demand for a high residual resistivity ratio $RRR > 300$~\footnote{$RRR$ is the ratio of the material's room temperature resistivity to the normal conducting resistivity close to \siunit{0}{K}; heat conductivity from electrons is proportial to $RRR$. $RRR$ is reduced by impurities, in particular interstitial ones  from hydrogen, nitrogen and oxygen.}, to reduce the raw material cost. 
 Conductivity for electricity and heat transport by electrons are proportional,
-thus large $RRR$ values, indicative of low impurity content, make the cavities less susceptible to thermal breakdown from surface defects~\cite{bib:Kubo:2018.ttc}.
+thus large $RRR$ values, indicative of low impurity content, make the cavities less susceptible to thermal breakdown from surface defects.
+However, when defect sizes can be successfully controlled to the extent necessary to achieve gradients above \siunit{35}{MV/m} routinely, the influence of heat conductivity and $RRR$ may be diminished, permitting the use of lower $RRR$ material~\cite{bib:Kubo:2018.ttc}.
 
 \paragraph{Ingot and large-grain niobium}
 
 Together with direct slicing of discs from large niobium ingots, without rolling, forging and grinding or polishing steps, the cost for niobium sheets has the potential to be reduced by $50\,\%$~\cite{Evans:2017rvt,Kneisel:2014uqa}.
-
-% Test with ingot niobium promising: \cite{Dhakal:2015xac}
+Without the mechanical deformation during rolling and forging, the grains from the initial crystallisation stay large, which makes later production steps, in particular deep--drawing of half cells, more challenging.
+Nevertheless, if these challenges are overcome, tests with large--grain and ingot niobium show promising results~\cite{Reschke:2011a, Dhakal:2015xac}.
 
 
 \subsubsection{Basic Parameters}
@@ -335,6 +327,8 @@ The recipe for the surface preparation has been developed over a long time and s
 In particular the electro polishing steps are complicated and costly, as they require complex infrastructure and highly toxic chemicals.
 
 {\it 
+XXXXXXX CONTINUE HERE XXXXXXXX
+
 ADD SOMETHING ABOUT QA AND RETREATMENT HERE.
 
 EXPLAIN INTEGRATION WITH MAGNETIC SHIELD AND TUNER}
@@ -465,6 +459,8 @@ The total helium inventory is approximately half of the \siunit{500}{GeV} machin
 
 
 \subsubsection{Existing and Future Facilities}
+
+XXXXX MORE HERE  XXXXXXXX
 
 \subsubsection{Series Production and Industrialisation, Worldwide and in Europe}
 
@@ -880,11 +876,22 @@ XXXXXXX CONTINUE HERE XXXXXXXXXX
 
 \subsection{Cost and Schedule}
 
-{\it 
-Description of Cost estimate and schedule - 1 page 
+\begin{figure*}[tb]
+ %\epsfysize=9.0cm
+ \begin{center}
+ \includegraphics[width=0.42\hsize]{chapters/figures/costs-as.pdf}
+ \includegraphics[width=0.45\hsize]{chapters/figures/costs-ts.pdf}
+\caption{Breakdown of Value costs into accelerator systems (left) and technical systems (right) for the \siunit{250}{GeV} ILC accelerator, assuming that cost reduction measures are successful and a gradient of \siunit{35}{MV/m} can be reached.
+\label{fig:costs}}
+ \end{center}
+ \end{figure*}
 
-include human resources, cost reduction effect by R\&D, operating costs
-}
+
+%{\it 
+%Description of Cost estimate and schedule - 1 page 
+%
+%include human resources, cost reduction effect by R\&D, operating costs
+%}
 
 For the Technical Design Report, the construction cost of the ILC accelerator was carefully evaluated from a detailed, bottom--up, WBS (Work Breakdown Structure) based cost estimation~\cite[Sect. 15]{Adolphsen:2013kya}.
 The TDR estimate distinguishes two cost categories: Value accounts for materials and supplies procured from industry and is given in ILCU (ILC Currency Unit, where $\siunit{1}{ILCU} = \siunit{1}{US\$}$ in 2012 prices), and Labour accounts for work performed in the participating institutions and is given in person--hours or person--years (assuming $1700$ working hours of work per year).
@@ -908,22 +915,12 @@ In addition, \siunit{17,165}{kh} (thousand person-hours) are required of institu
 In 2018, the ILC Advisory Panel of the Japanese Ministry of Education, Culture, Sports, Science and Technoloy (MEXT) concluded its review of the ILC~\cite{ILCAP:2018}. 
 For this review, costs were evaluated in Japanese Yen in 2017 prices, taking into account the local inflation for goods and construction costs.
 For the purpose of this estimate, also the Labour costs were converted to Yen to yield \siunit{119.8}{G\yen}, resulting in a total range of the accelerator construction cost of \siunit{635.0 - 702.8}{G\yen}, where the range covers uncertainties in the civil construction costs (\siunit{18}{G\yen}) and of the gradient (\siunit{49.8}{G\yen}).
-For the this estimate, conversion rates of $\siunit{1}{US\$} = \siunit{100}{JP\yen}$ and $\siunit{1}{\euro} = \siunit{1.15}{US\$}$ were assumed.
+For the this estimate, conversion rates of $\siunit{1}{US\$} = \siunit{100}{JP\yen}$ and $\siunit{1}{\matheuro} = \siunit{1.15}{US\$}$ were assumed.
 
-Operation costs of the accelerator and the central laboratory are estimated to be \siunit{36.6-39.2}{G\yen} (about \siunit{318-341}{M\euro}) per year.
+Operation costs of the accelerator and the central laboratory are estimated to be \siunit{36.6-39.2}{G\yen} (about \siunit{318-341}{M\matheuro}) per year.
 
 
 
 XXXXXX CONTINUE HERE WITH SCHEDULE   XXXXXXX
-
-
-
-
-
-
-
-
-
-
 
 
