@@ -1,7 +1,8 @@
-%\subsection*{}
-%\input{newcom}
+%>\subsection*{}
+%>\input{newcom}
 % Charginos and Neutralinos 
 % this clearly should go to the general commands ....:
+%>\iffalse
 \def\MXN#1{\mbox{$ M_{\widetilde{\chi}^0_#1}                                $}}
 \def\MXC#1{\mbox{$ M_{\widetilde{\chi}^{\pm}_#1}                            $}}
 \def\XP#1{\mbox{$ \widetilde{\chi}^+_#1                                     $}}
@@ -76,7 +77,7 @@
 \newcommand{\mstqtwo}    {\mbox{$ M_{\widetilde {\mathrm t}_2}                 $}}
 \newcommand{\eeto}    {\mbox{$ {\, \mathrm e}^+ {\mathrm e}^- \to             $}}
 \newcommand{\Ecms}    {\mbox{$ E_{\mathrm{\small cms}}                      $}}
-
+%>\fi
 Two approaches can be taken when searching for experimental signs of
 a theory for new physics.
 The first one is to find points in theory space that yields the
@@ -254,7 +255,7 @@ the shorthand  $\lambda_{k,l,m} = \lambda(M^2_k,M^2_l,M^2_m)$ is used\footnote{
 The K\"all\'en function $\lambda$ is defined as $\lambda(a,b,c) = a^2 + b^2 +c^2 -2ab - 2ac - 2bc$}, and 
 $i^\prime$ is either $X$ or $Y$ (and similarly, $i$ is the corresponding
 SM particle, either $x$ or $y$)\cite{Berggren:2015qua}.
-By determining these endpoints of the energy-spectra of the two SM particles ($x$~ and $y$),
+By determining these endpoints of the energy-spectra of the two SM particles ($x$ and $y$),
 and using the knowledge of $\Ecms, M_x$ and $M_y$, both $M_\chi, M_X$\ and $M_Y$ can 
 be determined.
 If  the two initially produced new particles have the same mass, 
@@ -344,16 +345,17 @@ For the second neutralino,
 a general exclusion in the mass-plane is not possible,
 due to the complicated structure of the neutralino mass-matrix,
 which allows for situations where the cross-sections both for
-$\eeto \XN{2} \XN{2}$~ and $\eeto \XN{1} \XN{2}$~ can be small
+$\eeto~\XN{2} \XN{2}$~ and $\eeto~\XN{1} \XN{2}$~ can be small
 at the same time. 
 For any {\it given} SUSY model, however, the combination of the
-searches for $\eeto \XN{2} \XN{2}$, $\eeto \XN{1} \XN{2}$ and
-$\eeto  \XPM{1} \XMP{1}$, 
-as well as the searches for $\eeto \sel \sel$ and $\eeto \snu_e \snu_e$ 
+searches for $\eeto~\XN{2} \XN{2}$, $\eeto~\XN{1} \XN{2}$ and
+$\eeto~\XPM{1} \XMP{1}$, 
+as well as the searches for $\eeto~\sel \sel$ and $\eeto~\snu_e \snu_e$ 
 (since the \sel~ and the $\snu_e$ contribute to t-channel production of \XN{2} and \XPM{1}, 
 respectively) 
-will be likely to yield constraints on \MXN{2}..
-\begin{figure*}[]
+will be likely to yield constraints on \MXN{2}.
+\begin{figure*}
+%[h]
    \centering
       \subfigure[]{\includegraphics[width=0.35\linewidth]{chapters/figures/smu_nlsp_reach}}
       \hspace{0.1\linewidth}
@@ -374,7 +376,10 @@ kinematic limit~\cite{Berggren:2013vna}. \label{fig:searches_noloophole1}}
 
 In the slepton sector,
 smuons and selectrons are excluded
-below 95 to 100 GeV, and staus below 87 to 93 GeV. 
+below 95 to 100 GeV, if the mass difference to the LSP is
+above 4 GeV. 
+Staus are excluded below 87 to 93 GeV, 
+if the difference is above 8 GeV. 
 Selectrons and
 smuons are completely excluded below $M_Z/2$ (from the width of the $Z$),
 while staus are excluded below 28 GeV for any mass-difference and
@@ -391,7 +396,7 @@ and therefore represents the current absolute exclusion for any MSSM model.
 
 Currently,
 LHC has set no limits on processes giving the weakest limits
-(sleptons in general, and stau:s in particular)..
+(sleptons in general, and stau:s in particular).
 In \cite{Aaboud:2017leg,Aad:2014vma,Sirunyan:2018nwe},
 it is shown that limits on selectrons and smuons can be set in the best possible case 
 - either requiring that not only that both selectrons and smuons 
@@ -436,19 +441,18 @@ In \cite{Berggren:2013vna},
 the prospects at the ILC are evaluated.
 Two cases were studied in more detail, 
 the least and the most challenging ones, 
-namely the cases where the NLSP is either the \smur~
-or the \stone .
+namely the cases where the NLSP is either the \smur~or the \stone.
 The first case profits from a very clean and well measured
 signal,
 with no other parameters than the two masses involved,
 while the second one has the most difficult signal 
 (due to the partly invisible SM system),
 and in addition has a further theory parameter,
-namely the \stau~ mixing angle.
+namely the \stau~mixing angle.
 For both these cases,
 the full mass-plane was scanned over a 1-by-1 GeV grid,
-using detailed fast simulation.
-In the \stone~ case, the mixing-angle was chosen such that the
+using detailed fast simulation SGV, see \ref{sec:sw_sgv}.
+In the \stone~case, the mixing-angle was chosen such that the
 production cross-section was as small as possible.
 The resulting exclusion/discovery reaches are shown in
 Figure~\ref{fig:searches_noloophole1}.
@@ -469,8 +473,12 @@ In \cite{Berggren:2015qua} and \cite{Bechtle:2009em}
 more in-depth analyses of specific models are presented.
 The emphasis in these works is to estimate the precision
 with which various parameters can be extracted.
-The analyses were done with full simulation at \Ecms = 500 GeV,
-but the models studied allows for \selr, \smur. and \stone~production also
+The analyses were done with the full SM background simulated  
+with full detector simulation at \Ecms = 500 GeV.
+In \cite{Bechtle:2009em}, also the signal was simulated with
+full simulation,
+while the detailed fast simulation SGV was used in  \cite{Berggren:2015qua}.
+The models studied allows for \selr, \smur. and \stone~production also
 at \Ecms = 250 GeV.
 \begin{figure*}[]
   \begin{center}
@@ -495,9 +503,9 @@ and finite impulse response method \cite{Caiazza:416980}),
 both giving precisions a factor two or more better than
 traditional methods.
 Once the edges were determined,
-applying eq. \ref{eq:searches_genspartendp}
-the masses of \selr~ and  \smur~ 
-could be estimated with an error of 2~\permil~ and
+applying eq. \ref{eq:searches_genspartendp},
+the masses of \selr~and  \smur~could 
+be estimated with an error of 2~\permil~and
 4~\permil, respectively.
 Fitting for a single value of \MXN{1} in these two spectra,
 an error of 1.5~\permil~ was obtained.
@@ -524,14 +532,14 @@ scalars) or
  $\sigma \propto \beta$ (expected for fermions). 
  
 A further measurement possible in these models is the determination of the
-polarisation of the $\tau$-lepton from the \stone~ decay.
+polarisation of the $\tau$-lepton from the \stone~decay.
 This is achieved by studying the spectrum of the $\pi$:s in
 the $\tau \rightarrow \pi \nu_\tau$ mode, or the ratio of
 $E_\pi^\pm$ to $E_\pi^0 + E_\pi^\pm$ in the  $\tau \rightarrow \rho \nu_\tau \rightarrow \pi^\pm \pi^0 \nu_\tau $ mode.
 In \cite{Bechtle:2009em} it was found that
 the degree of polarisation could be determined to $\sim$ 8 \%.
 Also in \cite{Bechtle:2009em},
-it was found that the cross-section for \stone~ pair-production could be determined to 4~\%.
+it was found that the cross-section for \stone~pair-production could be determined to 4~\%.
 The difference in the cross-section when the beam-polarisations are
 reversed can be used to determine the \stau~ mixing angle\footnote{The other
 possibility to determine the mixing-angle, namely the \stone \sttwo associated production
@@ -577,7 +585,7 @@ and avoid assumptions on other related processes.
 The LEP experiments all carried out a comprehensive
 search for a $\XPM{1}$ NLSP which were combined in \cite{LEPSUSYWG/02-04.1}.
 For the   $\XN{2}$ NLSP case,
-as mentioned above,
+as mentioned is section \ref{subsec:searches_noloophole},
 only cross-section limits can be given,
 if no assumptions on the model is done.
 Such limits were given by the experiments \cite{Abdallah:2003xe,Acciarri:1999km,Abbiendi:2003sc}.
@@ -706,7 +714,8 @@ can the mass-difference be arbitrarily large.
 Furthermore, 
 {\it if} GUT-scale unification of  the Bino and Wino mass 
 parameters $M_1$ and $M_2$ holds,
-the next-to-lightest bosino {\it cannot} be heavier the twice the LSP mass.
+the next-to-lightest bosino {\it cannot} be 
+heavier the twice the LSP mass\cite{Choi:2001ww}.
 \begin{figure*}[]
   \begin{center}
     \subfigure[]{\includegraphics[width=0.3\linewidth] {chapters/figures/higgsino-like2}}
@@ -774,7 +783,8 @@ dark matter such as axions:
     \hspace{0.05\linewidth}
     \subfigure[]{\includegraphics [width=0.45\linewidth]{chapters/figures/EdleeL.pdf}}
   \end{center}
-  \caption{\label{fig:searches_higgsinos} Higgsino mass determination for (a) the charged higgsino from the recoil against an ISR photon in a scenario with a mass splitting of $770$\,MeV~\cite{Berggren:2013vfa}, (b) the neutral higgsino from the energy of its visible decay products in a scenario with a mass splitting of  $20$\,GeV~\cite{Baer:2016new}. }
+  \caption{\label{fig:searches_higgsinos} Higgsino mass determination for (a) the charged higgsino from the recoil against an ISR photon in a scenario with a mass splitting of $770$\,MeV~\cite{Berggren:2013vfa}, using the SGV detector 
+simulation. (b) the neutral higgsino from the energy of its visible decay products in a scenario with a mass splitting of  $20$\,GeV~\cite{Baer:2016new}, using full detector simulation.}
 \end{figure*}
 
 
@@ -784,25 +794,26 @@ dark matter such as axions:
 
 The primary probe at the ILC for the direct production of WIMP dark matter are photons
 emitted as initial-state radiation in association with the pair production of dark matter.
+Such a Mono-photon search is analogous  to Mono-$X$ searches at the LHC.
 The main backgrounds to this search are the radiative neutrino production, which is irreducible,
 and the radiative Bhabha scattering process, in which the outgoing electron and positron escape 
 undetected in the beam pipe.
-At the ILC, WIMP pair production can be searched for with the help of an ISR photon, 
-in analogy to mono-X searches at the LHC.
+%At the ILC, WIMP pair production can be searched for with the help of an ISR photon, 
+%in analogy to mono-X searches at the LHC.
 At LEP, searches for photon events with missing energy were performed~\cite{Abdallah:2003np,*Abdallah:2008aa},
 and were later re-analysed within the  effective
 operator framework~\cite{Fox:2011fx}\footnote{Note that under LEP or ILC conditions the 
 effective field theory approximation is accurate, while it is questionable
 in similar analyses at hadron colliders. 
-}
+}.
 
 The prospects to detect WIMPs with such methods at the ILC and to determine their properties 
 have been studied
 for a centre-of-mass energy of $500$\,GeV
 in detailed detector simulation~\cite{Bartels:2012ex,Habermehl:417605}. 
 Also at the ILC, the experimental sensitivity have been interpreted 
-in the framework of effective.
-operators
+in the framework of effective
+operators.
 Figure~\ref{fig:searches_WIMPs}a shows the exclusion reach found, and 
 Figure~\ref{fig:searches_WIMPs}b shows the extrapolation of these
 results to a wide range of integrated luminosities and centre-of-mass energies 
@@ -828,7 +839,7 @@ production rates in the early universe along with WIMP scattering or annihilatio
 rates and the local WIMP abundance~\cite{Baltz:2006fm}. 
 Such checks could verify or falsify the simple assumptions 
 associated with thermal DM production within the WIMP miracle scenario, 
-thus giving important insights into the nature of dark matter
+thus giving important insights into the nature of dark matter.
 
 Searches for WIMP dark matter at the ILC are highly complementary to those
 at hadron colliders and at direct detection experiments: 
@@ -841,7 +852,7 @@ type of particle mediating the WIMP-SM interaction,
 there is a priori no reason for these couplings to be of similar strength.
 Thus, 
 if the LHC does not discover a deviation from the SM expectation 
-in its ``mono-$X$'' searches, 
+in its Mono-$X$ searches, 
 it is essential to complement the picture by probing 
 the WIMP-lepton couplings at an electron-positron collider.
 Moreover, 
@@ -871,7 +882,7 @@ In many models with extended Higgs sectors, e.g.
 Two Higgs Doublet Models, The Next-to-Minimal Supersymmetric  Standard  Model
 and  Randall  Sundrum  models,  there  exists  a  light  scalar
 $S^0$,
-lighter than the Standard Model (SM) like Higgs.
+lighter than the Standard Model Higgs.
 The coupling of the $S^0$ to the $Z$ can be very small,
 compared to the coupling a standard model Higgs with the
 same mass would have
@@ -895,8 +906,7 @@ offers the possibility to achieve this.
 The OPAL collaboration at LEP searched
 for light scalars with this method,
 but the  results were limited due to the low luminosity~\cite{Abbiendi:2002in}.
-The luminosity offered by the ILC design being 1000
-times higher than what LEP provided.
+The large luminosity offered by the ILC 
 makes the recoil mass technique correspondingly more powerful~\cite{Asner:2013psa}
 Therefore a search for a light scalar with a very weak interaction with
 the Z boson using the model-independent analysis would become  viable
@@ -912,7 +922,7 @@ cross-section of the Standard Model Higgsstrahlung process would
 have had, would the Higgs-mass have been the one assumed for the new scalar.
 
 Background events are rejected by considering kinematic variables
-only relied on muons. and the reconstructed $Z$:
+only relied on muons and the reconstructed $Z$:
 The invariant mass, transverse momentum and polar angle of the muon pair,
 as well as the polar angle of the missing momentum,
 and the polar angle of each muon, and the angle between them.
@@ -937,12 +947,12 @@ ILC results. From \cite{yanichep}.}
 The main backgrounds depend on the scalar mass.
 In
 the small mass region, the two fermions background
-$\eeto \mu^+ \mu^-$ with an energetic ISR
+$\eeto~\mu^+ \mu^-$ with an energetic ISR
 photon is the overwhelming background;
 while in the $Z$-pole region,
-$\eeto ZZ \rightarrow \mu^+ \mu^- + X$
+$\eeto~ZZ \rightarrow \mu^+ \mu^- + X$
 is an irreducible background,
-as is - obviously - $\eeto Z^* \rightarrow ZH \rightarrow \mu^+\mu^- H$
+as is - obviously - $\eeto~Z^* \rightarrow ZH \rightarrow \mu^+\mu^- H$
 at $M_{S^0} \sim M_H$.
 The two fermion background can be
 further rejected by taking into account ISR photon return effects.
@@ -956,6 +966,7 @@ in  Figure~\ref{fig:searches_newscalars}b.
 It is one to two orders of magnitude more sensitive than LEP, and
 covering substantial new phase space.
 In particular,
-at all studied points, a new scalar with a a coupling to the $Z$ greater
+at all studied points, a new scalar with a coupling to the $Z$ greater
 than 1\% of that of a SM-higgs at the same mass would be excluded or
 discovered at ILC-250.
+
