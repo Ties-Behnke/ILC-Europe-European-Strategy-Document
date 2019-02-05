@@ -1,6 +1,6 @@
 % CHAPTER ON ILC MACHINE
 
-{\it Status: Feb 4, 2019}
+{\it Status: Feb 5, 2019}
 
 The International Linear Accelerator (ILC) is a $250\,{\mathrm{GeV}}$ (extendable up to $1\,{\mathrm{TeV}}$) linear $e^+e^-$ collider, based on $1.3\,{\mathrm{GHz}}$ superconducting radio-frequency (SCRF) cavities.
 It is designed to  achieve a luminosity of $1.5\cdot 10^{34}~{\mathrm{cm}}^{-1}{\mathrm{s}}^{-1}$ and provide an integrated luminosity of $350\,{\mathrm{fb}}^{-1}$ in the first four years of running.
@@ -24,7 +24,7 @@ At accelerating gradients of $31.5$ to $35\,{\mathrm{MV/m}}$ this technology off
 
 The underlying TESLA technology is mature, with a broad industrial base throughout the world, and is in use at a number of free electron laser facilities that are in operation (European XFEL at DESY, Hamburg), under construction (LCLS-II at SLAC, Stanford) or in preparation (SCLF in Shanghai) in the three regions Asia, Americas, and Europe that contribute to the ILC project.
 In preparation for the ILC, Japan and the U.S. have founded a collaboration for further cost optimisation of the TESLA technology.
-In recent years, new surface treatment technologies utilising nitrogen during the cavity preparation process, such as the so-called   nitrogen infusion technique, have been developed at Fermilab, with the prospect to achieve higher gradients and lower loss rates with a less expensive surface preparation scheme than assumed in the TDR.
+In recent years, new surface treatment technologies utilising nitrogen during the cavity preparation process, such as the so-called   nitrogen infusion technique, have been developed at Fermilab, with the prospect to achieve higher gradients and lower loss rates with a less expensive surface preparation scheme than assumed in the TDR (see Par.~\ref{par:infusion}).
 
 When the Higgs discovery was imminent in 2012, the Japan Association of High Energy Physicists (JAHEP) made a proposal to host the ILC in Japan~\cite{JAHEP:2012a,JAHEP:2012b}. 
 Subsequently, the Japanese ILC Strategy Council conducted a survey of possible sites for the ILC in Japan, looking for  suitable geological conditions for a tunnel up to $50\,{\mathrm{km}}$ in length (as required for a $1\,{\mathrm{TeV}}$  machine), and the possibility to establish a laboratory where several thousand international scientists can work and live. 
@@ -230,6 +230,7 @@ Overall, the XFEL cavity production data prove that it is possible to mass-produ
 
 
 \paragraph{High-gradient R\&D: nitrogen infusion}
+\label{par:infusion}
 
 \begin{figure}[htbp]
    \includegraphics[width=\hsize]{chapters/figures/sst-30-094004-fig5}
@@ -260,10 +261,8 @@ Fig.~\ref{fig:n2infusion} \cite[Fig. 5]{Grassellino:2017bod} shows how the addit
 % XXX CONTINUE HERE XXX experimental status, success, transfer to other labs
 
 Up to now, it has proven difficult to reproduce these exciting results in other laboratories.
-Success has been reported by groups at JLAB~\cite{Dhakal:2017xxq}, at Cornell~\cite{Koufalis:2017blg}, KEK has reported mixed results \cite{bib:Umemori:2018.lcws}, at DESY has not yet successfully reproduced these results.
+Success has been reported by groups at JLAB~\cite{Dhakal:2017xxq}, at Cornell~\cite{Koufalis:2017blg}, KEK has reported mixed results \cite{bib:Umemori:2018.lcws}, at DESY has so far not been able to reproduce these results~\cite{Wenskat:2018zco}.
 These difficulties seem to indicate that the recipe for a successful application of nitrogen infusion is not yet fully understood, and that further research an development will be necessary before this process can be transferred to industry. 
-
-%The role of the \siunit{120}{^\circ C} bake in in the formation of a dirty surface layer was elucidated in a study measuring the B field penetration depth with muon spin rotation (muSR) \cite{Romanenko:2013saa}. 
 
 Nevertheless, the infusion results have triggered a renewed interest in the research on highest gradients in niobium cavities, with a host of experimental results, increased activity to achieve a more thorough theoretical understanding~\cite{Kubo:2017cww,Gurevich:2017vnn}, and the application of state of the art analytical methods such as   muon spin rotation (muSR) \cite{Romanenko:2013saa}.
 This provides reason for optimism that an improved understanding of the mechanisms that stabilise superconductivity in the presence of high fields will result in improved performance of industrially produced cavities for the ILC.
@@ -307,7 +306,7 @@ The optimum frequency is in the region of \siunit{1.5}{GHz}, but during the earl
 The superconducting accelerating cavities for the ILC are nine-cell structures made out of high-purity niobium (Fig.~\ref{fig:tesla-cavity}), with an overall length of \siunit{1.25}{m}.
 Cavity production starts from niobium ingots which are forged and rolled into \siunit{2.8}{mm} thick niobium sheets that are individually checked for defects by an eddy current scan and optical inspection~\cite{Adolphsen:2013jya}.
 Cavity cells are produced by deep-drawing the sheets into half cells, \num{18} of which are joined by electron beam welding with two end groups to form the whole structure.
-The welding process is one of the critical and cost-intensive steps of the cavity manufacturing procedure. 
+This welding process is one of the most critical and cost-intensive steps of the cavity manufacturing procedure. 
 Utmost care must be taken to avoid irregularities, impurities and inclusions in the weld itself, and deposition of molten material at the inner surface of the cavity that can lead to field emission.
 
 \begin{figure}[htbp]
@@ -321,18 +320,26 @@ Utmost care must be taken to avoid irregularities, impurities and inclusions in 
 
 After welding, the inner surface of the cavity must be prepared.
 The process is designed to remove material damage incurred by chemical procedures during the fabrication process, remove chemical residues from earlier production steps, remove hydrogen in the bulk niobium from earlier chemical processing, and remove and particulate contamination.
-in a last step, the cavity is closed to form a hermetically sealed structure ready for transport.
+In a last step, the cavity is closed to form a hermetically sealed structure ready for transport.
 The treatment steps involve a series of rinses with ethanol or high pressure water, annealing in a high purity vacuum furnace at \siunit{800^\circ}{C} and \siunit{120^\circ}{C}, and electro polishing or buffered chemical polishing.
 The recipe for the surface preparation has been developed over a long time and still subject to optimisation, as it is a major cost driver for the cavity production and largely determines the overall performance and yield of the cavities.
 In particular the electro polishing steps are complicated and costly, as they require complex infrastructure and highly toxic chemicals.
+One advantage of nitrogen infusion (see Par.~\ref{par:infusion}) is that the final electro polishing step is omitted.
 
-{\it 
-XXXXXXX CONTINUE HERE XXXXXXXX
+Careful quality control during the production process is of high importance.
+At the European XFEL, several quality controls were conducted by the manufacturer during production, with nonconformities reported to the institute responsible for the procurement, where a decision was made whether to accept or reject a part~\cite{Singer:2016fbf}. 
+With this ``build to print'' approach, where the manufacturer guarantees the precise following of the production process, but not a specific performance, procurement costs are reduced, because the manufacturer does not carry and not charge for the performance risk.
 
-ADD SOMETHING ABOUT QA AND RETREATMENT HERE.
+Upon reception from the manufacturer, cavities are tested in a vertical cryostat (``vertical test''), where $Q_0$ is measured as a function of the gradient.
+Cavities that fall below the specified gradient goal are re-treated by an additional (expensive) electropolishing step or a comparatively simple high--pressure rinse. 
+After retreatment, the vertical test is repeated.
 
-EXPLAIN INTEGRATION WITH MAGNETIC SHIELD AND TUNER}
- 
+Retreatment and tests constitute a major cost driver in cavity production. 
+For the ILC TDR, it was assumed that $25\,\%$ of the cavities would fall below the \siunit{28}{MV/m} gradient threshold and undergo retreatment and a second vertical test.
+E-XFEL data from the vendor ``RI'' that followed the ILC production recipe indicate that $15\,\%$ to $37\,\%$ of the cavities fall below \siunit{28}{MV/m}, depending  on whether the maximum or the `usable'' achieved gradient is considered~\cite{bib:Walker:2017.lcws}.
+However, E-XFEL experience also shows that in most of the cases a high--pressure rinse is sufficient as retreatment to remove surface defects, which is a cost saving compared to the electro--polishing assumed in the TDR.
+
+After successful testing, prior to installation in the cryomodule, cavities are equipped with a magnetic shield and the frequency tuner, which exerts mechanical force on the cavity to adjust the resonant frequency to the frequency of the external RF field~\cite[Sect. 3.3]{Adolphsen:2013kya}.  
 
 
 \subsubsection{Power Coupler}
@@ -369,6 +376,27 @@ A lot of experience has been gained from this production~\cite{Sierra:2017wyc}.
 \label{fig:crymodule}
 \end{figure}
 
+To facilitate transportation, installation and operation, 8 to 9 cavities are integrated in a \siunit{12.6}{m} long cryomodule~(Fig.~\ref{fig:crymodule}), which houses the cavities, thermal insulation, an optional quadrupole / beam position monitor / corrector magnet unit that is mounted instead of the 9th cavity in every third module, and all necessary supply tubes for liquid and gaseous helium at \siunit{2-80}{K} temperature.
+
+
+\begin{figure}[htbp]
+   \includegraphics[width=\hsize]{chapters/figures/srf17-moxa02-fig1}
+\caption{View of installed cryomodules in the tunnel of the European XFEL~\cite{Reschke:2018ywk}.
+}
+% Paper is published under CC-BY-3.0
+\label{fig:xfel-tunnel}
+\end{figure}
+
+
+Nine of these cryomodules are connected in the tunnel to form a cryostring, with a common liquid helium supply; RF for one such string is provided by two klystrons.
+No separate helium transfer line is necessary, as all helium transport lines are integrated within the modules.
+Fig.~\ref{fig:xfel-tunnel} shows installed cryomodules in the tunnel of the European XFEL~\cite{Reschke:2018ywk}.
+
+Cryomodule assembly requires a dedicated facility with large clean rooms, especially trained, experienced personnel, and thorough quality control~\cite{Berry:2017gpt}.
+The cryomodules are certified for liquid helium pressure of up to \siunit{2}{bar}, which is why the have to conform to the applicable pressure vessel codes, which brings with it very stringent documentation requirements for all pressure bearing parts~\cite{Peterson:2011zz}.
+
+For the European XFEL project, 101 cryomodules were assembled by industrial partners in a dedicated facility built and operated by CEA~\cite{Weise:2014zqa,Berry:2017gpt}, demonstrating the successful industrialization of the assembly process, with a final throughput of one cryomodule every four working days.
+This production rate is close to the rate envisaged for a possible European contribution of 300 cryomodules to a \siunit{250}{GeV} ILC in Japan.
 
 \begin{figure}[htbp]
    \includegraphics[width=\hsize]{chapters/figures/srf17-mopb106-fig1}
@@ -381,12 +409,11 @@ The specification of \siunit{23.6}{MV/m} is marked by a red line
 \label{fig:cryomodules-performance}
 \end{figure}
 
-XXXXXXX MORE HERE XXXXXXXX
+While the design gradient for XFEL accelerator modules of \siunit{23.6}{MV/m} is significantly lower than the aim of \siunit{31.5-35}{MV/m} for the ILC, a number of cryomodules have been built around the world that come close or reach the ILC TDR specification of \siunit{31.5}{MV/m}: An XFEL prototype module at DESY was reached \siunit{30}{MV/m}~\cite{Kostin:2009a}, Fermilab has demonstrated cryomodule operation at the ILC specification of \siunit{31.5}{MV/m}~\cite{Broemmelsiek:2018iqr}, and KEK has reported stable pulsed operation of a cryomodule at \siunit{36}{MV/m}~\cite{Yamamoto:2018kml}.
 
+Fig.~\ref{fig:cryomodules-performance} shows the average cavity gradients per cryomodule for the European XFEL serial-production cryomodules~\cite{Kasprzak:2018kkr}. 
+For almost all of the modules, the cavity gradients are significantly above the XFEL specification of \siunit{23.6}{MV/m}.
 
-Record at DESY: \cite{Kostin:2009a} PXFEL1
-Record at Fermilab: \cite{Broemmelsiek:2018iqr}
-record at STF2: \cite{Yamamoto:2018kml}
 
 \subsubsection{Plug-compatible design}
 
@@ -458,9 +485,9 @@ The \siunit{2}{K} and \siunit{4.5}{K} helium refrigerators are located in an und
 The total helium inventory is approximately half of the \siunit{500}{GeV} machine, namely $310 000$ liquid litres or about $41$ metric tonnes, about one third of the LHC's helium inventory.
 
 
-\subsubsection{Existing and Future Facilities}
+%\subsubsection{Existing and Future Facilities}
 
-XXXXX MORE HERE  XXXXXXXX
+% XXXXX MORE HERE  XXXXXXXX
 
 \subsubsection{Series Production and Industrialisation, Worldwide and in Europe}
 
@@ -528,28 +555,29 @@ The decision on the choice will be taken once the project has been approved, bas
 
 
 \begin{table*}
-\begin{tabular}{lccccc}
-Quantity & Symbol & Unit & Initial &  \multicolumn{2}{c}{Upgrades} \\
+\begin{tabular}{lcccccc}
+Quantity & Symbol & Unit & Initial & TDR &  \multicolumn{2}{c}{Upgrades} \\
 \hline
-Centre of mass energy & $\sqrt{s}$ & ${\mathrm{GeV}}$ & $250$ & $500$ & $1000$ \\
-Luminosity & \multicolumn{2}{c}{${\mathcal{L}}$ $10^{34}{\mathrm{cm^{-2}s^{-1}}}$} & $1.35$ & $1.8$ & $4.9$ \\
-Repetition frequency &$f\sub{{rep}}$ & ${\mathrm{Hz}}$  & $5$ & $5$ & $4$ \\
-Bunches per pulse  &$n\sub{{bunch}}$ & 1  & $1312$ & $1312$ & $2450$ \\
-Bunch population  &$N\sub{{e}}$ & $10^{10}$ &$2$ & $2$ & $1.74$ \\
-Linac bunch interval & $\Delta t\sub{{b}}$ & ${\mathrm{ns}}$ & $554$ & $554$ & $366$ \\
-Beam current in pulse & $I\sub{{pulse}}$ & ${\mathrm{mA}}$& $5.8$ & $5.8$ & $7.6$  \\
-Beam pulse duration  & $t\sub{{pulse}}$ & ${\mathrm{\mu s}}$ &$727$ & $727$ & $897$ \\
-Average beam power  & $P\sub{{ave}}$   & ${\mathrm{MW}}$ & $5.3$   &$10.5$  & $27.2$ \\  
-Norm. hor. emitt. at IP & $\gamma\epsilon\sub{{x}}$ & ${\mathrm{\mu m}}$& $5$ & $10$ & $10$  \\ 
-Norm. vert. emitt. at IP & $\gamma\epsilon\sub{{y}}$ & ${\mathrm{nm}}$ & $35$ & $35$ & $35$ \\ 
-RMS hor. beam size at IP  & $\sigma^*\sub{{x}}$ & ${\mathrm{nm}}$  & $516$ & $474$ & $335$ \\
-RMS vert. beam size at IP &$\sigma^*\sub{{y}}$ & ${\mathrm{nm}}$ & $7.7$  & $5.9$ & $2.7$ \\
-Site AC power  & $P\sub{{site}}$ &  ${\mathrm{MW}}$ & $129$ & $163$ & $300$ \\
-Site length & $L\sub{{site}}$ &  ${\mathrm{km}}$ & $20.5$ & $31$ & $40$ \\
+Centre of mass energy & $\sqrt{s}$ & ${\mathrm{GeV}}$ & $250$ & $250$ & $500$ & $1000$ \\
+Luminosity & \multicolumn{2}{c}{${\mathcal{L}}$ $10^{34}{\mathrm{cm^{-2}s^{-1}}}$} & $1.35$ & $0.75$ & $1.8$ & $4.9$ \\
+Polarisation for $e^- (e^+)$ & $P\sub{-} (P\sub{+})$ & & ~$80\,\% (30\,\%)$~ &  ~$80\,\% (30\,\%)$~ &  ~$80\,\% (30\,\%)$~ &  ~$80\,\% (20\,\%)$~  \\
+Repetition frequency &$f\sub{{rep}}$ & ${\mathrm{Hz}}$  & $5$ & $5$ & $5$ & $4$ \\
+Bunches per pulse  &$n\sub{{bunch}}$ & 1  & $1312$ & $1312$ & $1312$ & $2450$ \\
+Bunch population  &$N\sub{{e}}$ & $10^{10}$ &$2$ & $2$ & $2$ & $1.74$ \\
+Linac bunch interval & $\Delta t\sub{{b}}$ & ${\mathrm{ns}}$ & $554$ & $554$ & $554$ & $366$ \\
+Beam current in pulse & $I\sub{{pulse}}$ & ${\mathrm{mA}}$& $5.8$ & $5.8$ & $5.8$ & $7.6$  \\
+Beam pulse duration  & $t\sub{{pulse}}$ & ${\mathrm{\mu s}}$ & $727$ & $727$ & $727$ & $897$ \\
+Average beam power  & $P\sub{{ave}}$   & ${\mathrm{MW}}$ & $5.3$ & $5.3$ & $10.5$  & $27.2$ \\  
+Norm. hor. emitt. at IP & $\gamma\epsilon\sub{{x}}$ & ${\mathrm{\mu m}}$& $5$ & $10$ & $10$ & $10$  \\ 
+Norm. vert. emitt. at IP & $\gamma\epsilon\sub{{y}}$ & ${\mathrm{nm}}$ & $35$ & $35$ & $35$ & $35$ \\ 
+RMS hor. beam size at IP  & $\sigma^*\sub{{x}}$ & ${\mathrm{nm}}$  & $516$ & $729$ & $474$ & $335$ \\
+RMS vert. beam size at IP &$\sigma^*\sub{{y}}$ & ${\mathrm{nm}}$ & $7.7$  & $7.7$  & $5.9$ & $2.7$ \\
+Luminosity in top $1\,\%$ & ${\mathcal{L}}\sub{0.01} / {\mathcal{L}}$ &  &   & $87.1\,\%$  & $58.3\,\%$ & $44.5\,\%$\\
+Energy loss from beamstrahlung  & $\delta\sub{BS}$ &  & $2.6\,\%$  & $0.97\,\%$  & $4.5\,\%$ & $10.5\,\%$ \\
+Site AC power  & $P\sub{{site}}$ &  ${\mathrm{MW}}$ & $129$ & $122$ & $163$ & $300$ \\
+Site length & $L\sub{{site}}$ &  ${\mathrm{km}}$ & $20.5$ & $31$ & $31$ & $40$ \\
 \end{tabular}
-\caption{Summary table of the ILC accelerator parameters in the initial $250\,{\mathrm{GeV}}$ staged configuration
-and possible upgrades.
-{\it XXX add column for TDR values at 250, add rows with beam parameters at IP XXX}
+\caption{Summary table of the ILC accelerator parameters in the initial $250\,{\mathrm{GeV}}$ staged configuration (with TDR parameters at \siunit{250}{GeV} given for comparison) and possible upgrades.
 \label{tab:ilc-params}}
 \end{table*}
 
@@ -739,9 +767,12 @@ This emittance dilution effect grows as $E\sub{beam}^6$ at constant bending radi
 
 
 
-XXXXXXXXXXXXX CONTINUE HERE XXXXXXXXXXXXXX
+% XXXXXXXXXXXXX CONTINUE HERE XXXXXXXXXXXXXX
 
 \paragraph {Final focus with feedback system and crab cavities}
+
+% XXXXXXXXXXXXX CONTINUE HERE XXXXXXXXXXXXXX
+
 
 \paragraph {Test results from ATF2}
 The Accelerator Test Facility 2 (ATF2) was built at KEK in 2008 as a test bed for the ILC final focus scheme~\cite[Sec. 3.6]{Adolphsen:2013jya}.
@@ -758,9 +789,18 @@ validating the final focus design, including the local chromaticity correction~\
 
 \paragraph {Machine detector interface (MDI)}
 
+% XXXXXXXXXXXXX CONTINUE HERE XXXXXXXXXXXXXX
+
+
 \paragraph {Extraction line}
 
+% XXXXXXXXXXXXX CONTINUE HERE XXXXXXXXXXXXXX
+
+
 \paragraph {Main dump}
+
+% XXXXXXXXXXXXX CONTINUE HERE XXXXXXXXXXXXXX
+
 
 %===============================================================================
 
@@ -858,12 +898,12 @@ The surveys show that the rock is of good quality, with no active seismic faults
 Earthquakes are frequent throughout Japan, and the accelerator and detectors need  proper supports that isolate them from vibrations during earthquakes and micro tremors~\cite{Sanuki:2018b}. 
 Proven technologies exist to cope with all seismic events, including magnitude 9 earthquakes such as the great Tohoku earthquake. 
 
-XXXXX MENTION TUNNELLING TECHNOLOGY (NAT), Cross section, Tomo's talk on earthquake vibes XXXXXXXX
+% XXXXX MENTION TUNNELLING TECHNOLOGY (NAT), Cross section, Tomo's talk on earthquake vibes XXXXXXXX
 
 Vibration measurements taken during the construction of a road tunnel show that accelerator operation would be possible during the excavation of a tunnel for an energy upgrade~\cite{Sanuki:2018a}.
 
 
-XXXXXXX CONTINUE HERE XXXXXXXXXX
+% XXXXXXX CONTINUE HERE XXXXXXXXXX
 
 \begin{figure}[htbp]
    \includegraphics[width=\hsize]{chapters/figures/Kitakami_Geology}
@@ -876,7 +916,7 @@ XXXXXXX CONTINUE HERE XXXXXXXXXX
 
 \subsection{Cost and Schedule}
 
-\begin{figure*}[tb]
+\begin{figure*}[htbp]
  %\epsfysize=9.0cm
  \begin{center}
  \includegraphics[width=0.42\hsize]{chapters/figures/costs-as.pdf}
@@ -915,12 +955,22 @@ In addition, \siunit{17,165}{kh} (thousand person-hours) are required of institu
 In 2018, the ILC Advisory Panel of the Japanese Ministry of Education, Culture, Sports, Science and Technoloy (MEXT) concluded its review of the ILC~\cite{ILCAP:2018}. 
 For this review, costs were evaluated in Japanese Yen in 2017 prices, taking into account the local inflation for goods and construction costs.
 For the purpose of this estimate, also the Labour costs were converted to Yen to yield \siunit{119.8}{G\yen}, resulting in a total range of the accelerator construction cost of \siunit{635.0 - 702.8}{G\yen}, where the range covers uncertainties in the civil construction costs (\siunit{18}{G\yen}) and of the gradient (\siunit{49.8}{G\yen}).
-For the this estimate, conversion rates of $\siunit{1}{US\$} = \siunit{100}{JP\yen}$ and $\siunit{1}{\matheuro} = \siunit{1.15}{US\$}$ were assumed.
+For the this estimate, conversion rates of $\siunit{1}{US\$} = \siunit{100}{JP\yen}$ and $\siunit{1}{\euro} = \siunit{1.15}{US\$}$ were assumed.
 
-Operation costs of the accelerator and the central laboratory are estimated to be \siunit{36.6-39.2}{G\yen} (about \siunit{318-341}{M\matheuro}) per year.
+Operation costs of the accelerator and the central laboratory are estimated to be \siunit{36.6-39.2}{G\yen} (about \siunit{318-341}{M\euro}) per year.
 
 
 
-XXXXXX CONTINUE HERE WITH SCHEDULE   XXXXXXX
+% XXXXXX CONTINUE HERE WITH SCHEDULE   XXXXXXX
+
+
+
+
+
+
+
+
+
+
 
 

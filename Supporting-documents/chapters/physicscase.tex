@@ -43,6 +43,7 @@ The theorem has an appealing corollary, though.   Since the SM is the most gener
 lattice QCD will determine these well enough to fix the SM predictions for Higgs to part-per-mil accuracy.   Then, if we can observe corrections to the SM predictures at the 1\% level, these corrections and the evidence that they give for new physics cannot hide.
 
 \subsection{Examples of  new physics influence on the Higgs boson}
+\label{subsec:newphysicofH}
 
 Many models of physics beyond the SM illustrate the points made in the previous section. Here are some examples.   These examples point to  a goal of 1\% accuracy
 for the measurement of Higgs boson couplings in the major decay modes.
@@ -163,7 +164,7 @@ visible or partially visible modes the limits are in the range $10^{-3}$--$10^{-
 \subsection{Effective Field Theory framework for Higgs coupling determinations}
 \label{subsec:phys_eft}
 
-Though the goals of measuring the SM and exotic branching ratios of the Higgs boson are already very important, experiments at the ILC allow a further step.   The theory predictions described in Section~x.2 refer to absolute partial decay widths.   These are 
+Though the goals of measuring the SM and exotic branching ratios of the Higgs boson are already very important, experiments at the ILC allow a further step.   The theory predictions described in Sec.~\ref{subsec:newphysicofH} refer to absolute partial decay widths.   These are 
 related to the Higgs branching ratios by 
 \beq
            \Gamma(h\to A\bar A) =   \Gamma_{tot} \cdot BR(h\to A\bar A)  \  .
@@ -172,38 +173,30 @@ The Higgs boson total width is very small---4~MeV in the SM---and it is not expe
 However, as we will now show, the ILC can determine the total width of the Higgs in a 
 way that is highly model-independent and allows a 1\% absolute normalization of Higgs coupling constants.
 
-A possible method to determine the Higgs width is to multiply each $hAA$ coupling by a parameter $\kappa_A$, and then fit these prarameters using data from $\ee\to Zh$.   In this simple method, the total cross section for $\ee\to Zh$ is proportional to $\kappa_Z^2$ and so the $\kappa_A$ parameters can be absolutely normalized.   This method has been used in much of the literature on Higgs coupling determinations, including \cite{Fujii:2015jha}.  In that paper, invisible and visible but exotic decay modes were treated by including these two partial widths as two additional parameters in the fit.  Using as inputs the measureable $\sigma\times BR$s for SM Higgs decay channels and Higgs decays to invisible final states, plus the total cross section for $\ee\to Zh$,  the ILC data would give a well-defined fit to the $\kappa_A$ parameters.
+A possible method to determine the Higgs width is to multiply each $hAA$ coupling by a parameter $\kappa_A$, and then fit these prarameters using data from $\ee\to ZH$.   In this simple method, the total cross section for $\ee\to ZH$ is proportional to $\kappa_Z^2$ and so the $\kappa_A$ parameters can be absolutely normalized.   This method has been used in much of the literature on Higgs coupling determinations, including \cite{Fujii:2015jha}.  In that paper, invisible and visible but exotic decay modes were treated by including these two partial widths as two additional parameters in the fit.  Using as inputs the measureable $\sigma\times BR$s for SM Higgs decay channels and Higgs decays to invisible final states, plus the total cross section for $\ee\to Zh$,  the ILC data would give a well-defined fit to the $\kappa_A$ parameters.
 
 There are two problems with this method.  First, it is not completely model-independent.  Modelling the effects of new physics as a general set of dimension-6 operators as in \leqn{geneffL}, we find two different Lorentz structures for the modifications of the $hZZ$ vertex,
 \beq
    \Delta \L =    (1 + \eta_Z) {m_Z^2\over v}  h Z_\mu Z^\mu + \zeta_Z {1\over 2v} h
    Z_{\mu\nu} Z^{\mu\nu} \ ,
 \eeq{etazeta}
-and a similar pair of structures for the $hWW$ vertex.  In principle, the two coefficients  in each case should be independently determined from data.  Second, the method does not make the most effective use of the data set from $\ee$ colliders.  The total width of the Higgs boson is determined from the ratio  $\sigma(\ee\to Zh)/\Gamma(h\to ZZ^*)$.  Since the denominator is a 3\% branching ratio, this strategy sacrifices a factor 30 in 
+and a similar pair of structures for the $HWW$ vertex.  In principle, the two coefficients  in each case should be independently determined from data.  Second, the method does not make the most effective use of the data set from $\ee$ colliders.  The total width of the Higgs boson is determined from the ratio  $\sigma(\ee\to ZH)/\Gamma(H\to ZZ^*)$.  Since the denominator is a 3\% branching ratio, this strategy sacrifices a factor 30 in 
 statistics.
 
 A much more effective method for fitting Higgs boson couplings is described in \cite{Barklow:2017suo}.   In this method, we model the effects of new physics by the most general set of dimension-6 operators that can appear in \leqn{geneffL}.  The complete set of $SU(3)\times SU(2)\times U(1)$-invariant lepton- and baryon-number conserving dimension-6 operators  includes 59 terms~\cite{Grzadkowski:2010es}.  However, for 
 the analysis of $\ee$ collider data, we can restrict ourselves to electron reactions 
-producing the Higgs boson and other color-singlet states. To compute deviations from the SM predictions, it suffices to work at the electroweak tree level in the effective Lagrangian coefficients. (Of course, the SM predictions themselves must be worked out to high precision.)   We can consider $CP$-even observables; the contributions of $CP$-odd operators can be bounded by independent measurements.   With these simplifications, a total of 17 operators coefficients appear in the analysis.   To determine these coefficients, we can use precision electroweak measurements and data on $\ee\to W^+W-$ in addition to data from Higgs processs.   It is shown in 
-\cite{Barklow:2017suo} that this data suffices to determine independently  the 17 operator coefficients, plus 4 SM parameters (which must be refit in the new context), plus the two partial widths for invisible and exotic Higgs decays. 
+producing the Higgs boson and other color-singlet states.  Since there is a single SM effective
+ Lagrangian that should apply to all processes, this method allows us to combine data on 
+Higgs production with additional data sets from $\ee\to W^+W^-$ and precision electroweak
+measurements.   It is also possible to make use of additional observables for Higgs production
+beyond simple rates.  In particular, the angular distribution and polarization asymmetry in 
+$\ee\to ZH$ play important roles.  These considerations give the method based on 
+Effective Field Theory much more power in extracting the most accurate estimates of the 
+Higgs boson couplings from the data.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-\begin{center}
-\includegraphics[width=0.80\hsize]{chapters/figures/Zhdiagrams.pdf}
-\end{center}
-\caption{Feynman diagrams contributing to the process $\ee\to Zh$ when contributing  dimension-6 operators are included. }
-\label{fig:eeZhdiagrams}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-Beam polarization plays an important role in the analysis.   Including the effects of dimension-6 operators, the process $\ee\to Zh$  involves three Feynman diagrams, shown in Fig.~\ref{fig:eeZhdiagrams}.   Only the first diagram appears in the SM analysis; the other two are generated by dimension-6 operators.   The third diagram is required to be small by precision electroweak constraints.  The second diagram is generated by the same operators that generate the $\zeta_Z$ coefficient in \leqn{etazeta}.   Under a spin reversal $e^-_L \leftrightarrow e^-_R$, the first diagram flips sign while the second diagram keeps its sign.  Thus,  measurement of the 
-polarization asymmetry  in the total cross section for $\ee\to Zh$ directly measures the $\zeta$ parameter in \leqn{etazeta}.   (In a similar way, measurement of the forward-backward asymmetry in $\ee\to Zh$ tests for the presence of a $CP$-violating dimension-6 contribution.)
-
-After we describe the experimental methods and the expected measurement uncertainties in Section~VII, we will present the projections for uncertainties in 
-Higgs couplings that follow from the use of this method.  Suffice it to say that the data set expected for the ILC at 250~GeV is expected to measure the $hb\bar b$ couplings to 1\% accuracy, the $hWW$ and $hZZ$ couplings to better than 0.7\%, and the other 
+After we describe the experimental methods and the expected measurement uncertainties for Higgs production in  Sec.~VII and for $W$ pair production in Sec.~VIII,  we will present formal  projections for uncertainties in 
+Higgs couplings that follow from the use of the EFT  method.  Suffice it to say that the data set expected for the ILC at 250~GeV is expected to measure the $hb\bar b$ couplings to 1\% accuracy, the $hWW$ and $hZZ$ couplings to better than 0.7\%, and the other 
 major SM Higgs couplings to accuracies close to 1\%.    These measurements should be 
 statistics-limited.  Above 250~GeV, a second Higgs production reaction, $\ee\to \nu\bar\nu h$ through $W$ boson fusion becomes important.  Using the additional data on $\ee\to Zh$ and the independent measurements from the $W$ fusion reaction, we expect that the uncertainties on Higgs couplings will decrease by another factor of 2. 
 
