@@ -14,7 +14,7 @@
 %Description of ILC software and computing requirements] }
 
 
-\subsection{Software}
+%\subsection{Software}
 
 More than 15 years ago the linear collider community has started to develop common software
 tools to facilitate the development and optimization of detector concepts based on realistic
@@ -34,7 +34,8 @@ describe their design and performance, thereby following the natural flow of dat
 from generated 4-vectors to high level physics objects.
 
 
-\subsubsection{Core Software Tools}
+%\subsubsection{Core Software Tools}
+\subsection{\label{sub:sw-core-tools}Core Software Tools}
 
 The foundation for the development of common software was laid with LCIO~\cite{Gaede:2003ip}, the
 event data model (EDM) and persistency tool for linear collider studies. At the core of LCIO is a hierarchical
@@ -84,8 +85,8 @@ first incubator projects adopted by the Hep Software Foundation. While it was de
 collider community, it is now used by several other projects and is under evaluation by LHC experiments.
 
 
-
-\subsubsection{Event Generators}
+%\subsubsection{Event Generators}
+\subsection{\label{sub:sw-generators}Event Generators}
 
 Both detector concepts have created large, realistic Monte Carlo samples with the full Standard Model physics as well as various
 BSM scenarios that have been used for the physics analyses presented in the following sections.
@@ -127,7 +128,8 @@ These type of events are generated for $\gamma \gamma$ cms-energies from $300~\r
 on ~\cite{Chen:1993dba}, for higher energies Pythia is used.
 
 
-\subsubsection{Simulation}
+%\subsubsection{Simulation}
+\subsection{\label{sub:sw-sim}Simulation}
 
 Both detector concepts have adopted DD4hep for describing their detector simulation models and use \emph{ddsim}, a python application that
 is based on the DDG4 component, providing a gateway to full simulations with Geant4.
@@ -187,7 +189,8 @@ The high level of detail in the simulation models as decried above is a key prer
 realistic understanding of the expected detector performance and the physics reach of the ILC for both detector concepts.
 
 
-\subsubsection{Digitzation}
+%\subsubsection{Digitzation}
+\subsection{\label{sub:sw-digi}Digitzation}
 
 The output of the detailed full simulations with Geant4 from ddsim are \emph{SimTrackerHit} and \emph{SimCalorimeterHit} objects,
 that store the deposited energy in the sensitive detector elements, such as silicon wafers and calorimeter cells, together with
@@ -260,7 +263,8 @@ repeatedly adjusting the calibration constants.
 
 
   
-\subsubsection{Reconstruction}
+%\subsubsection{Reconstruction}
+\subsection{\label{sub:sw-reco}Reconstruction}
 
 Tracking: \\
 
@@ -309,8 +313,12 @@ using a triplet based seeding followed by a road search and a final track fit. M
 algorithm originally developed for CLICdp. It uses a conformal mapping transforming circles going through the origin (IP)
 into straight lines which are then identified using a Cellular-Automaton.
 
+The correct reconstruction of the kinematics of charged particles requires a sufficiently detailed description of the material
+the particles have traversed, in order to correctly account for effects of energy-loss and multiple-scattering in the fit.
+The DD4hep component DDRec provides dedicated surface classes for track reconstruction and fitting. These surface classes provide the
+geometric information of the corresponding measurement surfaces as well as material properties, averaged in a suitable way. Surfaces
+are also used to account for effects from dead material layers, such as support structures or cables and services.
 
-\fix{add a short paragraph on DDRec and tracking surfaces here ...}
 
 The resulting tracking efficiencies for the ILD detector are shown as a function of the momentum and
 $\rm{cos}(\theta)$ in Fig~\ref{fig:ild_trkeff}.
@@ -381,10 +389,10 @@ to take the best available measurement for the given particle type, i.e.:
 \item charged particles\\
   using the momentum measured in the tracking detectors with the excellent resolution described  above
 \item photons\\
-  measured in the Ecal with an energy resolution of $\sigma(E)/E \sim  11\% / \sqrt{(E/\rm{GeV})}$ \fix{is this the correct number?}
+  measured in the Ecal with an energy resolution of $\sigma(E)/E \sim  17\% / \sqrt{(E/\rm{GeV})}$ %%\fix{is this the correct number?}
 \item neutral hadrons\\
   measured predominantly in the Hcal\footnote{hadronic showers often start in the Ecal and might extend into the Muon system -
-    this is taken into account in PandorPFA} with an energy resolution of $\sigma(E)/E \sim  50\% / \sqrt{(E/\rm{GeV})}$ \fix{is this the correct number?} 
+    this is taken into account in PandorPFA} with an energy resolution of $\sigma(E)/E \sim  50\% / \sqrt{(E/\rm{GeV})}$ %%\fix{is this the correct number?}
 \end{itemize}
 
 The best jet energy measurement in hadronic events would be achieved if the above algorithm would work perfectly. However in reality
@@ -455,7 +463,8 @@ energy due to neutrinos.
 
   
 
-\subsubsection{High-Level Reconstruction}
+%\subsubsection{High-Level Reconstruction}
+\subsection{\label{sub:sw-HLR}High-Level Reconstruction}
 
 After having reconstructed all the individual particles in the event, the next step in the processing is the reconstruction of
 primary and secondary vertices. This is carried out in iLCSoft with the LCFIPlus~\cite{Suehara:2015ura} package that is also used
@@ -503,7 +512,8 @@ There is a large palette of additional high level reconstruction algorithms avai
 
 
 
-\subsubsection{Fast Simulation}
+%\subsubsection{Fast Simulation}
+\subsection{\label{sub:sw-fastsim}Fast Simulation}
 
 In addition to the full simulation and reconstruction 
 outlined in the previous sections,
@@ -527,19 +537,22 @@ should be a negligible source of systematic uncertainty.
 To meet these needs,
 a fast simulation program needs to be fast, flexible, and
 accurate. 
-The SGV program used at ILC meets these needs.
+The SGV program\cite{Berggren:2012ar} used at ILC meets these needs.
 The time to simulate and reconstruct an event is similar to
 the time it takes to generated it ($\sim 1-10$~ms),
 the response of the detector is as far as possible calculated
 from the detector design (i.e. there is no need to parametrisise
 pre-existing full simulation results),
 and has been shown to well compare both with full simulation
-and real data.
+and real data\cite{Abdallah:2003xe}.
 
 The program uses a simplified ``{\it cylinders-and-discs}'' description
 of the detector,
 which is used to calculate the Kalman-filtered track-helix covariance matrix
 of each generated charged particle.
+By Cholesky decomposition of the covariance matrix,
+the track-parameters are simulated in a way such that all correlations
+are respected.
 The calorimetric response is calculated from the expected single-particle
 performance of the different components of the calorimetric system,
 for each particle impinging on it. Optionally,
@@ -552,13 +565,13 @@ Events passing all filters are output in LCIO DST-format,
 and can seamlessly be further analysed within the Marlin framework.
 
 
+%\subsection{Computing}
 
+%\subsubsection{Computing Concept}
+\subsection{\label{sub:sw-computing}Computing Concept}
 
-\subsection{Computing}
 
 An initial computing concept for the ILC, including a first estimate of the required resources, has been developed by the LCC Software and Computing Group.
-
-\subsubsection{Computing Concept}
 
 The foreseen computing concept follows in general terms that of the current LHC experiments and Belle~II, with a strong on-site computing
 center complemented by large Grid-based computing resources distributed around the world. This concept is schematically shown in
@@ -585,7 +598,8 @@ final redistribution for physics analysis.
 A copy of the raw data from all bunch crossings will be kept to allow  for future searches for new exotic signatures.
 
 
-\subsubsection{Resource Estimate}
+%\subsubsection{Resource Estimate}
+\subsection{\label{sub:sw-res-estimate}Computing Resource Estimate}
 
 Based on our detailed physics and background simulations,  we estimate the total raw data rate of the ILC to be $\sim$1.5GB/s.
 
