@@ -1,14 +1,14 @@
+In this section, we make use of the simulation results presented in
+Secs.~\ref{sec:higgs} and \ref{sec:ew} to present projections for the
+uncertainties in Higgs boson couplings that will be obtained from the
+ILC both at this 250~GeV stage and after running at 500~GeV according
+to the plan presented in Sec.~\ref{sec:runscenarios}.   
 
 
 \subsection{Elements of the fit to Higgs couplings from Effective Field Theory}
 \label{subsec:global:elements}
 
 
-In this section, we make use of the simulation results presented in
-Secs.~\ref{sec:higgs} and \ref{sec:ew} to present projections for the
-uncertainties in Higgs boson couplings that will be obtained from the
-ILC both at this 250~GeV stage and after running at 500~GeV according
-to the plan presented in Sec.~\ref{sec:runscenarios}.   
 
 To extract
 Higgs boson couplings from measurements, we will use the method of
@@ -18,23 +18,120 @@ This method has been explained in full technical  detail in
 Here we will present an overview of the EFT analysis, supplying those 
 technical details that are relevant to the evaluation of our fitting procedure.
 
-[ stuff goes here ] 
-
-
- To compute deviations from the SM predictions, it suffices to work at
- the electroweak tree level in the effective Lagrangian
- coefficients. (Of course, the SM predictions themselves must be
- worked out to high precision.)   We can consider $CP$-even
- observables; the contributions of $CP$-odd operators can be bounded
+In the EFT method, we represent the effects of new physics on the
+Higgs boson and other SM observables by the most general linear
+combination of dimension-6 operators invariant under $SU(2)\times
+U(1)$.  In the most general settting, this formalism contains a large
+number of parameters.  However, in the special case of $\ee$
+collisions, there are some simplifications.   First, for the purpose
+of computing deviations from the SM due to dimension-6 operators, it
+suffices to work at the electroweak tree level.   (The basic SM
+predictions must of course be computed as accurately as possible,
+typically to 2-loop order in electroweak couplings.)  Second, it
+suffices to consider only CP-even observables, since the 
+ contributions of $CP$-odd operators can be bounded
  by independent measurements.   With these simplifications, a total of
- 17 operators coefficients appear in the analysis.   To determine
- these coefficients, we can use precision electroweak measurements and
+ 16 operators coefficients appear in the analysis.  One additional
+ parameter $c_6$ appears in double Higgs production, and 10 additional
+ parameters appear in analyses of top quark production, but these do
+ not enter the extraction of the Higgs couplings we will discuss here.
+
+To determine
+ these operator coefficients, we can use precision electroweak measurements and
  data on $\ee\to W^+W-$ in addition to data 
-from Higgs processs.   It is shown in 
-\cite{Barklow:2017suo} that this data suffices to determine
-independently  the 17 operator coefficients, plus 4 SM parameters
-(which must be refit in the new context),
- plus the two partial widths for invisible and exotic Higgs decays. 
+from Higgs processs.
+   It is shown in 
+\cite{Barklow:2017suo,Barklow:2017awn} that this data suffices to determine these
+coefficients independently and without important 
+degeneracies.\footnote{An 18th operator contributes to $G_F$
+  but is controlled by constraints from the measurement of  $\ee\to
+  \mu^+\mu^-$ at high energy.  The bound from LEP 2 is already very
+  strong.}     We also make use of specific constraints from the LHC
+that should be available when the ILC runs and have a clear
+model-independent interpretation.  An example is the  ratio of
+branching ratios   $\Gamma(h\to \gamma\gamma)/\Gamma(h\to ZZ^*)$,
+which 
+should be extracted  from LHC data in
+a way that most systematic errors cancel out.
+Here is an outline of the analysis. We need to fit 17 operator
+coefficients plus 4 SM parameters which are shifted by dimension-6
+effects.  The 17
+EFT coefficients arise in the following way:  3 from Higgs boson
+operators ($c_H$, $c_T$, $c_6$), 4 from operators involving the
+squares or cubes of SM gauge field strengths ($c_{WW}$, $c_{WB}$,
+$c_{BB}$, and $c_{3W}$), 3 from Higgs current couplings to leptons
+($c_{HL}$, $c_{HL}^\prime$, $c_{HE}$), 5 from the operators that shift
+the Higgs coupling to $b$, $c$, $g$, $\tau$, $\mu$, and two more from
+Higgs current couplings to quarks ($c_{W}$ and $c_Z$).   It turns out
+that $c_6$ does not contribute to single-Higgs processes except
+through radiative corrections.  The remaining parameters are
+constrained rather specifically, in a way that we can outline.  Measurements of
+$\alpha$ and 
+$G_F$ and the $W$, $Z$ and $H$ masses constrain the SM parameters plus
+one additional parameter ($c_T$).  Purely leptonic precision electroweak 
+measurements ($\Gamma(Z\to \ell^+\ell^-)$ and $A_{\ell}$) constrain
+two of the three $c_{H\ell}$ parameters, and measurements of the $W$
+and $Z$ total widths fix $c_W$ and $c_Z$.   Measurements on $\ee\to
+W^+W^-$ constrain  the third $c_{H\ell}$  parameter, plus $c_{WB}$ and
+$c_{3W}$.    The LHC measurement of the ratio of branching ratios 
+$\Gamma(h\to \gamma\gamma)/\Gamma(h\to ZZ^*)$ will put a strong
+constraint on $c_{BB}$.   The Higgs branching ratios to fermion and
+gluon states constrain those 5 parameters.  At this point, only the
+parameters $c_H$ and $c_{WW}$ remain.  These are constrained, respectively, by the
+normalized cross section for $\ee\to ZH$ and the polarization
+asymmetry or angular distribution in this reaction.  
+
+To account for the possibility of non-standard Higgs boson decays, we
+add two more parameters to our global fit.  The first is the Higgs branching
+ratio to invisible decay products.   This is independently measurable
+at an $\ee$ collider using the $Z$ tag in $\ee\to ZH$.  The second is
+the branching ratio to exotic modes that somehow do not correspond to
+any category that has been previously defined.   Though it might be
+argued that any Higgs decay mode above the $10^{-3}$ level of
+branching ratio should be directly observed, we add this parameter to
+as insurance against modes not yet thought of.  It is determined by the constraint that the 
+Higgs branching ratios, including this one, sum to 1.
+
+The ratio between the Higgs couplings to $W$ and $Z$ plays an
+important role in the extraction of Higgs boson couplings and the
+Higgs boson total width.   In the
+$\kappa$ formalism, one parameter is assigned for each of these
+couplings, and these parameters are determined independently  from Higgs production
+cross sections.   This typically leads to very small errors on the $Z$
+coupling and larger errors on the $W$ coupling.  In the EFT
+formalism, as we have shown in Eq.~\ref{etazeta}, two
+parameters are needed to describe each of these couplings, making the
+$\kappa$ description oversimplified.   The
+corresponding $W$ and $Z$ parameters are linked by
+not-so-simple formulae involving other EFT parameters.  However, these
+formula can be evaluated with the help of data from precision
+electroweak and $WW$ reactions, leading to  constraints that are at
+the same time tight and highly
+model-independent~\cite{Barklow:2017awn}.  This is one illustration of
+the synergies between different measurements that the EFT method
+brings into play. 
+
+It is remarkable that, though the EFT analysis introduces a large
+number of free parameters, each one has a direct counterpart in an
+physical observable that can be measured in the $\ee$ environment. 
+In particular, beam polarization is very powerful in providing needed
+information.  For example, in the EFT framework, the process $\ee\to
+ZH$ involves three diagrams, shown in Fig.~\ref{fig:eeZhdiagrams}.
+Only the first diagram appears in the SM.   The third diagram is
+required to be small by precision electroweak constraints.  The second
+diagram, with $s$-channel $\gamma$ exchange,  is generated the
+operator 
+corresponding to the coefficient $c_{WW}$.  Under a spin reversal $e^-_L
+\leftrightarrow e^-_R$, the $Z$ diagram flips sign while the 
+$\gamma$ diagram keeps the same sign.  Thus,  measurement of the 
+polarization asymmetry  in the total cross section for $\ee\to Zh$
+directly measures the $c_{WW}$ parameter.   Beam polarization plays
+another important role.  With beam polarization, the branching ratios
+of the   Higgs boson are measured for  two different   polarization
+settings.   The statement that the same branching ratio must appear in
+each pair of measurements helps to sharpen the global fit.  At the
+same time, this comparison provides a check of assigned systematic
+errors, as we will discuss in the Sec.~\ref{subsec:polarisation}. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -42,18 +139,28 @@ independently  the 17 operator coefficients, plus 4 SM parameters
 \begin{center}
 \includegraphics[width=0.80\hsize]{chapters/figures/Zhdiagrams.pdf}
 \end{center}
-\caption{Feynman diagrams contributing to the process $\ee\to Zh$ when contributing  dimension-6 operators are included. }
+\caption{Feynman diagrams contributing to the process $\ee\to Zh$ when 
+contributing  dimension-6 operators are included. }
 \label{fig:eeZhdiagrams}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-Beam polarization plays an important role in the analysis.   Including the effects of dimension-6 operators, the process $\ee\to Zh$  involves three Feynman diagrams, shown in Fig.~\ref{fig:eeZhdiagrams}.   Only the first diagram appears in the SM analysis; the other two are generated by dimension-6 operators.   The third diagram is required to be small by precision electroweak constraints.  The second diagram is generated by the same operators that generate the $\zeta_Z$ coefficient in \leqn{etazeta}.   Under a spin reversal $e^-_L \leftrightarrow e^-_R$, the first diagram flips sign while the second diagram keeps its sign.  Thus,  measurement of the 
-polarization asymmetry  in the total cross section for $\ee\to Zh$ directly measures the $\zeta$ parameter in \leqn{etazeta}.   (In a similar way, measurement of the forward-backward asymmetry in $\ee\to Zh$ tests for the presence of a $CP$-violating dimension-6 contribution.)
-
-
-[forward reference to the importance of polarization]
-
+%%%%%%%%%%%%%%%%
+\begin{figure*}
+\begin{center}
+\includegraphics[width=0.7\hsize]{chapters/figures/ModelindepSummary.pdf}
+\caption{Projected Higgs boson coupling uncertainties for the ILC
+  program at 250~GeV and an energy upgrade to 500~GeV, using the
+  highly model-independent analysis presented in \cite{Fujii:2017vwa}. This
+  analysis makes use of  data on $\ee\to W^+W^-$ in addition to Higgs
+  boson observables and also incorporates projected LHC results, as described
+  in the text.  These
+values correspond to the  scenario S1* in Table~\ref{tab:ILCLHC}.}
+\label{fig:ILCmodelindep}
+\end{center}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 From this analysis, we derive the projected uncertainties on Higgs
 couplings shown in Tab.~\ref{tab:ILCHiggs}.  We emphasize that the
 analysis leading to these projections is completely model-independent,
@@ -67,30 +174,47 @@ of confidence that these estimated uncertainties will be achieved --
 and, probably, surpassed -- in the realization of the ILC program.
 The projections in the table are summarized in Fig.~\ref{fig:ILCmodelindep}.
 
-
-
-%%%%%%%%%%%%%%%%
-\begin{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\begin{table}[!htbp]
 \begin{center}
-\includegraphics[width=0.85\hsize]{chapters/figures/ModelindepSummary.pdf}
-\caption{Projected Higgs boson coupling uncertainties for the ILC
-  program at 250~GeV and an energy upgrade to 500~GeV, using the
-  highly model-independent analysis presented in \cite{Fujii:2017vwa}. This
-  analysis makes use of  data on $\ee\to W^+W^-$ in addition to Higgs
-  boson observables and also incorporates projected LHC results, as described
-  in the text.  These
-values correspond to the  scenario S1* in Table~\ref{tab:ILCLHC}.}
-\label{fig:ILCmodelindep}
+\begin{tabular}{lcc}
+   coupling     &   2~\iab\ at 250      &   + 4~\iab\ at 500   \\ \hline 
+$HZZ$            &             0.67&            0.35                  \\ 
+$HWW$            &         0.66               &   0.34    \\ 
+ $Hbb$            &              1.1  &                0.58   \\ 
+$H\tau\tau$    &          1.2  &                   0.74   \\ 
+$Hgg$ &  1.7  &       0.95          \\ 
+$Hcc$         &   1.9  &  1.2  \\ 
+$H\gamma\gamma$ &  1.2 &   1.0  \\ 
+$H\mu\mu$ &  5.6  &  5.1  \\ 
+$Htt$  &   -     &      6.3   \\ 
+\hline 
+$HHH$  &  -    &   27   \\ \hline 
+$\Gamma_{tot}$ & 2.5  & 1.6  \\  
+$\Gamma_{inv}$ &   0.32  & 0.29 \\  \hline
+\end{tabular}
 \end{center}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
+\caption{ \label{tab:ILCHiggs}    Projected uncertainties in the Higgs
+  boson couplings for the ILC at 250~GeV and 500~GeV, with
+  precision LHC input, assuming the
+  integrated luminosities in the H20 program.   All values
+  are given in percent (\%). The ILC at 250~GeV only does 
+not have direct sensitivity to the $Htt$ and $Hhh$ couplings; thus no  model-independent  values are given in these lines. The
+  bottom lines give, for reference, the projected uncertainties in the
+  Higgs boson total width and the 95\% confidence limits on the Higgs
+  boson invisible width.
+   The analysis, which applies Effective Field Theory as described in
+   the text,  is highly model-independent}
+\end{table}
 
 
-\subsection{Systematic uncertainties and the importance of beam polarization for precision measurements at $\ee$  colliders}
-\label{subsec:polarization}
 
-\input{chapters/polarization.tex}
+
+
+\subsection{Systematic uncertainties and the importance of beam polarization}
+\label{subsec:polarisation}
+
+\input{chapters/systematics.tex}
 
 \subsection{Comparison of run scenarios for linear and circular $\ee$ collliders}
 \label{subsec:lincirc}
@@ -107,7 +231,55 @@ To begin, each collider proposal has presented its own set of
 projections in its documentation for the European strategy study.   We
 have copied the relevant numbers for projected Higgs boson coupling
 uncertainties into Tab.~\ref{tab:askthem}. 
- Typically, these estimates are made using the more model-dependent kappa fit.
+ These estimates are made using the more model-dependent
+ kappa fit.   (The small values of the $ZZ$ coupling uncertainty relative to the $WW$ coupling uncertainty reflects the model-dependence discussed above.)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\begin{table*}[!htbp]
+\begin{center}
+\begin{tabular}{l|cc|c|c|ccc}
+   coupling     &  ILC250      &   ILC500   & CEPC &  FCC-ee &
+   CLIC350 & 
+   CLIC1.4 & CLIC3 \\  \hline 
+$HZZ$            &             0.67&   0.35    &   0.25   & 0.17     &  0.6     &     0.6    &   0.6     \\ 
+$HWW$            &         0.66  &   0.34   &   1.4   &   0.43   &   1.0    &   0.6  &  0.6 \\ 
+ $Hbb$            &              1.1  &  0.58   &  1.3    &    0.61  &   2.1    &  0.7  &  0.7 \\ 
+$H\tau\tau$    &          1.2  &   0.74   &   1.5   &  0.74    &   3.1    &  1.4  &  1.0 \\ 
+$Hgg$ &                      1.7  & 0.95       &  1.5    &  1.01    &   2.6    &   1.4   &  1.0  \\ 
+$Hcc$                       &   1.9  &  1.2   &   2.2   &   1.21   &    4.4   &  1.9  &  1.4 \\ 
+$H\gamma\gamma$ &  1.2 &   1.0     &  1.6    &   1.3   &    -   &  4.8  &  2.3 \\ 
+$H\mu\mu$                &  5.6  &  5.1     &  5.0    &  3.8    &    -
+& 12.1 &  5.7 \\ 
+$Htt$  &                       -     &      6.3     &  -    &  -    &
+-    & 3.0  &  3.0  \\ 
+$HHH$                         &  -    &   27     &   -   &   -   &   -
+& 35 &  9 \\ \hline 
+$\Gamma_{tot}$             & 2.5  & 1.6    &   2.8    &  1.3     &
+4.7    & 2.6  & 2.5 \\  
+$\Gamma_{inv}$          &   0.32  & 0.29    &  < 0.3    &   -   &   -
+& -  & - \\  \hline
+\end{tabular}
+\end{center}
+\caption{ \label{tab:askthem}    Projected uncertainties in the Higgs
+  boson couplings quoted in the CDRs presented to the European
+  Strategy Study.  For the ILC, the  values are taken from
+  Tab.~\ref{ILCHiggs}.    For the CEPC, the values are taken from
+  Ref.~\cite{CEPCStudyGroup:2018ghi}, Tab.~11.4.  For the FCC-ee, the values are taken
+  from Ref.~\cite{Benedikt:2018qee}, Tab.~1.2.  For CLIC, the values are taken from 
+Ref.~\cite{Charles:2018vfv}, Tab.~2, with $HHH$ values from
+Ref.~\cite{Roloff:2019crr}.
+  All values
+  are given in percent (\%). The
+  bottom lines give, for reference, the projected uncertainties in the
+  Higgs boson total width and the 95\% confidence limits on the Higgs
+  boson invisible width.  For  ILC, CEPC, and FCC-ee, the 
+ values given for the $\gamma\gamma$ and $\mu\mu$ modes are those
+ combined with expected
+LHC results.}
+\end{table*}
+
+
 
 It is interesting to ask how the proposals would compare if a common
 fitting technique is used. In almost all cases, the measurement errors
@@ -128,8 +300,42 @@ without polarization.  The run plan for CLIC includes only 1~\iab\ at
 380~GeV before the energy upgrade to 1~TeV.  Since we are
 unconfortable using the EFT formalism
  with dimension-6 operators only at 1~TeV and above, we represent CLIC by a sample of
-2~\iab, similar to ILC, with $e^-$ polarization only, at 350~GeV.  
+2~\iab, similar to ILC, with 80\% $e^-$ polarization only, at 350~GeV.  
 The results are presented in Tab.~\ref{tab:oursimple}.  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\begin{table*}[!htbp]
+\begin{center}
+\begin{tabular}{l|cc|c|c|c}
+ &  2/ab-250 & +4/ab-500 &  5/ab-250 &  + 1.5/ab-350 &  2/ab-350 \\
+coupling &  pol.  &   pol.  &   unpol.  &  unpol &  $e^-$  pol. 
+  \\  \hline 
+$HZZ$            &             0.67&   0.35    &   0.25   & 0.17     &  0.6            \\ 
+$HWW$            &         0.66  &   0.34   &   1.4   &   0.43   &   1.0    \\ 
+ $Hbb$            &              1.1  &  0.58   &  1.3    &    0.61  &   2.1   \\ 
+$H\tau\tau$    &          1.2  &   0.74   &   1.5   &  0.74    &   3.1     \\ 
+$Hgg$ &                      1.7  & 0.95       &  1.5    &  1.01    &   2.6    \\ 
+$Hcc$                       &   1.9  &  1.2   &   2.2   &   1.21   &    4.4  \\ 
+$H\gamma\gamma$ &  1.2 &   1.0     &  1.6    &   1.3   &    -    \\ 
+$H\mu\mu$                &  5.6  &  5.1     &  5.0    &  3.8    &    -
+ \\ 
+$Htt$  &                       -     &      6.3     &  -    &  -    &
+-     \\ 
+$HHH$                         &  -    &   27     &   -   &   -   &   -
+ \\ \hline 
+$\Gamma_{tot}$             & 2.5  & 1.6    &   2.8    &  1.3     &
+4.7    \\  
+$\Gamma_{inv}$          &   0.32  & 0.29    &  < 0.3    &   -   &   -
+\\  \hline
+\end{tabular}
+\end{center}
+\caption{ \label{tab:oursimple}    Projected uncertainties in the Higgs
+  boson couplings computed using the EFT method, with  ILC uncertainties per unit of luminosity and assuming a run with the quoted integrated luminosity
+  and energy.   The first two columns are the ILC values from 
+  Tab.~\ref{ILCHiggs}.   In the last column, we assume 80\% electron polarization and zero positron polarization.  }
+\end{table*}
+
 
 Though not all differences among the various proposals are included in
 this table, it does usefully show how increased luminosity trades off
@@ -149,8 +355,58 @@ to the discussion in
 Sec.~\ref{subsec:polarization}. The results are presented in 
 Tab.~\ref{tab:ournotsosimple}. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\begin{table*}[!htbp]
+\begin{center}
+\begin{tabular}{l|cc|c|c|c}
+ &  2/ab-250 & +4/ab-500 &  5/ab-250 &  + 1.5/ab-350 &  2/ab-350 \\
+coupling &  pol.  &   pol.  &   unpol.  &  unpol &  $e^-$  pol. 
+  \\  \hline 
+$HZZ$            &             0.67&   0.35    &   0.25   & 0.17     &  0.6            \\ 
+$HWW$            &         0.66  &   0.34   &   1.4   &   0.43   &   1.0    \\ 
+ $Hbb$            &     1.1  &  0.58   &  1.3    &    0.61  &   2.1       \\ 
+$H\tau\tau$    &          1.2  &   0.74   &   1.5   &  0.74    &   3.1     \\ 
+$Hgg$ &                      1.7  & 0.95       &  1.5    &  1.01    &   2.6    \\ 
+$Hcc$                       &   1.9  &  1.2   &   2.2   &   1.21   &    4.4  \\ 
+$H\gamma\gamma$ &  1.2 &   1.0     &  1.6    &   1.3   &    -    \\ 
+$H\mu\mu$                &  5.6  &  5.1     &  5.0    &  3.8    &    -
+ \\ 
+$Htt$  &                       -     &      6.3     &  -    &  -    &
+-     \\ 
+$HHH$                         &  -    &   27     &   -   &   -   &   -
+ \\ \hline 
+$\Gamma_{tot}$             & 2.5  & 1.6    &   2.8    &  1.3     &
+4.7    \\  
+$\Gamma_{inv}$          &   0.32  & 0.29    &  < 0.3    &   -   &   -
+\\  \hline
+\end{tabular}
+\end{center}
+\caption{ \label{tab:ournotsosimple}    Projected uncertainties in the Higgs
+  boson couplings computed using the same methodology as in Tab.~\ref{tab:oursimple} but with higher precision electroweak inputs and degraded systematic errors for circular colliders, as explained in the text.  }
+\end{table*}
+
+
+
 
 [discussion of the results]
+
+%%%%%%%% to be moved to IX C %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\color{red}[THE FOLLOWING IS TO BE MOVED TO
+  SECTION~\ref{subsec:lincirc}; think about how this affects the
+  linear/circular comparison]}\\
+Figure~\ref{fig:polWIMPmanhattans} shows the 95\% CL reach in new physics scale $\Lambda$ for pair production of a light ($M_{X} = 1$\,GeV) WIMP mediated by a vector operator for different assumptions on luminosity, energy and polarization 
+as they are typical for linear and circular colliders. In particular the polarised
+configurations al refer to the ILC reference running scenario H20, see Sec.~\ref{sec:runscenarios}. Input to the limit calculation is the ILC study performed in full detector simulation of the ILD detector concept described in~Sec.~\ref{sec:searches}, and its extrapolation to other center-of-mass energies~\cite{Habermehl:417605}. The study includes a careful evaluation of the systematic uncertainties, comprising those on selection efficiencies, luminosity, beam energy (spectrum) and polarization as well as on the theoretical modelling of the background. The limit calculation uses a fractional event counting based on the 
+energy spectrum of the photon. It can be seen that at 250\,GeV, 2\,\iab\ with polarized beams offer a greater reach than 5 or even 10\,\iab\ without beam polarization. Even at a higher center-of-mass energy of 350\,GeV, about 10\,\iab\ of unpolarised data  would be required to catch up with 2\,\iab\ of polarised data at 250\,GeV. The higher center-of-mass energies reachable by linear colliders, in conjuction with beam polarisation, improve the reach considerably. For instance the reach of the full H20 running scenario of the ILC roughly doubles the reach in $\Lambda$ compared to the 250\,GeV stage.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.95\linewidth]{./chapters/figures/manhattan_vector_v3.pdf}
+		
+\caption{{\color{red}[Michael, I think this plot and its description would better fit into section~\ref{subsec:lincirc}, but I didn't want to mess with `your' tex file. Please move it to your section if you like!]} Comparison of the reach for WIMP searches in the mono-photon channel for different assumptions on luminosity, polarization and energy, including systematic uncertainties (see Sec.~\ref{sec:searches} for a description of the analysis)~\cite{Habermehl:417605}. }
+\label{fig:polWIMPmanhattans}
+\end{figure}
 
 
 
@@ -246,9 +502,9 @@ of input measurements is
 presented in some detail in Appendix A of \cite{Barklow:2017suo}. 
 
 %%%%%%%%%%%%%%%
-\begin{figure}
+\begin{figure*}
 \begin{center}
-\includegraphics[width=0.85\hsize]{chapters/figures/ModeldepSummary.pdf}
+\includegraphics[width=0.7\hsize]{chapters/figures/ModeldepSummary.pdf}
 \caption{Projected Higgs boson coupling uncertainties for the LHC and
   ILC
 using the model-dependent assumptions appropriate to the LHC Higgs
@@ -261,7 +517,7 @@ when
 data from the 500~GeV run of the ILC is included.}
  \label{fig:ILCLHC}
 \end{center}
-\end{figure}
+\end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 

@@ -191,19 +191,21 @@ Higgs production with additional data sets from $\ee\to W^+W^-$ and precision el
 measurements.   It is also possible to make use of additional observables for Higgs production
 beyond simple rates.  In particular, the angular distribution and polarization asymmetry in 
 $\ee\to ZH$ play important roles.  These considerations give the method based on 
-Effective Field Theory much more power in extracting the most accurate estimates of the 
+Effective Field Theory much more power in extracting the most accurate estimates 
+of the 
 Higgs boson couplings from the data.
 
+It is sometimes considered a restriction that the EFT model contains only operators of dimension 6 without considering operators of dimension 8 and higher.    This means that the model will be somewhat inaccurate for the effects of new particles of mass close to 125~GeV.  However, one should remember that the effects of the top quark and the Higgs boson on precision electroweak observables are well-modeled by the $S$ and $T$ parameters~\cite{Peskin:1990zt}---which are induced at the level of the dimension-6 EFT---even though the masses of these particles are not far above the $Z$ mass.   Very light new particles can have a different effect, providing new Higgs decay channels and giving additional contributions to the Higgs width.  We take these possible effects into account explicitly in our global fit, as we will explain in Sec.~\ref{subsec:global:elements}.
 
-After we describe the experimental methods and the expected measurement uncertainties for Higgs production in  Sec.~VII and for $W$ pair production in Sec.~VIII,  we will present formal  projections for uncertainties in 
-Higgs couplings in Sec.~iX, making use of the EFT  method.  Suffice it to say that the data set expected for the ILC at 250~GeV is expected to measure the $hb\bar b$ couplings to 1\% accuracy, the $hWW$ and $hZZ$ couplings to better than 0.7\%, and the other 
+After we describe the experimental methods and the expected measurement uncertainties for Higgs production in  Sec.~\ref{sec:higgs} and for $W$ pair production in Sec.~\ref{sec:ew},  we will present formal  projections for uncertainties in 
+Higgs couplings in Sec.\ref{sec:global}, making use of the EFT  method.  Suffice it to say that the data set expected for the ILC at 250~GeV is expected to measure the $hb\bar b$ couplings to 1\% accuracy, the $hWW$ and $hZZ$ couplings to better than 0.7\%, and the other 
 major SM Higgs couplings to accuracies close to 1\%.    These measurements should be 
 statistics-limited.  Above 250~GeV, a second Higgs production reaction, $\ee\to \nu\bar\nu h$ through $W$ boson fusion becomes important.  Using the additional data on $\ee\to Zh$ and the independent measurements from the $W$ fusion reaction, we expect that the uncertainties on Higgs couplings will decrease by another factor of 2. 
 
 
 \subsection{$\ee \to W^+W^-$}
 \label{subsec:phys_WW}
-The reaction $\ee\to W^+W^-$ contributes to the analysis just described, but it has its own independent interest.  It has been appreciated for  a long time that this reaction provides an excellent way to test for the presence of dimension-6 operators that involve the $W$ and $Z$ fields.   The Feynman diagrams contributing to the reaction are shown in Fig.~\ref{fig:WWdiagrams}.   The process involves interference between $s$-channel diagrams with $\gamma$ and $Z$ exchanges and a $t$-channel diagram with neutrino exchange.  In the SM, there are large cancellations among these diagrams, but these are not respected by the dimension-6 contributions.   Thus, the dimension-6 coefficients appear in the cross section formulae enhanced by a factor $s/m_W^2$. 
+The reaction $\ee\to W^+W^-$ contributes to the analysis just described, but it has its own independent interest.  It has been appreciated for  a long time that this reaction provides an excellent way to test for the presence of dimension-6 operators that involve the $W$ and $Z$ fields.   The Feynman diagrams contributing to the reaction are shown in Fig.~\ref{fig:eeWWdiagrams}.   The process involves interference between $s$-channel diagrams with $\gamma$ and $Z$ exchanges and a $t$-channel diagram with neutrino exchange.  In the SM, there are large cancellations among these diagrams, but these are not respected by the dimension-6 contributions.   Thus, the dimension-6 coefficients appear in the cross section formulae enhanced by a factor $s/m_W^2$. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
@@ -259,5 +261,97 @@ In both cases, the ILC can detect these new physics events for particle masses a
 
 The experimental aspects of these particle seaches are discussed in Section~VIII.  A broader review of the opportunities for new particle discovery at $\ee$ colliders can be found in \cite{Fujii:2017ekh}.
 
-\subsection{The central role of beam polarization}
+\subsection{The central role of beam polarisation}
+\label{subsec:beampol}
 
+One theme that runs through all of the analyses discussed in the following Sections is the  important role of beam polarisation.   The use of beam polarisation may be unfamiliar to many readers, since all recently operated colliders -- the Tevatron, PEP-II and KEK-b, and the LHC -- have had unpolarised beams.   In hadronic 
+collisions, the effects of polarisation are relatively small, first, because the dominant QCD interactions conserve parity and, second, because the proton is a composite particle, so high proton polarisation translates to much smaller polarisation for the constitutent quarks and gluons.   At a high-energy $\ee$ collider, the situation is very different.  The dominant interaction is the electroweak interaction, which has 
+order-1 parity asymmetries in its couplings.  The beam particles are elementary, so that 80\% beam polarisation translates to 80\% polarisation in the colliding partons.
+This implies  that polarisation effects are large at $\ee$  colliders and can be used to great advantage.   
+
+It is very challenging to achieve high beam polarisation in circular colliders, especially for longitudinal polarisation.   Transverse beam polarisation was observed at LEP in single- and separated-beam operation but not for 
+colliding beams~\cite{Assmann:1998qb}.  However,  a linear electron or positron
+collider naturally preserves longitudinal beam polarisation.    The design of the 
+ILC has been thought through  to produce, maintain, and control 
+beam polarisation for both electrons and positrons, as has been explained in 
+Sec.~\ref{par:beampol}.  This brings advantages for physics that we now discuss.
+
+There are three major uses of beam polarisation in the experiments planned for ILC:
+\begin{enumerate}
+\item  Measurement of helicity-dependent electroweak couplings
+\item Suppression of backgrounds and enhancement of signals
+\item  Control of systematic uncertainties
+\end{enumerate}
+We discuss the first two of these points here.  The third, which is particularly 
+important to claim a discovery from  precision measurements, is discussed in Sec.~\ref{subsec:polarization}.  A comprehensive review of the role of polarisation with many more examples can be found in~\cite{MoortgatPick:2005cw}, and, for  positron polarisation in particular, in~\cite{Fujii:2018mli}. 
+
+To begin, we need some notation. Let $P_{e^-}$ and $P_{e^+}$ be, respectively, the longitudinal polarisations of the electron and positron colliding beams, equal to $+1$ for completely polarised right-handed beams and $-1$ for completely polarised left-handed beams.   Let $\sigma_{RR}$, $\sigma_{RL}$, $\sigma_{LR}$, $\sigma_{LL}$ be the cross sections for a given process completely polarised beams of the four possible orientations.  Since the electron has only two spin  states, the 
+cross section for general beam  polarisations is given by 
+\begin{eqnarray}
+\sigma_{\Pem\Pep} &=& \frac{1}{4}\bigl\{
+     (1+\Pem)(1+\Pep) \quad \sigmaRR  \nonumber \\
+&& + (1-\Pem)(1-\Pep) \sigmaLL \nonumber \\
+&& + (1+\Pem)(1-\Pep) \sigmaRL \nonumber \\ 
+&& + (1-\Pem)(1+\Pep) \sigmaLR \bigr\},
+\label{eq:pol:xsec}
+\end{eqnarray}
+
+For $s$-channel $\ee$ annihilation processes, helicity conservation implies that only $\sigma_{RL}$ and $\sigma_{LR}$ are nonzero.
+In this case Eq.~\leqn{eq:pol:xsec} reduces to the simpler form
+\begin{equation}
+ \sigma_{\Pem\Pep} = 2 \sigma_0 (\Leff/\mathcal{L}) \left[1 - \ALR \Peff \right]
+\label{eq:pol:xsecschan}
+\end{equation}
+where $\sigma_0$ is the unpolarised cross section, and \Leff\ and \Peff\  
+are the effective luminosity and polarisation, defined, respectively, as 
+\begin{equation}
+\Peff= \frac{\Pem - \Pep}{1 - \Pep\Pem}
+\label{eq:def-leff-peff}
+\quad\mbox{\rm and }\quad
+\Leff=\frac{1}{2}(1 -\Pep\Pem)\L \ . 
+\end{equation}
+The coefficient $\ALR$ is the intrinsic left-right asymmetry of the reaction cross section,
+\beq
+  \ALR =    {\sigmaLR - \sigmaRL\over \sigmaLR + \sigmaRL } \ . 
+\eeq{eq:def-ALR}
+
+In the electroweak interactions, it is typical that left-handed fermions have larger coupling constants than right-handed fermions.   Then, choosing $\Pem$ to be left-handed (negative) and $\Pep$ to be right-handed (positive) can confer important advantages.
+Consider, for example, the typical ILC values $\Pem = -80\%$, $\Pep = +30\%$.    Then the effective polarization 
+Eq. \leqn{eq:def-leff-peff} for the measurement of $\ALR$ values is  $\Peff = 90\%$.   The Higgsstrahlung process has a rather small polarisation asymmetry, $\ALR = 0.151$. Still, for the luminosity is enhanced from the unpolarised case by  $ 40\%$. 
+
+Such substantial values of the beam polarisations can be applied to physics measurements in the following ways:
+\begin{itemize}
+\item In $\ee\to f\bar f$, the $e^-_L$ and $e^-_R$ couple to different linear combinations of the $s$-channel $\gamma$ and $Z$
+propagators.  Beam polarisation allows us to measure the couplings to these vector bosons independently.  In addition, an $s$-dependent change in the polarisation asymmetry can signal the presence of a new $s$-channel resonance.  
+\item Similarly, in $\ee\to W^+W^-$, the separation of $\gamma$ and $Z$ couplings can be combined with information from the $W$ production angle and polarisations to completely disentangle the 14 complex parameters (28 real parameters) in the most general 
+Lagrangian for triple gauge vertices.
+\item In $\ee\to ZH$, measurement of  the polarisation asymmetry plays an important role in disentangling the various of  parameters 
+that enter the EFT analysis of Higgs boson couplings.
+\item If new particles are discovered in pair-production at the ILC, measurement of the production cross section with different beam polarisation settings allows their electroweak quantum numbers to be determined unambiguously.
+\end{itemize}
+We will discuss all of the applications below.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centering
+\includegraphics[width=0.95\linewidth]{./chapters/figures/vector_noSystematics.pdf}
+		
+\caption{Comparison of the 95\% confidence lower limit on the mediator scale for dark matter production using  the mono-photon channel,  for different assumptions on luminosity and polarisation.  See Sec.~\ref{sec:searches} for a description of the analysis~\cite{Habermehl:417605}. Note that this plot considers {\em statistical uncertainties only}. The corresponding comparison {\em including systematic uncertainties} is shown in Fig.~\ref{fig:polWIMPsys}.}
+\label{fig:polWIMPstat}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+
+It is also possible to take advantage of differences in the polarisation effects on signal and background cross sections to enhance signals and control backgrounds.  Unlike annihilation processes, radiative Bhabha scattering and 2-photon processes have nonzero $\sigma_{LL}$ and $\sigma_{RR}$, so it is possible to test strategies for the suppression of these backgrounds using  data sets with
+in which $\Pem$ and $\Pep$ have the same sign.   The reaction $\ee\to W^+W^-$ has a relatively large cross section among 
+annihilation processes and so is often the dominant background to studies of or searches for other processes.   However, this process also has a large polarisation asymmetry, with $\sigma_{LR}/\sigma_{RL} \approx 30$.  Then running with $\Pem = +80\%$, $Pep = -30\%$ essentially turns off this background.   
+
+As an example of the effectiveness of background suppression, we show in Fig.~\ref{fig:polWIMPstat} a comparison of searches  for invisible dark matter particles $\chi$  in the mono-photon  mode $\ee\to \gamma+ \chi\chi$ under different assumptions on luminosity and polarisation.   The predicted 95\% confidence lower limit on the mediator scale $\Lambda_{95}$ is shown as a function of 
+the $\chi$ mass.  Of course, the polarisation settings cannot be simultaneously optimized for each physics analysis.  But the figure
+shows that a data set of 1.6~\iab\ with optimal polarisation is considerably more powerful than a data set of 4~\iab\ with unpolarised
+beams.  The red dotted curve shows the result for the H20 scenario with polarisations given in Tab.~\ref{tab:pollumirel}.   For clarity, the  figure includes statistical errors only. 
+
+The influence of polarisation on systematic errors is equally important.  Where experiments with unpolarised beams give one measurement, experiments with both electron and positron beams polarised give 4 independent measurements.  These can be used as cross-checks for  the understanding of systematics, and also to form combinations in which the 
+dominant systematic errors cancel.  We will 
+discuss this point in more detail in Sec.~\ref{subsec:polarization}.
