@@ -1,6 +1,6 @@
 % CHAPTER ON ILC MACHINE
 
-{\it Status: Feb 5, 2019}
+{\it Status: Feb 12, 2019}
 
 The International Linear Accelerator (ILC) is a $250\,{\mathrm{GeV}}$ (extendable up to $1\,{\mathrm{TeV}}$) linear $e^+e^-$ collider, based on $1.3\,{\mathrm{GHz}}$ superconducting radio-frequency (SCRF) cavities.
 It is designed to  achieve a luminosity of $1.5\cdot 10^{34}~{\mathrm{cm}}^{-1}{\mathrm{s}}^{-1}$ and provide an integrated luminosity of $350\,{\mathrm{fb}}^{-1}$ in the first four years of running.
@@ -10,6 +10,33 @@ Its parameters have been set by physics requirements first outlined in 2003,
 updated in 2006, and thoroughly discussed over many years with the physics user community. 
 After the discovery of the Higgs boson it was decided that an initial energy of $250\,{\mathrm{GeV}}$ provides the opportunity for a precision physics programme at a reasonable initial cost~\cite{Evans:2017rvt}.
 Some relevant parameters are given in Tab.~\ref{tab:ilc-params}.
+
+\begin{table*}[tbhp]
+\begin{tabular}{lcccccc}
+Quantity & Symbol & Unit & Initial & TDR &  \multicolumn{2}{c}{Upgrades} \\
+\hline
+Centre of mass energy & $\sqrt{s}$ & ${\mathrm{GeV}}$ & $250$ & $250$ & $500$ & $1000$ \\
+Luminosity & \multicolumn{2}{c}{${\mathcal{L}}$ ~~~~$10^{34}{\mathrm{cm^{-2}s^{-1}}}$} & $1.35$ & $0.75$ & $1.8$ & $4.9$ \\
+Polarisation for $e^- (e^+)$ & $P\sub{-} (P\sub{+})$ & & ~$80\,\% (30\,\%)$~ &  ~$80\,\% (30\,\%)$~ &  ~$80\,\% (30\,\%)$~ &  ~$80\,\% (20\,\%)$~  \\
+Repetition frequency &$f\sub{{rep}}$ & ${\mathrm{Hz}}$  & $5$ & $5$ & $5$ & $4$ \\
+Bunches per pulse  &$n\sub{{bunch}}$ & 1  & $1312$ & $1312$ & $1312$ & $2450$ \\
+Bunch population  &$N\sub{{e}}$ & $10^{10}$ &$2$ & $2$ & $2$ & $1.74$ \\
+Linac bunch interval & $\Delta t\sub{{b}}$ & ${\mathrm{ns}}$ & $554$ & $554$ & $554$ & $366$ \\
+Beam current in pulse & $I\sub{{pulse}}$ & ${\mathrm{mA}}$& $5.8$ & $5.8$ & $5.8$ & $7.6$  \\
+Beam pulse duration  & $t\sub{{pulse}}$ & ${\mathrm{\mu s}}$ & $727$ & $727$ & $727$ & $897$ \\
+Average beam power  & $P\sub{{ave}}$   & ${\mathrm{MW}}$ & $5.3$ & $5.3$ & $10.5$  & $27.2$ \\  
+Norm. hor. emitt. at IP & $\gamma\epsilon\sub{{x}}$ & ${\mathrm{\mu m}}$& $5$ & $10$ & $10$ & $10$  \\ 
+Norm. vert. emitt. at IP & $\gamma\epsilon\sub{{y}}$ & ${\mathrm{nm}}$ & $35$ & $35$ & $35$ & $35$ \\ 
+RMS hor. beam size at IP  & $\sigma^*\sub{{x}}$ & ${\mathrm{nm}}$  & $516$ & $729$ & $474$ & $335$ \\
+RMS vert. beam size at IP &$\sigma^*\sub{{y}}$ & ${\mathrm{nm}}$ & $7.7$  & $7.7$  & $5.9$ & $2.7$ \\
+Luminosity in top $1\,\%$ & ${\mathcal{L}}\sub{0.01} / {\mathcal{L}}$ &  & $73\,\%$  & $87.1\,\%$  & $58.3\,\%$ & $44.5\,\%$\\
+Energy loss from beamstrahlung  & $\delta\sub{BS}$ &  & $2.6\,\%$  & $0.97\,\%$  & $4.5\,\%$ & $10.5\,\%$ \\
+Site AC power  & $P\sub{{site}}$ &  ${\mathrm{MW}}$ & $129$ & $122$ & $163$ & $300$ \\
+Site length & $L\sub{{site}}$ &  ${\mathrm{km}}$ & $20.5$ & $31$ & $31$ & $40$ \\
+\end{tabular}
+\caption{Summary table of the ILC accelerator parameters in the initial $250\,{\mathrm{GeV}}$ staged configuration (with TDR parameters at \siunit{250}{GeV} given for comparison) and possible upgrades.
+\label{tab:ilc-params}}
+\end{table*}
 
 The collider design is the result of nearly twenty years of R\&D. 
 The heart of the ILC, the superconducting cavities, is based on over a decade of pioneering work by the TESLA collaboration in the 1990s. 
@@ -30,14 +57,14 @@ When the Higgs discovery was imminent in 2012, the Japan Association of High Ene
 Subsequently, the Japanese ILC Strategy Council conducted a survey of possible sites for the ILC in Japan, looking for  suitable geological conditions for a tunnel up to $50\,{\mathrm{km}}$ in length (as required for a $1\,{\mathrm{TeV}}$  machine), and the possibility to establish a laboratory where several thousand international scientists can work and live. 
 As a result, the candidate site in the Kitakami region in northern Japan, close to the larger cities of Sendai and Morioka, was found to be the best option. 
 The site offers a large, uniform granite formation with no currently active faults that is well suited for tunnelling.
-Even at the great Tohoku earthquake in 2011 underground installations in this rock formation were essentially unaffected, which underlines the suitability of this candidate site. 
+Even at the great Tohoku earthquake in 2011 underground installations in this rock formation were essentially unaffected~\cite{bib:sanuki:desy2017}, which underlines the suitability of this candidate site. 
 
 This section starts with a short overview over the changes of the ILC design between the publication of the TDR in $2013$ and today, followed by a description of the SCRF technology, and an description of the overall accelerator design and its subsystems. 
 Thereafter, possible upgrade options are laid out, the Japanese candidate site in the Kitakami region is presented, and costs and schedule of the accelerator construction project are shown.
 
 
 %===============================================================================
- \begin{figure*}[tb]
+ \begin{figure*}[tbhp]
  %\epsfysize=9.0cm
  \begin{center}
  \includegraphics[width=\hsize]{chapters/figures/TDR-machine-layout-cartoon-staged-mirror.pdf}
@@ -120,9 +147,9 @@ Since then, the TESLA technology collaboration~\cite{bib:ttc} has been improving
 %The dissipated power in a single cavity grows with the square of the gradient, 
 %and the overall power grows linearly with the gradient for a given accelerating voltage.
 
-\begin{figure*}[htbp]
+\begin{figure*}[tbhp]
    \includegraphics[width=0.8 \hsize]{chapters/figures/LBandSRFNbCavityGradientEvolution_ProjectImpact_rev28dec2018}
-\caption{Development of gradient of SRG cavities
+\caption{Development of the gradient of SRF cavities since 1970
 \cite[updated]{Geng:2015glc}.
 }
 % Paper is published under CC-BY-3.0
@@ -138,6 +165,7 @@ Recent progress in R\&D for high gradient cavities raises the hope to raise the 
 % Copied from TDR Vol 3.II p. 23
 To achieve the desired gradient in beam operation, the gradient achieved in the low-power vertical test (mass production acceptance test) is specified $10\,\%$ higher to allow for operational gradient overhead for low-level
 RF (LLRF) controls, as well as some degradation during cryomodule installation (few ${\mathrm{MV/m}}$).
+Fig.~\ref{fig:gradients} shows how the achievable gradients have evolved over the past 50 years~\cite{Geng:2015glc}.
 
 \paragraph{Gradient impact on costs}
 To the extent that the cost of cavities, cryomodules and tunnel infrastructure is independent of the achievable gradient, the investment cost per GeV of beam energy is inversely proportional to the average gradient achieved, which is the reason for the enormous cost saving potential from higher gradients.
@@ -553,34 +581,6 @@ The main difference, however, between the concepts is the positron polarisation 
 Both concepts have been reviewed recently \cite{PWG:2018a} inside the ILC community, with the result that both source concepts appear viable, with no known show stoppers, but require some more engineering work. 
 The decision on the choice will be taken once the project has been approved, based on the physics requirements, operational aspects, and technological maturity and risks. 
 
-
-\begin{table*}
-\begin{tabular}{lcccccc}
-Quantity & Symbol & Unit & Initial & TDR &  \multicolumn{2}{c}{Upgrades} \\
-\hline
-Centre of mass energy & $\sqrt{s}$ & ${\mathrm{GeV}}$ & $250$ & $250$ & $500$ & $1000$ \\
-Luminosity & \multicolumn{2}{c}{${\mathcal{L}}$ $10^{34}{\mathrm{cm^{-2}s^{-1}}}$} & $1.35$ & $0.75$ & $1.8$ & $4.9$ \\
-Polarisation for $e^- (e^+)$ & $P\sub{-} (P\sub{+})$ & & ~$80\,\% (30\,\%)$~ &  ~$80\,\% (30\,\%)$~ &  ~$80\,\% (30\,\%)$~ &  ~$80\,\% (20\,\%)$~  \\
-Repetition frequency &$f\sub{{rep}}$ & ${\mathrm{Hz}}$  & $5$ & $5$ & $5$ & $4$ \\
-Bunches per pulse  &$n\sub{{bunch}}$ & 1  & $1312$ & $1312$ & $1312$ & $2450$ \\
-Bunch population  &$N\sub{{e}}$ & $10^{10}$ &$2$ & $2$ & $2$ & $1.74$ \\
-Linac bunch interval & $\Delta t\sub{{b}}$ & ${\mathrm{ns}}$ & $554$ & $554$ & $554$ & $366$ \\
-Beam current in pulse & $I\sub{{pulse}}$ & ${\mathrm{mA}}$& $5.8$ & $5.8$ & $5.8$ & $7.6$  \\
-Beam pulse duration  & $t\sub{{pulse}}$ & ${\mathrm{\mu s}}$ & $727$ & $727$ & $727$ & $897$ \\
-Average beam power  & $P\sub{{ave}}$   & ${\mathrm{MW}}$ & $5.3$ & $5.3$ & $10.5$  & $27.2$ \\  
-Norm. hor. emitt. at IP & $\gamma\epsilon\sub{{x}}$ & ${\mathrm{\mu m}}$& $5$ & $10$ & $10$ & $10$  \\ 
-Norm. vert. emitt. at IP & $\gamma\epsilon\sub{{y}}$ & ${\mathrm{nm}}$ & $35$ & $35$ & $35$ & $35$ \\ 
-RMS hor. beam size at IP  & $\sigma^*\sub{{x}}$ & ${\mathrm{nm}}$  & $516$ & $729$ & $474$ & $335$ \\
-RMS vert. beam size at IP &$\sigma^*\sub{{y}}$ & ${\mathrm{nm}}$ & $7.7$  & $7.7$  & $5.9$ & $2.7$ \\
-Luminosity in top $1\,\%$ & ${\mathcal{L}}\sub{0.01} / {\mathcal{L}}$ &  &   & $87.1\,\%$  & $58.3\,\%$ & $44.5\,\%$\\
-Energy loss from beamstrahlung  & $\delta\sub{BS}$ &  & $2.6\,\%$  & $0.97\,\%$  & $4.5\,\%$ & $10.5\,\%$ \\
-Site AC power  & $P\sub{{site}}$ &  ${\mathrm{MW}}$ & $129$ & $122$ & $163$ & $300$ \\
-Site length & $L\sub{{site}}$ &  ${\mathrm{km}}$ & $20.5$ & $31$ & $31$ & $40$ \\
-\end{tabular}
-\caption{Summary table of the ILC accelerator parameters in the initial $250\,{\mathrm{GeV}}$ staged configuration (with TDR parameters at \siunit{250}{GeV} given for comparison) and possible upgrades.
-\label{tab:ilc-params}}
-\end{table*}
-
 \paragraph{Beam polarisation and spin reversal}
 \label{par:beampol}
 
@@ -755,31 +755,37 @@ The BDS is designed such that it can be upgraded to a maximum beam energy of \si
 In other places, such as the energy collimation dogleg, those components necessary for \siunit{125}{GeV} beam operation are installed and space for a later upgrade is reserved.
 
 Overall, the BDS is \siunit{2254}{m} long from the end of the main linac (or the undulator and target bypass insert of the positron source on the electron side, respectively) to the IP.
-It starts with a diagnostics section, where emittance, energy and polarisation are measured and any coupling between the vertical and horizontal planes is corrected by a set of skew quadrupoles.
+
+\paragraph{Diagnostics and collimation section}
+The BDS starts with a diagnostics section, where emittance, energy and polarisation are measured and any coupling between the vertical and horizontal planes is corrected by a set of skew quadrupoles.
 The energy measurement is incorporated into the machine protection system and can extract e.g. off--momentum bunches caused by a klystron failure in the main linac that would otherwise damage the machine or detector.
 An emergency dump~\cite{bib:cr-0013} is dimensioned such that it can absorb a full beam pulse at \siunit{500}{GeV}, sufficient for \siunit{1}{TeV} operation.
 
-\paragraph{Diagnostics and collimation section}
 The diagnostics section is followed by a collimation system, which first removes beam halo particles (betatron collimation). 
 then off--momentum particles are removed.
 In this energy collimation section, sufficient dispersion has to be generated by bending the beam in a dogleg, while avoiding excessive synchrotron radiation generation in dispersive regions that leads to an increase of the horizontal emittance.
-This emittance dilution effect grows as $E\sub{beam}^6$ at constant bending radius for the normalized emittance, and determines the overall length of the energy collimation section for a maximum \siunit{500}{GeV} beam energy to about \siunit{400}{m}.
+This emittance dilution effect grows as $E\sub{beam}^6$ at constant bending radius for the normalised emittance, and determines the overall length of the energy collimation section for a maximum \siunit{500}{GeV} beam energy to about \siunit{400}{m}.
 
-
-
-% XXXXXXXXXXXXX CONTINUE HERE XXXXXXXXXXXXXX
 
 \paragraph {Final focus with feedback system and crab cavities}
 
-% XXXXXXXXXXXXX CONTINUE HERE XXXXXXXXXXXXXX
+The final focus system demagnifies the beam to the required spot size of \siunit{516 \times 7.7}{nm^2} by means of final quadrupole doublet.
+Even the relatively small energy spread of $\approx 0.1\,\%$ leads to significant spread of the focal length of the doublet and requires a correction to achieve the desired beam size, which is realised by a local chromaticity correction scheme~\cite{Raimondi:2000cx}.
 
+To bring the beams to collision with the neccessary nanometre accuracy requires a continuous compensation of drift and vibration effects.
+The the ILC, the pulse length and bunch separation (\siunit{727}{\mu s} and \siunit{554}{ns}, respectively) are large enough to allow corrections between pulses as well as within a bunch train (intratrain feedback).
+Beam--beam offsets of a fraction of the beam size lead to a measurable deflection of the outgoing beams, which is used to feed fast stripline kickers that stabilize the beam.
+\siunit{3.9}{GHz} crab cavities close to the interaction point are foreseen that rotate the bunches to compensate for the \siunit{14}{mrad} beam crossing angle~\cite[Sect. 8.9]{Adolphsen:2013kya}.
+ 
 
 \paragraph {Test results from ATF2}
 The Accelerator Test Facility 2 (ATF2) was built at KEK in 2008 as a test bed for the ILC final focus scheme~\cite[Sec. 3.6]{Adolphsen:2013jya}.
 Its primary goals are~\cite{Grishanov:2005ek,Grishanov:2006kx} to achieve a \siunit{37}{nm} vertical beam size at the interaction point (IP), and demonstrate beam stabilisation at the nanometre level.
 After scaling for the different beam energies (ATF2 operates at $E\sub{beam}=\siunit{1.3}{GeV}$), the \siunit{37}{nm} beam size corresponds to the TDR design value of $\sigma\sub{y}^* = \siunit{5.7}{nm}$ at \siunit{250}{GeV} beam energy.
 As Fig.~\ref{fig:atf-results} shows, this goal has been reached within $10\,\%$~\cite{Okugi:2017jji} by the successive application of various correction and stabilisation techniques, 
-validating the final focus design, including the local chromaticity correction~\cite{White:2014vwa}.
+validating the final focus design, in particular the local chromaticity correction~\cite{White:2014vwa}.
+
+The fifth generation FONT5 feedback system~\cite{Apsimon:2018bpq} for the ILC and CLIC has also been tested at the ATF2, where a beam stabilisation to \siunit{41}{nm} has been demonstrated~\cite{Ramjiawan:2018egu}.
 
 \begin{figure}[htbp]
    \includegraphics[width=\hsize]{chapters/figures/ATF2trend2018}
@@ -788,6 +794,8 @@ validating the final focus design, including the local chromaticity correction~\
 \end{figure}
 
 \paragraph {Machine detector interface (MDI)}
+
+% describe experimental hall, final focus
 
 % XXXXXXXXXXXXX CONTINUE HERE XXXXXXXXXXXXXX
 
@@ -799,7 +807,11 @@ validating the final focus design, including the local chromaticity correction~\
 
 \paragraph {Main dump}
 
-% XXXXXXXXXXXXX CONTINUE HERE XXXXXXXXXXXXXX
+The main beam dumps~\cite[Sect. 8.8]{Adolphsen:2013kya} are rated for a maximum beam power of \siunit{17}{MW}~\cite{bib:cr-0013}, enough for a \siunit{1}{TeV} upgrade of the accelerator.
+The main dump design is based on the successful SLAC \siunit{2.2}{MW} beam dump~\cite{Walz:1967nz}.
+It  utilises water at \siunit{10}{bar} pressure (to prevent boiling) as absorber medium. 
+The main engineering challenges lie in the safe recombination of the produced oxyhydrogen gas and in the safe containment and disposal of radioisotopes, in particular tritium and $^7{\mathrm{Be}}$ produced from spallation processes.
+The entry window is another component that has to be carefully designed. 
 
 
 %===============================================================================
@@ -834,7 +846,7 @@ During the installation phase, the newly built tunnels would be connected to the
 At the same time, any necessary modifications to the positron source and the final focus can be made.
 With the cryo modules ready for installation at the beginning of the shut down period, it is estimated that the shutdown could be limited to about a year for an energy upgrade.
 
-{\it XXX Mention quantization from timing constraint, leads to stage with 500-600 GeV, optimal for tth and testing Higgs self coupling in the region relevant for electroweak baryogenesis Sec. \ref{subsubsec:runscen_ilc500} XXX }
+% {\it XXXXXXXX Mention quantization from timing constraint, leads to stage with 500-600 GeV, optimal for tth and testing Higgs self coupling in the region relevant for electroweak baryogenesis Sec. \ref{subsubsec:runscen_ilc500} XXXXXXXX }
 
 \subsubsection{Luminosity upgrade}
 \label{subsubsec:upg-optL}
@@ -914,17 +926,18 @@ Vibration measurements taken during the construction of a road tunnel show that 
 
 %===============================================================================
 
-\subsection{Cost and Schedule}
-
 \begin{figure*}[htbp]
  %\epsfysize=9.0cm
  \begin{center}
- \includegraphics[width=0.42\hsize]{chapters/figures/costs-as.pdf}
- \includegraphics[width=0.45\hsize]{chapters/figures/costs-ts.pdf}
+ \includegraphics[width=0.36\hsize]{chapters/figures/costs-as.pdf}
+ \includegraphics[width=0.4\hsize]{chapters/figures/costs-ts.pdf}
 \caption{Breakdown of Value costs into accelerator systems (left) and technical systems (right) for the \siunit{250}{GeV} ILC accelerator, assuming that cost reduction measures are successful and a gradient of \siunit{35}{MV/m} can be reached.
 \label{fig:costs}}
  \end{center}
  \end{figure*}
+
+
+\subsection{Cost and Schedule}
 
 
 %{\it 
@@ -934,7 +947,7 @@ Vibration measurements taken during the construction of a road tunnel show that 
 %}
 
 For the Technical Design Report, the construction cost of the ILC accelerator was carefully evaluated from a detailed, bottom--up, WBS (Work Breakdown Structure) based cost estimation~\cite[Sect. 15]{Adolphsen:2013kya}.
-The TDR estimate distinguishes two cost categories: Value accounts for materials and supplies procured from industry and is given in ILCU (ILC Currency Unit, where $\siunit{1}{ILCU} = \siunit{1}{US\$}$ in 2012 prices), and Labour accounts for work performed in the participating institutions and is given in person--hours or person--years (assuming $1700$ working hours of work per year).
+The TDR estimate distinguishes two cost categories: Value accounts for materials and supplies procured from industry and is given in ILCU (ILC Currency Unit, where $\siunit{1}{ILCU} = \siunit{1}{US\$}$ in 2012 prices), and Labour accounts for work performed in the participating institutions and is given in person--hours or person--years\footnote{One person--year corresponds to $1700$ working hours.}.
 
 The Value of acquired goods reflects its worth in the local currency of the purchasing institution. 
 Therefore, conversion of Value between currencies is performed based on Purchasing Power Parities (PPP), which are regularly evaluated and published by the OECD~\cite{OECD:2018,Eurostat:2012}, rather than currency exchange rates. 
@@ -959,7 +972,9 @@ For the this estimate, conversion rates of $\siunit{1}{US\$} = \siunit{100}{JP\y
 
 Operation costs of the accelerator and the central laboratory are estimated to be \siunit{36.6-39.2}{G\yen} (about \siunit{318-341}{M\euro}) per year.
 
+% XXXXXX DISCUSS EFFECT OF COST REDUCTION R&D XXXXXX
 
+% XXXXXX uncertainty, contingency, risk, running costs
 
 % XXXXXX CONTINUE HERE WITH SCHEDULE   XXXXXXX
 
