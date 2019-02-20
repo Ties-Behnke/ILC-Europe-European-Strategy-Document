@@ -40,6 +40,17 @@ nofootinbib,
 %floatfix,
 ]{revtex4-1}
 
+% Usual (decimal) numbering
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+% Fix references
+\makeatletter
+\renewcommand{\p@subsection}{}
+\renewcommand{\p@subsubsection}{}
+\makeatother
+
 \usepackage{tabularx}                                 % tables with automatic width calculation
 \usepackage{graphicx}% Include figure files
 \usepackage{xcolor}
