@@ -366,12 +366,12 @@ At the European XFEL, several quality controls were conducted by the manufacture
 With this ``build to print'' approach, in which the manufacturer guarantees that a precise production process will be followed but does not guarantee a specific performance, procurement costs are reduced, because the manufacturer does not carry, and does not charge for,  the performance risk.
 
 Upon reception from the manufacturer, cavities are tested in a vertical cryostat (``vertical test''), where $Q_0$ is measured as a function of the gradient.
-Cavities that fall below the specified gradient goal are re-treated by an additional (expensive) electropolishing step or a comparatively simple high--pressure rinse. 
+Cavities that fall below the specified gradient goal are re-treated by an additional (expensive) electropolishing step or a comparatively simple high-pressure rinse. 
 After retreatment, the vertical test is repeated.
 
 Re-treatment and tests constitute a major cost driver in cavity production. 
 For the ILC TDR, it was assumed that $25\,\%$ of the cavities would fall below the \siunit{28}{MV/m} gradient threshold and undergo re-treatment and a second vertical test.
-E-XFEL data from the vendor ``RI'' that followed the ILC production recipe indicate that $15\,\%$ to $37\,\%$ of the cavities fall below \siunit{28}{MV/m}, depending  on whether the maximum or the `usable'' achieved gradient is considered~\cite{bib:Walker:2017.lcws}.
+E-XFEL data from the vendor ``RI'' that followed the ILC production recipe indicate that $15\,\%$ to $37\,\%$ of the cavities fall below \siunit{28}{MV/m}, depending  on whether the maximum or the ``usable'' achieved gradient is considered~\cite{bib:Walker:2017.lcws}.
 However, E-XFEL experience also shows that, in most of the cases, a high-pressure rinse is sufficient as re-treatment to remove surface defects, which is a cost saving compared to the electropolishing assumed in the TDR.
 
 After successful testing, prior to installation in the cryomodule, cavities are equipped with a magnetic shield and the frequency tuner, which exerts mechanical force on the cavity to adjust the resonant frequency to the frequency of the external RF field~\cite[Sect. 3.3]{Adolphsen:2013kya}.  
@@ -783,6 +783,7 @@ This emittance dilution effect grows as $E\sub{beam}^6$ at constant bending radi
 
 
 \paragraph {Final focus with feedback system and crab cavities:}
+\label{par:final_focus}
 
 The final focus system demagnifies the beam to the required spot size of \siunit{516 \times 7.7}{nm^2} by means of a final quadrupole doublet.
 Even the relatively small energy spread of $\approx 0.1\,\%$ leads to a significant spread of the focal length of the doublet and requires a correction to achieve the desired beam size, which is realised by a local chromaticity correction scheme~\cite{Raimondi:2000cx}.
@@ -812,13 +813,22 @@ The fifth generation FONT5 feedback system~\cite{Apsimon:2018bpq} for the ILC an
 
 % describe experimental hall, final focus
 
-% XXXXXXXXXXXXX CONTINUE HERE XXXXXXXXXXXXXX
+% XXXXXXXXXXXXX BEGIN NEW 20190219 XXXXXXXXXXXXXX
 
+The ILC is configured to have two detectors that share one interaction point, with one detector in data taking position at any time, in a so--called ``push--pull'' operation~\cite[Sec. 8.4]{Adolphsen:2013jya}.
+Both detectors are mounted on movable platforms that allow an exchange of the detectors within approximately \siunit{24}{hours}.
 
-\paragraph {Extraction line:}
+In the push--pull scheme, the innermost final focus quadrupole ``QD0'', a slim, superconducting magnet package combined with a sextupole for lacal chromaticity correction, is installed within the detectors. 
+The other part of the final focus doublet (``QF1'') is located outside the detector on a bridge, and does not move with the detector.
+Since the TDR, the free space $L^*$ between interaction point and the QD0 edge has been harmonised to a common value of $L^*=\siunit{3.5}{m}$~\cite{bib:cr-0002}, which facilitates the design of a final focus optics that delievers optimal and equal performance to both detectors.
 
-% XXXXXXXXXXXXX CONTINUE HERE XXXXXXXXXXXXXX
+The detectors are located in an underground cavern. 
+In contrast to the TDR design, it is foreseen to have a large vertical access shaft~\cite{bib:cr-0003}, which permits a CMS--style detector installation concept, in which the detectors are assembled in large modules in a surface hall and lowered into the hall by means of a gantry crane capable of lowering pieces up to \siunit{4000}{t}.
+As the CMS experience shows, this concept significantly reduces the schedule risk associated with the experimental hall, as it the cavern needs to be available for detector installation only one or two years prior to commissioning.
 
+% \paragraph {Extraction line}
+
+% XXXXXXXXXXXXX END NEW 20190219 XXXXXXXXXXXXXX
 
 \paragraph {Main dump:}
 
@@ -827,6 +837,21 @@ The main dump design is based on the successful SLAC \siunit{2.2}{MW} beam dump~
 It  utilises water at \siunit{10}{bar} pressure (to prevent boiling) as absorber medium. 
 The main engineering challenges lie in the safe recombination of the produced oxyhydrogen gas and in the safe containment and disposal of radioisotopes, in particular tritium and $^7{\mathrm{Be}}$ produced from spallation processes.
 The entry window is another component that has to be carefully designed. 
+
+% XXXXXXXXXXXXX BEGIN NEW 20190219 XXXXXXXXXXXXXX
+
+\paragraph {Measurement of beam energy, luminosity, and beam polarisation:}
+
+Two energy spectrometers, one located \siunit{700}{m} upstream of the IP, the other \siunit{55}{m} downstream, provide independent and complementary measurements of the beam energy with an accuracy of \siunit{100}{ppm}~\cite{Boogert:2009ir}.
+
+The luminosity is measured to $10^{-3}$ accuracy from low angle Bhabha scattering in the so--called LumiCal (see Sect.~\ref{susub:det:forward}) at polar angles from $30$ to \siunit{90}{mrad}.
+Additional calorimeters (BeamCal) in the region $5$ to \siunit{30}{mrad} provide a fast signal that is used to detect beam--beam offsets of a fraction of the beam size, and correct them via the intra--beam feedback system (see Par.~\ref{par:final_focus}).
+
+Beam polarisation is measured with \siunit{0.25}{\%} accuracy by means of Compton scattering: electrons that scatter off green or infrared light laser photons lose enough energy that they can be detected in a spectrometer; their momentum spectrum is used to fit the beam polarisation~ \cite{Vormwald:2015hla}.
+Two such polarimeters are located \siunit{1800}{m} upstream and \siunit{150}{m} downstream of the IP, which allows to interpolate the precise polarisation at the IP and control the systematics, including effects from precession of the polarisation vector by transverse fields and depolarising effects in the interaction, which lead to a sizeable variation of the polarisation within the bunch during the collision (see Sect.~\ref{subsubsec:sysuncert}). 
+
+
+% XXXXXXXXXXXXX END NEW 20190219 XXXXXXXXXXXXXX
 
 
 %===============================================================================

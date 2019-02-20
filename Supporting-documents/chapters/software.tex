@@ -4,11 +4,26 @@
 \newcommand{\fix}[1]{\textcolor{red}{\texttt{#1}}} % command for comments 
 %\newcommand{\fix}[1]{} % remove all comments
 
-\newcommand{\CPP}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
+\newcommand{\CPP}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf
+    +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
+
+
+
+This section will describe the software framework used for ILC event
+analysis, working from raw data or digitized simulation data to
+physics objects.   We will first describe the core software tools used
+by the detector groups.  We will then follow the path by which this
+software to used to provide detailed detector models and model data
+sets,   to reconstruct the data including as much realism as possible,
+and to produce the final physics objects for analysis.    At the
+successive stages of this process, will be illustrate the analysis
+through performance plots that also can be used to benchmark the
+detector models.  Finally, we will discuss the computing concept and
+costs for the ILC experiments. 
 
 %\subsection{Software}
 
-More than 15 years ago the linear collider community has started to develop common software
+More than 15 years ago the linear collider community started to develop common software
 tools to facilitate the development and optimization of detector concepts based on realistic
 simulations of physics interactions. These software tools eventually led to the creation of
 a common software ecosystem called \emph{iLCSoft}~\cite{bib:ilcsoft}.
@@ -21,9 +36,9 @@ This approach of developing common tools wherever possible has helped considerab
 leveraging the limited manpower and putting the focus on algorithm development that
 is crucial for the physics performance. 
 
-In the next sections we will introduce the most relevant tools and algorithms and
-describe their design and performance, thereby following the natural flow of data processing
-from generated 4-vectors to high level physics objects.
+% In the next sections we will introduce the most relevant tools and algorithms and
+% describe their design and performance, thereby following the natural flow of data processing
+% from generated 4-vectors to high level physics objects.
 
 
 %\subsubsection{Core Software Tools}
@@ -31,7 +46,7 @@ from generated 4-vectors to high level physics objects.
 
 The foundation for the development of common software was laid with LCIO~\cite{Gaede:2003ip}, the
 event data model (EDM) and persistency tool for linear collider studies. At the core of LCIO is a hierarchical
-EDM for any particle physics experiment, as shown in Fig.\ref{fig:lcio_edm}.
+EDM for any particle physics experiment, as shown in Fig.~\ref{fig:lcio_edm}.
 %%%%%%%%%%%%%%%%
 \begin{figure}
 \begin{center}
@@ -41,14 +56,15 @@ EDM for any particle physics experiment, as shown in Fig.\ref{fig:lcio_edm}.
 \label{fig:lcio_edm}
 \end{figure}
 %%%%%%%%%%%%%%%%%
-It provides data classes for all phases of the event processing, starting from Monte Carlo truth information,
-over raw data and digitization to the final reconstruction and analysis. Objects at higher levels of the processing
+It provides data classes for all phases of the event processing,
+starting from Monte Carlo truth information, continuing to generate
+raw data and digitization, and processing this  to the final reconstruction and analysis. Objects at higher levels of the processing
 point back to the lower level constituting objects. As a specific design decision, there are no pointers back to the
 Monte Carlo truth but these can be added if needed using dedicated generic LCRelation objects.
 These relation objects can be used to create many-to-many relations between arbitrary types in the EDM.
 A special class LCGenericObject holds user defined data in named vectors of types int, float and double.
 This feature is used in many test beams for conditions data and raw data from the DAQ.
-LCIO provides APIs in \CPP, Java and Fortran, where today \CPP\ is used almost exclusively.
+LCIO provides APIs in \CPP, Java and Fortran, but today \CPP\ is used almost exclusively.
 
 
 The \CPP\ application framework Marlin~\cite{Gaede:2006pj} provides an easy to use environment for developing software
@@ -62,7 +78,7 @@ equivalent implementation for direct comparisons and benchmarking.
 The generic detector description toolkit DD4hep~\cite{Frank:2014zya,Frank:2015ivo} provides a powerful tool for describing
 the detector geometries, materials and readout properties. DD4hep follows a modular component based approach and provides
 interfaces to full simulations with Geant4~\cite{Agostinelli:2002hh} via DDG4, to reconstruction programs via DDRec and to
-conditions data and alignment with DDCond and DDAlign respectively, see Fig.\ref{fig:dd4hep}.
+conditions data and alignment with DDCond and DDAlign respectively, see Fig.~\ref{fig:dd4hep}.
 %%%%%%%%%%%%%%%%
 \begin{figure}
 \begin{center}
@@ -82,16 +98,19 @@ collider community, it is now used by several other projects and is under evalua
 
 Both detector concepts have created large, realistic Monte Carlo samples with the full Standard Model physics as well as various
 BSM scenarios that have been used for the physics analyses presented in the following sections.
-In a first step, large generator samples with $e^+e^-$-events are created with the Whizard~\cite{Kilian:2007gr} event generator.
+In a first step, large generator samples with $e^+e^-$ 
+events are created with the Whizard~\cite{Kilian:2007gr} event generator.
 Whizard uses tree-level matrix elements and loop corrections to generate events with the final state partons and leptons
 based on a realistic beam energy spectrum, the so called \emph{hard sub-process}. The hadronization into the visible final state
 is performed with Pythia~\cite{Sjostrand:2006za} tuned to describe the LEP data.
 
 The input spectrum is created with Guinea-Pig~\cite{Schulte:1998au}, a dedicated simulation program for computing
-beam-beam interactions at linear colliders. The two dominating effects of the strong beam-beam interactions are the 
-beamstrahlung leading to the available luminosity spectrum (see Fig~\ref{fig:lumi_spectrum}) and the creation of
-incoherent $e^+e^-$-pairs that are the source of the dominating background at the ILC. These electrons and positrons
-are predominantly created in a forward cone as shown in Fig~\ref{fig:pair_bg}. It is this cone that restricts the minimal
+beam-beam interactions at linear colliders. The two dominating effects of the strong beam-beam interactions are 
+beamstrahlung, leading to the available luminosity spectrum (see Fig.~\ref{fig:lumi_spectrum}), and the creation of
+incoherent $e^+e^-$-pairs that are the source of the dominant
+background at the ILC. 
+These electrons and positrons
+are predominantly created in a forward cone as shown in Fig.~\ref{fig:pair_bg}. It is this cone that restricts the minimal
 allowed radius of the innermost layer of the vertex detector.
 
 %%%%%%%%%%%%%%%%
@@ -117,16 +136,17 @@ allowed radius of the innermost layer of the vertex detector.
 
 Another source of background at the ILC are $\gamma \gamma \rightarrow hadrons$ events, due to bremsstrahlung and beamstrahlung photons.
 These type of events are generated for $\gamma \gamma$ cms-energies from $300~\rm{MeV~to} ~2~\rm{GeV}.$ with a dedicated generator based
-on ~\cite{Chen:1993dba}, for higher energies Pythia is used.
+on Ref.~\cite{Chen:1993dba}, for higher energies Pythia is used.
 
 
 %\subsubsection{Simulation}
 \subsection{\label{sub:sw-sim}Simulation}
 
 Both detector concepts have adopted DD4hep for describing their detector simulation models and use \emph{ddsim}, a python application that
-is based on the DDG4 component, providing a gateway to full simulations with Geant4.
-In DD4hep the detector geometry is implemented in dedicated \CPP modules for every subdetector and the actual parameters with dimensions
-and materials are provided via compact xml-files. A large palette of predefined sub-detector drivers exists in DD4hep, allowing for an
+is based on the DDG4 component, to provide a gateway to full simulations with Geant4.
+In DD4hep the detector geometry is implemented in dedicated \CPP\  modules for every subdetector and the actual parameters with dimensions
+and materials are provided via compact xml-files. DD4hep contains a
+ large palette of predefined sub-detector drivers, allowing for an
 easy implementation of a new detector concept by providing suitable compact files.
 A dedicated software package lcgeo~\cite{bib:lcgeo}, which is shared by SiD, ILD and CLICdp, contains all subdetector drivers for the
 detector concepts under study by these groups, together with the corresponding compact parameter files.
@@ -184,8 +204,9 @@ realistic understanding of the expected detector performance and the physics rea
 %\subsubsection{Digitzation}
 \subsection{\label{sub:sw-digi}Digitzation}
 
-The output of the detailed full simulations with Geant4 from ddsim are \emph{SimTrackerHit} and \emph{SimCalorimeterHit} objects,
-that store the deposited energy in the sensitive detector elements, such as silicon wafers and calorimeter cells, together with
+The output of the detailed full simulations with Geant4 from 
+ddsim are \emph{SimTrackerHit} and \emph{SimCalorimeterHit} objects.
+These store the deposited energy in the sensitive detector elements, such as silicon wafers and calorimeter cells, together with
 the position and pointers to the \emph{MCParticle} that created the energy deposition. In the digitization step, carried out in dedicated
 Marlin processors, these hits are converted into \emph{TrackerHit} and \emph{CalorimeterHit} objects,
 taking into account all relevant effects from the detector and the readout electronics.
@@ -198,7 +219,7 @@ from charge sharing, clustering and position reconstruction. Table~\ref{tab:ild_
 
 
 %-----------------------------------------------------------------------
-\begin{table}[htbp]
+\begin{table}[tbp]
 \renewcommand{\arraystretch}{1.25}
 
 \centering\small
@@ -241,16 +262,17 @@ In the TPC hit digitization, simulated hits that are closer than the established
 in $z$ are merged into one. For the silicon detectors this treatment is not necessary, due to the expected low occupancies.
 
 The \emph{SimCalorimeterHits} contain the total energy deposited in each calorimeter cell, together with the individual depositions
-from the individual Monte Carlo steps. For scintillating calorimeters Birk's Law, resulting in different light yields for different
-particles, is already applied during the simulation. Dedicated digitizers take into account effects of non-uniformity of the light yield
+from the individual Monte Carlo steps. For scintillating calorimeters
+Birk's Law is already applied during the simulation, resulting in different light yields for different
+particles.  Dedicated digitizers take into account effects of non-uniformity of the light yield
 for scintillators as well as cross-talk between neighboring channels. The latter is important in particular for the simulation of
 (semi)-digital calorimeters using RPCs and is possible due to the availability of the individual simulation steps, containing
 the exact position of the energy deposition.
 
-During the calorimeter digitization a two step calibration is applied for every calorimeter type and sampling structure. In a first step
+During the calorimeter digitization, a two step calibration is applied for every calorimeter type and sampling structure. In a first step
 the hits are calibrated to a MIP signal and in a second step, the total energy is calibrated to an absolute value of the
-cell energy in $GeV$. This calibration is an iterative procedure, based on the application of the full
-\emph{particle flow algorithm }(see next subsection) to single particle events with photons and $K^0$s and thereby
+cell energy in  GeV. This calibration is an iterative procedure, based on the application of the full
+\emph{particle flow algorithm }  to single particle events with photons and $K^0$s and thereby
 repeatedly adjusting the calibration constants.
 
 
@@ -258,12 +280,12 @@ repeatedly adjusting the calibration constants.
 %\subsubsection{Reconstruction}
 \subsection{\label{sub:sw-reco}Reconstruction}
 
-Tracking: \\
+\subsubsection{Tracking} 
 
 The first step of the event reconstruction consists of identifying the trajectories of charged particles based on the positions of their
 energy depositions in the detector (\emph{SimTrackerHits}), typically referred to as \emph{pattern recognition}. In a second step the
 kinematic parameters of these trajectories are fitted based on the known equations of motion in a magnetic field and the errors of the
-hit positions. Often both steps are carried out together, e.g. by using a Kalman-Filter and simply referred to as \emph{Tracking}.
+hit positions. Often both steps are carried out together, \eg, by using a Kalman-Filter and simply referred to as \emph{Tracking}.
 
 The tracking packages in iLCSoft is called MarlinTrk and provides a generic tracking-API \emph{IMarlinTrk} and underlying fitting code,
 using the Kalman-Filter package \emph{KalTest}~\cite{Li:2013cxa}.
@@ -271,7 +293,7 @@ The \emph{IMarlinTrk} interface provides code to iteratively add hits to a track
 thereby updating the track parameters, extrapolation of the current track state to the next measurement surface or any given point
 in space. It uses LCIO as data model for the Track and TrackState with a \emph{perigee} track parameterization with
 track curvature $\omega$, impact parameters $d_0$ and $z_0$ and direction parameters $\phi_0$ and $\rm{tan}(\lambda)$.
-A pallete of different pattern recognition algorithms are programmed against \emph{IMarlinTrk} as shown in Fig~\ref{fig:imarlintrk}.
+A palette of different pattern recognition algorithms are programmed against \emph{IMarlinTrk} as shown in Fig.~\ref{fig:imarlintrk}.
 %%%%%%%%%%%%%%%%
 \begin{figure}
 \begin{center}
@@ -283,24 +305,27 @@ DDRec geometry description.}
 \end{figure}
 %%%%%%%%%%%%%%%%%
 ILD uses the following different algorithms in the different parts of the tracking region
-(for more details see~\cite{Gaede:2014aza}):
+(for more details see Ref.~\cite{Gaede:2014aza}):
 
 \begin{itemize}
 \item SiliconTracking\\
-  Algorithm used in the innermost Si-tracking detector VXD and SIT, based an a brute-force triplet seeding followed by
+  Algorithm used in the innermost Si-tracking detector VXD and SIT,
+  based on a brute-force triplet seeding followed by
   a road search using the extrapolation to the next layer provided in MarlinTrk.
 \item ForwardTracking\\
-  Stand alone pattern recognition in the FTD forward tracker using a Cellular-Automaton to find, a possibly large, set of
+  Stand alone pattern recognition in the FTD forward tracker using a
+  Cellular-Automaton to find a 
+(possibly large) set of
   track candidates that are reduced to a unique and consistent set through the use of a Hopfield Network.
 \item Clupatra\\
-  Pattern recognition algorithm for the TPC, based on a topological clustering in the outer TPC pad row layers for seeding,
+  Pattern recognition algorithm for the TPC, based on topological clustering in the outer TPC pad row layers for seeding,
   followed by a Kalman-Filter based road search inwards.
 \item FullLDCTracking\\
   A collection of algorithms for merging track segments from the previous algorithms and assignments of leftover hits followed
   by a final re-fit using a Kalman-Filter.
 \end{itemize}
 
-SiD had originally developed their stand alone tracking software in the Java framework \emph{LCSim}~\cite{bib:LCSim}
+SiD had originally developed their stand-alone tracking software in the Java framework \emph{LCSim}~\cite{bib:LCSim}
 using a triplet based seeding followed by a road search and a final track fit. More recently SiD has adopted the \emph{ConformalTracking}
 algorithm originally developed for CLICdp. It uses a conformal mapping transforming circles going through the origin (IP)
 into straight lines which are then identified using a Cellular-Automaton.
@@ -313,7 +338,7 @@ are also used to account for effects from dead material layers, such as support 
 
 
 The resulting tracking efficiencies for the ILD detector are shown as a function of the momentum and
-$\rm{cos}(\theta)$ in Fig~\ref{fig:ild_trkeff}.
+$\rm{cos}(\theta)$ in Fig.~\ref{fig:ild_trkeff}.
 
 %%%%%%%%%%%%%%%%
 \begin{figure}
@@ -330,7 +355,7 @@ $\rm{cos}(\theta)$ in Fig~\ref{fig:ild_trkeff}.
 %%%%%%%%%%%%%%%%%
 
 The normalised transverse momentum resolution $\sigma(1/p_T)$ for single-muon events the SiD detector model is shown in
-Fig~\ref{fig:sid_mom_res} together with fits using the parameterisation:
+Fig.~\ref{fig:sid_mom_res} together with fits using the parameterisation:
 
 \begin{equation}
   \frac{\sigma(p_T)}{p^2_T} = a~\oplus~\frac{b}{p~\rm{sin}\theta}     \label{eq:trk_res_param}
@@ -362,34 +387,33 @@ $\sigma(p_T)/P^2_T  < 2 \times 10^{-5} \rm{GeV}^{-1}$ for high momentum central 
 \end{figure}
 %%%%%%%%%%%%%%%%%
 
-The impact paramter resolution as a function of polar angle for single-muon events in SiD is shown in Fig~\ref{fig:sid_d0_res} for
+The impact parameter resolution as a function of polar angle for single-muon events in SiD is shown in Fig.~\ref{fig:sid_d0_res} for
 different particle momenta. A resolution of a few $\mu\rm{m}$ is achieved for high mometum tracks over a large range of the polar
 angle down to $\sim 20^{o}$.
 
 
-The tracking software is completed with a dedicated processors for the identification and reconstruction of kinks and $V_0$s.
+The tracking software is completed with dedicated processors for the identification and reconstruction of kinks and $V^0$s.
 Tracks with kinks can arise from bremsstrahlung, typically for electrons, or a large angle deflection due to multiple scattering.
-$V_0$s are almost exclusively decays of $K^0_s$ and $\Lambda^0$ as well as gamma conversions.
+$V^0$s are almost exclusively decays of $K^0_s$ and $\Lambda^0$ and gamma conversions.
 
-%----------------------------------------------
-~~~\\
-Particle Flow: \\
+
+\subsubsection{Particle Flow:} 
 
 The \emph{particle flow algorithm} (PFA) aims at reconstructing every individual particle created in the event in order
-to take the best available measurement for the given particle type, i.e.:
+to take the best available measurement for the given particle type:
 \begin{itemize}
 \item charged particles\\
   using the momentum measured in the tracking detectors with the excellent resolution described  above
 \item photons\\
   measured in the Ecal with an energy resolution of $\sigma(E)/E \sim  17\% / \sqrt{(E/\rm{GeV})}$ %%\fix{is this the correct number?}
 \item neutral hadrons\\
-  measured predominantly in the Hcal\footnote{hadronic showers often start in the Ecal and might extend into the Muon system -
+  measured predominantly in the HCAL\footnote{hadronic showers often start in the Ecal and might extend into the Muon system -
     this is taken into account in PandorPFA} with an energy resolution of $\sigma(E)/E \sim  50\% / \sqrt{(E/\rm{GeV})}$ %%\fix{is this the correct number?}
 \end{itemize}
 
 The best jet energy measurement in hadronic events would be achieved if the above algorithm would work perfectly. However in reality
 there is always confusion in the assignment of individual \emph{CalorimeterHits} to Clusters and showers as well as in the assignment
-of tracks to clusters. This effect is demonstrated in Fig~\ref{fig:pandorapfa_perfect} for PandoraPFA~\cite{Marshall:2015rfa}, the
+of tracks to clusters. This effect is demonstrated in Fig.~\ref{fig:pandorapfa_perfect} for PandoraPFA~\cite{Marshall:2015rfa}, the
 implementation of PFA available in iLCSoft that is used by both detector concepts.
 
 %%%%%%%%%%%%%%%%
@@ -397,13 +421,13 @@ implementation of PFA available in iLCSoft that is used by both detector concept
 \begin{center}
 \includegraphics[width=0.85\hsize]{chapters/figures/pandorapfa_perfect.png}
 \end{center}
-\caption{Jet energy resolution for $Z'$ events as a function of the jet energy in a realistic detector for PandoraPFA.
+\caption{Jet energy resolution (in \%) for $Z'$ events as a function of the jet energy in a realistic detector for PandoraPFA.
   Also shown are the effect of \emph{confusion} and the result assuming \emph{perfect PFA} (from~\cite{Marshall:2015rfa}).} 
 \label{fig:pandorapfa_perfect}
 \end{figure}
 %%%%%%%%%%%%%%%%%
 
-The input to PandoraPFA are collections of Tracks, Kinks, $V0$s and collections of all digitized \emph{CalorimeterHits} together with
+The input to PandoraPFA are collections of Tracks, Kinks, $V^0$s and collections of all digitized \emph{CalorimeterHits} together with
 some geometrical information retrieved from DDRec.
 Following~\cite{Marshall:2015rfa} the main steps of the algorithm are:
 
@@ -430,11 +454,12 @@ Following~\cite{Marshall:2015rfa} the main steps of the algorithm are:
 \end{itemize}
 
 
-The final output collection of PandoraPFA is called ``PandoraPFOs'' and represents the final output of the \emph{Reconstruction}
+The final output collection of PandoraPFA is a set of objects called
+``PandoraPFO''s.  This represents the final output of the \emph{Reconstruction}
 process. This collection is either directly used for physics analyses or serves as input to higher-level reconstruction
 algorithms where necessary.
 
-Fig~\ref{fig:ild_jer_jes} shows the jet energy resolution and jet energy scale that is achieved for two variants of the ILD detector
+Fig.~\ref{fig:ild_jer_jes} shows the jet energy resolution and jet energy scale that is achieved for two variants of the ILD detector
 for a dedicated event sample of hadronic $Z\rightarrow u,d,s$ events.
 The jet energy resolution is evaluated using $RMS_{90}(E)$, the root mean square of the energy of the central 90\% of the events.
 The restriction to $u,d,s$ quarks is chosen to focus on  the detector and PFA performance without the extra complication of missing
@@ -458,7 +483,7 @@ energy due to neutrinos.
 %\subsubsection{High-Level Reconstruction}
 \subsection{\label{sub:sw-HLR}High-Level Reconstruction}
 
-After having reconstructed all the individual particles in the event, the next step in the processing is the reconstruction of
+After having reconstructed all of the individual particles in the event, the next step in the processing is the reconstruction of
 primary and secondary vertices. This is carried out in iLCSoft with the LCFIPlus~\cite{Suehara:2015ura} package that is also used
 for the tagging of heavy flavor jets.
 
@@ -472,13 +497,15 @@ used in the primary vertex. The pairs have to fulfill suitable requirements with
 and $\chi^2$. $V^0$s are excluded from these initial pairs. Secondary vertices are then formed using so far leftover tracks in
 an iterative procedure and eventually adding compatible tracks originally used in the primary vertex.
 
-Secondary vertices and optionally isolated Leptons can be used by LCFIPlus for jet clustering, aiming at high efficiency for correctly identifying
+Secondary vertices and optionally isolated leptons can be used by LCFIPlus for jet clustering, aiming at high efficiency for correctly identifying
 heavy flavor jets. The actual jet clustering is then performed by using a cone-based clustering with a Durham-like algorithm.
-Alternatively users can use $k_T$ jet clustering algorithms from the Fastjet~\cite{Cacciari:2006sm} that is interfaced to Marlin in a dedicated
+Alternatively users can use $k_T$ jet clustering algorithms from
+Fastjet~\cite{Cacciari:2006sm},
+which is interfaced to Marlin in a dedicated
 package MarlinFastJet.
 
 LCFIPlus also provides algorithms for jet flavor tagging using boosted decision trees (BDTs) based on suitable variables from tracks and vertices.
-Fig~\ref{fig:sid_flavor_tag} shows the mis-identification efficiency for jets from light quarks and c-quarks as a function of the b-tagging efficiency
+Fig.~\ref{fig:sid_flavor_tag} shows the mis-identification efficiency for jets from light quarks and c-quarks as a function of the b-tagging efficiency
 for the SiD detector using LCFIPlus.
 
 %%%%%%%%%%%%%%%%
@@ -511,13 +538,13 @@ In addition to the full simulation and reconstruction
 outlined in the previous sections,
 there is a need for simulation that can quickly generate
 substantial samples of simulated and reconstructed events.
-Situations were this is desirable include detector optimisation
+Situations where this is desirable include detector optimisation
 and new physics searches. In these cases,
 similar processes need to be simulated and reconstructed at
 a, possibly very large, number of different conditions.
-In the first case, it would amount to modifying various aspects
+In the first case, one needs to  modifying various aspects
 of the detector in steps, in the latter,
-one would like to exploit the entire allowed parameter space
+one needs to  explore the entire allowed parameter space
 of a theory for new physics.
 In addition to these cases,
 fast simulation is also an asset for simulating high-crossection
@@ -531,12 +558,12 @@ a fast simulation program needs to be fast, flexible, and
 accurate. 
 The SGV program\cite{Berggren:2012ar} used at ILC meets these needs.
 The time to simulate and reconstruct an event is similar to
-the time it takes to generated it ($\sim 1-10$~ms),
-the response of the detector is as far as possible calculated
-from the detector design (i.e. there is no need to parametrisise
-pre-existing full simulation results),
-and has been shown to well compare both with full simulation
-and real data\cite{Abdallah:2003xe}.
+the time it takes to generate it ($\sim 1-10$~ms).
+The response of the detector is as far as possible calculated
+from the detector design (so there is no need to parametrisise
+pre-existing full simulation results).  SGV
+has been shown to compare well  both with full simulation
+and with  real data~\cite{Abdallah:2003xe}.
 
 The program uses a simplified ``{\it cylinders-and-discs}'' description
 of the detector,
@@ -549,7 +576,7 @@ The calorimetric response is calculated from the expected single-particle
 performance of the different components of the calorimetric system,
 for each particle impinging on it. Optionally,
 the effects of shower-confusion can be included.
-To reduce the needed storage for Giga-event size sample,
+To reduce the needed storage for a Giga-event size sample,
 event filtering can be applied at different steps of the processing,
 directly after generation, after the detector response is known,
 or after higher-level event analysis is done.
@@ -567,7 +594,7 @@ An initial computing concept for the ILC, including a first estimate of the requ
 
 The foreseen computing concept follows in general terms that of the current LHC experiments and Belle~II, with a strong on-site computing
 center complemented by large Grid-based computing resources distributed around the world. This concept is schematically shown in
-Fig~\ref{fig:computing_scheme}.
+Fig.~\ref{fig:computing_scheme}.
 
 %%%%%%%%%%%%%%%%
 \begin{figure*}

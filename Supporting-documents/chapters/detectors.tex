@@ -1,23 +1,113 @@
 \subsection{Introduction}
-The ILC accelerator is planned with one interaction region, equipped with two experiments. The two experiments are swapped into the Interaction Point within the so-called "Push-Pull" scheme. The experiments have been designed to allow fast move-in and move-out from the interaction region, on a timescale of a few hours to a day. In 2008 a call for letters of intent was issued to the community. Following a detailed review by an international detector advisory group, two experiments were selected in 2009 and invited to prepare more detailed proposals; they are the SiD detector and the ILD detector. Both prepared detailed and costed proposals which were scrutinised by the international group, and included in the ILC technical design report in 2012. In this section the two proposals are briefly introduced.
 
-The experimental conditions for the ILC detectors vary significantly, for example, from those for the proton-proton experiments at the LHC. The rate of interactions at the ILC is sufficiently low to allow running in a triggerless mode. The 199 ms interval between bunch trains provides ample time for full readout of data from the immediate past set  of collisions. While there are background processes arising due to beam-beam interactions, the associated detector occupancies have been shown to be manageable. In addition, analysis of collisions from the ILC will not involve the complications arising from pileup such as encountered at the LHC.
-The radiation levels at the ILC will be modest compared with the LHC. This will allow the consideration of the use of a wide range of materials and technologies for the tracking and calorimeter systems, although for the special forward calorimters very close to the beamline radiation exposure will be an issue. The generally low radiation levels will allow the innermost vertex detector elements to be located at very low radii, significantly enhancing the efficiency for short-lived particle identification. In general, the relatively benign ILC experiment environment will permit the implementation of tracking detectors with minimal material profile (See Sec.~\ref{sub:sw-sim}), which in turn supports the excellent track momentum resolution required by the Higgs studies.
+The ILC accelerator is planned with one interaction region, equipped
+with two experiments. The two experiments are swapped into the
+Interaction Point within the so-called "Push-Pull" scheme. The
+experiments have been designed to allow fast move-in and move-out from
+the interaction region, on a timescale of a few hours to a day. In
+2008 a call for letters of intent was issued to the
+community. Following a detailed review by an international detector
+advisory group, two experiments were selected in 2009 and invited to
+prepare more detailed proposals.  These  are the SiD detector and the ILD
+detector described in this section. Both prepared detailed and costed proposals which were
+scrutinised by the international advisory group and included in the
+2012 ILC
+Technical Design Report~\cite{Behnke:2013lya}.  In this section the two proposals are
+briefly   introduced.
 
- A major change in the design philosophy compared to previous large scale detectors has been the definition of very ambitious goals on the jet-mass resolution, to enable the reconstruction of the final states using the particle-flow paradigm. The accepted goal of $3\%$ jet mass resolution at energies above 100~\GeV means a resolution goal about twice as good as reached e.g. for the LHC experiments. Similarly the requirement on the momentum resolution which is driven by the needs to reconstruct sufficiently precisely the Z-mass in the Higgs recoil analysis, translates into a system resolution nearly an order of magnitude better than achieved in the LHC experiments. To meet these goals an ambitious R\& D program has been pursued throughout the past 10 years or so to develop and demonstrate the needed technologies. The two experiments proposed for the ILC, SiD and ILD, utilise and rely on the results from these R\& D efforts. 
+The ILC detectors are designed to make precision measurements on the
+Higgs boson,  $W$, $Z$, $t$, and other particles.    They are able to
+meet the requirements for such measurements, first, because the
+experimental conditions are naturally very much more benign than those
+at the LHC, and second, because the detector collaborations have
+developed technologies specifically to take advantage of these more
+forgiving conditions. 
+
+An $\ee$ collider gives much  lower collision
+rates and events of much lower complexity than a hadron collider, 
+and detectors can be adapted to take
+advantage of this.  The radiation levels at the ILC will be modest compared with the
+LHC, except for the special forward calorimters very close to the
+beamline, where radiation exposure will be an issue. 
+This  allows the consideration of a wide range of
+materials and technologies for the tracking and calorimeter systems. 
+The generally low
+radiation levels allow the innermost vertex detector elements to
+be located at very small  radii, significantly enhancing the efficiency
+for short-lived particle identification. More generally,  the relatively
+benign ILC experiment environment permits  the design of 
+tracking detectors with minimal material profile (see
+Sec.~\ref{sub:sw-sim}).  This allows the detectors to meet the
+stringent requirement on the track momentum resolution
+ which is driven by the needs to reconstruct sufficiently precisely
+ the Z-mass in the Higgs recoil analysis.  This requirement translates into a system
+ resolution nearly an order of magnitude better than achieved in the
+ LHC experiments.
+
+At the same time, although they are studying electroweak particle
+production, it is essential that the ILC detectors have excellent
+performance for jets.   At an $\ee$ collider, $W$ and $Z$ bosons are
+readily observed in their hadronic decay modes, and the study of these
+modes plays a major role in most analyses.    To meet the requirements
+of precision measurements, the ILC detectors are optimized from the
+beginning to enable jet reconstruction and measurement using 
+the particle-flow algorithm (PFA). This drives the goal of $3\%$
+ jet mass resolution at energies above 100~\GeV,  a resolution
+about twice as good as has been achieved in  the LHC
+ experiments.
+
+FInally, while the LHC detectors depend crucially on multi-level
+triggers that filter out only a small fraction of events for analysis,
+the  rate of interactions at the ILC is sufficiently low to allow
+running without a trigger.     The ILC accelerator design is based on
+trains of electron and positron bunches, with a repetition rate of
+5~Hz, and with 1312 bunches (and bunch
+collisions) per train (see Sec.~\ref{sec:ilc},
+Tab.~\ref{tab:ilc-params}). 
+The 199 ms interval between bunch trains provides ample time for a full
+readout of data
+ from the  previous train.  While there are background processes arising
+ from  beam-beam interactions, the detector occupancies arising from these 
+have been shown to be manageable.
+
+The combination of extremely precise tracking, excellent jet mass
+resolution, and triggerless running gives the ILC, at 250 GeV and at
+higher energies, a superb potential for discovery. 
+
+To meet these goals an ambitious R\& D program has
+ been pursued throughout the past 10 years or so to develop and
+ demonstrate the needed technologies. The results of this program are
+ described in some detail in Ref.~\cite{RDliaision}. 
+ The two experiments proposed for
+ the ILC, SiD and ILD, utilise and 
+rely on the results from these R\&D efforts.
+
+Since the goals of SiD and ILD in terms of material budget, tracking
+performance, heavy-flavor tagging, and jet mass resolution are very 
+demanding, we feel it important to provide information about the level
+of detailed input that enters our performance estimates.   These are
+best
+discussed together with the event reconstruction and analysis
+framework that we will present in Sec.~\ref{sec:software}.   In that
+section, we will present estimates of detector performance as
+illustrations at the successive stages of event analysis. 
+
+
 
 \subsection{The SiD Detector}
-The SiD detector is a general-purpose experiment designed to perform precision measurements
-at ILC. It satisfies the challenging detector requirements resulting from the full range of ILC physics processes. SiD is based on the paradigm of particle flow, an algorithm by which
+The SiD detector is a general-purpose experiment designed to perform
+ precision measurements
+at the ILC. It satisfies the challenging detector requirements resulting from the full range of ILC physics processes. SiD is based on the paradigm of particle flow, an algorithm by which
 the reconstruction of both charged and neutral particles is accomplished by an optimised
 combination of tracking and calorimetry. The net result is a significantly more precise jet
 energy measurement which results in a di-jet mass resolution good enough to distinguish
-between W’s and Z’s.
-The SiD detector (Fig.~\ref{fig:fig_sid})is a compact detector based on a powerful silicon
-pixel vertex detector, silicon tracking, silicon-tungsten electromagnetic calorimetry and
+between $W$s and $Z$s.
+The SiD detector (Fig.~\ref{fig:fig_sid})  is a compact detector based on a powerful silicon
+pixel vertex detector, silicon tracking, silicon-tungsten electromagnetic calorimetry, and
 highly segmented hadronic calorimetry. 
 SiD also incorporates a high-field solenoid, iron
-flux return, and a muon identification system. The use of silicon sensors in the vertex, tracking
+flux return, and a muon identification system. The use of silicon 
+sensors in the vertex, tracking,
 and calorimetry enables a unique integrated tracking system ideally suited to particle
 flow.
 
@@ -25,13 +115,19 @@ The choice of silicon detectors for tracking and vertexing ensures that SiD is r
 with respect to beam backgrounds or beam loss, provides superior charged particle momentum
 resolution, and eliminates out-of-time tracks and backgrounds. The main tracking
 detector and calorimeters are “live” only during a single bunch crossing, so beam-related
-backgrounds and low-pT backgrounds from \gamgam processes will be reduced to the minimum
+backgrounds and low-pT backgrounds from $\gamma\gamma$ processes will be reduced to the minimum
 possible levels. The SiD calorimetry is optimised for excellent jet energy measurement
-using the particle flow technique. The complete tracking and calorimeter systems are contained
+using the particle flow technique.
+ The complete tracking and calorimeter systems are contained
 within a superconducting solenoid, which has a 5 T field strength, enabling the overall
-compact design. The coil is located within a layered iron structure that returns the magnetic flux and is instrumented to allow the identification of muons. All aspects of SiD are the result of intensive and leading-edge research aimed at achieving
+compact design. The coil is located within a layered iron structure
+that returns the magnetic flux and is instrumented to allow the
+identification of muons. 
+All aspects of SiD are the result of intensive and leading-edge research aimed at achieving
 performance at unprecedented levels. At the same time, the design represents a balance between cost
-and physics performance. The key parameters of the SiD design are listed in  Table~\ref{sid:ConceptOverview:Table:Ovw_sidparams}.
+and physics performance. The key parameters of the SiD design are
+listed in  
+Table~\ref{sid:ConceptOverview:Table:Ovw_sidparams}.
 
 \begin{figure}[tb]
  %\epsfysize=9.0cm
@@ -127,7 +223,8 @@ silicon pixel disks. In addition, there are three silicon pixel disks at a
 larger distance from the interaction point to provide uniform coverage for the
 transition region between the vertex detector and the outer tracker. This
 configuration provides for very good hermeticity with uniform coverage and
-guarantees excellent charged-track pattern recognition capability and impact parameter resolution 
+guarantees excellent charged-track pattern recognition capability
+ and impact parameter resolution 
 over the full solid angle. 
 This enhances the capability of the integrated tracking system and, 
 in conjunction with the high magnetic field, makes for a very compact
@@ -153,7 +250,7 @@ being developed in collaboration with SRI International.
 The pixel size is about  $10~\times~10~\micron^2$ with a design goal of 99\% charged-particle
  efficiency.
 The time-stamping feature of the design means each hit is accompanied by a time tag with sufficient precision to assign it to a particular bunch crossing of
-the ILC - thus the name Chronopixel. This reduces the occupancy to negligible levels, even in the
+the ILC -- thus the name Chronopixel. This reduces the occupancy to negligible levels, even in the
 innermost vertex detector layer, yielding a robust vertex detector which operates at background
 levels significantly in excess of those currently foreseen for the ILC. Chronopixel differs from the
 similar detectors developed by other groups by its capability to record time stamps for two hits in
@@ -189,7 +286,7 @@ structures, providing extreme versatility in designing and constructing a vertex
 detector.
 
 Power delivery must be accomplished without exceeding the material budget and
-over heating the detector.  The vertex detector 
+overheating the detector.  The vertex detector 
 design relies on power pulsing during bunch trains to minimise heating 
 and uses forced air for cooling. 
 
@@ -247,13 +344,15 @@ within the volume of the cylindrical superconducting solenoid.
 %shower containment. The total depth of the electromagnetic calorimeter is 26
 %radiation lengths (\xo) and one nuclear interaction length. 
 
-SiD's reliance on particle flow calorimetry to obtain a jet energy resolution of  $\sim$3\% demands a highly segmented (longitudinally and laterally) electromagnetic calorimeter. It also calls for a minimized lateral electromagnetic shower size, by minimizing the Moliere radius to efficiently separate photons, electrons and charge hadrons~\cite{calor:2018}.
+SiD's reliance on particle flow calorimetry to obtain a jet energy resolution of  $\sim$3\% demands a highly segmented (longitudinally and laterally) electromagnetic calorimeter. It also calls for a minimized lateral electromagnetic shower size, by minimizing the Moliere radius to efficiently separate photons, electrons and charged hadrons~\cite{calor:2018}.
 
 The SiD ECal design employs thirty longitudinal layers, the first twenty each with 2.50 mm tungsten alloy thickness and 1.25 mm readout gaps, and the last ten with 5.00 mm tungsten alloy.  The total depth is 26 radiation lengths, providing good containment of electromagnetic showers.
 
-Simulations have shown the energy resolution for electrons or photons to be well described by 0.17 / $\sqrt{E}$ $\oplus$ 0.009, degrading some at higher energies due to changes in sampling fraction and a small leakage.
+Simulations have shown the energy resolution for electrons or photons
+to be well described by 0.17 / $\sqrt{E}$ $\oplus$ 0.009, degrading a
+bit  at higher energies due to changes in sampling fraction and a small leakage.
 
-The baseline design employs tiled, large, commercially produced silicon sensors (currently assuming 15 cm wafers). The sensors are segmented into pixels that are individually read out over the full range of charge depositions. The complete electronics for the pixels is contained in a single chip, the KPiX ASIC~\cite{Brau:2013yb}, which is bump bonded to the wafer. The low beam-crossing duty cycle ($10^{-3}$ ) allows reducing the heat load using power pulsing, thus allowing passive thermal management within the ECal modules.
+The baseline design employs tiled, large, commercially produced silicon sensors (currently assuming 15 cm wafers). The sensors are segmented into pixels that are individually read out over the full range of charge depositions. The complete electronics for the pixels is contained in a single chip, the KPiX ASIC~\cite{Brau:2013yb}, which is bump bonded to the wafer. The low beam-crossing duty cycle ($10^{-3}$) allows reducing the heat load using power pulsing, thus allowing passive thermal management within the ECal modules.
 
 Bench tests of the KPiX bonded sensor  with a cosmic ray telescope trigger yielded 
 a Landau distribution with a peak of the signal at about 4 fC is consistent with our expectation for minimum-ionizing particles (MIP) passing through the fully-depleted 320 $\mu$m thick sensors. Crosstalk between channels has been managed and the 
@@ -276,7 +375,7 @@ alternating steel plates and active layers. The baseline choice for the active
 layers is scintillator tiles read out via silicon photomultipliers. For this approach SiD is closely following the analog hadron calorimeter developments within the CALICE collaboration. In this context, the simulated HCAL energy resolution has been shown to reproduce well the results from the CALICE AHCAL prototype module exposed to pion beams.
 
 \subsubsection{Forward calorimeters}
-
+\label{susub:det:forward}
 Two special calorimeters are foreseen in the very forward region: LumiCal for a precise luminosity measurement, and BeamCal for the fast estimation of the collision parameters and tagging of forward-scattered beam particles. LumiCal and BeamCal are both compact cylindrical electromagnetic calorimeters centered on the outgoing beam, making use of semiconductor-tungsten technology. BeamCal is placed just in front of the final focus quadrupole and LumiCal is aligned with the electromagnetic calorimeter endcap. 
 
 LumiCal makes use of conventional silicon diode sensor readout. It is a precision device with challenging requirements on the mechanics and position control, and must achieve a small Moliere radius to reach its precision targets. Substantial work has been done to thin the silicon sensor readout planes within the silicon-tungsten assembly. Dedicated electronics with an appropriately large dynamic range is under development.
@@ -313,7 +412,7 @@ time-saving effort for solenoid construction.
 \subsubsection{Muon System}
 The flux-return yoke is instrumented with position sensitive detectors to
 serve as both a muon filter and a tail catcher. The total area to be
-instrumented is very significant - several thousand square meters. Technologies
+instrumented is very significant -- several thousand square meters. Technologies
 that lend themselves to low-cost large-area detectors are therefore under
 investigation. Particles arriving at the muon system have seen large amounts of
 material in the calorimeters and encounter significant multiple scattering
@@ -324,7 +423,11 @@ The scintillator technology uses extruded scintillator readout with wavelength
 shifting fibre and SiPMs, and has been successfully demonstrated. 
 Simulation studies have shown that nine or more layers of sensitive detectors 
 yield adequate energy measurements and good muon-detection efficiency and purity.
-The flux-return yoke itself has been optimised with respect to the uniformity of the central solenoidal field, the external fringe field, and ease of the iron assembly. This was achieved by separating the yoke barrel and end sections along a 30 degree line.
+The flux-return yoke itself has been optimised with respect to the
+uniformity of the central solenoidal field, the external fringe field,
+and ease of the iron assembly. 
+This was achieved by separating the  barrel and end sections of the
+yoke along a 30 degree line.
 
 \subsubsection{The Machine-Detector Interface}
 A time-efficient implementation of the push-pull model of
@@ -333,13 +436,14 @@ machine systems, in particular the interaction region (IR) magnets, the
 cryogenics, the alignment system, the beamline shielding, the detector design
 and the overall integration. The minimal functional requirements and interface
 specifications for the push-pull IR have been successfully developed and
-published~\cite{Platform_Agreement,IR_Layout}, to which all further IR design
-work on both the detectors and machine sides are constrained.
+published~\cite{Platform_Agreement,IR_Layout}.  All further IR design
+work on both the detectors and machine sides are constrained by these 
+specifications. 
 
 \subsection{The ILD Detector}
 The ILD detector is a proposed detector for the ILC. It has been developed by a proto-collaboration with the goal to develop and eventually propose a fully integrated detector for the ILC. 
 
-The ILD detector concept has been designed as a multi-purpose detector. It should deliver excellent physics performance for collision energies between 90~Gev and 1~TeV, the largest possible energy reach of the ILC. The ILD detector has been optimized to perform excellently at the initial ILC energy of 250 GeV (for more details see \cite{ild:bib:ILDloi}, \cite{ild:bib:ILDDBD}). An artists view of the ILD detector is shown in Fig.~\ref{fig:ild_3d}. 
+The ILD detector concept has been designed as a multi-purpose detector. It should deliver excellent physics performance for collision energies between 90~Gev and 1~TeV, the largest possible energy reach of the ILC. The ILD detector has been optimized to perform excellently at the initial ILC energy of 250 GeV (for more details see \cite{ild:bib:ILDloi,ild:bib:ILDDBD}). An artists view of the ILD detector is shown in Fig.~\ref{fig:ild_3d}. 
 \begin{figure}
     \centering
     \includegraphics[width=0.35\textwidth]{../figures/ILD.pdf}
@@ -347,84 +451,158 @@ The ILD detector concept has been designed as a multi-purpose detector. It shoul
     \label{fig:ild_3d}
 \end{figure}
 
-The science which will be done at the ILC requires a true multi-purpose detector. A central element of the design has been the capability of the detector to reconstruct precisely complex hadronic final states as well as more events with leptons or missing energy in the final state. Thus traditional precision detector elements as vertex detectors are combined in an overall design philosophy called particle flow, which has been developed for optimal hadronic event reconstruction.
+The science which will be done at the ILC requires a detector that
+truly covers all aspects of the $\ee$ events.  The tracking philosophy
+is very different from that of SiD, as will be discussed in a moment.
+However, similarly to SiD, the ILD detector has been designed to combine the traditional
+precision detector 
+elements such as as vertex detectors and trackers in an overall design
+philosophy 
+that optimizes jet reconstruction using particle flow. 
+
 
 \subsubsection{Vertexing and Tracking}
 \label{subsubsec:ILDtracker}
-The high precision vertex detector positioned very closely to the interaction point is followed by a hybrid tracking layout, realised as a combination of silicon tracking with a time projection chamber, and a calorimeter system. The complete system is located inside a large solenoid providing a magnetic field of 3.5-4 T. On the outside of the coil, the iron return yoke is instrumented as a muon system and as a tail catcher calorimeter. 
+The high precision vertex detector positioned very closely to the
+interaction point is followed by a hybrid tracking layout, realised as
+a combination of silicon tracking with a time projection chamber, and
+a calorimeter system. The complete system is located inside a large
+solenoid providing a magnetic field of 3.5-4 T. On the outside of the
+coil, 
+the iron return yoke is instrumented as a muon system and as a tail catcher calorimeter. 
 
-The vertex detector is realised as a multi-layer pixel-vertex detector (VTX), with three super-layers each comprising two layers. The detector has a pure barrel geometry. To minimise the occupancy from background hits,
+The vertex detector is realised as a multi-layer pixel-vertex detector
+(VTX), with three super-layers, each comprising two layers. The
+detector
+ has a pure barrel geometry. To minimise the occupancy from background hits,
 the first super-layer is only half as long as the outer two. Whilst the underlying detector technology has not yet been decided, 
-the VTX is optimised for point resolution and minimum material thickness. 
+the VTX is optimised for point resolution and
+ minimum material thickness. 
 	
 A system of silicon strip and pixel detectors surrounds the VTX detector. In the barrel, two layers of silicon strip detectors (SIT) are arranged to bridge the gap between the VTX and the TPC. In the forward region, a system of two silicon-pixel disks and five silicon-strip disks (FTD) provides low angle tracking coverage.
 
-A distinct feature of ILD is a large volume time projection chamber (TPC) with up to 224 points per track. The TPC is optimised for 3-dimensional point resolution and minimum material in the field cage and in the end-plate. It also allows d$E$/d$x$ based particle identification. At the ILC a TPC has a number of specific strength, which make this type of detector attractive. A time projection chamber offers true three-dimensional points, and offers many of those along a charged particle trajectory. The intrinsic disadvantage of a TPC, its slow readout speed, does not really harm the performance at the ILC, since the time between bunches is relatively long, with around 300~ns. On the other hand the large number of points offer superb pattern recognition capabilities, and allows the detailed reconstruction of kinks or decays in flight within its volume. This can be achieved at a very low material budget, rather uniformly distributed over the sensitive volume. The excellent performance of the system is particularly striking at low momenta, at a few GeV and below, where the combination of three dimensional reconstruction and low material allows the efficient and precise reconstruction of tracks. 
+A distinct feature of ILD is a large volume time projection chamber
+(TPC) with up to 224 points per track. The TPC is optimised for
+3-dimensional point resolution and minimum material in the field cage
+and in the end-plate. It also allows d$E$/d$x$-based particle
+identification. At the ILC,  a TPC has a number of specific strengths
+ which make this type of detector attractive. A time projection
+ chamber offers true three-dimensional points, and offers many of
+ those along a charged particle trajectory. The intrinsic disadvantage
+ of a TPC, its slow readout speed, does not harm the
+ performance at the ILC, since the time between bunches is relatively
+ long, around 300~ns. On the other hand the large number of
+ points offer superb pattern recognition capabilities, and allows the
+ detailed reconstruction of kinks or decays in flight within its
+ volume. This can be achieved at a very low material budget, rather
+ uniformly distributed over the sensitive volume. The excellent
+ performance of the system is particularly striking at low momenta, at
+ a few GeV and below, where the combination of three dimensional
+ reconstruction and low material 
+allows the efficient and precise reconstruction of tracks. 
 
-Outside the TPC a system of Si-strip detectors in between the TPC and the ECAL (SET), provide additional high precision space points which improve the tracking performance and provide additional
-    redundancy in the regions between the main tracking volume and the calorimeters. 
+Outside the TPC, a system of Si-strip detectors in between the TPC and
+the ECAL (SET), provide additional high precision space points which
+ improve the tracking performance and provide additional
+    redundancy in the regions between the main tracking volume and the
+    calorimeters. 
+
 \subsubsection{Calorimetry}
-A highly segmented electromagnetic calorimeter (ECAL) provides up to 30 samples in depth and small transverse cell size, split into a barrel and an end cap system. For the absorber Tungsten has been chosen, for the sensitive area silicon diodes or scintillator strips are considered.
-%\thisfloatsetup{floatwidth=\SfigwFull,capposition=beside}
-\begin{figure}[t!]
-\begin{tabular}{cc}
-\includegraphics[width=0.52\hsize,viewport={0 -10 600 500},clip]{chapters/figures/material-budget-new.pdf} &
-\includegraphics[width=0.5\hsize]{chapters/figures/intlen_ILD_o1_v05.pdf}
-\end{tabular}
-\caption[Material in the ILD detector]{Left: Average total radiation length of the material
-  in the tracking detectors as a function of polar angle. Right: Total interaction length in the detector, up to the end of the calorimeter system, and including the coil of the detector.}
-%\end{figure}
-\label{fig:intro:material}
-%\begin{tabular}{cc}
 
-\end{figure}
+A highly segmented electromagnetic calorimeter (ECAL) provides up to
+30 samples in depth and small transverse cell size, split into a
+barrel and an end cap system. For the absorber, Tungsten has been
+chosen; for the sensitive area, silicon diodes 
+or scintillator strips are considered.
+
+% %\thisfloatsetup{floatwidth=\SfigwFull,capposition=beside}
+% \begin{figure}[t!]
+% \begin{tabular}{cc}
+% \includegraphics[width=0.52\hsize,viewport={0 -10 600 500},clip]{chapters/figures/material-budget-new.pdf} &
+% \includegraphics[width=0.5\hsize]{chapters/figures/intlen_ILD_o1_v05.pdf}
+% \end{tabular}
+% \caption[Material in the ILD detector]{Left: Average total radiation length of the material
+%   in the tracking detectors as a function of polar angle. Right: Total
+%   interaction
+%  length in the detector, up to the end of the calorimeter system, and including the coil of the detector.}
+% %\end{figure}
+% \label{ild:fig:intro:material}
+% %\begin{tabular}{cc}
+
+% \end{figure}
 
 This is followed by a segmented hadronic calorimeter (HCAL) with up to 48 longitudinal samples and small transverse cell size. Two 
-options are considered, both based on a Steel-absorber structure. One option uses scintillator tiles of $3 \times 3$\,cm$^2$, 
+options are considered, both based on a steel-absorber structure. One option uses scintillator tiles of $3 \times 3$\,cm$^2$, 
 which are read out with an analogue system. The second uses a gas-based readout which allows a $1 \times 1$\,cm$^2$ 
 cell geometry with a semi-digital readout of each cell. 
 
-At very forward angles, below the coverage provided by the ECAL and the HCAL, a system of high precision and radiation hard calorimetric detectors (LumiCAL, BeamCAL, LHCAL) is foreseen. These
-extend the calorimetric coverage to almost $4\pi$, measure the luminosity, and  monitor the quality of the colliding beams.
+At very forward angles, below the coverage provided by the ECAL and
+the HCAL, a system of high precision and radiation hard calorimetric
+detectors (LumiCAL, BeamCAL, LHCAL)
+ is foreseen. The LumiCAL and BeamCAL use the design presented in
+ Sec.~\ref{subsub:det:forward}.    These detectors 
+extend the calorimetric coverage to almost $4\pi$, measure the
+luminosity, and  monitor
+ the quality of the colliding beams.
 
 \subsubsection{Coil and Yoke}
 A large volume superconducting coil surrounds the calorimeters, creating an axial $B$-field of nominally 3.5-4\,Tesla.
 
-An iron  yoke, instrumented with scintillator strips or resistive plate chambers (RPCs), returns the magnetic flux of the solenoid, and, at the same time, serves as a muon filter, muon detector and tail catcher calorimeter.
+An iron  yoke, instrumented with scintillator strips or resistive
+plate chambers (RPCs), returns the magnetic flux of the solenoid, and,
+at the same
+ time, serves as a muon filter, muon detector and tail catcher calorimeter.
 
-%\thisfloatsetup{floatwidth=\SfigwFull,capposition=beside}
-\begin{figure}[b!]
-\begin{tabular}{cc}
+% %\thisfloatsetup{floatwidth=\SfigwFull,capposition=beside}
+% \begin{figure}[b!]
+% \begin{tabular}{cc}
 
-\includegraphics[width=0.5\hsize]{chapters/figures/deltaInvP_all_fits.png} &
-\includegraphics[width=0.5\hsize]{chapters/figures/evalZ-lcfiweights_qq91new_v02-test.pdf}
-\end{tabular}
-\caption{\label{ild:fig:intro:tracking}(left) Momentum resolution for the ILD detector concept, as a function of the transverse momentum of the particle. (right) Flavour tagging efficiency versus purity for bottom events in sample of Z decays at 91\,GeV, and for charm events with only bottom background. )}
-\end{figure}
-
-
-
-\begin{figure}[t!]
-
-\includegraphics[width=0.8\hsize]{chapters/figures/ild01_o1_pflow.png}
-
-\caption{\label{ild:fig:intro:pflow}Fractional jet energy resolution
-    plotted against $|\cos\theta|$ where theta is the polar angle of the thrust axis of the event. }
-\end{figure}
-
-%The main parameters of the ILD detector are summarised in Table~\ref{ild:tab:barrelpara} and table~\ref{ild:tab:endcappara}.
-%\begin{sidewaystable}[thb]
-
-\subsubsection{ILD Performance}
-The performance of the ILD concept has been extensively studied using a detailed GEANT4 based simulation model and sophisticated reconstruction tools. Backgrounds have been taken into account to the best of current knowledge. 
-
-the key technologies proposed for the ILD detector have been developed in close cooperation with R\&D collaborations and have been extensively tested. The performance numbers of key systems are based on results from prototypes, whereever possible, and extraploated to the full detector performance. This strong check against experimental results ensures that the performance numbers are reliable and are considered a realistic estimate of the ultimate detector performance. 
+% \includegraphics[width=0.5\hsize]{chapters/figures/deltaInvP_all_fits.png} &
+% \includegraphics[width=0.5\hsize]{chapters/figures/evalZ-lcfiweights_qq91new_v02-test.pdf}
+% \end{tabular}
+% \caption{\label{ild:fig:intro:tracking}(left) Momentum resolution for the ILD detector concept, as a function of the transverse momentum of the particle. (right) Flavour tagging efficiency versus purity for bottom events in sample of Z decays at 91\,GeV, and for charm events with only bottom background. )}
+% \end{figure}
 
 
-A key characteristics of the detector is the amount of material in the detector. Particle flow requires a thin tracker, to minimise interactions before the calorimeters, and thick calorimeters, to fully absorb the showers. Figure~\ref{ild:fig:intro:material}~(left) shows the material in the detector in radiation lengths, until the entry of the calorimeter. The right plot shows the total interaction length including the calorimeter system. 
 
-The performance of the tracking system can be summarised by its combined momentum resolution, shown in Figure~\ref{ild:fig:intro:tracking}~(left). A resolution of $\sigma_{1/p_T} = 2 \times 10^{-5}$\,GeV$^{-1}$ has been achieved for high momenta. For many physics studies the tagging of long lived particles is of key importance. Several layers of pixel detectors close to the IP allow the reconstruction of displaced vertices, as shown in Figure~\ref{ild:fig:intro:tracking}~(right).
+% \begin{figure}[t!]
 
-Calorimeter system and tracking system together enter into the particle flow performance. The performance of the ILD detector for different energies and as a function of the polar angle is shown in Figure~\ref{ild:fig:intro:pflow}. 
+% \includegraphics[width=0.8\hsize]{chapters/figures/ild01_o1_pflow.png}
 
-The few plots shown in this section illustrate the anticipated performance of the detector and illustrate the potential for precision measurements with the ILD detector. 
+% \caption{\label{ild:fig:intro:pflow}Fractional jet energy resolution
+%     plotted against $|\cos\theta|$ where theta is the polar angle of the thrust axis of the event. }
+% \end{figure}
+
+% %The main parameters of the ILD detector are summarised in Table~\ref{ild:tab:barrelpara} and table~\ref{ild:tab:endcappara}.
+% %\begin{sidewaystable}[thb]
+
+% \subsubsection{ILD Performance}
+% The performance of the ILD concept has been extensively studied using a detailed GEANT4 based simulation model and sophisticated reconstruction tools. Backgrounds have been taken into account to the best of current knowledge. 
+
+% The key technologies proposed for the ILD detector have been developed in close cooperation with R\&D collaborations and have been extensively tested. The performance numbers of key systems are based on results from prototypes, whereever possible, and extraploated to the full detector performance. This strong check against experimental results ensures that the performance numbers are reliable and are considered a realistic estimate of the ultimate detector performance. 
+
+
+% A key characteristics of the detector is the amount of material in the detector. Particle flow requires a thin tracker, to minimise interactions before the calorimeters, and thick calorimeters, to fully absorb the showers. Figure~\ref{ild:fig:intro:material}~(left) shows the material in the detector in radiation lengths, until the entry of the calorimeter. The right plot shows the total interaction length including the calorimeter system. 
+
+% The performance of the tracking system can be summarised by its combined momentum resolution, shown in Figure~\ref{ild:fig:intro:tracking}~(left). A resolution of $\sigma_{1/p_T} = 2 \times 10^{-5}$\,GeV$^{-1}$ has been achieved for high momenta. For many physics studies the tagging of long lived particles is of key importance. Several layers of pixel detectors close to the IP allow the reconstruction of displaced vertices, as shown in Figure~\ref{ild:fig:intro:tracking}~(right).
+
+% Calorimeter system and tracking system together enter into the particle flow performance. The performance of the ILD detector for different energies and as a function of the polar angle is shown in Figure~\ref{ild:fig:intro:pflow}. 
+
+% The few plots shown in this section illustrate the anticipated performance of the detector and illustrate the potential for precision measurements with the ILD detector. 
+
+
+
+Key plots to evaluate the projected performances of the ILD and SiD
+detectors will be presented in the following chapter.    These plots
+will also illustrate the successive stages of event reconstruction
+from raw data and will describe the level of detail that we have
+considered in making these estimates of performance.  
+As we have already noted, the ILD and SiD detectors include many
+technologies that have been developed in close cooperation with R\&D
+collaborations 
+and have been extensively tested. For both detectors, the performance numbers 
+of key systems are based on results from prototypes, whereever 
+possible, and extraploated to the full detector performance. This
+strong 
+check against experimental results ensures that the performance 
+numbers are reliable and are considered a realistic estimate of the ultimate detector performance. 

@@ -19,7 +19,7 @@
 %  4)  latex apssamp.tex
 %
 \documentclass[%
- reprint,
+reprint,
 %superscriptaddress,
 %groupedaddress,
 %unsortedaddress,
@@ -43,15 +43,11 @@ nofootinbib,
 \usepackage{tabularx}                                 % tables with automatic width calculation
 \usepackage{graphicx}% Include figure files
 \usepackage{xcolor}
-\usepackage{hepunits}
-\usepackage{dcolumn}% Align table columns on decimal point
-\usepackage{wasysym}
-\usepackage{bm}% bold math
-\usepackage{subfigure}
-\usepackage{eurosym}
+ \usepackage{eurosym}
+%\linenumbers
 %\usepackage{hyperref}% add hypertext capabilities
-%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
-%\linenumbers\relax % Commence numbering lines
+\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+\linenumbers\relax % Commence numbering lines
 
 %\usepackage[showframe,%Uncomment any one of the following lines to test 
 %%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
@@ -77,17 +73,18 @@ nofootinbib,
 \thanks{Version 1.3}%
 
 \author{\textbf{Prepared by:}
- }
+Ties Behnke$^1$, Mikael Berggren$^1$, James Brau$^2$, Keisuke Fujii$^{3}$, Juan Fuster$^{4}$, Frank Gaede$^{1}$, Christophe Grojean$^{1}$, Benno List$^{1}$, Jenny List$^{1}$, Shinichiro Michizono$^{3}$, Akiya Miyamoto$^{3}$, Michael Peskin$^{5}$, Roman Poeschl$^{6}$, Frank Simon$^{7}$, Junping Tian$^{8}$, Marcel Vos$^{4}$, Andrew White$^{9}$, Graham Wilson$^{10}$ and Hitoshi Yamamoto$^{11}$  }
 % \altaffiliation[Also at ]{Physics Department, XYZ University.}%Lines break automatically or can be forced with \\
 %\author{et.al.}%
-% \email{Second.Author@institution.edu}https://www.overleaf.com/project/5b0c51828e746f209754cf04
-\affiliation{\vspace{.2 cm} }
+% \email{Second.Author@institution.edu}
+\affiliation{\vspace{.2 cm}$^1$DESY, $^2$U. Oregon, $^{3}$KEK, $^{4}$IFIC, U. Valencia-CSIC, $^5$SLAC, $^6$LAL-Orsay/CNRS, $^7$Max Planck, Munich, $^8$U. Tokyo,   $^{9}$U. Texas, Arlington, $^{10}$U. Kansas, $^{11}$U. Tohoku }
+
 
  % Authors' institution and/or address\\
 % This line break forced with \textbackslash\textbackslash
 %
 
-\collaboration{Linear Collider Collaboration}%\noaffiliation
+\collaboration{Representing the Linear Collider Collaboration and the global ILC community.}%\noaffiliation
 
 \date{\today}% It is always \today, today,
              %  but any date may be explicitly specified
@@ -141,7 +138,8 @@ Input from the International Linear Collider community for the European Strategy
 \section{\label{sec:detectors}Detectors }
 \input{./chapters/detectors.tex}
 
-\section{\label{sec:software}Software and Computing}
+\section{\label{sec:software} Computing, Event Reconstruction, and
+  Detector Performance}
 
   
    
