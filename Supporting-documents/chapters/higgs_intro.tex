@@ -1,11 +1,8 @@
-The compelling physics case in Section~\ref{sec:physics} is constructed 
-based on a set of solid estimates for measurements of various observables at the ILC. 
-The observables related to Higgs physics are outlined in Table~\ref{tab:higgserrors}, 
-mostly $\sigma$ and $\sigma\cdot BR$ measurements
-using the Higgs production processes shown in Fig. \ref{fig:HiggsProdILC},
- and will be explained in detail in this section. 
-By solid it means that the estimates are obtained after having performed
-full simulation of experimental physics analyses. 
+
+
+
+
+
 
 \begin{figure}
 \begin{center}
@@ -18,57 +15,25 @@ from~\cite{Baer:2013cma}.}
 \label{fig:HiggsProdILC}
 \end{figure}
 
-Section~\ref{sec:software} has introduced a few aspects of the full simulation
-which can be defined as ``{\it detector simulation level}" and are absolutely essential: 
-realistic interaction between each final state particle and 
-any part of the detector that the particle passes through, including new creation of
-particles during the interaction; realistic algorithms for tracking,
-particle flow analysis, vertex reconstruction and particle identification; 
-resulting realistic performance of various detector resolutions for track momentum, jet energy,
-and impact parameters, as well as of various efficiencies for tracking, flavor tagging, 
-and isolated lepton finder. 
 
-This section will introduce the other aspects of the full simulation which can be
-defined as ``{\it event selection level}" and are mainly dealing with discrimination 
-between signal and background events. As expected, the detailed strategies 
-at the event selection level highly depend on what kind of observables we are going to
-measure, and are elaborated in each of the following sub-sections. Before that, it is worth
-emphasizing a few general features included in the full simulation analyses here
-that are important to reach a solid estimate
-and often are not well noticed or not fully captured in 
-many fast simulation analyses in the literatures:
-%{\color{red} JL: shouldn't the modelling of these be described in the software and MC sample chapter? We can mention them again here to rub the point in, of course, but the basic explanations ``[to be filled]'' should be in the previous chaper...}
-%{JT: no, [to be filled] is not for "the basic explanations"}
-\begin{itemize}
-\item {\it beamstrahlung and ISR}
-are implemented in the event generators for both signal and background processes,
-as introduced in previous section. These effects are important for estimation of 
-signal and background contributions in the analyses that make use of the 
-nominal value of center-of-mass energy. A representative example is seen in
-Section~\ref{sec:higgs:sigmazh} Fig.~\ref{fig:RecoilMassLep250} for recoil
-mass calculation: both beamstrahlung and ISR effects will drag signal events
-from the more sensitive peak region to the less sensitive tail region, and meanwhile
-will induce more background contribution in the signal region.
-\item {\it overlay of beam background events} is implemented in every signal 
-and background events. This will clearly affect the performance of 
-reconstructed variables related to jets hence degrade the signal and background
-discrimination. There is some method to remove partially the overlay, which will 
-be introduced in next section. 
-\item {\it full standard model background} is checked in all the analyses, 
-in order not to miss any significant contribution. For example 2-fermion 
-events after parton shower can well become background of 4-fermion signal.
-For another example, often the background contribution in Higgs observables
-comes from tail part of Breit-Wigner structure for $Z$ propagator, hence neither neglecting 
-$Z$ natural width nor ignoring similar diagram from $\gamma$ propagator is correct.
-\item {\it realistic jet clustering and jet paring} algorithms often become the 
-limiting factors for many of the analyses with $\ge 4$ jets in the signal final states.
-The confusion between two color singlets, for instance $Z$ and $h$ in $\ee\to Zh\to 4 jets$,
-could produce much wider spread on the reconstructed di-jet invariant masses 
-than that by the pure detector resolution. Hence a simply smearing on di-jet mass
-at parton level according to the detector resolution is often too optimistic. 
-\item {\it control of systematics} is taken into account in the design of every
-selection cut.
-\end{itemize}
+The physics case for the precision study for the Higgs
+boson
+presented  in Section~\ref{sec:physics}
+will be realized through the measurement of  total cross sections and 
+$\sigma\cdot BR$  values for the various final-states.  The major
+Higgs production cross sections at the ILC are shown in
+Fig.~\ref{fig:HiggsProdILC} as a function of centre of mass energy for
+the optimal choice of  ILC beam polarization.    In
+Tab.~\ref{tab:higgserrors},  we present our estimates for the
+statistical errors that will be obtained for the total cross section for $\ee\to ZH$ and for
+the $\sigma\cdot BR$s for  this process and the $WW$ fusion process, 
+for a reference luminosity sample of 
+250~\ifb\ and for three different ILC energies.  These estimates are
+based on full-simulation analyses using the tools presented in
+Sec.~\ref{sec:software}.     The purpose of this
+section is explain how these numbers are obtained, what the factors
+are  that limit them, and how these limitations might be relaxed.
+
 
 \begin{table}[htb]
 \begin{center}
@@ -142,20 +107,6 @@ extrapolated from full simulation results. }
 %\end{center}
 %\end{table}
 
-As another general comment from the simulation study presented in this section, 
-it is useful to point out that the precision Higgs measurements 
-are going to be much easier at a lepton collider than that at a hadron collider.
-Table~\ref{tab:ILCEffSB} gives the typical signal efficiencies and signal over
-background ratios (S/B) after final cuts. The difference with
-LHC can be clearly seen using the example of $h\to b\bar{b}$ measurements
-as shown in Fig.~\ref{fig:LHCILCHbb}. The decay of $h\to b\bar{b}$
-has been discovered by ATLAS (CMS)~\cite{Aaboud:2018zhk,Sirunyan:2018kst} 
-after around 4 million Higgs events are produced
-with a significance of 5.4$\sigma$ (5.5$\sigma$). In contrast, at the ILC, 
-with only 400 Higgs events which will be produced with an integrated luminosity of 1.3 fb$^{-1}$
-corresponding to around 2 days of running, the decay of $h\to b\bar{b}$ will be 
-measured with a similar significance, around 5.2$\sigma$ according to the full 
-simulation result~\cite{Ogawa:2018}.
 
 \begin{table}
 \begin{center}
@@ -180,22 +131,115 @@ representative Higgs measurements (first column) at the ILC.}
 \end{center}
 \end{table}
 
+
 \begin{figure}
 \begin{tabular}[c]{c}
 \includegraphics[width=0.85\hsize]{chapters/figures/ATLAS_VH_bb.pdf} \\
 \includegraphics[width=0.85\hsize]{chapters/figures/qqH_bb250_ILC.pdf}
 \end{tabular}
-  \caption{Upper: signal $h\to b\bar{b}$ and background events in different categories of S/B
+  \caption{Upper: signal $H\to b\bar{b}$ and background events in different categories of S/B
   measured by ATLAS~\cite{Aaboud:2018zhk,Sirunyan:2018kst} using LHC Run 2 data; lower: signal $h\to b\bar{b}$ 
   and background events in the $b\bar{b}$ mass spectrum expected from the 
   ILC full simulation~\cite{Ogawa:2018}.}
   \label{fig:LHCILCHbb}
 \end{figure}
 
-This section is organized as follows. In Sec.~\ref{subsec:higgs_common} the common
-procedures for event selections will be introduced. In Sec.~\ref{subsec:higgs_ana} the 
-analyses for main Higgs observables will be introduced. The analysis strategies and 
-selection cuts in some representative channels are discussed in great detail. 
-In Sec.~\ref{subsec:higgs_syst} the systematic errors which are included in 
-the global fit are introduced. In Sec.~\ref{subsec:higgs_improve} some optimistic estimates
-from improvements of key algorithms in future are introduced.
+
+
+
+We begin from the observation that 
+precision Higgs measurements will be much easier to obtain 
+at a lepton collider than  at a hadron collider.
+Table~\ref{tab:ILCEffSB} gives the typical signal efficiencies for ILC
+analyses and the corresponding signal to
+background ratios (S/B) after final cuts. The difference with
+LHC can be clearly seen using the example of $H\to b\bar{b}$ measurements.
+The decay of $H\to b\bar{b}$
+has been discovered by ATLAS and
+CMS~\cite{Aaboud:2018zhk,Sirunyan:2018kst} 
+with a significance of 5.4$\sigma$, 5.5$\sigma$, respectively, 
+after producting  about  4 million Higgs events per experiment.  At
+the ILC,  with only 400 Higgs events which will be produced with an
+ integrated luminosity of 1.3 fb$^{-1}$ (corresponding to 2 days of
+ running time),
+the decay of $H\to b\bar{b}$ will be 
+measured with a similar significance, around 5.2$\sigma$ according to the full 
+simulation result~\cite{Ogawa:2018}.  The S/B ratios for these
+analyses are illustrated in  Fig.~\ref{fig:LHCILCHbb}. Clearly, if one
+wishes to measure the rate for $h\to b\bar b$,
+there are strong advantages in starting from a situation in which the
+signal stands well above any background process that would need to be
+controlled.   The challenge of physics at a linear collider is to make use of this
+advantage in the most optimal way and realize the potential to achieve 
+very high precision.
+
+
+A full simulation analysis contains two components.  The first is the 
+detector simulation.  This provides  the 
+realistic interactions between each final state particle and 
+any part of the detector that the particle passes through, including new creation of
+particles during the interaction; concrete algorithms for tracking,
+particle flow analysis, vertex reconstruction and particle identification; 
+the resulting performance of the various detector resolutions for track momentum, jet energy,
+and impact parameters; and the  efficiencies for tracking, flavor tagging, 
+and isolated lepton finding.  These aspects have already been
+described in Section~\ref{sec:software}. The second component
+ is the event seletion, that is, the algorithms
+for discriminating
+between signal and background events. That will be our main concern in
+the discussion of this section.
+
+First, however, we would like to emphasize to the reader a number
+of effects that are included in the detector modelling and event
+generation, and that must be included for a solid estimate of
+detection efficiencies and signal-background discrimination:
+\begin{itemize}
+\item {\it beamstrahlung and ISR}
+are implemented in the event generators for both signal and background processes.
+These effects are important for estimation of 
+signal and background contributions in the analyses that make use of the 
+nominal value of the centre-of-mass energy. A representative example is seen in
+Section~\ref{sec:higgs:sigmazh}, Fig.~\ref{fig:RecoilMassLep250}, for
+the determination of the Higgs boson mass from $Z$ recoil. 
+Both beamstrahlung and ISR effects will drag signal events
+from the more sensitive peak region to the less sensitive tail region,
+and at the same time will induce more background contribution in the signal region.
+\item {\it overlay of beam background events} is implemented in every signal 
+and background event sample.  This will affects the performance of 
+reconstructed variables related to jets and  hence degrades the signal and background
+discrimination. There is a method to partially remove the effect of
+this events which will 
+be introduced in next section. 
+\item {\it full standard model background} is checked in all of  the
+  analyses to be described,
+in order not to miss any significant contribution. For example,  2-fermion 
+events developed with a parton shower can   become background for the  4-fermion signal.
+Another example is the background contribution to  Higgs observables
+that 
+comes from tail of the Breit-Wigner structure of a $Z$ boson in
+$\ee\to ZZ$.   It is not correct either to neglecting the 
+$Z$ natural width nor to ignore the  similar diagram with the $\gamma$ propagator.
+\item {\it explicit jet clustering and jet paring} algorithms are used
+  in all analyses.   These often become the 
+limiting factors the analyses with 4 or more jets  in the final state.
+The confusion between two color singlets, for instance $Z$ and $h$ in $\ee\to Zh\to 4 jets$,
+could produce a much wider spread of the reconstructed dijet invariant mass
+than that due to  the pure detector resolution. Hence,  simply
+smearing the  dijet mass variable 
+at the parton level according to the detector resolution is often too optimistic. 
+\item {\it control of systematics} is taken into account in the design of every
+selection cut.
+\end{itemize}
+
+
+
+This section is organized as follows. In
+Sec.~\ref{subsec:higgs_common},  we will introduce  the common
+procedures for event selections will be
+introduced. Sec.~\ref{subsec:higgs_ana} will discuss the 
+analyses for the main Higgs observable. The analysis strategies and 
+selection cuts in some representative channels will be  discussed in great detail. 
+Section~\ref{subsec:higgs_improve}  presents some estimates for
+improvement of the key algorithms in the future.
+Section~~\ref{subsec:higgsself}  gives a dedicated discussion of the 
+ measurement of Higgs self-coupling.

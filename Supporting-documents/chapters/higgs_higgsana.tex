@@ -55,8 +55,8 @@ and $m_{ll}\in[73,120]$ GeV
 are applied to suppress $WW$ background events. 
 $ZZ$ as well as $WW$ and $\gamma Z$ background events are
 further suppressed by a dedicated BDT cut 
-which is trained using angular distributions of each muon,
-between two muon and muon pairs. After a final cut that requires
+which is trained using distributions of polar angle of each muon,
+angle between two muons, and polar angle of the muon pair. After a final cut that requires
 $m_X\in[110, 155]$ GeV, the remained signal and background events are 
 shown in the $m_X$ spectrum in Fig.~\ref{fig:RecoilMassLep250} 
 for the $Z\to\mu^+\mu^-$ channel, where the signal peak is clearly seen.
@@ -148,7 +148,7 @@ The uncertainties due to finite MC statistics on these values are below 0.14\%.}
 
 As pointed out in the very beginning of this analysis, the key idea which enables
 the inclusive $\sigma_{Zh}$ measurement is that the signal is tagged
-independent of Higgs decay modes. Hence it is crucial to examine whether all
+independently of Higgs decay modes. Hence it is crucial to examine whether all
 the pre-selection and final-selection cuts satisfy this criterion. This can be verified 
 by checking the signal efficiency for each individual Higgs decay mode
 and evaluating the efficiency uniformity among all the decay modes.
@@ -174,7 +174,20 @@ controlled at below 0.1\% (0.2\%) for the $\mu^+\mu^-h$ ($e^+e^-h$) channel,
 which is much smaller than the
 expected statistical uncertainty even at the full ILC250.
 
-[t.b.f.: a few comments on decay mode independence in hadronic recoil channel~\cite{}.]
+In the hadronic recoil channel, a more complicated strategy is applied in order to
+keep the analysis still decay modes independent. In stead of the simple categorization
+into visible and invisible modes in leptonic channel, the signal events in hadronic channel
+are categorized according to number of taus, number of leptons, and number of jets
+in the final state. In principle as long as the categories are inclusive we can design and 
+optimize the selection cuts category by category. The studies in~\cite{Tomita:2015} show
+that by varying the SM decay branching ratios by $\pm 5\%$ (absolute) in each decay mode,
+the bias on measured $\sigma_{Zh}$ is at most around 0.5\% relatively.  
+More efforts would be needed in future to further reduce the bias to a much lower level
+in particular even under assumption that there would be other unknown exotic decay modes.
+At higher $\sqrt{s}$, the hadronic recoil analysis generally becomes less challenging, because
+the two jets from primary $Z$ are more boosted hence are easier to 
+be identified from the Higgs decay products, as studied in~\cite{Thomson:2015jda,Miyamoto:2013zva}
+for $\sqrt{s}=350$ and 500 GeV.
 
 \subsubsection{$\sigma_{\nu\nu h}$ and $\sigma_{eeh}$}
 \label{subsubsec:higgs:nunuee}
@@ -221,8 +234,8 @@ The c-likeness is defined in a similar way.}
 
 The signal final states consist of two b-jets and two missing neutrinos.
 The pre-selection starts with vetoing events with one or more isolated 
-leptons. Then jet-clustering and flavor tagging are performed with number of
-expected jets equals 2. The two jets are required that in each jet there are at least 6
+leptons. Then jet-clustering and flavor tagging are performed with expected number of
+jets equals 2. The two jets are required that in each jet there are at least 6
 reconstructed particles and $Y_{3\to2}<0.1$, where $Y_{3\to 2}$ is the 
 jet distance value from 3 jets to 2 jets step defined by Durham algorithm. The 
 b-tagging of the two jets are required to be $btag1>0.8$ and $btag2>0.2$.
@@ -258,10 +271,11 @@ shown in~\ref{fig:vvHbb} (lower), thanks
 to a fact of 10 increase on cross section and much easier separation with $Zh$ ($Z\to\nu\bar{\nu}$).
 
 The third leading Higgs production process, $\ee\to e^+e^- h$ via $Z$-fusion, is not easy to measure
-due to its very small cross section at $\sqrt{s}=250$ GeV. 
+due to its very small cross section at $\sqrt{s}=250$ GeV, $\sigma_{eeh}=0.7$ fb. 
 A full simulation analysis is performed and 
-suggests that this process is already discoverable at $\sqrt{s}=250$ GeV
-with $\sigma_{eeh}$ measured at a significance of 9$\sigma$~\cite{}. 
+suggests that this process is already discoverable at $\sqrt{s}=250$ GeV with 2 ab$^{-1}$ and
+$\sigma_{eeh}$ can be measured with a significance of 9$\sigma$~\cite{Ogawa:2018}. 
+At $\sqrt{s}=500$ GeV, the significance will be significantly improved to 60$\sigma$.
 
 \subsubsection{$\mathrm{BR}(h\to b\bar{b}/c\bar{c}/gg)$}
 The capabilities of precise measurements for $\mathrm{BR}(h\to c\bar{c}/gg)$ 
@@ -398,10 +412,10 @@ The entry marked with ** is based on CEPC studies.}
 \end{figure}
 
 At $\sqrt{s}=500$ GeV, the $BR(h\to WW^*)$ measurement can also be improved significantly by including 
-Higgs production via $WW$-fusion. Two signal channels $e^+e^-\to\nu\bar{h}$, $h\to WW^*\to qqqq / qql\nu$
-have been studied based on full simulation. As an illustration, t
-he remained signal and background events in $WW^*\to qqqq$ channel
-after all cuts are plotted in Fig.~\ref{vvHWW500} in the reconstructed $h$ mass spectra. The signal peak
+Higgs production via $W$-fusion. Two signal channels $e^+e^-\to\nu\bar{\nu}h$, $h\to WW^*\to qqqq / qql\nu$
+have been studied based on full simulation. As an illustration, 
+the remained signal and background events in $WW^*\to qqqq$ channel
+after all cuts are plotted in Fig.~\ref{fig:vvHWW500} in the reconstructed $h$ mass spectra. The signal peak
 can be clearly observed with the dominant background from $\nu\bar{\nu}h$ ($h\to others$), 
 $\nu\bar{\nu}Z$ and $W^+W^-$. The average S/B ratio is around $1/1.6$ in the $M(h)\in(114,142)$ GeV 
 region. The estimate of statistical uncertainty for $\sigma_{\nu\bar{\nu}h}\cdot BR_{WW}$ is
@@ -428,7 +442,7 @@ The measurement of $BR_{\tau\tau}$ provides a very important probe of the Higgs 
 third generation fermions. And it is going to be one of the most precise Higgs measurements at the ILC, 
 thanks to the relatively large branching ratio and very clean signal and background separation. 
 The full simulation is performed using the leading Higgs production process $e^+e^-\to Zh$ and 
-all the decay channels from $Z\to q\bar{q} / \nu\bar{\nu}/ l^+l^-$; see details in in~\cite{Kawada:2015wea}.
+all the decay channels from $Z\to q\bar{q} / \nu\bar{\nu}/ l^+l^-$; see details in~\cite{Kawada:2015wea}.
 The $\tau$ is reconstructed using TaFinder and the four momenta of missing neutrinos are 
 calculated using collinear approximation. The remained signal and
  background events in $Z\to q\bar{q}$ channel are shown in 
@@ -570,6 +584,6 @@ The CP violating parameter $\tilde{b}$ can be determined with a statistical unce
 \includegraphics[width=0.85\hsize]{chapters/figures/ZH_anomHVV_ab.eps}
 \end{center}
   \caption{68\% and 95\% C.L. contour plots for fitted parameter $a$ versus $b$ at 250 GeV (left)
-  and 500 GeV (right) \cite{anomHVV}.}
+  and 500 GeV (right) \cite{Ogawa:2017bmg}.}
   \label{fig:ZHanomHVV2}
 \end{figure*}

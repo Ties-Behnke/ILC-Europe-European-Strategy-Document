@@ -11,8 +11,7 @@ for the pre-selection are typically as follows:
 %\begin{enumerate}[i]
 \item {\it isolated lepton finder}, which will try to reconstruct the isolated leptons
 in each event. The main algorithms are implemented in the processor called
-IsolatedLeptonTagging~\cite{}, based on a multivariate method [as introduced in 
-previous section?]. [in case not yet introduced]
+IsolatedLeptonTagging in the iLCSoft, based on a multivariate method.
 It starts with selecting energetic electron/muon (momentum $P>5$ GeV), 
 from the reconstructed particles collection, by requiring the particle has characteristic
 energy fractions deposited in each sub-detector, namely $E_{ecal}/E_{tot}$,
@@ -25,20 +24,39 @@ electron/muon is then further required to have impact parameters consistent with
 that from primary vertex. Double cones are then defined around that electron/muon,
 and variables such as the energies of the charged and neutral particles within a cone 
 are utilized for isolation requirement. The exact criteria for isolation 
-are realized by a MVA, trained using true isolated leptons and leptons from jets.
+are realized by a MVA, trained using true isolated leptons as signal 
+and leptons from jets as background.
 A cut on the MVA output is then required as the last step of isolated lepton finder.
-\item {\it isolated tau/photon selection}, using TaFinder and PandoraPFA.
+\item {\it isolated tau finder}, which will try to reconstruct the isolated taus. 
+The main algorithms are implemented in TaFinder in the iLCSoft. It starts
+with finding the most energetic charged particle as a tau candidate. Then the
+remaining most energetic particle which is within a cone of $\cos\theta=0.99$ around
+the tau candidate will be combined to the tau candidate if the invariant mass
+of the combined tau candidate does not exceed 2 GeV. This combining step
+will be iterated until there is no any more particle to combine. The resulting 
+combined tau candidate is identified as an isolated tau.
+\item{\it isolated photon selection}, which will try to reconstruct the isolated photon.
+A photon is first identified based on its cluster properties by PandoraPFA. For
+most of the signal processes with an isolated photon, it is usually sufficient to tag
+the most energetic photon which has energy larger than several tens of GeV, as
+the candidate isolated photon. If there are other photons within a very small cone of
+$\cos\theta=0.999$ around the candidate photon, those other photons are most
+probably split ones hence are merged into the candidate photon.
 \item {\it overlay removal}, which will try to remove the pile-up beam background
-events in every event. An exclusive jet clustering is performed using $k_t$ algorithm
-on all the particles except the selected isolated lepton/tau/photon in above step. 
+events in every event. An exclusive jet clustering is performed using 
+longitudinal invariant $k_t$ algorithm~\cite{Catani:1993hr}
+for all the particles except the selected isolated lepton/tau/photon in above step. 
 As a result, the particles from beam background events, which usually have very low-$p_t$, 
-will be effectively removed by the exclusive jet clustering process in which the 
+are clustered into beam jets and 
+are effectively removed by the exclusive jet clustering process. The 
 input parameters such as $R$ and number of required jets are carefully optimized 
-for each signal process. Alternative algorithms include anti-$k_t$ and Valencia.
-\item {\it jet clustering and flavor tagging}, using LCFIPlus. 
+for each signal process. Alternative algorithms include anti-$k_t$~\cite{Cacciari:2008gp} 
+and Valencia~\cite{Boronat:2014hva}.
+\item {\it jet clustering and flavor tagging}, are done using LCFIPlus 
+as introduced in~\ref{sub:sw-HLR}. 
 All the particles belonging to the
 jets obtained in previous step are then re-clustered into a few jets using another inclusive 
-jet clustering algorithm, Durham algorithm~\cite{}.
+jet clustering algorithm, Durham algorithm~\cite{Catani:1991hj}.
 Each jet is flavor tagged using the reconstructed information of 
 its secondary and tertiary vertices. 
 \end{itemize}
@@ -55,5 +73,5 @@ $e^-_Le^+_R: P(e^-,e^+)=(-0.8,+0.3)$. Additional comments will be given
 when $\sqrt{s}$ or right-handed beam polarization 
 $e^-_Re^+_L: P(e^-,e^+)=(+0.8,-0.3)$ has a significant impact on the results.
 The results are straightforwardly extrapolated into that for the running scenario
-introduced in Sec.~\ref{sec:runscenario} and are then used as input for the 
+introduced in Sec.~\ref{sec:runscenarios} and are then used as input for the 
 Higgs coupling determination by a global fit introduced in Sec.~\ref{sec:physics}.

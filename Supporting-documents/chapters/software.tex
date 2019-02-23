@@ -16,8 +16,8 @@ by the detector groups.  We will then follow the path by which this
 software to used to provide detailed detector models and model data
 sets,   to reconstruct the data including as much realism as possible,
 and to produce the final physics objects for analysis.    At the
-successive stages of this process, will be illustrate the analysis
-through performance plots that also can be used to benchmark the
+successive stages of this process, we will illustrate the intermediate results 
+with  performance plots that also can be used to benchmark the
 detector models.  Finally, we will discuss the computing concept and
 costs for the ILC experiments. 
 
@@ -171,26 +171,8 @@ Both detector concept groups have invested considerable effort into making their
 Care has been taken to include realistic material estimates in particular in the tracking region where
 the material budget has a direct impact on the detector performance.
 Figure~\ref{fig:sid_trk} shows the tracking detector as implemented for the SiD simulation model.
-%%%%%%%%%%%%%%%%
-\begin{figure}
-\begin{center}
-\includegraphics[width=0.80\hsize]{chapters/figures/SiD_material_budget_tracker.png}
-\end{center}
-\caption{Resulting radiation lengths of the tracking detectors in the \emph{SIDLOI3} simulation model (from~\cite{Behnke:2013lya}).}
-\label{fig:sid_mat_budget}
-\end{figure}
-%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%
-\begin{figure}
-\begin{center}
-\includegraphics[width=0.80\hsize]{chapters/figures/ILD_material_budget_tracker.pdf}
-\end{center}
-\caption{Resulting radiation lengths of the tracking detectors in the \emph{ILD\_o1\_v05} simulation model (from~\cite{Behnke:2013lya}).}
-\label{fig:ILD_mat_budget}
-\end{figure}
-%%%%%%%%%%%%%%%%%
-The average material budget in the tracking volume of the simulation models is shown in Figures~\ref{fig:sid_mat_budget}
-and~\ref{fig:ILD_mat_budget} for SiD and ILD respectively.
+The average material budget in the tracking volume of the simulation models has already been shown in Sec.~\ref{sec:detectors}, Figs.~\ref{fig:sid_mat_budget}
+and~\ref{fig:ILD_mat_budget}, for SiD and ILD respectively.
 
 Before the two concepts had decided to move to the common geometry description and simulation with DD4hep, they had
 implemented their detailed simulation models in Mokka~\cite{MoradeFreitas:2002kj} and slic~\cite{bib:slic}. These models
@@ -343,12 +325,15 @@ $\rm{cos}(\theta)$ in Fig.~\ref{fig:ild_trkeff}.
 %%%%%%%%%%%%%%%%
 \begin{figure}
   \begin{tabular}[c]{c}
-    \includegraphics[width=0.85\hsize]{chapters/figures/trkEff_Momentum_ttbar_ILD_l5_v02_v02-00-02_New_publish_cuts2.png} \\
-    \includegraphics[width=0.85\hsize]{chapters/figures/trkEff_theta_ttbar_ILD_l5_v02_v02-00-02_New_publish_cuts1.png}
+    \includegraphics[width=0.85\hsize]{chapters/figures/trkEff_Momentum_ttbar_ILD_l5_v02_v02-00-02_New_wPairsOverlay_2BX_publish_cuts2.png} \\
+    \includegraphics[width=0.85\hsize]{chapters/figures/trkEff_theta_ttbar_ILD_l5_v02_v02-00-02_New_wPairsOverlay_2BX_publish_cuts1.png}
+%    \includegraphics[width=0.85\hsize]{chapters/figures/trkEff_Momentum_ttbar_ILD_l5_v02_v02-00-02_New_publish_cuts2.png} \\
+%    \includegraphics[width=0.85\hsize]{chapters/figures/trkEff_theta_ttbar_ILD_l5_v02_v02-00-02_New_publish_cuts1.png}
 \end{tabular}
   \caption{Tracking efficiency for $t\bar t$-events at $\sqrt{s}=500~\rm{GeV}$ in the ILD detector as a function of
-    momentum ($\rm{cos}(\theta)>.99$) [upper]
-    and $\rm{cos}(\theta)$ ($p>1~\rm{GeV}$) [lower].}
+    momentum ($\rm{cos}(\theta)>.99$) [upper] and $\rm{cos}(\theta)$ ($p>1~\rm{GeV}$) [lower] for prompt tracks
+    ($d_{IP}<10~\rm{cm}$). Decays in flight are excluded and tracks are required to have left at least 4 hits in the detector.
+  Background from $e^+e^-$-pairs for two bunch crossings is overlaid to the $t\bar t$-events.}
 
 \label{fig:ild_trkeff}
 \end{figure}

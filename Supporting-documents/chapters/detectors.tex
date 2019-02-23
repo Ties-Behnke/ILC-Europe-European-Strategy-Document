@@ -97,7 +97,8 @@ illustrations at the successive stages of event analysis.
 \subsection{The SiD Detector}
 The SiD detector is a general-purpose experiment designed to perform
  precision measurements
-at the ILC. It satisfies the challenging detector requirements resulting from the full range of ILC physics processes. SiD is based on the paradigm of particle flow, an algorithm by which
+at the ILC. It satisfies the challenging detector requirements resulting from the full range of 
+ILC physics processes. SiD is based on the paradigm of particle flow, an algorithm by which
 the reconstruction of both charged and neutral particles is accomplished by an optimised
 combination of tracking and calorimetry. The net result is a significantly more precise jet
 energy measurement which results in a di-jet mass resolution good enough to distinguish
@@ -301,6 +302,18 @@ pitch of 50~\micron. The endcaps utilise two sensors bonded back-to-back for
 small angle stereo measurements. With an outer cylinder radius of 1.25~m
 and a 5~T field, the charged track momentum resolution will be better than
 $\delta (1/\pT) = 5 \times 10^{-5} $/(GeV/$c$) for high momentum tracks with coverage down to polar angles of 10 degrees.
+A plot of the momentum budget as a function of polar angle is shown in Fig.~\ref{fig:sid_mat_budget}.
+
+%%%%%%%%%%%%%%%%
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.80\hsize]{./chapters/figures/SiD_material_budget_tracker.png}
+\end{center}
+\caption{Material in the SiD detector, in terms of fractions of a radiation length, as a function of the polar angle.}
+\label{fig:sid_mat_budget}
+\end{figure}
+%%%%%%%%%%%%%%%%%
+
 
 The all-silicon tracking approach has been extensively tested using full Monte-Carlo
 simulations including full beam backgrounds. Besides having an excellent momentum resolution
@@ -507,6 +520,17 @@ the ECAL (SET), provide additional high precision space points which
     redundancy in the regions between the main tracking volume and the
     calorimeters. 
 
+A key aspect of the ILD detector design is the low mass of the tracking system. The total material as a function of angle, in radiation lengths, is shown in Fig.~\ref{fig:ILD_mat_budget}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centering
+\includegraphics[width=0.85\hsize,viewport={0 -10 600 500},clip]{chapters/figures/material-budget-new.pdf}
+\caption{Material in the ILD detector, in terms of fractions of a radiation length, as a function of the polar angle.}
+\label{fig:ILD_mat_budget}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsubsection{Calorimetry}
 
 A highly segmented electromagnetic calorimeter (ECAL) provides up to
@@ -539,11 +563,10 @@ cell geometry with a semi-digital readout of each cell.
 At very forward angles, below the coverage provided by the ECAL and
 the HCAL, a system of high precision and radiation hard calorimetric
 detectors (LumiCAL, BeamCAL, LHCAL)
- is foreseen. The LumiCAL and BeamCAL use the design presented in
- Sec.~\ref{subsub:det:forward}.    These detectors 
+ is foreseen. The LumiCAL and BeamCAL are based on technologies developed in the context of the FCAL collaboration. These detectors 
 extend the calorimetric coverage to almost $4\pi$, measure the
 luminosity, and  monitor
- the quality of the colliding beams.
+ the quality of the colliding beams. the LHCAL system bridges the electromagnetic endcap calorimeter with the forward systems. 
 
 \subsubsection{Coil and Yoke}
 A large volume superconducting coil surrounds the calorimeters, creating an axial $B$-field of nominally 3.5-4\,Tesla.
@@ -552,6 +575,9 @@ An iron  yoke, instrumented with scintillator strips or resistive
 plate chambers (RPCs), returns the magnetic flux of the solenoid, and,
 at the same
  time, serves as a muon filter, muon detector and tail catcher calorimeter.
+
+\subsubsection{Detector Integration and Performance}
+The ILD detector is designed to operate in the ILC interaction region with a push-pull scheme, allowing the rapid interchange of ILD with SiD. Detailed studies have been done to understand the impact this scheme might have on the detector and its design. In addition the ILD detector is optimised for operation in the seismic active region in the north of Japan. Extensive simulation studies for the main components have shown that the detector is stable against seismic events. 
 
 % %\thisfloatsetup{floatwidth=\SfigwFull,capposition=beside}
 % \begin{figure}[b!]
@@ -590,8 +616,6 @@ at the same
 
 % The few plots shown in this section illustrate the anticipated performance of the detector and illustrate the potential for precision measurements with the ILD detector. 
 
-
-
 Key plots to evaluate the projected performances of the ILD and SiD
 detectors will be presented in the following chapter.    These plots
 will also illustrate the successive stages of event reconstruction
@@ -601,8 +625,8 @@ As we have already noted, the ILD and SiD detectors include many
 technologies that have been developed in close cooperation with R\&D
 collaborations 
 and have been extensively tested. For both detectors, the performance numbers 
-of key systems are based on results from prototypes, whereever 
-possible, and extraploated to the full detector performance. This
+of key systems are based on results from prototypes, wherever 
+possible, and extrapolated to the full detector performance. This
 strong 
 check against experimental results ensures that the performance 
 numbers are reliable and are considered a realistic estimate of the ultimate detector performance. 

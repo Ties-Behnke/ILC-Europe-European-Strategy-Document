@@ -54,11 +54,16 @@ nofootinbib,
 \usepackage{tabularx}                                 % tables with automatic width calculation
 \usepackage{graphicx}% Include figure files
 \usepackage{xcolor}
- \usepackage{eurosym}
+\usepackage{eurosym}
+\usepackage{subfigure}
+\usepackage{wasysym}
+\usepackage{amssymb,amsmath,array}
+\usepackage{latexsym, amsfonts, wasysym}
+
 %\linenumbers
 %\usepackage{hyperref}% add hypertext capabilities
-\usepackage[mathlines]{lineno}% Enable numbering of text and display math
-\linenumbers\relax % Commence numbering lines
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
 
 %\usepackage[showframe,%Uncomment any one of the following lines to test 
 %%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
@@ -84,11 +89,11 @@ nofootinbib,
 \thanks{Version 1.3}%
 
 \author{\textbf{Prepared by:}
-Ties Behnke$^1$, Mikael Berggren$^1$, James Brau$^2$, Keisuke Fujii$^{3}$, Juan Fuster$^{4}$, Frank Gaede$^{1}$, Christophe Grojean$^{1}$, Benno List$^{1}$, Jenny List$^{1}$, Shinichiro Michizono$^{3}$, Akiya Miyamoto$^{3}$, Michael Peskin$^{5}$, Roman Poeschl$^{6}$, Frank Simon$^{7}$, Junping Tian$^{8}$, Marcel Vos$^{4}$, Andrew White$^{9}$, Graham Wilson$^{10}$ and Hitoshi Yamamoto$^{11}$  }
+Ties Behnke$^1$, Mikael Berggren$^1$, James Brau$^2$, Dmitri Denisov$^{3}$, Keisuke Fujii$^{4}$, Juan Fuster$^{5}$, Frank Gaede$^{1}$, Christophe Grojean$^{1}$, Benno List$^{1}$, Jenny List$^{1}$, Shinichiro Michizono$^{4}$, Akiya Miyamoto$^{4}$, Michael Peskin$^{6}$, Roman Poeschl$^{7}$, Frank Simon$^{8}$, Junping Tian$^{9}$, Marcel Vos$^{5}$, Andrew White$^{10}$, Graham Wilson$^{11}$ and Hitoshi Yamamoto$^{12}$  }
 % \altaffiliation[Also at ]{Physics Department, XYZ University.}%Lines break automatically or can be forced with \\
 %\author{et.al.}%
 % \email{Second.Author@institution.edu}
-\affiliation{\vspace{.2 cm}$^1$DESY, $^2$U. Oregon, $^{3}$KEK, $^{4}$IFIC, U. Valencia-CSIC, $^5$SLAC, $^6$LAL-Orsay/CNRS, $^7$Max Planck, Munich, $^8$U. Tokyo,   $^{9}$U. Texas, Arlington, $^{10}$U. Kansas, $^{11}$U. Tohoku }
+\affiliation{\vspace{.2 cm}$^1$DESY, $^2$U. Oregon, $^3$BNL, $^{4}$KEK, $^{5}$IFIC, U. Valencia-CSIC, $^6$SLAC, $^7$LAL-Orsay/CNRS, $^8$Max Planck, Munich, $^9$U. Tokyo,   $^{10}$U. Texas, Arlington, $^{11}$U. Kansas, $^{12}$U. Tohoku }
 
 
  % Authors' institution and/or address\\
@@ -101,7 +106,7 @@ Ties Behnke$^1$, Mikael Berggren$^1$, James Brau$^2$, Keisuke Fujii$^{3}$, Juan 
              %  but any date may be explicitly specified
 
 \begin{abstract}
-Input from the International Linear Collider community for the European Strategy Update: supplementary material
+Input from the International Linear Collider community for the European Strategy Update: supplementary material.
 
 \end{abstract}
 
@@ -139,7 +144,7 @@ Input from the International Linear Collider community for the European Strategy
  
 \input{./chapters/physicscase.tex}
 
-\section{\label{sec:highenergy}Physics Case -- beyond 250 GeV }
+\section{\label{sec:highenergy}Physics Case --Beyond 250 GeV }
 
 
  
@@ -179,12 +184,12 @@ Input from the International Linear Collider community for the European Strategy
 \input{./chapters/top.tex}  
 
 
-\section{\label{sec:gigaz} Physics program at the $Z$ pole:  Giga-Z}
+%\section{\label{sec:gigaz} Physics program at the $Z$ pole:  Giga-Z}
 
 
  
   
-\input{./chapters/gigaz.tex}  
+%\input{./chapters/gigaz.tex}  
 
 
 \section{\label{sec:global}Global Fit to Higgs Boson Couplings and Effective Field Theory Parameters}
@@ -193,7 +198,8 @@ Input from the International Linear Collider community for the European Strategy
 
 
 
-\section{\label{sec:searches}Physics Simulations: Searches }
+\section{\label{sec:searches}Physics Simulations: Direct Searches for
+  New Particles}
 
 
  
